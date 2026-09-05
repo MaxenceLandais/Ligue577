@@ -40,18 +40,30 @@ def slugify(text):
 
 
 def get_wikipedia_bio(nom_depute):
-    formatted_name = nom_depute.replace(" ", "_")
-    url = f"https://fr.wikipedia.org/api/rest_v1/page/summary/{formatted_name}"
+    url = "https://fr.wikipedia.org/w/api.php"
+    params = {
+        "action": "query",
+        "prop": "extracts",
+        "exintro": "1",
+        "explaintext": "1",
+        "titles": nom_depute,
+        "format": "json",
+        "redirects": "1",
+    }
     headers = {
         "User-Agent": "ObservatoireLiberalismeBot/1.0 (contact@votre-domaine.fr)"
     }
 
     try:
-        res = requests.get(url, headers=headers, timeout=3)
+        res = requests.get(url, params=params, headers=headers, timeout=5)
         if res.status_code == 200:
             data = res.json()
-            if data.get("type") == "standard":
-                return data.get("extract", "")
+            pages = data.get("query", {}).get("pages", {})
+            for page_id, page_data in pages.items():
+                if page_id != "-1":
+                    extract = page_data.get("extract", "").strip()
+                    if extract:
+                        return re.sub(r"\n+", " ", extract)
     except Exception:
         pass
 
@@ -215,10 +227,9 @@ def fetch_and_update():
                         if is_udr:
                             groupe_an = "UDR"
 
-                        # Wikipédia uniquement si UDR et pas encore renseigné
                         biographie = existing_record.get("biographie", "")
-                        if is_udr and not biographie:
-                            print(f"   ➔ Récupération bio Wikipédia : {full_name}")
+                        if is_udr and len(biographie) < 100:
+                            print(f"   ➔ Récupération bio Wikipédia complète : {full_name}")
                             biographie = get_wikipedia_bio(full_name)
 
                         photo_url = f"https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/{pa_id}.jpg"
