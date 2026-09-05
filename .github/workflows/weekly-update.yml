@@ -1,0 +1,33 @@
+name: Mise a jour hebdomadaire des scores
+
+on:
+  schedule:
+    # S'exécute tous les lundis à 3h00 du matin
+    - cron: '0 3 * * 1'
+  workflow_dispatch: # Permet de lancer le script manuellement depuis GitHub
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v3
+
+      - name: Configuration de Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Execution du script de mise a jour
+        run: python scripts/update_data.py
+
+      - name: Commit et Push des modifications
+        run: |
+          git config --global user.name "Bot Observatoire"
+          git config --global user.email "bot@observatoire-liberal.fr"
+          git add data.json
+          # Commit seulement s'il y a des changements
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Mise à jour automatique des scores" && git push)
