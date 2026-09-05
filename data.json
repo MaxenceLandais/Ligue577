@@ -15066,12 +15066,12 @@
     "avatar": "https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/PA840809.jpg",
     "datanUrl": "https://datan.fr/deputes/bouches-du-rhone-13/depute_gerault-verny",
     "scores": {
-      "FIS": 75,
-      "ETA": 68,
-      "REG": 70,
-      "PRO": 65,
-      "LIB": 62,
-      "OUV": 60
+      "FIS": 85,
+      "ETA": 70,
+      "REG": 65,
+      "PRO": 40,
+      "LIB": 70,
+      "OUV": 55
     },
     "reseaux": {},
     "initiatives": [
@@ -15083,6 +15083,200 @@
         "position": "Auteur",
         "description": "Propose une réduction d'impôt pour stimuler l'investissement privé dans le tissu entrepreneurial.",
         "url": "https://datan.fr/deputes/bouches-du-rhone-13/depute_gerault-verny/votes"
+      }
+    ],
+    "score_global": 64,
+    "qualification": "Modérément libéral",
+    "synthese_analyse": "Le député manifeste une orientation économique modérément libérale, principalement portée par un engagement affirmé pour la santé fiscale et la réduction du fardeau fiscal (FIS: 85), comme en témoignent ses votes répétés contre l'augmentation de l'impôt sur le revenu, la création de nouvelles taxes et en faveur de la défiscalisation. Il s'aligne également sur la réduction de la taille de l'État et des dépenses publiques (ETA: 70), notamment en s'opposant aux lois de financement de la sécurité sociale et en soutenant la réforme des retraites. La liberté du travail (LIB: 70) est également un pilier fort, avec des votes favorables aux incitations au travail. Cependant, son positionnement est plus nuancé et moins libéral concernant la protection du droit de propriété et du capital (PRO: 40), notamment en votant POUR une taxation accrue des dividendes élevés, ce qui contraste avec les principes libéraux. En matière de réglementation (REG: 65), une tendance à la dérégulation est perceptible, particulièrement dans le secteur agricole, bien qu'il ait soutenu le maintien des ZFE obligatoires. L'ouverture des marchés (OUV: 55) n'est pas un axe majeur de ses votes mais tend légèrement vers le libre-échange. En somme, le député présente un profil libéral marqué par une forte orthodoxie budgétaire et fiscale, mais avec une divergence notable sur la fiscalité du capital.",
+    "votes": [
+      {
+        "titre": "Loi urgence agricole : réautorisation de l'acétamipride",
+        "position": "POUR",
+        "date": "20 juill. 2026",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n20 juill. 2026\nLoi urgence agricole : réautorisation de l'acétamipride\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "15 juill. 2026",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n15 juill. 2026\nProposition de loi créant un droit à l'aide à mourir\nLecture définitive"
+      },
+      {
+        "titre": "Proposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre",
+        "position": "POUR",
+        "date": "07 juill. 2026",
+        "description": "",
+        "texte_brut": "POUR\n07 juill. 2026\nProposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre"
+      },
+      {
+        "titre": "Maintenir l'existence des ZFE mais les rendre facultatives",
+        "position": "CONTRE",
+        "date": "14 avr. 2026",
+        "description": "",
+        "texte_brut": "CONTRE\n14 avr. 2026\nMaintenir l'existence des ZFE mais les rendre facultatives"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "16 déc. 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n16 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nLecture définitive"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "09 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n09 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Partie recettes du projet de loi de finances (PLF) pour 2026",
+        "position": "CONTRE",
+        "date": "21 nov. 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n21 nov. 2025\nPartie recettes du projet de loi de finances (PLF) pour 2026\nPremière lecture"
+      },
+      {
+        "titre": "Suspension de la réforme des retraites jusqu'au 1er janvier 2028",
+        "position": "CONTRE",
+        "date": "12 nov. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n12 nov. 2025\nSuspension de la réforme des retraites jusqu'au 1er janvier 2028"
+      },
+      {
+        "titre": "Proposition de résolution visant à dénoncer les accords franco-algériens de 1968",
+        "position": "POUR",
+        "date": "30 oct. 2025",
+        "description": "",
+        "texte_brut": "POUR\n30 oct. 2025\nProposition de résolution visant à dénoncer les accords franco-algériens de 1968"
+      },
+      {
+        "titre": "Motion de censure de LFI contre le gouvernement Lecornu",
+        "position": "POUR",
+        "date": "16 oct. 2025",
+        "description": "",
+        "texte_brut": "POUR\n16 oct. 2025\nMotion de censure de LFI contre le gouvernement Lecornu"
+      },
+      {
+        "titre": "Vote de confiance au Premier ministre François Bayrou",
+        "position": "CONTRE",
+        "date": "08 sept. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n08 sept. 2025\nVote de confiance au Premier ministre François Bayrou"
+      },
+      {
+        "titre": "Loi Duplomb sur l’agriculture",
+        "position": "POUR",
+        "date": "08 juill. 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n08 juill. 2025\nLoi Duplomb sur l’agriculture\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "27 mai 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n27 mai 2025\nProposition de loi créant un droit à l'aide à mourir\nPremière lecture"
+      },
+      {
+        "titre": "Fin de vie : création des cinq critères pour accéder à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "20 mai 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n20 mai 2025\nFin de vie : création des cinq critères pour accéder à l'aide à mourir"
+      },
+      {
+        "titre": "Proposition de loi sur la sécurité dans les transports",
+        "position": "POUR",
+        "date": "18 mars 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n18 mars 2025\nProposition de loi sur la sécurité dans les transports\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Projet de loi souveraineté en matière agricole",
+        "position": "POUR",
+        "date": "19 févr. 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n19 févr. 2025\nProjet de loi souveraineté en matière agricole\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Motion de censure du gouvernement de Michel Barnier",
+        "position": "POUR",
+        "date": "04 déc. 2024",
+        "description": "",
+        "texte_brut": "POUR\n04 déc. 2024\nMotion de censure du gouvernement de Michel Barnier"
+      },
+      {
+        "titre": "Supprimer le crédit d'impôt accordé aux entreprises mettant en place une flotte de vélos",
+        "position": "CONTRE",
+        "date": "06 nov. 2024",
+        "description": "",
+        "texte_brut": "CONTRE\n06 nov. 2024\nSupprimer le crédit d'impôt accordé aux entreprises mettant en place une flotte de vélos"
+      },
+      {
+        "titre": "Créée une taxe sur les produits ultra-transformés",
+        "position": "CONTRE",
+        "date": "04 nov. 2024",
+        "description": "",
+        "texte_brut": "CONTRE\n04 nov. 2024\nCréée une taxe sur les produits ultra-transformés"
+      },
+      {
+        "titre": "Instaurer une taxe sur la publicité pour les aliments nocifs pour la santé",
+        "position": "CONTRE",
+        "date": "04 nov. 2024",
+        "description": "",
+        "texte_brut": "CONTRE\n04 nov. 2024\nInstaurer une taxe sur la publicité pour les aliments nocifs pour la santé"
+      },
+      {
+        "titre": "Renforcer la défiscalisation des heures supplémentaires",
+        "position": "POUR",
+        "date": "23 oct. 2024",
+        "description": "",
+        "texte_brut": "POUR\n23 oct. 2024\nRenforcer la défiscalisation des heures supplémentaires"
+      },
+      {
+        "titre": "Supprimer l'avantage fiscal pour les intermittents du spectacle",
+        "position": "POUR",
+        "date": "23 oct. 2024",
+        "description": "",
+        "texte_brut": "POUR\n23 oct. 2024\nSupprimer l'avantage fiscal pour les intermittents du spectacle"
+      },
+      {
+        "titre": "Imposer davantage les dividendes aux rendements exceptionnellement élevés",
+        "position": "POUR",
+        "date": "23 oct. 2024",
+        "description": "",
+        "texte_brut": "POUR\n23 oct. 2024\nImposer davantage les dividendes aux rendements exceptionnellement élevés"
+      },
+      {
+        "titre": "Supprimer l'abattement fiscal sur les dividendes",
+        "position": "CONTRE",
+        "date": "23 oct. 2024",
+        "description": "",
+        "texte_brut": "CONTRE\n23 oct. 2024\nSupprimer l'abattement fiscal sur les dividendes"
+      },
+      {
+        "titre": "Augmenter la progressivité de l'impôt sur le revenu",
+        "position": "CONTRE",
+        "date": "22 oct. 2024",
+        "description": "",
+        "texte_brut": "CONTRE\n22 oct. 2024\nAugmenter la progressivité de l'impôt sur le revenu"
+      },
+      {
+        "titre": "Pérenniser dans le temps la contribution sur les plus hauts revenus (CDHR)",
+        "position": "CONTRE",
+        "date": "22 oct. 2024",
+        "description": "",
+        "texte_brut": "CONTRE\n22 oct. 2024\nPérenniser dans le temps la contribution sur les plus hauts revenus (CDHR)"
+      },
+      {
+        "titre": "Instaurer une contribution différentielle sur les hauts revenus (CDHR)",
+        "position": "CONTRE",
+        "date": "22 oct. 2024",
+        "description": "",
+        "texte_brut": "CONTRE\n22 oct. 2024\nInstaurer une contribution différentielle sur les hauts revenus (CDHR)"
       }
     ]
   },
