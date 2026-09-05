@@ -1,63 +1,226 @@
-{
-    "metadata": {
-        "last_updated": "2026-09-05",
-        "methodology": "Basé sur les 6 piliers de la liberté économique : FIS, ÉTA, RÉG, PRO, LIB, OUV."
-    },
-    "deputies": [
-        {
-            "id": "gerault-verny",
-            "name": "Gérault Verny",
-            "group": "UDR",
-            "department": "Bouches-du-Rhône (14e)",
-            "scores_detail": {
-                "FIS": 18,
-                "ETA": 17,
-                "REG": 15,
-                "PRO": 16,
-                "LIB": 4,
-                "OUV": 3
-            },
-            "score_total": 60.8,
-            "bande": "Modérément libéral",
-            "bio": "Gérault Verny est un député du groupe Union des Droites pour la République (UDR). Son profil économique s'inscrit dans une ligne fermement libérale-conservatrice. Il se distingue par une volonté farouche de réduire la dépense publique (ÉTA) et d'alléger la fiscalité de production (FIS). Toutefois, ses positions sur les libertés individuelles (LIB) et l'ouverture des frontières (OUV) font chuter son score global, le classant dans la bande 'Modérément libéral'.",
-            "recent_actions": [
-                {
-                    "date": "Septembre 2026",
-                    "type": "Vote",
-                    "description": "Vote CONTRE le maintien des subventions sectorielles aux énergies fossiles",
-                    "impact": "+2 points en ÉTA (Subventions)"
-                },
-                {
-                    "date": "Août 2026",
-                    "type": "Déclaration",
-                    "description": "Appel à un moratoire sur les nouvelles normes administratives pour les PME",
-                    "impact": "+1 point en RÉG (Volume normatif)"
-                },
-                {
-                    "date": "Juillet 2026",
-                    "type": "Vote",
-                    "description": "Soutien au renforcement des contrôles aux frontières et restriction des visas",
-                    "impact": "-2 points en OUV (Mobilité des personnes)"
-                }
-            ]
-        },
-        {
-            "id": "eric-ciotti",
-            "name": "Éric Ciotti",
-            "group": "UDR",
-            "department": "Alpes-Maritimes (1re)",
-            "scores_detail": {
-                "FIS": 16,
-                "ETA": 14,
-                "REG": 13,
-                "PRO": 15,
-                "LIB": 5,
-                "OUV": 5
-            },
-            "score_total": 56.6,
-            "bande": "Peu libéral",
-            "bio": "Président du groupe UDR, Éric Ciotti défend une baisse de la fiscalité mais conserve une vision régalienne forte de l'État.",
-            "recent_actions": []
-        }
-    ]
-}
+[
+  {
+    "id": "gerault-verny",
+    "nom": "Gérault Verny",
+    "circo": "Bouches-du-Rhône (14ᵉ)",
+    "bio": "Entrepreneur dans les technologies et l'industrie numérique. Son parcours dans le secteur privé le pousse vers une ligne axée sur la baisse des prélèvements et la déréglementation.",
+    "scores": {
+      "FIS": 85,
+      "ETA": 75,
+      "REG": 85,
+      "PRO": 80,
+      "LIB": 40,
+      "OUV": 35
+    }
+  },
+  {
+    "id": "eric-michoux",
+    "nom": "Éric Michoux",
+    "circo": "Saône-et-Loire (4ᵉ)",
+    "bio": "Chef d'entreprise du secteur industriel (groupe Galilé). Il aborde la politique sous l'angle de la compétitivité et de la simplification administrative pour le monde économique.",
+    "scores": {
+      "FIS": 85,
+      "ETA": 70,
+      "REG": 80,
+      "PRO": 80,
+      "LIB": 40,
+      "OUV": 35
+    }
+  },
+  {
+    "id": "bernard-chaix",
+    "nom": "Bernard Chaix",
+    "circo": "Alpes-Maritimes (3ᵉ)",
+    "bio": "Issu du commerce de détail et vice-président de la CCI Nice Côte d'Azur. Très centré sur la défense des commerçants, des artisans et des TPE.",
+    "scores": {
+      "FIS": 85,
+      "ETA": 70,
+      "REG": 80,
+      "PRO": 80,
+      "LIB": 35,
+      "OUV": 30
+    }
+  },
+  {
+    "id": "alexandre-allegret-pilot",
+    "nom": "Alexandre Allegret-Pilot",
+    "circo": "Gard (5ᵉ)",
+    "bio": "Ancien haut fonctionnaire aux ministères économiques et financiers (Bercy). Sa connaissance de l'État le conduit à cibler la bureaucratie tout en maintenant des positions souverainistes sur le plan commercial.",
+    "scores": {
+      "FIS": 80,
+      "ETA": 80,
+      "REG": 75,
+      "PRO": 75,
+      "LIB": 35,
+      "OUV": 30
+    }
+  },
+  {
+    "id": "olivier-fayssat",
+    "nom": "Olivier Fayssat",
+    "circo": "Bouches-du-Rhône (6ᵉ)",
+    "bio": "Avocat de profession. Son profil juridique l'amène à insister sur la sécurité juridique, la protection de la propriété et la baisse des prélèvements obligatoires.",
+    "scores": {
+      "FIS": 80,
+      "ETA": 70,
+      "REG": 75,
+      "PRO": 85,
+      "LIB": 35,
+      "OUV": 25
+    }
+  },
+  {
+    "id": "vincent-trebuchet",
+    "nom": "Vincent Trébuchet",
+    "circo": "Ardèche (2ᵉ)",
+    "bio": "Issu du secteur privé et des nouvelles technologies. Il plaide pour une modernisation de l'action publique, la suppression des contraintes normatives et la baisse de la fiscalité des entreprises.",
+    "scores": {
+      "FIS": 80,
+      "ETA": 70,
+      "REG": 75,
+      "PRO": 75,
+      "LIB": 35,
+      "OUV": 30
+    }
+  },
+  {
+    "id": "charles-alloncle",
+    "nom": "Charles Alloncle",
+    "circo": "Hérault (9ᵉ)",
+    "bio": "Ancien responsable des Jeunes Républicains et entrepreneur du web. Il combine un discours pro-business sur l'innovation et la baisse des taxes avec une ligne ferme en matière régalienne.",
+    "scores": {
+      "FIS": 80,
+      "ETA": 65,
+      "REG": 75,
+      "PRO": 75,
+      "LIB": 35,
+      "OUV": 30
+    }
+  },
+  {
+    "id": "christelle-dintorni",
+    "nom": "Christelle D'Intorni",
+    "circo": "Alpes-Maritimes (5ᵉ)",
+    "bio": "Avocate de profession, élue à l'Assemblée nationale en 2022 et réélue en 2024. Proche d'Éric Ciotti, elle se montre très offensive sur la baisse d'impôts et la défense des propriétaires face au squat.",
+    "scores": {
+      "FIS": 80,
+      "ETA": 65,
+      "REG": 70,
+      "PRO": 85,
+      "LIB": 30,
+      "OUV": 25
+    }
+  },
+  {
+    "id": "eric-ciotti",
+    "nom": "Éric Ciotti",
+    "circo": "Alpes-Maritimes (1ʳᵉ)",
+    "bio": "Président du groupe UDR, ancien président du parti Les Républicains et cadre historique de la droite niçoise. Très anti-fiscal et favorable à la baisse de la dépense sociale, il reste fermement partisan d'un État régalien renforcé.",
+    "scores": {
+      "FIS": 80,
+      "ETA": 65,
+      "REG": 70,
+      "PRO": 85,
+      "LIB": 25,
+      "OUV": 25
+    }
+  },
+  {
+    "id": "hanane-mansouri",
+    "nom": "Hanane Mansouri",
+    "circo": "Isère (8ᵉ)",
+    "bio": "Ancienne présidente des Jeunes Républicains de l'Isère. Axée sur les questions de compétitivité des jeunes actifs et la déréglementation, tout en s'alignant sur l'agenda d'ordre public du groupe.",
+    "scores": {
+      "FIS": 75,
+      "ETA": 65,
+      "REG": 70,
+      "PRO": 75,
+      "LIB": 35,
+      "OUV": 25
+    }
+  },
+  {
+    "id": "matthieu-bloch",
+    "nom": "Matthieu Bloch",
+    "circo": "Doubs (3ᵉ)",
+    "bio": "Juriste de formation et élu local. Il insiste sur la protection du droit de propriété et l'allègement de la bureaucratie administrative.",
+    "scores": {
+      "FIS": 75,
+      "ETA": 65,
+      "REG": 70,
+      "PRO": 80,
+      "LIB": 30,
+      "OUV": 20
+    }
+  },
+  {
+    "id": "bartolome-lenoir",
+    "nom": "Bartolomé Lenoir",
+    "circo": "Creuse (1ʳᵉ)",
+    "bio": "Ancien président d'Avenir Français et entrepreneur. Tout en soutenant la baisse des prélèvements sur les petites entreprises, sa vision reste marquée par la ruralité et la souveraineté économique.",
+    "scores": {
+      "FIS": 75,
+      "ETA": 60,
+      "REG": 70,
+      "PRO": 75,
+      "LIB": 30,
+      "OUV": 25
+    }
+  },
+  {
+    "id": "sophie-vaginay-ricourt",
+    "nom": "Sophie Ricourt Vaginay",
+    "circo": "Alpes-de-Haute-Provence (2ᵉ)",
+    "bio": "Juriste et élue locale (ancienne maire de Barcelonnette). Orientée vers le pragmatisme territorial, la baisse des charges et la défense de la propriété privée.",
+    "scores": {
+      "FIS": 70,
+      "ETA": 60,
+      "REG": 65,
+      "PRO": 75,
+      "LIB": 30,
+      "OUV": 25
+    }
+  },
+  {
+    "id": "maxime-michelet",
+    "nom": "Maxime Michelet",
+    "circo": "Marne (3ᵉ)",
+    "bio": "Historien et spécialiste du Second Empire. Sa vision politique accorde une grande place au rôle stratégique de l'État et à la défense du modèle national face au marché mondialisé.",
+    "scores": {
+      "FIS": 65,
+      "ETA": 60,
+      "REG": 60,
+      "PRO": 70,
+      "LIB": 30,
+      "OUV": 25
+    }
+  },
+  {
+    "id": "antoine-valentin",
+    "nom": "Antoine Valentin",
+    "circo": "Haute-Savoie (3ᵉ)",
+    "bio": "Maire de Saint-Jeoire. Son ancrage territorial et son orientation républicaine d'ordre privilégient le rôle régulateur de la collectivité et de l'État régalien.",
+    "scores": {
+      "FIS": 65,
+      "ETA": 55,
+      "REG": 60,
+      "PRO": 70,
+      "LIB": 30,
+      "OUV": 20
+    }
+  },
+  {
+    "id": "marc-chavent",
+    "nom": "Marc Chavent",
+    "circo": "Ain (5ᵉ)",
+    "bio": "Élu local (ancien maire de Cerdon). Il défend une ligne prioritairement axée sur le localisme, le contrôle strict des frontières commerciales et une méfiance marquée envers le libre-échange.",
+    "scores": {
+      "FIS": 65,
+      "ETA": 55,
+      "REG": 60,
+      "PRO": 70,
+      "LIB": 30,
+      "OUV": 15
+    }
+  }
+]
