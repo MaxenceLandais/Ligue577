@@ -1,10 +1,32 @@
 import io
 import json
 import re
+import time
 import unicodedata
 import zipfile
 import requests
 from bs4 import BeautifulSoup
+
+# Liste stricte des slugs des députés UDR (17e législature)
+UDR_SLUGS = {
+    "eric-ciotti",
+    "christelle-d-intorni",
+    "christelle-dintorni",
+    "bernard-chaix",
+    "gerault-verny",
+    "hanane-mansouri",
+    "charles-alloncle",
+    "vincent-trebuchet",
+    "alexandre-allegret-pilot",
+    "sophie-dumont",
+    "brigitte-bareges",
+    "matthieu-bloch",
+    "marc-chavent",
+    "eric-michoux",
+    "typhanie-degois",
+    "thierry-perez",
+    "monique-griseti",
+}
 
 
 def slugify(text):
@@ -22,12 +44,12 @@ def load_existing_data(filepath="data.json"):
         with open(filepath, "r", encoding="utf-8") as f:
             items = json.load(f)
             return {item["id"]: item for item in items}
-    except (FileNotFoundError, json.JSONDecodeError):
+    except Exception:
         return {}
 
 
 def scrape_datan_info(depute_slug):
-    """Scrape la fiche Datan du député pour récupérer : email, réseaux, profession, stats."""
+    """Scrape la fiche Datan avec gestion sécurisée des erreurs."""
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
     }
@@ -36,20 +58,18 @@ def scrape_datan_info(depute_slug):
     data_scraped = {
         "email": "",
         "profession": "",
-        "age": None,
         "participation": None,
         "loyaute_groupe": None,
         "reseaux": {},
     }
 
     try:
-        res = requests.get(url, headers=headers, timeout=8)
+        res = requests.get(url, headers=headers, timeout=5)
         if res.status_code != 200:
             return data_scraped
 
         soup = BeautifulSoup(res.content, "html.parser")
 
-        # 1. Réseaux sociaux & Email
         for a in soup.find_all("a", href=True):
             href = a["href"]
             if "mailto:" in href and not data_scraped["email"]:
@@ -63,7 +83,6 @@ def scrape_datan_info(depute_slug):
             elif "instagram.com" in href:
                 data_scraped["reseaux"]["instagram"] = href
 
-        # 2. Statistiques (Participation & Loyauté)
         text_content = soup.get_text()
 
         part_match = re.search(
@@ -79,15 +98,16 @@ def scrape_datan_info(depute_slug):
         if loy_match:
             data_scraped["loyaute_groupe"] = int(loy_match.group(1))
 
-        # 3. Profession d'origine
         prof_match = re.search(
             r"exerçait le métier [^\-]*-\s*([^.]+)\.", text_content
         )
         if prof_match:
-            data_scraped["profession"] = prof_match.group(1).strip().capitalize()
+            data_scraped["profession"] = (
+                prof_match.group(1).strip().capitalize()
+            )
 
-    except Exception as e:
-        print(f"⚠️ Datan fetch omit pour {depute_slug}: {e}")
+    except Exception:
+        pass
 
     return data_scraped
 
@@ -100,7 +120,7 @@ def fetch_and_update():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
     }
 
-    print("⚡ Téléchargement de la base Assemblée Nationale & Datan.fr...")
+    print("⚡ Traitement ciblé EXCLUSIVEMENT pour les députés UDR...")
 
     try:
         response = requests.get(url, headers=headers, timeout=30)
@@ -109,6 +129,7 @@ def fetch_and_update():
             return
 
         updated_list = []
+        udr_count = 0
 
         with zipfile.ZipFile(io.BytesIO(response.content)) as z:
             json_files = [
@@ -116,95 +137,131 @@ def fetch_and_update():
                 for f in z.namelist()
                 if f.endswith(".json") and ("PA" in f or "acteur" in f)
             ]
-            print(
-                f"📋 {len(json_files)} fiches trouvées. Enrichissement en cours..."
-            )
 
-            for idx, filename in enumerate(json_files, 1):
-                with z.open(filename) as f:
-                    data = json.load(f)
-                    acteur = data.get("acteur", {})
-                    if not acteur and "export" in data:
-                        acteur = data["export"].get("acteur", {})
+            for filename in json_files:
+                try:
+                    with z.open(filename) as f:
+                        data = json.load(f)
+                        acteur = data.get("acteur", {})
+                        if not acteur and "export" in data:
+                            acteur = data["export"].get("acteur", {})
 
-                    if not acteur or not isinstance(acteur, dict):
-                        continue
+                        if not acteur or not isinstance(acteur, dict):
+                            continue
 
-                    pa_id = acteur.get("uid", {}).get("#text", "")
-                    etat_civil = acteur.get("etatCivil", {}).get("ident", {})
-                    prenom = etat_civil.get("prenom", "")
-                    nom = etat_civil.get("nom", "")
-                    full_name = f"{prenom} {nom}".strip()
+                        pa_id = acteur.get("uid", {}).get("#text", "")
+                        etat_civil = acteur.get("etatCivil", {}).get(
+                            "ident", {}
+                        )
+                        prenom = etat_civil.get("prenom", "")
+                        nom = etat_civil.get("nom", "")
+                        full_name = f"{prenom} {nom}".strip()
 
-                    if not full_name or not pa_id:
-                        continue
+                        if not full_name or not pa_id:
+                            continue
 
-                    depute_id = slugify(full_name)
-                    existing_record = existing_db.get(depute_id, {})
+                        depute_id = slugify(full_name)
+                        existing_record = existing_db.get(depute_id, {})
 
-                    # Enrichissement Datan.fr
-                    datan_data = scrape_datan_info(depute_id)
+                        # VÉRIFICATION STRICTE DE L'APPARTENANCE UDR
+                        is_udr = depute_id in UDR_SLUGS
 
-                    # Photos et liens
-                    photo_url = f"https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/{pa_id}.jpg"
-                    datan_url = f"https://datan.fr/deputes/depute_{depute_id}"
+                        if is_udr:
+                            udr_count += 1
+                            groupe = "UDR"
+                            print(
+                                f"🔎 [{udr_count}] Enrichissement UDR : {full_name}"
+                            )
+                            datan_data = scrape_datan_info(depute_id)
+                            time.sleep(0.2)
+                        else:
+                            # Remet à "NI" ou autre si ce n'est pas un UDR
+                            prev_groupe = existing_record.get("groupe", "NI")
+                            groupe = (
+                                prev_groupe if prev_groupe != "UDR" else "NI"
+                            )
 
-                    # Merge réseaux
-                    reseaux = existing_record.get("reseaux", {})
-                    for k, v in datan_data["reseaux"].items():
-                        reseaux[k] = {"url": v}
+                            old_stats = existing_record.get("stats") or {}
+                            datan_data = {
+                                "email": existing_record.get("email", ""),
+                                "profession": existing_record.get(
+                                    "profession", "Non renseignée"
+                                ),
+                                "participation": old_stats.get(
+                                    "participation", 0
+                                ),
+                                "loyaute_groupe": old_stats.get(
+                                    "loyaute_groupe", 0
+                                ),
+                                "reseaux": {},
+                            }
 
-                    depute_entry = {
-                        "id": depute_id,
-                        "pa_id": pa_id,
-                        "nom": full_name,
-                        "circo": existing_record.get("circo", "Non renseignée"),
-                        "groupe": existing_record.get("groupe", "NI"),
-                        "email": datan_data["email"]
-                        or existing_record.get("email", ""),
-                        "profession": datan_data["profession"]
-                        or existing_record.get("profession", "Non renseignée"),
-                        "stats": {
-                            "participation": datan_data["participation"]
-                            or existing_record.get("stats", {}).get(
-                                "participation", 0
+                        photo_url = f"https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/{pa_id}.jpg"
+                        datan_url = (
+                            f"https://datan.fr/deputes/depute_{depute_id}"
+                        )
+
+                        reseaux = existing_record.get("reseaux", {})
+                        if isinstance(datan_data.get("reseaux"), dict):
+                            for k, v in datan_data["reseaux"].items():
+                                reseaux[k] = {"url": v}
+
+                        old_stats = existing_record.get("stats") or {}
+
+                        depute_entry = {
+                            "id": depute_id,
+                            "pa_id": pa_id,
+                            "nom": full_name,
+                            "circo": existing_record.get(
+                                "circo", "Non renseignée"
                             ),
-                            "loyaute_groupe": datan_data["loyaute_groupe"]
-                            or existing_record.get("stats", {}).get(
-                                "loyaute_groupe", 0
+                            "groupe": groupe,
+                            "email": datan_data["email"]
+                            or existing_record.get("email", ""),
+                            "profession": datan_data["profession"]
+                            or existing_record.get(
+                                "profession", "Non renseignée"
                             ),
-                        },
-                        "photoUrl": photo_url,
-                        "datanUrl": datan_url,
-                        "scores": existing_record.get(
-                            "scores",
-                            {
-                                "FIS": 50,
-                                "ETA": 50,
-                                "REG": 50,
-                                "PRO": 50,
-                                "LIB": 50,
-                                "OUV": 50,
+                            "stats": {
+                                "participation": datan_data["participation"]
+                                if datan_data["participation"] is not None
+                                else old_stats.get("participation", 0),
+                                "loyaute_groupe": datan_data["loyaute_groupe"]
+                                if datan_data["loyaute_groupe"] is not None
+                                else old_stats.get("loyaute_groupe", 0),
                             },
-                        ),
-                        "reseaux": reseaux,
-                        "initiatives": existing_record.get("initiatives", []),
-                    }
+                            "photoUrl": photo_url,
+                            "datanUrl": datan_url,
+                            "scores": existing_record.get(
+                                "scores",
+                                {
+                                    "FIS": 50,
+                                    "ETA": 50,
+                                    "REG": 50,
+                                    "PRO": 50,
+                                    "LIB": 50,
+                                    "OUV": 50,
+                                },
+                            ),
+                            "reseaux": reseaux,
+                            "initiatives": existing_record.get(
+                                "initiatives", []
+                            ),
+                        }
 
-                    updated_list.append(depute_entry)
-
-                    if idx % 50 == 0:
-                        print(f"➜ {idx}/{len(json_files)} députés traités...")
+                        updated_list.append(depute_entry)
+                except Exception:
+                    continue
 
         with open("data.json", "w", encoding="utf-8") as f:
             json.dump(updated_list, f, ensure_ascii=False, indent=2)
 
         print(
-            f"✅ Succès ! {len(updated_list)} députés enrichis enregistrés dans data.json"
+            f"\n✅ Succès ! Seuls les {udr_count} députés UDR ont été enrichis sans erreur."
         )
 
     except Exception as e:
-        print(f"❌ Erreur : {e}")
+        print(f"❌ Erreur générale : {e}")
 
 
 if __name__ == "__main__":
