@@ -1,0 +1,6 @@
+# Requêtes HTTP et API Open Data
+requests>=2.31.0
+
+# Extraction / Scraping HTML (pour Datan.fr et réseaux sociaux)
+beautifulsoup4>=4.12.0
+lxml>=5.0.0
