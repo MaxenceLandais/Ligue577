@@ -1,0 +1,77 @@
+:root {
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --primary: #0f172a;
+    --primary-light: #334155;
+    --text-main: #1e293b;
+    --border: #e2e8f0;
+    
+    /* Couleurs des bandes */
+    --color-liberal: #166534;
+    --bg-liberal: #dcfce7;
+    --color-plutot: #22c55e;
+    --bg-plutot: #bbf7d0;
+    --color-modere: #ca8a04;
+    --bg-modere: #fef08a;
+    --color-peu: #ea580c;
+    --bg-peu: #ffedd5;
+    --color-dirigiste: #dc2626;
+    --bg-dirigiste: #fee2e2;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0; padding: 0; line-height: 1.6;
+}
+
+.container { max-width: 1000px; margin: 0 auto; padding: 0 1rem; }
+
+header { background-color: var(--primary); color: white; padding: 1.5rem 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+header h1 { margin: 0 0 0.2rem 0; font-size: 1.8rem; }
+header p { margin: 0; color: #cbd5e1; }
+.back-link { color: #cbd5e1; text-decoration: none; }
+.back-link:hover { color: white; text-decoration: underline; }
+
+.dashboard-header { margin: 2rem 0 1rem 0; display: flex; justify-content: space-between; align-items: baseline; }
+.text-muted { color: #64748b; font-size: 0.9rem; }
+
+/* Tables */
+.table-container { background: var(--card-bg); border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); overflow: hidden; margin-bottom: 2rem;}
+table { width: 100%; border-collapse: collapse; text-align: left; }
+th, td { padding: 1rem; border-bottom: 1px solid var(--border); }
+th { background-color: #f1f5f9; font-weight: 600; color: var(--primary-light); }
+tr:last-child td { border-bottom: none; }
+tr:hover { background-color: #f8fafc; }
+
+.btn { background-color: var(--primary); color: white; padding: 0.4rem 0.8rem; border-radius: 4px; text-decoration: none; font-size: 0.85rem; transition: background 0.2s;}
+.btn:hover { background-color: var(--primary-light); }
+
+/* Badges de Bandes */
+.badge { padding: 0.3rem 0.8rem; border-radius: 999px; font-size: 0.85rem; font-weight: bold; display: inline-block; text-align: center; }
+.bande-liberal { background-color: var(--bg-liberal); color: var(--color-liberal); }
+.bande-plutot { background-color: var(--bg-plutot); color: var(--color-plutot); }
+.bande-modere { background-color: var(--bg-modere); color: var(--color-modere); }
+.bande-peu { background-color: var(--bg-peu); color: var(--color-peu); }
+.bande-dirigiste { background-color: var(--bg-dirigiste); color: var(--color-dirigiste); }
+
+.methodology-card { background: white; padding: 1.5rem; border-radius: 8px; border: 1px dashed var(--border); margin-bottom: 3rem;}
+.legend-grid { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
+
+/* Profil */
+.profile-card { display: flex; justify-content: space-between; align-items: center; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); margin: 2rem 0; }
+.profile-header-info h2 { margin: 0; font-size: 2.2rem; color: var(--primary); }
+.subtitle { color: #64748b; font-size: 1.1rem; margin-top: 0.2rem; }
+
+.score-display { text-align: right; }
+.main-score { font-size: 3rem; font-weight: 800; line-height: 1; color: var(--primary); }
+.main-score small { font-size: 1.2rem; color: #94a3b8; }
+
+.grid-2-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+@media(max-width: 768px) { .grid-2-cols { grid-template-columns: 1fr; } }
+
+.card { background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 1.5rem;}
+.card h3 { margin-top: 0; color: var(--primary); border-bottom: 2px solid #f1f5f9; padding-bottom: 0.5rem; }
+
+.chart-container { position: relative; height: 350px; display: flex; justify-content: center; align-items: center; }
