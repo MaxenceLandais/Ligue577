@@ -118,17 +118,32 @@ def parse_an_acteur(acteur, existing_record, groupes_map):
     profession = re.sub(r"^\(\d+\)\s*-\s*", "", profession)
 
     groupe = existing_record.get("groupe", "NI")
+    dept_name = ""
+    num_dept = ""
+    num_circo = ""
+
     mandats = acteur.get("mandats", {}).get("mandat", [])
     if isinstance(mandats, dict):
         mandats = [mandats]
 
     for m in mandats:
-        if isinstance(m, dict) and m.get("typeOrgane") == "GP" and m.get("dateFin") is None:
+        if not isinstance(m, dict):
+            continue
+        type_organe = m.get("typeOrgane")
+        date_fin = m.get("dateFin")
+
+        if type_organe == "GP" and date_fin is None:
             organes = m.get("organes", {})
             ref = organes.get("organeRef", "") if isinstance(organes, dict) else ""
             if ref in groupes_map:
                 groupe = groupes_map[ref]
-                break
+
+        if type_organe == "ASSEMBLEE" and date_fin is None:
+            lieu = m.get("election", {}).get("lieu", {})
+            if isinstance(lieu, dict):
+                dept_name = lieu.get("departement", "") or ""
+                num_dept = str(lieu.get("numDepartement", "") or "")
+                num_circo = str(lieu.get("numCirco", "") or "")
 
     email = ""
     reseaux = {}
@@ -159,7 +174,7 @@ def parse_an_acteur(acteur, existing_record, groupes_map):
             elif "instagram.com" in val_lower:
                 reseaux["instagram"] = {"url": val_elec}
 
-    return profession, groupe, email, reseaux
+    return profession, groupe, email, reseaux, dept_name, num_dept, num_circo
 
 
 def fetch_and_update():
@@ -219,7 +234,7 @@ def fetch_and_update():
                         depute_id = slugify(full_name)
                         existing_record = existing_db.get(depute_id, {})
 
-                        prof_an, groupe_an, email_an, reseaux_an = parse_an_acteur(
+                        prof_an, groupe_an, email_an, reseaux_an, dept_name, num_dept, num_circo = parse_an_acteur(
                             acteur, existing_record, groupes_map
                         )
 
@@ -227,13 +242,28 @@ def fetch_and_update():
                         if is_udr:
                             groupe_an = "UDR"
 
+                        # Génération du lien Datan valide avec département et numéro
+                        if dept_name and num_dept:
+                            dept_slug = slugify(dept_name)
+                            datan_url = f"https://datan.fr/deputes/{dept_slug}-{num_dept}/depute_{depute_id}"
+                        else:
+                            datan_url = existing_record.get("datanUrl") or f"https://datan.fr/deputes/depute_{depute_id}"
+
+                        # Mise à jour de la circo si absente
+                        circo_val = existing_record.get("circo")
+                        if not circo_val or circo_val == "Non renseignée":
+                            if dept_name and num_circo:
+                                circo_val = f"{dept_name} ({num_circo}e)"
+                            else:
+                                circo_val = dept_name or "Non renseignée"
+
+                        # Biographie Wikipédia
                         biographie = existing_record.get("biographie", "")
                         if is_udr and len(biographie) < 100:
-                            print(f"   ➔ Récupération bio Wikipédia complète : {full_name}")
+                            print(f"   ➔ Récupération bio Wikipédia : {full_name}")
                             biographie = get_wikipedia_bio(full_name)
 
                         photo_url = f"https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/{pa_id}.jpg"
-                        datan_url = existing_record.get("datanUrl") or f"https://datan.fr/deputes/depute_{depute_id}"
 
                         reseaux = existing_record.get("reseaux", {})
                         if not isinstance(reseaux, dict):
@@ -247,7 +277,7 @@ def fetch_and_update():
                             "id": depute_id,
                             "pa_id": pa_id,
                             "nom": full_name,
-                            "circo": existing_record.get("circo", "Non renseignée"),
+                            "circo": circo_val,
                             "groupe": groupe_an,
                             "email": email_an or existing_record.get("email", ""),
                             "profession": prof_an if prof_an != "Non renseignée" else existing_record.get("profession", "Non renseignée"),
