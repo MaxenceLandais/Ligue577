@@ -5,75 +5,168 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fiche Député - Observatoire du Libéralisme</title>
     <link rel="stylesheet" href="assets/style.css">
+    <style>
+        .depute-header {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #edf2f7;
+        }
+        .score-hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .score-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1e293b;
+        }
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .pillar-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .pillar-title {
+            font-weight: bold;
+            font-size: 0.95rem;
+            color: #475569;
+            margin-bottom: 8px;
+        }
+        .pillar-score {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #0f172a;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="container">
             <h1>🏛️ Observatoire du Libéralisme</h1>
-            <a href="index.html" style="color: white; text-decoration: underline;">← Retour au classement général</a>
+            <a href="index.html" style="color: white; text-decoration: underline; font-weight: 500;">← Retour au classement général</a>
         </div>
     </header>
 
     <main class="container" style="margin-top: 30px;">
         <div id="deputeCard" class="methodology-card">
-            <p style="text-align: center;">Chargement des données du député...</p>
+            <p style="text-align: center; color: #64748b;">Chargement de la fiche du député...</p>
         </div>
     </main>
 
     <script>
         function getBande(score) {
-            if (score >= 80) return "Libéral";
-            if (score >= 70) return "Plutôt libéral";
-            if (score >= 60) return "Modérément libéral";
-            if (score >= 50) return "Peu libéral";
-            return "Dirigiste";
+            if (score >= 80) return { label: "Libéral", class: "bande-liberal" };
+            if (score >= 70) return { label: "Plutôt libéral", class: "bande-plutot" };
+            if (score >= 60) return { label: "Modérément libéral", class: "bande-modere" };
+            if (score >= 50) return { label: "Peu libéral", class: "bande-peu" };
+            return { label: "Dirigiste", class: "bande-dirigiste" };
         }
 
         const params = new URLSearchParams(window.location.search);
         const idDepute = params.get('id');
-
         const cardContainer = document.getElementById('deputeCard');
 
         if (!idDepute) {
-            cardContainer.innerHTML = '<p style="color: red;">Aucun député spécifié dans l\'URL.</p>';
+            cardContainer.innerHTML = '<p style="color: #ef4444; font-weight: bold;">Aucun identifiant de député n\'a été fourni dans l\'URL.</p>';
         } else {
-            fetch('data.json')
+            // Anti-cache param (t=...) pour s'assurer d'obtenir toujours le data.json le plus récent
+            fetch('data.json?t=' + new Date().getTime())
                 .then(response => {
-                    if (!response.ok) throw new Error("Impossible de charger data.json");
+                    if (!response.ok) {
+                        throw new Error(`Erreur HTTP ${response.status} : impossible d'accéder à data.json`);
+                    }
                     return response.json();
                 })
                 .then(deputes => {
                     const depute = deputes.find(d => d.id === idDepute);
 
                     if (!depute) {
-                        cardContainer.innerHTML = '<p style="color: red;">Député introuvable.</p>';
+                        cardContainer.innerHTML = `<p style="color: #ef4444; font-weight: bold;">Député introuvable pour l'identifiant : "${idDepute}".</p>`;
                         return;
                     }
 
-                    const piliers = Object.values(depute.scores);
-                    const scoreGlobal = Math.round(piliers.reduce((acc, v) => acc + v, 0) / piliers.length);
+                    const scoresObj = depute.scores || {};
+                    const piliersValues = Object.values(scoresObj);
+                    const scoreGlobal = piliersValues.length > 0
+                        ? Math.round(piliersValues.reduce((acc, v) => acc + v, 0) / piliersValues.length)
+                        : 0;
+
                     const bande = getBande(scoreGlobal);
 
                     cardContainer.innerHTML = `
-                        <h2>${depute.nom}</h2>
-                        <p class="text-muted"><strong>Circonscription :</strong> ${depute.circo}</p>
-                        <hr style="margin: 15px 0;">
-                        <p><strong>Score global :</strong> ${scoreGlobal} / 100 — <em>${bande}</em></p>
-                        <p style="margin-top: 15px;"><strong>Biographie & orientation :</strong></p>
-                        <p>${depute.bio}</p>
-                        <h3 style="margin-top: 25px;">Détail par pilier (sur 100) :</h3>
-                        <ul style="line-height: 1.8;">
-                            <li><strong>Fiscalité (FIS) :</strong> ${depute.scores.FIS}</li>
-                            <li><strong>Périmètre de l'État (ÉTA) :</strong> ${depute.scores.ETA}</li>
-                            <li><strong>Régulation (RÉG) :</strong> ${depute.scores.REG}</li>
-                            <li><strong>Propriété (PRO) :</strong> ${depute.scores.PRO}</li>
-                            <li><strong>Libertés (LIB) :</strong> ${depute.scores.LIB}</li>
-                            <li><strong>Ouverture (OUV) :</strong> ${depute.scores.OUV}</li>
-                        </ul>
+                        <div class="depute-header">
+                            <h2 style="margin: 0 0 5px 0;">${depute.nom}</h2>
+                            <p class="text-muted" style="margin: 0;"><strong>Circonscription :</strong> ${depute.circo}</p>
+                        </div>
+
+                        <div class="score-hero">
+                            <div>
+                                <span style="font-size: 0.9rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600;">Score Global</span>
+                                <div class="score-number">${scoreGlobal} <span style="font-size: 1.2rem; color: #94a3b8;">/ 100</span></div>
+                            </div>
+                            <div>
+                                <span class="badge ${bande.class}" style="font-size: 1.1rem; padding: 8px 16px;">${bande.label}</span>
+                            </div>
+                        </div>
+
+                        <div style="margin: 25px 0;">
+                            <h3 style="margin-bottom: 10px;">Biographie & Orientation</h3>
+                            <p style="line-height: 1.6; color: #334155;">${depute.bio || "Aucune biographie disponible."}</p>
+                        </div>
+
+                        <hr style="margin: 25px 0; border: 0; border-top: 1px solid #e2e8f0;">
+
+                        <h3>Détail par pilier de liberté économique</h3>
+                        <div class="pillars-grid">
+                            <div class="pillar-card">
+                                <div class="pillar-title">FIS — Fiscalité</div>
+                                <div class="pillar-score">${scoresObj.FIS ?? '-'} <span style="font-size: 0.9rem; color: #94a3b8;">/ 100</span></div>
+                            </div>
+                            <div class="pillar-card">
+                                <div class="pillar-title">ÉTA — Périmètre de l'État</div>
+                                <div class="pillar-score">${scoresObj.ETA ?? '-'} <span style="font-size: 0.9rem; color: #94a3b8;">/ 100</span></div>
+                            </div>
+                            <div class="pillar-card">
+                                <div class="pillar-title">RÉG — Régulation</div>
+                                <div class="pillar-score">${scoresObj.REG ?? '-'} <span style="font-size: 0.9rem; color: #94a3b8;">/ 100</span></div>
+                            </div>
+                            <div class="pillar-card">
+                                <div class="pillar-title">PRO — Propriété</div>
+                                <div class="pillar-score">${scoresObj.PRO ?? '-'} <span style="font-size: 0.9rem; color: #94a3b8;">/ 100</span></div>
+                            </div>
+                            <div class="pillar-card">
+                                <div class="pillar-title">LIB — Libertés individuelles</div>
+                                <div class="pillar-score">${scoresObj.LIB ?? '-'} <span style="font-size: 0.9rem; color: #94a3b8;">/ 100</span></div>
+                            </div>
+                            <div class="pillar-card">
+                                <div class="pillar-title">OUV — Ouverture des marchés</div>
+                                <div class="pillar-score">${scoresObj.OUV ?? '-'} <span style="font-size: 0.9rem; color: #94a3b8;">/ 100</span></div>
+                            </div>
+                        </div>
                     `;
                 })
                 .catch(error => {
-                    cardContainer.innerHTML = `<p style="color: red;">Erreur de chargement : ${error.message}</p>`;
+                    cardContainer.innerHTML = `
+                        <div style="padding: 15px; background: #fef2f2; border: 1px solid #fecaca; border-radius: 6px;">
+                            <h3 style="color: #991b1b; margin-top: 0;">Erreur lors du chargement des données</h3>
+                            <p style="color: #b91c1c; font-family: monospace;">${error.message}</p>
+                            <p style="font-size: 0.9rem; color: #7f1d1d; margin-bottom: 0;">
+                                Vérifiez que le fichier <code>data.json</code> est bien publié à la racine du dépôt GitHub et retentez après déploiement.
+                            </p>
+                        </div>
+                    `;
                 });
         }
     </script>
