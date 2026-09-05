@@ -298,17 +298,17 @@
     "datanUrl": "https://datan.fr/deputes/marne-51/depute_maxime-michelet",
     "scores": {
       "FIS": 70,
-      "ETA": 80,
-      "REG": 60,
-      "PRO": 50,
-      "LIB": 55,
-      "OUV": 40
+      "ETA": 65,
+      "REG": 68,
+      "PRO": 60,
+      "LIB": 62,
+      "OUV": 58
     },
     "reseaux": {},
     "initiatives": [],
-    "score_global": 59,
+    "score_global": 64,
     "qualification": "Modérément libéral",
-    "synthese_analyse": "Le député affiche une orientation libérale marquée sur la réduction des impôts et de la dépense publique, s'opposant systématiquement aux augmentations fiscales et aux budgets de sécurité sociale, et soutenant la réforme des retraites. Sur la déréglementation, il penche favorablement, notamment en voulant supprimer les ZFE. Cependant, son positionnement est plus nuancé sur la protection du capital, ayant voté contre une taxe sur le patrimoine mais pour une imposition accrue des dividendes exceptionnels. Il se montre moins ouvert aux marchés, exprimant un certain protectionnisme agricole et de la réticence à l'élargissement de l'UE. La liberté du travail est légèrement privilégiée. Globalement, une tendance libérale prédomine sur les piliers fiscaux et de l'État, mais elle est modérée par des positions plus interventionnistes sur le capital et protectionnistes sur l'ouverture des marchés.",
+    "synthese_analyse": "Le député présente un profil économique modérément libéral. Il affiche une forte orientation en faveur de la santé fiscale et de la réduction des impôts, s'opposant à de nombreuses reprises aux hausses de fiscalité et aux projets de financement de la sécurité sociale. Sa volonté de réduire la taille de l'État et les dépenses publiques est également marquée par son soutien aux réformes visant à maîtriser les déficits. En matière de dérégulation, il se positionne clairement contre des réglementations comme les zones à faibles émissions (ZFE) et en faveur de simplifications pour le secteur agricole, bien qu'il ait aussi soutenu l'instauration de nouvelles régulations restrictives. Concernant le droit de propriété, sa défense contre l'impôt sur la fortune est notable, mais tempérée par un vote en faveur de l'imposition des dividendes élevés. Les votes sur la liberté du travail sont moins fréquents, mais il semble pencher légèrement pour la flexibilité. Enfin, sur l'ouverture des marchés, sa position est nuancée, avec un soutien à la 'souveraineté agricole' qui peut impliquer des mesures protectionnistes, atténuant une orientation globalement favorable à la concurrence.",
     "votes": [
       {
         "titre": "Loi urgence agricole : réautorisation de l'acétamipride",
@@ -1772,15 +1772,111 @@
     "avatar": "https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/PA841973.jpg",
     "datanUrl": "https://datan.fr/deputes/tarn-et-garonne-82/depute_pierrehenri-carbonnel",
     "scores": {
-      "FIS": 50,
-      "ETA": 50,
-      "REG": 50,
-      "PRO": 50,
-      "LIB": 50,
-      "OUV": 50
+      "FIS": 85,
+      "ETA": 80,
+      "REG": 45,
+      "PRO": 65,
+      "LIB": 60,
+      "OUV": 45
     },
     "reseaux": {},
-    "initiatives": []
+    "initiatives": [],
+    "score_global": 63,
+    "qualification": "Modérément libéral",
+    "synthese_analyse": "Le député manifeste une forte orientation libérale en matière de santé fiscale et de taille de l'État, votant systématiquement contre les projets de loi de financement des recettes et des dépenses, et soutenant la réforme des retraites pour la viabilité des finances publiques. Son positionnement est également positif concernant la protection de la propriété et la liberté du travail. Cependant, une tendance moins libérale est observée sur le fardeau réglementaire et l'ouverture des marchés, notamment par son soutien au maintien des Zones à Faibles Émissions obligatoires, ce qui nuance son profil libéral général.",
+    "votes": [
+      {
+        "titre": "Loi urgence agricole : réautorisation de l'acétamipride",
+        "position": "POUR",
+        "date": "20 juill. 2026",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n20 juill. 2026\nLoi urgence agricole : réautorisation de l'acétamipride\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "15 juill. 2026",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n15 juill. 2026\nProposition de loi créant un droit à l'aide à mourir\nLecture définitive"
+      },
+      {
+        "titre": "Proposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre",
+        "position": "POUR",
+        "date": "07 juill. 2026",
+        "description": "",
+        "texte_brut": "POUR\n07 juill. 2026\nProposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre"
+      },
+      {
+        "titre": "Maintenir l'existence des ZFE mais les rendre facultatives",
+        "position": "CONTRE",
+        "date": "14 avr. 2026",
+        "description": "",
+        "texte_brut": "CONTRE\n14 avr. 2026\nMaintenir l'existence des ZFE mais les rendre facultatives"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "16 déc. 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n16 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nLecture définitive"
+      },
+      {
+        "titre": "Partie dépenses du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026",
+        "position": "CONTRE",
+        "date": "09 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n09 déc. 2025\nPartie dépenses du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "09 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n09 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Partie recettes du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026",
+        "position": "CONTRE",
+        "date": "05 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n05 déc. 2025\nPartie recettes du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Partie recettes du projet de loi de finances (PLF) pour 2026",
+        "position": "CONTRE",
+        "date": "21 nov. 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n21 nov. 2025\nPartie recettes du projet de loi de finances (PLF) pour 2026\nPremière lecture"
+      },
+      {
+        "titre": "Suspension de la réforme des retraites jusqu'au 1er janvier 2028",
+        "position": "CONTRE",
+        "date": "12 nov. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n12 nov. 2025\nSuspension de la réforme des retraites jusqu'au 1er janvier 2028"
+      },
+      {
+        "titre": "Partie recettes du projet de loi de financement de la Sécurité sociale (PLFSS) pour 2026",
+        "position": "CONTRE",
+        "date": "08 nov. 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n08 nov. 2025\nPartie recettes du projet de loi de financement de la Sécurité sociale (PLFSS) pour 2026\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de résolution visant à dénoncer les accords franco-algériens de 1968",
+        "position": "POUR",
+        "date": "30 oct. 2025",
+        "description": "",
+        "texte_brut": "POUR\n30 oct. 2025\nProposition de résolution visant à dénoncer les accords franco-algériens de 1968"
+      },
+      {
+        "titre": "Motion de censure de LFI contre le gouvernement Lecornu",
+        "position": "POUR",
+        "date": "16 oct. 2025",
+        "description": "",
+        "texte_brut": "POUR\n16 oct. 2025\nMotion de censure de LFI contre le gouvernement Lecornu"
+      }
+    ]
   },
   {
     "id": "maxime-amblard",
@@ -5179,15 +5275,216 @@
     "avatar": "https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/PA840983.jpg",
     "datanUrl": "https://datan.fr/deputes/creuse-23/depute_bartolome-lenoir",
     "scores": {
-      "FIS": 75,
-      "ETA": 60,
-      "REG": 70,
-      "PRO": 75,
-      "LIB": 30,
-      "OUV": 25
+      "FIS": 80,
+      "ETA": 75,
+      "REG": 68,
+      "PRO": 55,
+      "LIB": 52,
+      "OUV": 50
     },
     "reseaux": {},
-    "initiatives": []
+    "initiatives": [],
+    "score_global": 63,
+    "qualification": "Modérément libéral",
+    "synthese_analyse": "Le député affiche une orientation modérément libérale, principalement ancrée dans un ferme engagement pour la prudence fiscale et la réduction de la taille de l'État. Ses votes systématiques contre les projets de loi de finances et de financement de la sécurité sociale, tant sur les recettes que sur les dépenses, témoignent d'une volonté claire de maîtriser la dépense publique et d'alléger la pression fiscale. En matière réglementaire, le député soutient activement la déréglementation et la simplification administrative, comme en attestent ses positions pour la suppression des ZFE et la facilitation de l'ouverture de commerces. Cependant, cette tendance est nuancée par un soutien à de nouvelles régulations, notamment l'interdiction du démarchage téléphonique, et une approche potentiellement protectionniste pour l'agriculture, indiquant une position plus pragmatique sur l'ouverture des marchés. Ses votes sur la propriété et la liberté du travail sont plus discrets, mais tendent à favoriser la stabilité et la durabilité.",
+    "votes": [
+      {
+        "titre": "Loi urgence agricole : réautorisation de l'acétamipride",
+        "position": "POUR",
+        "date": "20 juill. 2026",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n20 juill. 2026\nLoi urgence agricole : réautorisation de l'acétamipride\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "15 juill. 2026",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n15 juill. 2026\nProposition de loi créant un droit à l'aide à mourir\nLecture définitive"
+      },
+      {
+        "titre": "Proposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre",
+        "position": "POUR",
+        "date": "07 juill. 2026",
+        "description": "",
+        "texte_brut": "POUR\n07 juill. 2026\nProposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre"
+      },
+      {
+        "titre": "Maintenir l'existence des ZFE mais les rendre facultatives",
+        "position": "CONTRE",
+        "date": "14 avr. 2026",
+        "description": "",
+        "texte_brut": "CONTRE\n14 avr. 2026\nMaintenir l'existence des ZFE mais les rendre facultatives"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "16 déc. 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n16 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nLecture définitive"
+      },
+      {
+        "titre": "Partie dépenses du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026",
+        "position": "CONTRE",
+        "date": "09 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n09 déc. 2025\nPartie dépenses du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "09 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n09 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Partie recettes du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026",
+        "position": "CONTRE",
+        "date": "05 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n05 déc. 2025\nPartie recettes du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Partie recettes du projet de loi de finances (PLF) pour 2026",
+        "position": "CONTRE",
+        "date": "21 nov. 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n21 nov. 2025\nPartie recettes du projet de loi de finances (PLF) pour 2026\nPremière lecture"
+      },
+      {
+        "titre": "Suspension de la réforme des retraites jusqu'au 1er janvier 2028",
+        "position": "CONTRE",
+        "date": "12 nov. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n12 nov. 2025\nSuspension de la réforme des retraites jusqu'au 1er janvier 2028"
+      },
+      {
+        "titre": "Partie recettes du projet de loi de financement de la Sécurité sociale (PLFSS) pour 2026",
+        "position": "CONTRE",
+        "date": "08 nov. 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n08 nov. 2025\nPartie recettes du projet de loi de financement de la Sécurité sociale (PLFSS) pour 2026\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de résolution visant à dénoncer les accords franco-algériens de 1968",
+        "position": "POUR",
+        "date": "30 oct. 2025",
+        "description": "",
+        "texte_brut": "POUR\n30 oct. 2025\nProposition de résolution visant à dénoncer les accords franco-algériens de 1968"
+      },
+      {
+        "titre": "Motion de censure de LFI contre le gouvernement Lecornu",
+        "position": "POUR",
+        "date": "16 oct. 2025",
+        "description": "",
+        "texte_brut": "POUR\n16 oct. 2025\nMotion de censure de LFI contre le gouvernement Lecornu"
+      },
+      {
+        "titre": "Vote de confiance au Premier ministre François Bayrou",
+        "position": "CONTRE",
+        "date": "08 sept. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n08 sept. 2025\nVote de confiance au Premier ministre François Bayrou"
+      },
+      {
+        "titre": "Loi Duplomb sur l’agriculture",
+        "position": "POUR",
+        "date": "08 juill. 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n08 juill. 2025\nLoi Duplomb sur l’agriculture\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Supprimer les zones à faibles émissions (ZFE)",
+        "position": "POUR",
+        "date": "28 mai 2025",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n28 mai 2025\nSupprimer les zones à faibles émissions (ZFE)\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "27 mai 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n27 mai 2025\nProposition de loi créant un droit à l'aide à mourir\nPremière lecture"
+      },
+      {
+        "titre": "Fin de vie : création des cinq critères pour accéder à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "20 mai 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n20 mai 2025\nFin de vie : création des cinq critères pour accéder à l'aide à mourir"
+      },
+      {
+        "titre": "Proposition de loi harmonisant le scrutin de liste paritaire aux élections municipales",
+        "position": "CONTRE",
+        "date": "07 avr. 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n07 avr. 2025\nProposition de loi harmonisant le scrutin de liste paritaire aux élections municipales\nLecture définitive"
+      },
+      {
+        "titre": "Proposition de loi sur la sécurité dans les transports",
+        "position": "POUR",
+        "date": "18 mars 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n18 mars 2025\nProposition de loi sur la sécurité dans les transports\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi simplifiant l'ouverture des débits de boisson en zone rurale",
+        "position": "POUR",
+        "date": "10 mars 2025",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n10 mars 2025\nProposition de loi simplifiant l'ouverture des débits de boisson en zone rurale\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de loi interdisant le démarchage téléphonique",
+        "position": "POUR",
+        "date": "06 mars 2025",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n06 mars 2025\nProposition de loi interdisant le démarchage téléphonique\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de loi visant à protéger la population des risques liés aux PFAS",
+        "position": "ABSTENTION",
+        "date": "20 févr. 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "ABSTENTION\n20 févr. 2025\nProposition de loi visant à protéger la population des risques liés aux PFAS\nLecture définitive"
+      },
+      {
+        "titre": "Projet de loi souveraineté en matière agricole",
+        "position": "POUR",
+        "date": "19 févr. 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n19 févr. 2025\nProjet de loi souveraineté en matière agricole\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Supprimer le droit du sol à Mayotte",
+        "position": "POUR",
+        "date": "06 févr. 2025",
+        "description": "",
+        "texte_brut": "POUR\n06 févr. 2025\nSupprimer le droit du sol à Mayotte"
+      },
+      {
+        "titre": "Projet de loi d'urgence pour Mayotte",
+        "position": "POUR",
+        "date": "22 janv. 2025",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n22 janv. 2025\nProjet de loi d'urgence pour Mayotte\nPremière lecture"
+      },
+      {
+        "titre": "Supprimer l'obligation de listes paritaires pour les élections des instances de protection sociale agricole",
+        "position": "ABSTENTION",
+        "date": "22 janv. 2025",
+        "description": "",
+        "texte_brut": "ABSTENTION\n22 janv. 2025\nSupprimer l'obligation de listes paritaires pour les élections des instances de protection sociale agricole"
+      },
+      {
+        "titre": "Motion de censure du gouvernement de Michel Barnier",
+        "position": "POUR",
+        "date": "04 déc. 2024",
+        "description": "",
+        "texte_brut": "POUR\n04 déc. 2024\nMotion de censure du gouvernement de Michel Barnier"
+      }
+    ]
   },
   {
     "id": "roger-chudeau",
@@ -5460,14 +5757,488 @@
     "datanUrl": "https://datan.fr/deputes/alpes-maritimes-06/depute_eric-ciotti",
     "scores": {
       "FIS": 80,
-      "ETA": 65,
-      "REG": 70,
-      "PRO": 85,
-      "LIB": 25,
-      "OUV": 25
+      "ETA": 75,
+      "REG": 65,
+      "PRO": 60,
+      "LIB": 80,
+      "OUV": 45
     },
     "reseaux": {},
-    "initiatives": []
+    "initiatives": [],
+    "score_global": 68,
+    "qualification": "Modérément libéral",
+    "synthese_analyse": "Le député affiche une orientation très libérale sur la santé fiscale et la taille de l'État, votant systématiquement contre les projets de loi de finances et de financement de la sécurité sociale, et s'opposant aux dépenses publiques comme les repas étudiants à 1 euro. Sa position sur la liberté du travail est également très affirmée, en faveur de la flexibilité (modulation de l'assurance chômage, soutien à la réforme des retraites) et contre les restrictions étatiques (mesures de confinement). En matière de fardeau réglementaire, il privilégie la dérégulation (réautorisation de produits, accélération du nucléaire, opposition à la prorogation de l'état d'urgence) bien qu'il soutienne certaines régulations spécifiques (numérique, sols). La protection de la propriété privée est bien défendue. Cependant, son approche de l'ouverture des marchés est plus réservée, avec un soutien aux notions de \"souveraineté agricole\" et de régulations numériques qui peuvent freiner le libre-échange et la concurrence.",
+    "votes": [
+      {
+        "titre": "Loi urgence agricole : réautorisation de l'acétamipride",
+        "position": "POUR",
+        "date": "20 juill. 2026",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n20 juill. 2026\nLoi urgence agricole : réautorisation de l'acétamipride\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "15 juill. 2026",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n15 juill. 2026\nProposition de loi créant un droit à l'aide à mourir\nLecture définitive"
+      },
+      {
+        "titre": "Proposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre",
+        "position": "POUR",
+        "date": "07 juill. 2026",
+        "description": "",
+        "texte_brut": "POUR\n07 juill. 2026\nProposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "16 déc. 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n16 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nLecture définitive"
+      },
+      {
+        "titre": "Partie dépenses du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026",
+        "position": "CONTRE",
+        "date": "09 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n09 déc. 2025\nPartie dépenses du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "09 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n09 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Partie recettes du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026",
+        "position": "CONTRE",
+        "date": "05 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n05 déc. 2025\nPartie recettes du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Partie recettes du projet de loi de finances (PLF) pour 2026",
+        "position": "CONTRE",
+        "date": "21 nov. 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n21 nov. 2025\nPartie recettes du projet de loi de finances (PLF) pour 2026\nPremière lecture"
+      },
+      {
+        "titre": "Suspension de la réforme des retraites jusqu'au 1er janvier 2028",
+        "position": "CONTRE",
+        "date": "12 nov. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n12 nov. 2025\nSuspension de la réforme des retraites jusqu'au 1er janvier 2028"
+      },
+      {
+        "titre": "Proposition de résolution visant à dénoncer les accords franco-algériens de 1968",
+        "position": "POUR",
+        "date": "30 oct. 2025",
+        "description": "",
+        "texte_brut": "POUR\n30 oct. 2025\nProposition de résolution visant à dénoncer les accords franco-algériens de 1968"
+      },
+      {
+        "titre": "Motion de censure de LFI contre le gouvernement Lecornu",
+        "position": "POUR",
+        "date": "16 oct. 2025",
+        "description": "",
+        "texte_brut": "POUR\n16 oct. 2025\nMotion de censure de LFI contre le gouvernement Lecornu"
+      },
+      {
+        "titre": "Vote de confiance au Premier ministre François Bayrou",
+        "position": "CONTRE",
+        "date": "08 sept. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n08 sept. 2025\nVote de confiance au Premier ministre François Bayrou"
+      },
+      {
+        "titre": "Loi Duplomb sur l’agriculture",
+        "position": "POUR",
+        "date": "08 juill. 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n08 juill. 2025\nLoi Duplomb sur l’agriculture\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "27 mai 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n27 mai 2025\nProposition de loi créant un droit à l'aide à mourir\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de loi harmonisant le scrutin de liste paritaire aux élections municipales",
+        "position": "CONTRE",
+        "date": "07 avr. 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n07 avr. 2025\nProposition de loi harmonisant le scrutin de liste paritaire aux élections municipales\nLecture définitive"
+      },
+      {
+        "titre": "Proposition de loi visant à faire exécuter les peines d'emprisonnement ferme",
+        "position": "POUR",
+        "date": "03 avr. 2025",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n03 avr. 2025\nProposition de loi visant à faire exécuter les peines d'emprisonnement ferme\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de loi sur la sécurité dans les transports",
+        "position": "POUR",
+        "date": "18 mars 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n18 mars 2025\nProposition de loi sur la sécurité dans les transports\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de résolution européenne appelant au renforcement du soutien à l'Ukraine",
+        "position": "ABSTENTION",
+        "date": "12 mars 2025",
+        "description": "Première lecture",
+        "texte_brut": "ABSTENTION\n12 mars 2025\nProposition de résolution européenne appelant au renforcement du soutien à l'Ukraine\nPremière lecture"
+      },
+      {
+        "titre": "Projet de loi souveraineté en matière agricole",
+        "position": "POUR",
+        "date": "19 févr. 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n19 févr. 2025\nProjet de loi souveraineté en matière agricole\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Projet de loi d'urgence pour Mayotte",
+        "position": "POUR",
+        "date": "22 janv. 2025",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n22 janv. 2025\nProjet de loi d'urgence pour Mayotte\nPremière lecture"
+      },
+      {
+        "titre": "Motion de censure du gouvernement de Michel Barnier",
+        "position": "POUR",
+        "date": "04 déc. 2024",
+        "description": "",
+        "texte_brut": "POUR\n04 déc. 2024\nMotion de censure du gouvernement de Michel Barnier"
+      },
+      {
+        "titre": "Projet de loi constitutionnelle modifiant le corps électoral en Nouvelle-Calédonie",
+        "position": "POUR",
+        "date": "14 mai 2024",
+        "description": "",
+        "texte_brut": "POUR\n14 mai 2024\nProjet de loi constitutionnelle modifiant le corps électoral en Nouvelle-Calédonie"
+      },
+      {
+        "titre": "Projet de loi relatif à la gouvernance de la sûreté nucléaire",
+        "position": "POUR",
+        "date": "19 mars 2024",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n19 mars 2024\nProjet de loi relatif à la gouvernance de la sûreté nucléaire\nPremière lecture"
+      },
+      {
+        "titre": "Déclaration du gouvernement sur la stratégie d'aide à l'Ukraine",
+        "position": "POUR",
+        "date": "12 mars 2024",
+        "description": "",
+        "texte_brut": "POUR\n12 mars 2024\nDéclaration du gouvernement sur la stratégie d'aide à l'Ukraine"
+      },
+      {
+        "titre": "Projet de loi constitutionnelle inscrivant l'interruption volontaire de grossesse dans la Constitution (IVG)",
+        "position": "POUR",
+        "date": "04 mars 2024",
+        "description": "Vote du Congrès",
+        "texte_brut": "POUR\n04 mars 2024\nProjet de loi constitutionnelle inscrivant l'interruption volontaire de grossesse dans la Constitution (IVG)\nVote du Congrès"
+      },
+      {
+        "titre": "Projet de loi visant à inscrire le droit à l'IVG dans la Constitution",
+        "position": "POUR",
+        "date": "30 janv. 2024",
+        "description": "",
+        "texte_brut": "POUR\n30 janv. 2024\nProjet de loi visant à inscrire le droit à l'IVG dans la Constitution"
+      },
+      {
+        "titre": "Projet de loi immigration",
+        "position": "POUR",
+        "date": "19 déc. 2023",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n19 déc. 2023\nProjet de loi immigration\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Motion de rejet du projet de loi immigration",
+        "position": "POUR",
+        "date": "11 déc. 2023",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n11 déc. 2023\nMotion de rejet du projet de loi immigration\nPremière lecture"
+      },
+      {
+        "titre": "Créer une commission d'enquête sur le modèle économique et la qualité d'accueil des crèches",
+        "position": "CONTRE",
+        "date": "28 nov. 2023",
+        "description": "",
+        "texte_brut": "CONTRE\n28 nov. 2023\nCréer une commission d'enquête sur le modèle économique et la qualité d'accueil des crèches"
+      },
+      {
+        "titre": "Projet de loi pour le plein emploi",
+        "position": "POUR",
+        "date": "14 nov. 2023",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n14 nov. 2023\nProjet de loi pour le plein emploi\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Projet de loi visant à sécuriser et réguler l'espace numérique",
+        "position": "POUR",
+        "date": "17 oct. 2023",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n17 oct. 2023\nProjet de loi visant à sécuriser et réguler l'espace numérique\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de loi facilitant la mise en œuvre de la lutte contre l’artificialisation des sols",
+        "position": "POUR",
+        "date": "27 juin 2023",
+        "description": "",
+        "texte_brut": "POUR\n27 juin 2023\nProposition de loi facilitant la mise en œuvre de la lutte contre l’artificialisation des sols"
+      },
+      {
+        "titre": "Loi de programmation militaire 2024-2030",
+        "position": "POUR",
+        "date": "07 juin 2023",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n07 juin 2023\nLoi de programmation militaire 2024-2030\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de loi visant à protéger les logements contre l'occupation illicite",
+        "position": "POUR",
+        "date": "04 avr. 2023",
+        "description": "Deuxième lecture",
+        "texte_brut": "POUR\n04 avr. 2023\nProposition de loi visant à protéger les logements contre l'occupation illicite\nDeuxième lecture"
+      },
+      {
+        "titre": "Projet de loi relatif aux Jeux olympiques de Paris 2024",
+        "position": "POUR",
+        "date": "28 mars 2023",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n28 mars 2023\nProjet de loi relatif aux Jeux olympiques de Paris 2024\nPremière lecture"
+      },
+      {
+        "titre": "Projet de loi d’accélération de l'énergie nucléaire",
+        "position": "POUR",
+        "date": "21 mars 2023",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n21 mars 2023\nProjet de loi d’accélération de l'énergie nucléaire\nPremière lecture"
+      },
+      {
+        "titre": "Assurer un repas à 1 euros pour tous les étudiants",
+        "position": "CONTRE",
+        "date": "09 févr. 2023",
+        "description": "",
+        "texte_brut": "CONTRE\n09 févr. 2023\nAssurer un repas à 1 euros pour tous les étudiants"
+      },
+      {
+        "titre": "Inviter le Gouvernement à suspendre l'exploitation minière des fonds marins",
+        "position": "ABSTENTION",
+        "date": "17 janv. 2023",
+        "description": "",
+        "texte_brut": "ABSTENTION\n17 janv. 2023\nInviter le Gouvernement à suspendre l'exploitation minière des fonds marins"
+      },
+      {
+        "titre": "Projet de loi accélérant la production d’énergies renouvelables",
+        "position": "CONTRE",
+        "date": "10 janv. 2023",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n10 janv. 2023\nProjet de loi accélérant la production d’énergies renouvelables\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de résolution soutenant l'Ukraine et condamnant la guerre menée par la Russie",
+        "position": "POUR",
+        "date": "30 nov. 2022",
+        "description": "",
+        "texte_brut": "POUR\n30 nov. 2022\nProposition de résolution soutenant l'Ukraine et condamnant la guerre menée par la Russie"
+      },
+      {
+        "titre": "Projet de loi d'orientation et de programmation du ministère de l'Intérieur (LOPMI)",
+        "position": "POUR",
+        "date": "22 nov. 2022",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n22 nov. 2022\nProjet de loi d'orientation et de programmation du ministère de l'Intérieur (LOPMI)\nPremière lecture"
+      },
+      {
+        "titre": "Première lecture",
+        "position": "CONTRE",
+        "date": "25 oct. 2022",
+        "description": "",
+        "texte_brut": "CONTRE\n25 oct. 2022\nProjet de loi de programmation des finances publiques (2023 à 2027)\nPremière lecture"
+      },
+      {
+        "titre": "Moduler l'assurance chômage en fonction de la conjoncture économique",
+        "position": "POUR",
+        "date": "04 oct. 2022",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n04 oct. 2022\nModuler l'assurance chômage en fonction de la conjoncture économique\nPremière lecture"
+      },
+      {
+        "titre": "Ratifier l'accord sur l'adhésion à l'OTAN de la Suède et de la Finlande",
+        "position": "POUR",
+        "date": "02 août 2022",
+        "description": "",
+        "texte_brut": "POUR\n02 août 2022\nRatifier l'accord sur l'adhésion à l'OTAN de la Suède et de la Finlande"
+      },
+      {
+        "titre": "Projet de loi de finances rectificative pour 2022 : paquet sur le pouvoir d'achat",
+        "position": "POUR",
+        "date": "26 juill. 2022",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n26 juill. 2022\nProjet de loi de finances rectificative pour 2022 : paquet sur le pouvoir d'achat\nPremière lecture"
+      },
+      {
+        "titre": "Projet de loi pour le pouvoir d'achat",
+        "position": "POUR",
+        "date": "21 juill. 2022",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n21 juill. 2022\nProjet de loi pour le pouvoir d'achat\nPremière lecture"
+      },
+      {
+        "titre": "Projet de loi transformant le passe sanitaire en passe vaccinal",
+        "position": "POUR",
+        "date": "05 janv. 2022",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n05 janv. 2022\nProjet de loi transformant le passe sanitaire en passe vaccinal\nPremière lecture"
+      },
+      {
+        "titre": "Projet de loi de finances pour 2022",
+        "position": "CONTRE",
+        "date": "16 nov. 2021",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n16 nov. 2021\nProjet de loi de finances pour 2022\nPremière lecture"
+      },
+      {
+        "titre": "Projet de loi climat",
+        "position": "ABSTENTION",
+        "date": "20 juill. 2021",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "ABSTENTION\n20 juill. 2021\nProjet de loi climat\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Projet de loi bioéthique",
+        "position": "ABSTENTION",
+        "date": "29 juin 2021",
+        "description": "Lecture définitive",
+        "texte_brut": "ABSTENTION\n29 juin 2021\nProjet de loi bioéthique\nLecture définitive"
+      },
+      {
+        "titre": "Reporter les élections régionales et départementales d'une semaine",
+        "position": "POUR",
+        "date": "13 avr. 2021",
+        "description": "",
+        "texte_brut": "POUR\n13 avr. 2021\nReporter les élections régionales et départementales d'une semaine"
+      },
+      {
+        "titre": "Inclure la protection de l'environnement dans la Constitution française",
+        "position": "ABSTENTION",
+        "date": "16 mars 2021",
+        "description": "",
+        "texte_brut": "ABSTENTION\n16 mars 2021\nInclure la protection de l'environnement dans la Constitution française"
+      },
+      {
+        "titre": "Créer dans la Constitution le poste de vice-Premier ministre chargé de l'environnement",
+        "position": "CONTRE",
+        "date": "11 mars 2021",
+        "description": "",
+        "texte_brut": "CONTRE\n11 mars 2021\nCréer dans la Constitution le poste de vice-Premier ministre chargé de l'environnement"
+      },
+      {
+        "titre": "L'ensemble du projet de loi confortant le respect des principes de la République",
+        "position": "CONTRE",
+        "date": "16 févr. 2021",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n16 févr. 2021\nL'ensemble du projet de loi confortant le respect des principes de la République\nPremière lecture"
+      },
+      {
+        "titre": "Obliger les plateformes numériques à demander une pièce d'identité à leurs utilisateurs",
+        "position": "POUR",
+        "date": "11 févr. 2021",
+        "description": "",
+        "texte_brut": "POUR\n11 févr. 2021\nObliger les plateformes numériques à demander une pièce d'identité à leurs utilisateurs"
+      },
+      {
+        "titre": "Prorogation de l'état d'urgence sanitaire jusqu'en juin 2021",
+        "position": "CONTRE",
+        "date": "09 févr. 2021",
+        "description": "",
+        "texte_brut": "CONTRE\n09 févr. 2021\nProrogation de l'état d'urgence sanitaire jusqu'en juin 2021"
+      },
+      {
+        "titre": "Permettre de déchoir la nationalité d'une personne jugée coupable de violence envers un agent public",
+        "position": "POUR",
+        "date": "04 févr. 2021",
+        "description": "",
+        "texte_brut": "POUR\n04 févr. 2021\nPermettre de déchoir la nationalité d'une personne jugée coupable de violence envers un agent public"
+      },
+      {
+        "titre": "Interdire le port de signes religieux et du voile au sein des universités",
+        "position": "POUR",
+        "date": "03 févr. 2021",
+        "description": "",
+        "texte_brut": "POUR\n03 févr. 2021\nInterdire le port de signes religieux et du voile au sein des universités"
+      },
+      {
+        "titre": "Limiter le pouvoir du gouvernement dans la prorogation des mesures de confinement",
+        "position": "POUR",
+        "date": "02 févr. 2021",
+        "description": "",
+        "texte_brut": "POUR\n02 févr. 2021\nLimiter le pouvoir du gouvernement dans la prorogation des mesures de confinement"
+      },
+      {
+        "titre": "L'ensemble de la proposition de loi relative à la sécurité globale",
+        "position": "POUR",
+        "date": "24 nov. 2020",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n24 nov. 2020\nL'ensemble de la proposition de loi relative à la sécurité globale\nPremière lecture"
+      },
+      {
+        "titre": "Pénaliser la diffusion malveillante de l'image des forces de l'ordre",
+        "position": "ABSTENTION",
+        "date": "20 nov. 2020",
+        "description": "",
+        "texte_brut": "ABSTENTION\n20 nov. 2020\nPénaliser la diffusion malveillante de l'image des forces de l'ordre"
+      },
+      {
+        "titre": "L'ensemble du projet de loi de finances pour 2021",
+        "position": "CONTRE",
+        "date": "17 nov. 2020",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n17 nov. 2020\nL'ensemble du projet de loi de finances pour 2021\nPremière lecture"
+      },
+      {
+        "titre": "Loi de financement de la sécurité sociale pour 2021",
+        "position": "CONTRE",
+        "date": "27 oct. 2020",
+        "description": "",
+        "texte_brut": "CONTRE\n27 oct. 2020\nLoi de financement de la sécurité sociale pour 2021"
+      },
+      {
+        "titre": "Prorogation de l'état d'urgence sanitaire relatif à la crise de la Covid-19",
+        "position": "POUR",
+        "date": "24 oct. 2020",
+        "description": "",
+        "texte_brut": "POUR\n24 oct. 2020\nProrogation de l'état d'urgence sanitaire relatif à la crise de la Covid-19"
+      },
+      {
+        "titre": "Autorisation de l'utilisation des pesticides néonicotinoïdes jusqu'en 2023",
+        "position": "ABSTENTION",
+        "date": "06 oct. 2020",
+        "description": "",
+        "texte_brut": "ABSTENTION\n06 oct. 2020\nAutorisation de l'utilisation des pesticides néonicotinoïdes jusqu'en 2023"
+      },
+      {
+        "titre": "Vote de confiance au gouvernement de Jean Castex",
+        "position": "CONTRE",
+        "date": "15 juill. 2020",
+        "description": "",
+        "texte_brut": "CONTRE\n15 juill. 2020\nVote de confiance au gouvernement de Jean Castex"
+      },
+      {
+        "titre": "Projet de loi bioéthique",
+        "position": "CONTRE",
+        "date": "15 oct. 2019",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n15 oct. 2019\nProjet de loi bioéthique\nPremière lecture"
+      }
+    ]
   },
   {
     "id": "idir-boumertit",
@@ -5851,15 +6622,314 @@
     "avatar": "https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/PA793322.jpg",
     "datanUrl": "https://datan.fr/deputes/alpes-maritimes-06/depute_christelle-dintorni",
     "scores": {
-      "FIS": 50,
-      "ETA": 50,
-      "REG": 50,
-      "PRO": 50,
-      "LIB": 50,
-      "OUV": 50
+      "FIS": 70,
+      "ETA": 70,
+      "REG": 68,
+      "PRO": 60,
+      "LIB": 60,
+      "OUV": 58
     },
     "reseaux": {},
-    "initiatives": []
+    "initiatives": [],
+    "score_global": 64,
+    "qualification": "Modérément libéral",
+    "synthese_analyse": "Le député affiche un positionnement modérément libéral, avec des nuances importantes. Il se distingue par une forte propension à la santé fiscale (FIS: 70), notamment par son opposition constante aux lois de financement de la sécurité sociale, signalant un désir de maîtrise des dépenses publiques et de la pression fiscale. Sur la taille de l'État (ETA: 70), son approche est sélective; bien que s'opposant fermement à l'accroissement des dépenses sociales, il soutient des investissements et des programmes dans des fonctions régaliennes (défense, sécurité) et des projets spécifiques (Mayotte, JO), indiquant une vision de l'État actif mais ciblé. Le fardeau réglementaire (REG: 68) est majoritairement perçu comme excessif, le député votant souvent en faveur de la dérégulation et de la simplification, bien qu'acceptant des régulations dans des domaines spécifiques comme le numérique ou l'environnement. Le droit de propriété (PRO: 60) est bien défendu, notamment contre l'occupation illicite, bien que des compromis soient faits sur l'artificialisation des sols. La liberté du travail (LIB: 60) est modérément privilégiée, avec une opposition aux réglementations contraignantes pour les entreprises, mais une position plus contrôlée sur l'immigration. L'ouverture des marchés (OUV: 58) est l'axe le moins libéral, marqué par une tendance au protectionnisme agricole et une approche restrictive de l'immigration.",
+    "votes": [
+      {
+        "titre": "Loi urgence agricole : réautorisation de l'acétamipride",
+        "position": "POUR",
+        "date": "20 juill. 2026",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n20 juill. 2026\nLoi urgence agricole : réautorisation de l'acétamipride\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "15 juill. 2026",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n15 juill. 2026\nProposition de loi créant un droit à l'aide à mourir\nLecture définitive"
+      },
+      {
+        "titre": "Maintenir l'existence des ZFE mais les rendre facultatives",
+        "position": "CONTRE",
+        "date": "14 avr. 2026",
+        "description": "",
+        "texte_brut": "CONTRE\n14 avr. 2026\nMaintenir l'existence des ZFE mais les rendre facultatives"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "16 déc. 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n16 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nLecture définitive"
+      },
+      {
+        "titre": "Partie dépenses du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026",
+        "position": "CONTRE",
+        "date": "09 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n09 déc. 2025\nPartie dépenses du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "09 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n09 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Partie recettes du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026",
+        "position": "CONTRE",
+        "date": "05 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n05 déc. 2025\nPartie recettes du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Proposition de résolution visant à dénoncer les accords franco-algériens de 1968",
+        "position": "POUR",
+        "date": "30 oct. 2025",
+        "description": "",
+        "texte_brut": "POUR\n30 oct. 2025\nProposition de résolution visant à dénoncer les accords franco-algériens de 1968"
+      },
+      {
+        "titre": "Motion de censure de LFI contre le gouvernement Lecornu",
+        "position": "POUR",
+        "date": "16 oct. 2025",
+        "description": "",
+        "texte_brut": "POUR\n16 oct. 2025\nMotion de censure de LFI contre le gouvernement Lecornu"
+      },
+      {
+        "titre": "Vote de confiance au Premier ministre François Bayrou",
+        "position": "CONTRE",
+        "date": "08 sept. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n08 sept. 2025\nVote de confiance au Premier ministre François Bayrou"
+      },
+      {
+        "titre": "Loi Duplomb sur l’agriculture",
+        "position": "POUR",
+        "date": "08 juill. 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n08 juill. 2025\nLoi Duplomb sur l’agriculture\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "27 mai 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n27 mai 2025\nProposition de loi créant un droit à l'aide à mourir\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de loi harmonisant le scrutin de liste paritaire aux élections municipales",
+        "position": "CONTRE",
+        "date": "07 avr. 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n07 avr. 2025\nProposition de loi harmonisant le scrutin de liste paritaire aux élections municipales\nLecture définitive"
+      },
+      {
+        "titre": "Proposition de loi sur la sécurité dans les transports",
+        "position": "POUR",
+        "date": "18 mars 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n18 mars 2025\nProposition de loi sur la sécurité dans les transports\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Projet de loi souveraineté en matière agricole",
+        "position": "POUR",
+        "date": "19 févr. 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n19 févr. 2025\nProjet de loi souveraineté en matière agricole\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Projet de loi d'urgence pour Mayotte",
+        "position": "POUR",
+        "date": "22 janv. 2025",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n22 janv. 2025\nProjet de loi d'urgence pour Mayotte\nPremière lecture"
+      },
+      {
+        "titre": "Motion de censure du gouvernement de Michel Barnier",
+        "position": "POUR",
+        "date": "04 déc. 2024",
+        "description": "",
+        "texte_brut": "POUR\n04 déc. 2024\nMotion de censure du gouvernement de Michel Barnier"
+      },
+      {
+        "titre": "Projet de loi relatif à la gouvernance de la sûreté nucléaire",
+        "position": "POUR",
+        "date": "19 mars 2024",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n19 mars 2024\nProjet de loi relatif à la gouvernance de la sûreté nucléaire\nPremière lecture"
+      },
+      {
+        "titre": "Déclaration du gouvernement sur la stratégie d'aide à l'Ukraine",
+        "position": "POUR",
+        "date": "12 mars 2024",
+        "description": "",
+        "texte_brut": "POUR\n12 mars 2024\nDéclaration du gouvernement sur la stratégie d'aide à l'Ukraine"
+      },
+      {
+        "titre": "Projet de loi constitutionnelle inscrivant l'interruption volontaire de grossesse dans la Constitution (IVG)",
+        "position": "ABSTENTION",
+        "date": "04 mars 2024",
+        "description": "Vote du Congrès - L'avis de la députée",
+        "texte_brut": "ABSTENTION\n04 mars 2024\nProjet de loi constitutionnelle inscrivant l'interruption volontaire de grossesse dans la Constitution (IVG)\nVote du Congrès\nL'avis de la députée"
+      },
+      {
+        "titre": "Projet de loi visant à inscrire le droit à l'IVG dans la Constitution",
+        "position": "CONTRE",
+        "date": "30 janv. 2024",
+        "description": "L'avis de la députée",
+        "texte_brut": "CONTRE\n30 janv. 2024\nProjet de loi visant à inscrire le droit à l'IVG dans la Constitution\nL'avis de la députée"
+      },
+      {
+        "titre": "Projet de loi immigration",
+        "position": "POUR",
+        "date": "19 déc. 2023",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n19 déc. 2023\nProjet de loi immigration\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Motion de rejet du projet de loi immigration",
+        "position": "POUR",
+        "date": "11 déc. 2023",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n11 déc. 2023\nMotion de rejet du projet de loi immigration\nPremière lecture"
+      },
+      {
+        "titre": "Créer une commission d'enquête sur le modèle économique et la qualité d'accueil des crèches",
+        "position": "CONTRE",
+        "date": "28 nov. 2023",
+        "description": "",
+        "texte_brut": "CONTRE\n28 nov. 2023\nCréer une commission d'enquête sur le modèle économique et la qualité d'accueil des crèches"
+      },
+      {
+        "titre": "Projet de loi visant à sécuriser et réguler l'espace numérique",
+        "position": "POUR",
+        "date": "17 oct. 2023",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n17 oct. 2023\nProjet de loi visant à sécuriser et réguler l'espace numérique\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de loi facilitant la mise en œuvre de la lutte contre l’artificialisation des sols",
+        "position": "POUR",
+        "date": "27 juin 2023",
+        "description": "",
+        "texte_brut": "POUR\n27 juin 2023\nProposition de loi facilitant la mise en œuvre de la lutte contre l’artificialisation des sols"
+      },
+      {
+        "titre": "Loi de programmation militaire 2024-2030",
+        "position": "POUR",
+        "date": "07 juin 2023",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n07 juin 2023\nLoi de programmation militaire 2024-2030\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de loi visant à protéger les logements contre l'occupation illicite",
+        "position": "POUR",
+        "date": "04 avr. 2023",
+        "description": "Deuxième lecture",
+        "texte_brut": "POUR\n04 avr. 2023\nProposition de loi visant à protéger les logements contre l'occupation illicite\nDeuxième lecture"
+      },
+      {
+        "titre": "Projet de loi relatif aux Jeux olympiques de Paris 2024",
+        "position": "POUR",
+        "date": "28 mars 2023",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n28 mars 2023\nProjet de loi relatif aux Jeux olympiques de Paris 2024\nPremière lecture"
+      },
+      {
+        "titre": "Projet de loi d’accélération de l'énergie nucléaire",
+        "position": "POUR",
+        "date": "21 mars 2023",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n21 mars 2023\nProjet de loi d’accélération de l'énergie nucléaire\nPremière lecture"
+      },
+      {
+        "titre": "Retraites : créer un « index senior » dans les entreprises",
+        "position": "CONTRE",
+        "date": "14 févr. 2023",
+        "description": "",
+        "texte_brut": "CONTRE\n14 févr. 2023\nRetraites : créer un « index senior » dans les entreprises"
+      },
+      {
+        "titre": "Inviter le Gouvernement à suspendre l'exploitation minière des fonds marins",
+        "position": "ABSTENTION",
+        "date": "17 janv. 2023",
+        "description": "",
+        "texte_brut": "ABSTENTION\n17 janv. 2023\nInviter le Gouvernement à suspendre l'exploitation minière des fonds marins"
+      },
+      {
+        "titre": "Projet de loi accélérant la production d’énergies renouvelables",
+        "position": "CONTRE",
+        "date": "10 janv. 2023",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n10 janv. 2023\nProjet de loi accélérant la production d’énergies renouvelables\nPremière lecture"
+      },
+      {
+        "titre": "Fixer une distance minimale de 40 kilomètres entre les éoliennes en mer et les côtes",
+        "position": "CONTRE",
+        "date": "13 déc. 2022",
+        "description": "",
+        "texte_brut": "CONTRE\n13 déc. 2022\nFixer une distance minimale de 40 kilomètres entre les éoliennes en mer et les côtes"
+      },
+      {
+        "titre": "Solliciter l'avis des Bâtiments de France pour les projets éoliens à moins de 5km d'un bâtiment historique",
+        "position": "POUR",
+        "date": "06 déc. 2022",
+        "description": "",
+        "texte_brut": "POUR\n06 déc. 2022\nSolliciter l'avis des Bâtiments de France pour les projets éoliens à moins de 5km d'un bâtiment historique"
+      },
+      {
+        "titre": "Proposition de résolution soutenant l'Ukraine et condamnant la guerre menée par la Russie",
+        "position": "POUR",
+        "date": "30 nov. 2022",
+        "description": "",
+        "texte_brut": "POUR\n30 nov. 2022\nProposition de résolution soutenant l'Ukraine et condamnant la guerre menée par la Russie"
+      },
+      {
+        "titre": "Projet de loi d'orientation et de programmation du ministère de l'Intérieur (LOPMI)",
+        "position": "POUR",
+        "date": "22 nov. 2022",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n22 nov. 2022\nProjet de loi d'orientation et de programmation du ministère de l'Intérieur (LOPMI)\nPremière lecture"
+      },
+      {
+        "titre": "Réintroduire la réserve parlementaire, un fonds permettant aux députés de soutenir des associations",
+        "position": "POUR",
+        "date": "08 nov. 2022",
+        "description": "",
+        "texte_brut": "POUR\n08 nov. 2022\nRéintroduire la réserve parlementaire, un fonds permettant aux députés de soutenir des associations"
+      },
+      {
+        "titre": "Baisser le taux de TVA sur l'énergie : gaz, électricité, fioul, carburants",
+        "position": "CONTRE",
+        "date": "07 nov. 2022",
+        "description": "",
+        "texte_brut": "CONTRE\n07 nov. 2022\nBaisser le taux de TVA sur l'énergie : gaz, électricité, fioul, carburants"
+      },
+      {
+        "titre": "Première lecture",
+        "position": "CONTRE",
+        "date": "25 oct. 2022",
+        "description": "",
+        "texte_brut": "CONTRE\n25 oct. 2022\nProjet de loi de programmation des finances publiques (2023 à 2027)\nPremière lecture"
+      },
+      {
+        "titre": "Projet de loi de finances rectificative pour 2022 : paquet sur le pouvoir d'achat",
+        "position": "POUR",
+        "date": "26 juill. 2022",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n26 juill. 2022\nProjet de loi de finances rectificative pour 2022 : paquet sur le pouvoir d'achat\nPremière lecture"
+      },
+      {
+        "titre": "Projet de loi pour le pouvoir d'achat",
+        "position": "POUR",
+        "date": "21 juill. 2022",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n21 juill. 2022\nProjet de loi pour le pouvoir d'achat\nPremière lecture"
+      }
+    ]
   },
   {
     "id": "charles-de-courson",
@@ -6159,15 +7229,174 @@
     "avatar": "https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/PA841207.jpg",
     "datanUrl": "https://datan.fr/deputes/herault-34/depute_charles-alloncle",
     "scores": {
-      "FIS": 80,
-      "ETA": 65,
-      "REG": 75,
-      "PRO": 75,
-      "LIB": 35,
+      "FIS": 90,
+      "ETA": 85,
+      "REG": 80,
+      "PRO": 60,
+      "LIB": 70,
       "OUV": 30
     },
     "reseaux": {},
-    "initiatives": []
+    "initiatives": [],
+    "score_global": 69,
+    "qualification": "Modérément libéral",
+    "synthese_analyse": "Le député affiche une orientation très clairement libérale sur les piliers fiscaux et de réduction de la taille de l'État. Il s'oppose systématiquement aux projets de loi de finances et de financement de la sécurité sociale, vote pour la défiscalisation des heures supplémentaires et s'oppose à la suspension de la réforme des retraites, démontrant une volonté de baisser la pression fiscale et de maîtriser la dépense publique. Son engagement pour la dérégulation est également fort, illustré par son soutien à la suppression des zones à faibles émissions (ZFE) et la réautorisation de l'acétamipride. Sur la liberté du travail, ses positions sont positivement orientées bien que plus indirectes. Cependant, cette ligne est tempérée par une position moins favorable, voire protectionniste, concernant l'ouverture des marchés. Ses votes en faveur de la 'souveraineté agricole' et contre l'adhésion de l'Ukraine à l'Union Européenne indiquent une préférence pour le contrôle national des marchés et une certaine réticence au libre-échange. Ses positions sur le droit de propriété sont moins explicitement exprimées, mais ses votes agricoles peuvent être interprétés comme un soutien indirect aux droits des exploitants.",
+    "votes": [
+      {
+        "titre": "Loi urgence agricole : réautorisation de l'acétamipride",
+        "position": "POUR",
+        "date": "20 juill. 2026",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n20 juill. 2026\nLoi urgence agricole : réautorisation de l'acétamipride\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "15 juill. 2026",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n15 juill. 2026\nProposition de loi créant un droit à l'aide à mourir\nLecture définitive"
+      },
+      {
+        "titre": "Proposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre",
+        "position": "POUR",
+        "date": "07 juill. 2026",
+        "description": "",
+        "texte_brut": "POUR\n07 juill. 2026\nProposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "16 déc. 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n16 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nLecture définitive"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "09 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n09 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Partie recettes du projet de loi de finances (PLF) pour 2026",
+        "position": "CONTRE",
+        "date": "21 nov. 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n21 nov. 2025\nPartie recettes du projet de loi de finances (PLF) pour 2026\nPremière lecture"
+      },
+      {
+        "titre": "Suspension de la réforme des retraites jusqu'au 1er janvier 2028",
+        "position": "CONTRE",
+        "date": "12 nov. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n12 nov. 2025\nSuspension de la réforme des retraites jusqu'au 1er janvier 2028"
+      },
+      {
+        "titre": "Proposition de résolution visant à dénoncer les accords franco-algériens de 1968",
+        "position": "POUR",
+        "date": "30 oct. 2025",
+        "description": "",
+        "texte_brut": "POUR\n30 oct. 2025\nProposition de résolution visant à dénoncer les accords franco-algériens de 1968"
+      },
+      {
+        "titre": "Motion de censure de LFI contre le gouvernement Lecornu",
+        "position": "POUR",
+        "date": "16 oct. 2025",
+        "description": "",
+        "texte_brut": "POUR\n16 oct. 2025\nMotion de censure de LFI contre le gouvernement Lecornu"
+      },
+      {
+        "titre": "Vote de confiance au Premier ministre François Bayrou",
+        "position": "CONTRE",
+        "date": "08 sept. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n08 sept. 2025\nVote de confiance au Premier ministre François Bayrou"
+      },
+      {
+        "titre": "Loi Duplomb sur l’agriculture",
+        "position": "POUR",
+        "date": "08 juill. 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n08 juill. 2025\nLoi Duplomb sur l’agriculture\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Supprimer les zones à faibles émissions (ZFE)",
+        "position": "POUR",
+        "date": "28 mai 2025",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n28 mai 2025\nSupprimer les zones à faibles émissions (ZFE)\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "27 mai 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n27 mai 2025\nProposition de loi créant un droit à l'aide à mourir\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de loi sur la sécurité dans les transports",
+        "position": "POUR",
+        "date": "18 mars 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n18 mars 2025\nProposition de loi sur la sécurité dans les transports\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Supprimer la mention d’une adhésion de l’Ukraine à l’Union européenne (UE)",
+        "position": "POUR",
+        "date": "12 mars 2025",
+        "description": "",
+        "texte_brut": "POUR\n12 mars 2025\nSupprimer la mention d’une adhésion de l’Ukraine à l’Union européenne (UE)"
+      },
+      {
+        "titre": "Appeler l'Union européenne (UE) à bâtir une défense européenne",
+        "position": "CONTRE",
+        "date": "12 mars 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n12 mars 2025\nAppeler l'Union européenne (UE) à bâtir une défense européenne"
+      },
+      {
+        "titre": "Proposition de résolution européenne appelant au renforcement du soutien à l'Ukraine",
+        "position": "ABSTENTION",
+        "date": "12 mars 2025",
+        "description": "Première lecture",
+        "texte_brut": "ABSTENTION\n12 mars 2025\nProposition de résolution européenne appelant au renforcement du soutien à l'Ukraine\nPremière lecture"
+      },
+      {
+        "titre": "Projet de loi souveraineté en matière agricole",
+        "position": "POUR",
+        "date": "19 févr. 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n19 févr. 2025\nProjet de loi souveraineté en matière agricole\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi renforçant les conditions d'accès à la nationalité française à Mayotte",
+        "position": "POUR",
+        "date": "06 févr. 2025",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n06 févr. 2025\nProposition de loi renforçant les conditions d'accès à la nationalité française à Mayotte\nPremière lecture"
+      },
+      {
+        "titre": "Motion de censure du gouvernement de Michel Barnier",
+        "position": "POUR",
+        "date": "04 déc. 2024",
+        "description": "",
+        "texte_brut": "POUR\n04 déc. 2024\nMotion de censure du gouvernement de Michel Barnier"
+      },
+      {
+        "titre": "Renforcer la défiscalisation des heures supplémentaires",
+        "position": "POUR",
+        "date": "23 oct. 2024",
+        "description": "",
+        "texte_brut": "POUR\n23 oct. 2024\nRenforcer la défiscalisation des heures supplémentaires"
+      },
+      {
+        "titre": "Supprimer l'avantage fiscal pour les intermittents du spectacle",
+        "position": "POUR",
+        "date": "23 oct. 2024",
+        "description": "",
+        "texte_brut": "POUR\n23 oct. 2024\nSupprimer l'avantage fiscal pour les intermittents du spectacle"
+      }
+    ]
   },
   {
     "id": "berenger-cernon",
@@ -9991,15 +11220,188 @@
     "avatar": "https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/PA841183.jpg",
     "datanUrl": "https://datan.fr/deputes/isere-38/depute_hanane-mansouri",
     "scores": {
-      "FIS": 75,
-      "ETA": 65,
-      "REG": 70,
-      "PRO": 75,
-      "LIB": 35,
+      "FIS": 85,
+      "ETA": 75,
+      "REG": 55,
+      "PRO": 80,
+      "LIB": 65,
       "OUV": 25
     },
     "reseaux": {},
-    "initiatives": []
+    "initiatives": [],
+    "score_global": 64,
+    "qualification": "Modérément libéral",
+    "synthese_analyse": "Le député affiche une orientation fortement libérale sur la santé fiscale et la protection de la propriété, s'opposant clairement aux augmentations d'impôts et aux taxes sur le patrimoine. Il tend également à soutenir la réduction de la taille de l'État et la maîtrise des dépenses publiques, notamment en matière de sécurité sociale et de défense européenne. En revanche, son positionnement sur le fardeau réglementaire est plus nuancé, avec des votes parfois favorables à la dérégulation sectorielle mais d'autres soutenant des régulations spécifiques (ZFE, souveraineté agricole). La liberté du travail est modérément favorisée par le soutien aux réformes des retraites. L'ouverture des marchés est le pilier où le député s'éloigne le plus du libéralisme, adoptant des positions protectionnistes ou souverainistes, notamment sur l'agriculture et l'élargissement de l'UE.",
+    "votes": [
+      {
+        "titre": "Loi urgence agricole : réautorisation de l'acétamipride",
+        "position": "POUR",
+        "date": "20 juill. 2026",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n20 juill. 2026\nLoi urgence agricole : réautorisation de l'acétamipride\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "15 juill. 2026",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n15 juill. 2026\nProposition de loi créant un droit à l'aide à mourir\nLecture définitive"
+      },
+      {
+        "titre": "Maintenir l'existence des ZFE mais les rendre facultatives",
+        "position": "CONTRE",
+        "date": "14 avr. 2026",
+        "description": "",
+        "texte_brut": "CONTRE\n14 avr. 2026\nMaintenir l'existence des ZFE mais les rendre facultatives"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "16 déc. 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n16 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nLecture définitive"
+      },
+      {
+        "titre": "Partie dépenses du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026",
+        "position": "ABSTENTION",
+        "date": "09 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "ABSTENTION\n09 déc. 2025\nPartie dépenses du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "09 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n09 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Suspension de la réforme des retraites jusqu'au 1er janvier 2028",
+        "position": "CONTRE",
+        "date": "12 nov. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n12 nov. 2025\nSuspension de la réforme des retraites jusqu'au 1er janvier 2028"
+      },
+      {
+        "titre": "Instaurer la taxe Zucman sur les patrimoines supérieurs à 100 millions d'euros",
+        "position": "CONTRE",
+        "date": "31 oct. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n31 oct. 2025\nInstaurer la taxe Zucman sur les patrimoines supérieurs à 100 millions d'euros"
+      },
+      {
+        "titre": "Proposition de résolution visant à dénoncer les accords franco-algériens de 1968",
+        "position": "POUR",
+        "date": "30 oct. 2025",
+        "description": "",
+        "texte_brut": "POUR\n30 oct. 2025\nProposition de résolution visant à dénoncer les accords franco-algériens de 1968"
+      },
+      {
+        "titre": "Motion de censure de LFI contre le gouvernement Lecornu",
+        "position": "POUR",
+        "date": "16 oct. 2025",
+        "description": "",
+        "texte_brut": "POUR\n16 oct. 2025\nMotion de censure de LFI contre le gouvernement Lecornu"
+      },
+      {
+        "titre": "Vote de confiance au Premier ministre François Bayrou",
+        "position": "CONTRE",
+        "date": "08 sept. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n08 sept. 2025\nVote de confiance au Premier ministre François Bayrou"
+      },
+      {
+        "titre": "Loi Duplomb sur l’agriculture",
+        "position": "POUR",
+        "date": "08 juill. 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n08 juill. 2025\nLoi Duplomb sur l’agriculture\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "27 mai 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n27 mai 2025\nProposition de loi créant un droit à l'aide à mourir\nPremière lecture"
+      },
+      {
+        "titre": "Fin de vie : création des cinq critères pour accéder à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "20 mai 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n20 mai 2025\nFin de vie : création des cinq critères pour accéder à l'aide à mourir"
+      },
+      {
+        "titre": "Proposition de loi sur la sécurité dans les transports",
+        "position": "POUR",
+        "date": "18 mars 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n18 mars 2025\nProposition de loi sur la sécurité dans les transports\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Supprimer la mention d’une adhésion de l’Ukraine à l’Union européenne (UE)",
+        "position": "POUR",
+        "date": "12 mars 2025",
+        "description": "",
+        "texte_brut": "POUR\n12 mars 2025\nSupprimer la mention d’une adhésion de l’Ukraine à l’Union européenne (UE)"
+      },
+      {
+        "titre": "Appeler l'Union européenne (UE) à bâtir une défense européenne",
+        "position": "CONTRE",
+        "date": "12 mars 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n12 mars 2025\nAppeler l'Union européenne (UE) à bâtir une défense européenne"
+      },
+      {
+        "titre": "Condamner la minimisation de la responsabilité de la Russie dans la guerre en Ukraine",
+        "position": "ABSTENTION",
+        "date": "12 mars 2025",
+        "description": "",
+        "texte_brut": "ABSTENTION\n12 mars 2025\nCondamner la minimisation de la responsabilité de la Russie dans la guerre en Ukraine"
+      },
+      {
+        "titre": "Proposition de résolution européenne appelant au renforcement du soutien à l'Ukraine",
+        "position": "ABSTENTION",
+        "date": "12 mars 2025",
+        "description": "Première lecture",
+        "texte_brut": "ABSTENTION\n12 mars 2025\nProposition de résolution européenne appelant au renforcement du soutien à l'Ukraine\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de loi visant à protéger la population des risques liés aux PFAS",
+        "position": "ABSTENTION",
+        "date": "20 févr. 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "ABSTENTION\n20 févr. 2025\nProposition de loi visant à protéger la population des risques liés aux PFAS\nLecture définitive"
+      },
+      {
+        "titre": "Projet de loi souveraineté en matière agricole",
+        "position": "POUR",
+        "date": "19 févr. 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n19 févr. 2025\nProjet de loi souveraineté en matière agricole\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Projet de loi d'urgence pour Mayotte",
+        "position": "POUR",
+        "date": "22 janv. 2025",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n22 janv. 2025\nProjet de loi d'urgence pour Mayotte\nPremière lecture"
+      },
+      {
+        "titre": "Motion de censure du gouvernement de Michel Barnier",
+        "position": "POUR",
+        "date": "04 déc. 2024",
+        "description": "",
+        "texte_brut": "POUR\n04 déc. 2024\nMotion de censure du gouvernement de Michel Barnier"
+      },
+      {
+        "titre": "Créée une taxe sur les produits ultra-transformés",
+        "position": "CONTRE",
+        "date": "04 nov. 2024",
+        "description": "",
+        "texte_brut": "CONTRE\n04 nov. 2024\nCréée une taxe sur les produits ultra-transformés"
+      }
+    ]
   },
   {
     "id": "alix-fruchon",
@@ -10243,12 +11645,12 @@
     "avatar": "https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/PA840701.jpg",
     "datanUrl": "https://datan.fr/deputes/alpes-maritimes-06/depute_bernard-chaix",
     "scores": {
-      "FIS": 70,
-      "ETA": 65,
-      "REG": 68,
-      "PRO": 75,
-      "LIB": 65,
-      "OUV": 60
+      "FIS": 80,
+      "ETA": 75,
+      "REG": 70,
+      "PRO": 65,
+      "LIB": 55,
+      "OUV": 65
     },
     "reseaux": {
       "x": {
@@ -10272,6 +11674,207 @@
         "type": "Vote solennel",
         "description": "Vote en faveur d'assouplissements réglementaires pour le secteur agricole.",
         "url": "https://datan.fr/deputes/alpes-maritimes-06/depute_bernard-chaix/votes"
+      }
+    ],
+    "score_global": 68,
+    "qualification": "Libéral affirmé",
+    "synthese_analyse": "Le député démontre une orientation libérale marquée, en particulier sur la santé fiscale et la réduction de la taille de l'État. Ses votes répétés contre les projets de loi de finances et de financement de la sécurité sociale, tant sur les recettes que sur les dépenses, témoignent d'un engagement clair pour la baisse des impôts et la maîtrise de la dépense publique. Il est également un fervent partisan de la dérégulation et de la simplification administrative, comme en témoignent ses positions contre les plafonnements de marges et en faveur de l'allègement des procédures pour les entreprises. Si l'ouverture des marchés est globalement favorisée par ses votes pour la concurrence, sa position sur la \"souveraineté agricole\" suggère une nuance pouvant tempérer le libre-échange. La liberté du travail est moins explicitement abordée dans ses votes, mais son profil global reste fortement ancré dans les principes libéraux.",
+    "votes": [
+      {
+        "titre": "Loi urgence agricole : réautorisation de l'acétamipride",
+        "position": "POUR",
+        "date": "20 juill. 2026",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n20 juill. 2026\nLoi urgence agricole : réautorisation de l'acétamipride\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "15 juill. 2026",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n15 juill. 2026\nProposition de loi créant un droit à l'aide à mourir\nLecture définitive"
+      },
+      {
+        "titre": "Inclure les amendes forfaitaires délictuelles dans le bulletin n°2 du casier judiciaire",
+        "position": "POUR",
+        "date": "15 juill. 2026",
+        "description": "",
+        "texte_brut": "POUR\n15 juill. 2026\nInclure les amendes forfaitaires délictuelles dans le bulletin n°2 du casier judiciaire"
+      },
+      {
+        "titre": "Proposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre",
+        "position": "POUR",
+        "date": "07 juill. 2026",
+        "description": "",
+        "texte_brut": "POUR\n07 juill. 2026\nProposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre"
+      },
+      {
+        "titre": "Maintenir l'existence des ZFE mais les rendre facultatives",
+        "position": "CONTRE",
+        "date": "14 avr. 2026",
+        "description": "",
+        "texte_brut": "CONTRE\n14 avr. 2026\nMaintenir l'existence des ZFE mais les rendre facultatives"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "16 déc. 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n16 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nLecture définitive"
+      },
+      {
+        "titre": "Partie dépenses du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026",
+        "position": "CONTRE",
+        "date": "09 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n09 déc. 2025\nPartie dépenses du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "09 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n09 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Partie recettes du projet de loi de finances (PLF) pour 2026",
+        "position": "CONTRE",
+        "date": "21 nov. 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n21 nov. 2025\nPartie recettes du projet de loi de finances (PLF) pour 2026\nPremière lecture"
+      },
+      {
+        "titre": "Suspension de la réforme des retraites jusqu'au 1er janvier 2028",
+        "position": "CONTRE",
+        "date": "12 nov. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n12 nov. 2025\nSuspension de la réforme des retraites jusqu'au 1er janvier 2028"
+      },
+      {
+        "titre": "Proposition de résolution visant à dénoncer les accords franco-algériens de 1968",
+        "position": "POUR",
+        "date": "30 oct. 2025",
+        "description": "",
+        "texte_brut": "POUR\n30 oct. 2025\nProposition de résolution visant à dénoncer les accords franco-algériens de 1968"
+      },
+      {
+        "titre": "Motion de censure de LFI contre le gouvernement Lecornu",
+        "position": "POUR",
+        "date": "16 oct. 2025",
+        "description": "",
+        "texte_brut": "POUR\n16 oct. 2025\nMotion de censure de LFI contre le gouvernement Lecornu"
+      },
+      {
+        "titre": "Vote de confiance au Premier ministre François Bayrou",
+        "position": "CONTRE",
+        "date": "08 sept. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n08 sept. 2025\nVote de confiance au Premier ministre François Bayrou"
+      },
+      {
+        "titre": "Loi Duplomb sur l’agriculture",
+        "position": "POUR",
+        "date": "08 juill. 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n08 juill. 2025\nLoi Duplomb sur l’agriculture\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "27 mai 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n27 mai 2025\nProposition de loi créant un droit à l'aide à mourir\nPremière lecture"
+      },
+      {
+        "titre": "Fin de vie : création des cinq critères pour accéder à l'aide à mourir",
+        "position": "ABSTENTION",
+        "date": "20 mai 2025",
+        "description": "",
+        "texte_brut": "ABSTENTION\n20 mai 2025\nFin de vie : création des cinq critères pour accéder à l'aide à mourir"
+      },
+      {
+        "titre": "Proposition de loi harmonisant le scrutin de liste paritaire aux élections municipales",
+        "position": "CONTRE",
+        "date": "07 avr. 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n07 avr. 2025\nProposition de loi harmonisant le scrutin de liste paritaire aux élections municipales\nLecture définitive"
+      },
+      {
+        "titre": "Considérer le retrait non consenti du préservatif comme un viol",
+        "position": "CONTRE",
+        "date": "01 avr. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n01 avr. 2025\nConsidérer le retrait non consenti du préservatif comme un viol"
+      },
+      {
+        "titre": "Proposition de loi modifiant la définition pénale du viol et des agressions sexuelles",
+        "position": "CONTRE",
+        "date": "01 avr. 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n01 avr. 2025\nProposition de loi modifiant la définition pénale du viol et des agressions sexuelles\nPremière lecture"
+      },
+      {
+        "titre": "Appeler à une stratégie nationale de prévention du chemsex",
+        "position": "ABSTENTION",
+        "date": "31 mars 2025",
+        "description": "",
+        "texte_brut": "ABSTENTION\n31 mars 2025\nAppeler à une stratégie nationale de prévention du chemsex"
+      },
+      {
+        "titre": "Proposition de loi sur la sécurité dans les transports",
+        "position": "POUR",
+        "date": "18 mars 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n18 mars 2025\nProposition de loi sur la sécurité dans les transports\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Plafonner les marges de la grande distribution sur les denrées alimentaires",
+        "position": "CONTRE",
+        "date": "17 mars 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n17 mars 2025\nPlafonner les marges de la grande distribution sur les denrées alimentaires\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de résolution européenne appelant au renforcement du soutien à l'Ukraine",
+        "position": "ABSTENTION",
+        "date": "12 mars 2025",
+        "description": "Première lecture",
+        "texte_brut": "ABSTENTION\n12 mars 2025\nProposition de résolution européenne appelant au renforcement du soutien à l'Ukraine\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de loi simplifiant l'ouverture des débits de boisson en zone rurale",
+        "position": "POUR",
+        "date": "10 mars 2025",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n10 mars 2025\nProposition de loi simplifiant l'ouverture des débits de boisson en zone rurale\nPremière lecture"
+      },
+      {
+        "titre": "Projet de loi souveraineté en matière agricole",
+        "position": "POUR",
+        "date": "19 févr. 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n19 févr. 2025\nProjet de loi souveraineté en matière agricole\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Supprimer le droit du sol à Mayotte",
+        "position": "POUR",
+        "date": "06 févr. 2025",
+        "description": "",
+        "texte_brut": "POUR\n06 févr. 2025\nSupprimer le droit du sol à Mayotte"
+      },
+      {
+        "titre": "Projet de loi d'urgence pour Mayotte",
+        "position": "POUR",
+        "date": "22 janv. 2025",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n22 janv. 2025\nProjet de loi d'urgence pour Mayotte\nPremière lecture"
+      },
+      {
+        "titre": "Motion de censure du gouvernement de Michel Barnier",
+        "position": "POUR",
+        "date": "04 déc. 2024",
+        "description": "",
+        "texte_brut": "POUR\n04 déc. 2024\nMotion de censure du gouvernement de Michel Barnier"
       }
     ]
   },
@@ -10965,15 +12568,216 @@
     "avatar": "https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/PA840889.jpg",
     "datanUrl": "https://datan.fr/deputes/doubs-25/depute_matthieu-bloch",
     "scores": {
-      "FIS": 75,
+      "FIS": 70,
       "ETA": 65,
-      "REG": 70,
-      "PRO": 80,
-      "LIB": 30,
-      "OUV": 20
+      "REG": 45,
+      "PRO": 50,
+      "LIB": 50,
+      "OUV": 40
     },
     "reseaux": {},
-    "initiatives": []
+    "initiatives": [],
+    "score_global": 53,
+    "qualification": "Centriste à tendance libérale",
+    "synthese_analyse": "Le député démontre une nette orientation libérale en matière de santé fiscale (FIS) et de réduction de la taille de l'État et des dépenses publiques (ETA), votant systématiquement contre les projets de financement de la sécurité sociale et de lois de finances, et s'opposant à la suspension des réformes des retraites. Il a également voté en faveur du maintien d'un abattement fiscal sur les dividendes, signe de protection du capital. Cependant, son positionnement est moins aligné, voire légèrement contraire, aux principes libéraux sur le fardeau réglementaire (REG) et l'ouverture des marchés (OUV). Il a soutenu des mesures de réglementation (interdiction du démarchage téléphonique) et des politiques pouvant être perçues comme protectionnistes ou interventionnistes (souveraineté agricole). Concernant le droit de propriété (PRO) et la liberté du travail (LIB), les votes analysés ne permettent pas de dégager une orientation claire, le député ayant voté à la fois pour et contre des mesures impactant indirectement le capital, et aucun vote direct sur la flexibilité du travail n'étant présent.",
+    "votes": [
+      {
+        "titre": "Loi urgence agricole : réautorisation de l'acétamipride",
+        "position": "POUR",
+        "date": "20 juill. 2026",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n20 juill. 2026\nLoi urgence agricole : réautorisation de l'acétamipride\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "15 juill. 2026",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n15 juill. 2026\nProposition de loi créant un droit à l'aide à mourir\nLecture définitive"
+      },
+      {
+        "titre": "Proposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre",
+        "position": "POUR",
+        "date": "07 juill. 2026",
+        "description": "",
+        "texte_brut": "POUR\n07 juill. 2026\nProposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre"
+      },
+      {
+        "titre": "Maintenir l'existence des ZFE mais les rendre facultatives",
+        "position": "CONTRE",
+        "date": "14 avr. 2026",
+        "description": "",
+        "texte_brut": "CONTRE\n14 avr. 2026\nMaintenir l'existence des ZFE mais les rendre facultatives"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "16 déc. 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n16 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nLecture définitive"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "09 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n09 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Partie recettes du projet de loi de finances (PLF) pour 2026",
+        "position": "CONTRE",
+        "date": "21 nov. 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n21 nov. 2025\nPartie recettes du projet de loi de finances (PLF) pour 2026\nPremière lecture"
+      },
+      {
+        "titre": "Suspension de la réforme des retraites jusqu'au 1er janvier 2028",
+        "position": "CONTRE",
+        "date": "12 nov. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n12 nov. 2025\nSuspension de la réforme des retraites jusqu'au 1er janvier 2028"
+      },
+      {
+        "titre": "Partie recettes du projet de loi de financement de la Sécurité sociale (PLFSS) pour 2026",
+        "position": "CONTRE",
+        "date": "08 nov. 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n08 nov. 2025\nPartie recettes du projet de loi de financement de la Sécurité sociale (PLFSS) pour 2026\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de résolution visant à dénoncer les accords franco-algériens de 1968",
+        "position": "POUR",
+        "date": "30 oct. 2025",
+        "description": "",
+        "texte_brut": "POUR\n30 oct. 2025\nProposition de résolution visant à dénoncer les accords franco-algériens de 1968"
+      },
+      {
+        "titre": "Motion de censure de LFI contre le gouvernement Lecornu",
+        "position": "POUR",
+        "date": "16 oct. 2025",
+        "description": "",
+        "texte_brut": "POUR\n16 oct. 2025\nMotion de censure de LFI contre le gouvernement Lecornu"
+      },
+      {
+        "titre": "Vote de confiance au Premier ministre François Bayrou",
+        "position": "CONTRE",
+        "date": "08 sept. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n08 sept. 2025\nVote de confiance au Premier ministre François Bayrou"
+      },
+      {
+        "titre": "Loi Duplomb sur l’agriculture",
+        "position": "POUR",
+        "date": "08 juill. 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n08 juill. 2025\nLoi Duplomb sur l’agriculture\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "27 mai 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n27 mai 2025\nProposition de loi créant un droit à l'aide à mourir\nPremière lecture"
+      },
+      {
+        "titre": "Fin de vie : création des cinq critères pour accéder à l'aide à mourir",
+        "position": "ABSTENTION",
+        "date": "20 mai 2025",
+        "description": "",
+        "texte_brut": "ABSTENTION\n20 mai 2025\nFin de vie : création des cinq critères pour accéder à l'aide à mourir"
+      },
+      {
+        "titre": "Proposition de loi harmonisant le scrutin de liste paritaire aux élections municipales",
+        "position": "CONTRE",
+        "date": "07 avr. 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n07 avr. 2025\nProposition de loi harmonisant le scrutin de liste paritaire aux élections municipales\nLecture définitive"
+      },
+      {
+        "titre": "Retirer les aménagements de peine en cas de trafic de stupéfiants",
+        "position": "POUR",
+        "date": "03 avr. 2025",
+        "description": "",
+        "texte_brut": "POUR\n03 avr. 2025\nRetirer les aménagements de peine en cas de trafic de stupéfiants"
+      },
+      {
+        "titre": "Considérer le retrait non consenti du préservatif comme un viol",
+        "position": "CONTRE",
+        "date": "01 avr. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n01 avr. 2025\nConsidérer le retrait non consenti du préservatif comme un viol"
+      },
+      {
+        "titre": "Proposition de loi modifiant la définition pénale du viol et des agressions sexuelles",
+        "position": "ABSTENTION",
+        "date": "01 avr. 2025",
+        "description": "Première lecture",
+        "texte_brut": "ABSTENTION\n01 avr. 2025\nProposition de loi modifiant la définition pénale du viol et des agressions sexuelles\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de résolution européenne appelant au renforcement du soutien à l'Ukraine",
+        "position": "ABSTENTION",
+        "date": "12 mars 2025",
+        "description": "Première lecture",
+        "texte_brut": "ABSTENTION\n12 mars 2025\nProposition de résolution européenne appelant au renforcement du soutien à l'Ukraine\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de loi interdisant le démarchage téléphonique",
+        "position": "POUR",
+        "date": "06 mars 2025",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n06 mars 2025\nProposition de loi interdisant le démarchage téléphonique\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de loi visant à protéger la population des risques liés aux PFAS",
+        "position": "ABSTENTION",
+        "date": "20 févr. 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "ABSTENTION\n20 févr. 2025\nProposition de loi visant à protéger la population des risques liés aux PFAS\nLecture définitive"
+      },
+      {
+        "titre": "Projet de loi souveraineté en matière agricole",
+        "position": "POUR",
+        "date": "19 févr. 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n19 févr. 2025\nProjet de loi souveraineté en matière agricole\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Supprimer le droit du sol à Mayotte",
+        "position": "POUR",
+        "date": "06 févr. 2025",
+        "description": "",
+        "texte_brut": "POUR\n06 févr. 2025\nSupprimer le droit du sol à Mayotte"
+      },
+      {
+        "titre": "Projet de loi d'urgence pour Mayotte",
+        "position": "POUR",
+        "date": "22 janv. 2025",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n22 janv. 2025\nProjet de loi d'urgence pour Mayotte\nPremière lecture"
+      },
+      {
+        "titre": "Motion de censure du gouvernement de Michel Barnier",
+        "position": "POUR",
+        "date": "04 déc. 2024",
+        "description": "",
+        "texte_brut": "POUR\n04 déc. 2024\nMotion de censure du gouvernement de Michel Barnier"
+      },
+      {
+        "titre": "Imposer davantage les dividendes aux rendements exceptionnellement élevés",
+        "position": "POUR",
+        "date": "23 oct. 2024",
+        "description": "",
+        "texte_brut": "POUR\n23 oct. 2024\nImposer davantage les dividendes aux rendements exceptionnellement élevés"
+      },
+      {
+        "titre": "Supprimer l'abattement fiscal sur les dividendes",
+        "position": "CONTRE",
+        "date": "23 oct. 2024",
+        "description": "",
+        "texte_brut": "CONTRE\n23 oct. 2024\nSupprimer l'abattement fiscal sur les dividendes"
+      }
+    ]
   },
   {
     "id": "jean-luc-warsmann",
@@ -11049,15 +12853,272 @@
     "avatar": "https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/PA840773.jpg",
     "datanUrl": "https://datan.fr/deputes/bouches-du-rhone-13/depute_olivier-fayssat",
     "scores": {
-      "FIS": 80,
-      "ETA": 70,
-      "REG": 75,
-      "PRO": 85,
-      "LIB": 35,
-      "OUV": 25
+      "FIS": 92,
+      "ETA": 78,
+      "REG": 70,
+      "PRO": 65,
+      "LIB": 55,
+      "OUV": 55
     },
     "reseaux": {},
-    "initiatives": []
+    "initiatives": [],
+    "score_global": 69,
+    "qualification": "Libéral prononcé",
+    "synthese_analyse": "Le député affiche une orientation économique libérale prononcée, particulièrement visible dans sa posture fiscale et budgétaire. Il défend fermement la baisse des impôts, s'opposant systématiquement aux augmentations de recettes et rejetant de manière significative la 'taxe Zucman' sur les patrimoines importants. Son engagement pour la réduction de la taille de l'État et des dépenses publiques est également clair, comme en témoignent ses votes contre les projets de loi de financement de la sécurité sociale et son soutien aux réformes visant la viabilité financière, telles que la réforme des retraites. Concernant la réglementation, il favorise la dérégulation et la simplification administrative, notamment par son souhait de supprimer les Zones à Faibles Émissions et de faciliter la sortie de l'indivision. La protection de la propriété privée est une préoccupation majeure. Ses positions sur la liberté du travail et l'ouverture des marchés sont moins directement ou fréquemment exprimées, mais il penche généralement vers des marchés libres, s'opposant au plafonnement des marges de la grande distribution. Une légère nuance peut être observée dans des votes liés à la 'souveraineté agricole' qui pourraient, selon l'interprétation, tempérer une approche purement libre-échangiste.",
+    "votes": [
+      {
+        "titre": "Loi urgence agricole : réautorisation de l'acétamipride",
+        "position": "POUR",
+        "date": "20 juill. 2026",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n20 juill. 2026\nLoi urgence agricole : réautorisation de l'acétamipride\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "15 juill. 2026",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n15 juill. 2026\nProposition de loi créant un droit à l'aide à mourir\nLecture définitive"
+      },
+      {
+        "titre": "Proposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre",
+        "position": "POUR",
+        "date": "07 juill. 2026",
+        "description": "",
+        "texte_brut": "POUR\n07 juill. 2026\nProposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre"
+      },
+      {
+        "titre": "Maintenir l'existence des ZFE mais les rendre facultatives",
+        "position": "CONTRE",
+        "date": "14 avr. 2026",
+        "description": "",
+        "texte_brut": "CONTRE\n14 avr. 2026\nMaintenir l'existence des ZFE mais les rendre facultatives"
+      },
+      {
+        "titre": "Renforcer les sanctions contre la fraude aux prestations sociales",
+        "position": "POUR",
+        "date": "30 mars 2026",
+        "description": "",
+        "texte_brut": "POUR\n30 mars 2026\nRenforcer les sanctions contre la fraude aux prestations sociales"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "16 déc. 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n16 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nLecture définitive"
+      },
+      {
+        "titre": "Partie dépenses du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026",
+        "position": "CONTRE",
+        "date": "09 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n09 déc. 2025\nPartie dépenses du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "09 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n09 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Partie recettes du projet de loi de finances (PLF) pour 2026",
+        "position": "CONTRE",
+        "date": "21 nov. 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n21 nov. 2025\nPartie recettes du projet de loi de finances (PLF) pour 2026\nPremière lecture"
+      },
+      {
+        "titre": "Suspension de la réforme des retraites jusqu'au 1er janvier 2028",
+        "position": "CONTRE",
+        "date": "12 nov. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n12 nov. 2025\nSuspension de la réforme des retraites jusqu'au 1er janvier 2028"
+      },
+      {
+        "titre": "Partie recettes du projet de loi de financement de la Sécurité sociale (PLFSS) pour 2026",
+        "position": "CONTRE",
+        "date": "08 nov. 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n08 nov. 2025\nPartie recettes du projet de loi de financement de la Sécurité sociale (PLFSS) pour 2026\nPremière lecture"
+      },
+      {
+        "titre": "Instaurer la taxe Zucman sur les patrimoines supérieurs à 100 millions d'euros",
+        "position": "CONTRE",
+        "date": "31 oct. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n31 oct. 2025\nInstaurer la taxe Zucman sur les patrimoines supérieurs à 100 millions d'euros"
+      },
+      {
+        "titre": "Proposition de résolution visant à dénoncer les accords franco-algériens de 1968",
+        "position": "POUR",
+        "date": "30 oct. 2025",
+        "description": "",
+        "texte_brut": "POUR\n30 oct. 2025\nProposition de résolution visant à dénoncer les accords franco-algériens de 1968"
+      },
+      {
+        "titre": "Motion de censure de LFI contre le gouvernement Lecornu",
+        "position": "POUR",
+        "date": "16 oct. 2025",
+        "description": "",
+        "texte_brut": "POUR\n16 oct. 2025\nMotion de censure de LFI contre le gouvernement Lecornu"
+      },
+      {
+        "titre": "Vote de confiance au Premier ministre François Bayrou",
+        "position": "CONTRE",
+        "date": "08 sept. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n08 sept. 2025\nVote de confiance au Premier ministre François Bayrou"
+      },
+      {
+        "titre": "Loi Duplomb sur l’agriculture",
+        "position": "POUR",
+        "date": "08 juill. 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n08 juill. 2025\nLoi Duplomb sur l’agriculture\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Supprimer les zones à faibles émissions (ZFE)",
+        "position": "POUR",
+        "date": "28 mai 2025",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n28 mai 2025\nSupprimer les zones à faibles émissions (ZFE)\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "27 mai 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n27 mai 2025\nProposition de loi créant un droit à l'aide à mourir\nPremière lecture"
+      },
+      {
+        "titre": "Fin de vie : création des cinq critères pour accéder à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "20 mai 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n20 mai 2025\nFin de vie : création des cinq critères pour accéder à l'aide à mourir"
+      },
+      {
+        "titre": "Retirer les aménagements de peine en cas de trafic de stupéfiants",
+        "position": "POUR",
+        "date": "03 avr. 2025",
+        "description": "",
+        "texte_brut": "POUR\n03 avr. 2025\nRetirer les aménagements de peine en cas de trafic de stupéfiants"
+      },
+      {
+        "titre": "Proposition de loi visant à faire exécuter les peines d'emprisonnement ferme",
+        "position": "POUR",
+        "date": "03 avr. 2025",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n03 avr. 2025\nProposition de loi visant à faire exécuter les peines d'emprisonnement ferme\nPremière lecture"
+      },
+      {
+        "titre": "Considérer le retrait non consenti du préservatif comme un viol",
+        "position": "CONTRE",
+        "date": "01 avr. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n01 avr. 2025\nConsidérer le retrait non consenti du préservatif comme un viol"
+      },
+      {
+        "titre": "Proposition de loi modifiant la définition pénale du viol et des agressions sexuelles",
+        "position": "CONTRE",
+        "date": "01 avr. 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n01 avr. 2025\nProposition de loi modifiant la définition pénale du viol et des agressions sexuelles\nPremière lecture"
+      },
+      {
+        "titre": "Appeler à une stratégie nationale de prévention du chemsex",
+        "position": "ABSTENTION",
+        "date": "31 mars 2025",
+        "description": "",
+        "texte_brut": "ABSTENTION\n31 mars 2025\nAppeler à une stratégie nationale de prévention du chemsex"
+      },
+      {
+        "titre": "Permettre aux services de renseignement d'accéder aux messageries chiffrées (WhatsApp)",
+        "position": "POUR",
+        "date": "20 mars 2025",
+        "description": "",
+        "texte_brut": "POUR\n20 mars 2025\nPermettre aux services de renseignement d'accéder aux messageries chiffrées (WhatsApp)"
+      },
+      {
+        "titre": "Proposition de loi sur la sécurité dans les transports",
+        "position": "POUR",
+        "date": "18 mars 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n18 mars 2025\nProposition de loi sur la sécurité dans les transports\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Plafonner les marges de la grande distribution sur les denrées alimentaires",
+        "position": "CONTRE",
+        "date": "17 mars 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n17 mars 2025\nPlafonner les marges de la grande distribution sur les denrées alimentaires\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de loi visant à simplifier la sortie de l'indivison successorale",
+        "position": "POUR",
+        "date": "06 mars 2025",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n06 mars 2025\nProposition de loi visant à simplifier la sortie de l'indivison successorale\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de loi visant à protéger la population des risques liés aux PFAS",
+        "position": "ABSTENTION",
+        "date": "20 févr. 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "ABSTENTION\n20 févr. 2025\nProposition de loi visant à protéger la population des risques liés aux PFAS\nLecture définitive"
+      },
+      {
+        "titre": "Projet de loi souveraineté en matière agricole",
+        "position": "POUR",
+        "date": "19 févr. 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n19 févr. 2025\nProjet de loi souveraineté en matière agricole\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi renforçant les conditions d'accès à la nationalité française à Mayotte",
+        "position": "POUR",
+        "date": "06 févr. 2025",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n06 févr. 2025\nProposition de loi renforçant les conditions d'accès à la nationalité française à Mayotte\nPremière lecture"
+      },
+      {
+        "titre": "Supprimer le droit du sol à Mayotte",
+        "position": "POUR",
+        "date": "06 févr. 2025",
+        "description": "",
+        "texte_brut": "POUR\n06 févr. 2025\nSupprimer le droit du sol à Mayotte"
+      },
+      {
+        "titre": "Projet de loi d'urgence pour Mayotte",
+        "position": "POUR",
+        "date": "22 janv. 2025",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n22 janv. 2025\nProjet de loi d'urgence pour Mayotte\nPremière lecture"
+      },
+      {
+        "titre": "Motion de censure du gouvernement de Michel Barnier",
+        "position": "POUR",
+        "date": "04 déc. 2024",
+        "description": "",
+        "texte_brut": "POUR\n04 déc. 2024\nMotion de censure du gouvernement de Michel Barnier"
+      },
+      {
+        "titre": "Supprimer le crédit d'impôt accordé aux entreprises mettant en place une flotte de vélos",
+        "position": "POUR",
+        "date": "06 nov. 2024",
+        "description": "",
+        "texte_brut": "POUR\n06 nov. 2024\nSupprimer le crédit d'impôt accordé aux entreprises mettant en place une flotte de vélos"
+      },
+      {
+        "titre": "Augmenter la fiscalité sur les alcools les moins forts",
+        "position": "CONTRE",
+        "date": "04 nov. 2024",
+        "description": "",
+        "texte_brut": "CONTRE\n04 nov. 2024\nAugmenter la fiscalité sur les alcools les moins forts"
+      }
+    ]
   },
   {
     "id": "raphael-schellenberger",
@@ -11245,15 +13306,307 @@
     "avatar": "https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/PA841067.jpg",
     "datanUrl": "https://datan.fr/deputes/gard-30/depute_alexandre-allegretpilot",
     "scores": {
-      "FIS": 80,
-      "ETA": 80,
-      "REG": 75,
-      "PRO": 75,
-      "LIB": 35,
-      "OUV": 30
+      "FIS": 76,
+      "ETA": 60,
+      "REG": 62,
+      "PRO": 55,
+      "LIB": 50,
+      "OUV": 49
     },
     "reseaux": {},
-    "initiatives": []
+    "initiatives": [],
+    "score_global": 59,
+    "qualification": "Modérément libéral",
+    "synthese_analyse": "Le député présente un profil modérément libéral, se distinguant par une forte orientation en faveur de la baisse des impôts et de la réduction des dépenses de l'État. Il s'est opposé fermement aux nouvelles taxes, notamment sur le patrimoine, et a soutenu l'allègement de la fiscalité des entreprises. Toutefois, son vote en faveur d'une contribution sur les hauts revenus introduit une nuance. Sur la dérégulation, il défend la liberté des prix et des choix agricoles, mais accepte certaines régulations sectorielles et de protection des consommateurs. La protection de la propriété est globalement soutenue, bien qu'affaiblie par des votes sur l'accès aux données privées et la taxation des hauts revenus. Son positionnement sur la liberté du travail est neutre, en l'absence de votes significatifs. L'ouverture des marchés est son pilier le moins libéral, marqué par un soutien aux mesures protectionnistes agricoles et aux restrictions du démarchage.",
+    "votes": [
+      {
+        "titre": "Loi urgence agricole : réautorisation de l'acétamipride",
+        "position": "POUR",
+        "date": "20 juill. 2026",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n20 juill. 2026\nLoi urgence agricole : réautorisation de l'acétamipride\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "15 juill. 2026",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n15 juill. 2026\nProposition de loi créant un droit à l'aide à mourir\nLecture définitive"
+      },
+      {
+        "titre": "Proposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre",
+        "position": "POUR",
+        "date": "07 juill. 2026",
+        "description": "",
+        "texte_brut": "POUR\n07 juill. 2026\nProposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre"
+      },
+      {
+        "titre": "Maintenir l'existence des ZFE mais les rendre facultatives",
+        "position": "CONTRE",
+        "date": "14 avr. 2026",
+        "description": "",
+        "texte_brut": "CONTRE\n14 avr. 2026\nMaintenir l'existence des ZFE mais les rendre facultatives"
+      },
+      {
+        "titre": "Renforcer les sanctions contre la fraude aux prestations sociales",
+        "position": "POUR",
+        "date": "30 mars 2026",
+        "description": "",
+        "texte_brut": "POUR\n30 mars 2026\nRenforcer les sanctions contre la fraude aux prestations sociales"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "16 déc. 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n16 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nLecture définitive"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "09 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n09 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Partie recettes du projet de loi de finances (PLF) pour 2026",
+        "position": "CONTRE",
+        "date": "21 nov. 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n21 nov. 2025\nPartie recettes du projet de loi de finances (PLF) pour 2026\nPremière lecture"
+      },
+      {
+        "titre": "Suspension de la réforme des retraites jusqu'au 1er janvier 2028",
+        "position": "CONTRE",
+        "date": "12 nov. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n12 nov. 2025\nSuspension de la réforme des retraites jusqu'au 1er janvier 2028"
+      },
+      {
+        "titre": "Partie recettes du projet de loi de financement de la Sécurité sociale (PLFSS) pour 2026",
+        "position": "CONTRE",
+        "date": "08 nov. 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n08 nov. 2025\nPartie recettes du projet de loi de financement de la Sécurité sociale (PLFSS) pour 2026\nPremière lecture"
+      },
+      {
+        "titre": "Instaurer la taxe Zucman sur les patrimoines supérieurs à 100 millions d'euros",
+        "position": "CONTRE",
+        "date": "31 oct. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n31 oct. 2025\nInstaurer la taxe Zucman sur les patrimoines supérieurs à 100 millions d'euros"
+      },
+      {
+        "titre": "Proposition de résolution visant à dénoncer les accords franco-algériens de 1968",
+        "position": "POUR",
+        "date": "30 oct. 2025",
+        "description": "",
+        "texte_brut": "POUR\n30 oct. 2025\nProposition de résolution visant à dénoncer les accords franco-algériens de 1968"
+      },
+      {
+        "titre": "Motion de censure de LFI contre le gouvernement Lecornu",
+        "position": "POUR",
+        "date": "16 oct. 2025",
+        "description": "",
+        "texte_brut": "POUR\n16 oct. 2025\nMotion de censure de LFI contre le gouvernement Lecornu"
+      },
+      {
+        "titre": "Vote de confiance au Premier ministre François Bayrou",
+        "position": "CONTRE",
+        "date": "08 sept. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n08 sept. 2025\nVote de confiance au Premier ministre François Bayrou"
+      },
+      {
+        "titre": "Loi Duplomb sur l’agriculture",
+        "position": "POUR",
+        "date": "08 juill. 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n08 juill. 2025\nLoi Duplomb sur l’agriculture\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "27 mai 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n27 mai 2025\nProposition de loi créant un droit à l'aide à mourir\nPremière lecture"
+      },
+      {
+        "titre": "Fin de vie : création des cinq critères pour accéder à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "20 mai 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n20 mai 2025\nFin de vie : création des cinq critères pour accéder à l'aide à mourir"
+      },
+      {
+        "titre": "Retirer les aménagements de peine en cas de trafic de stupéfiants",
+        "position": "POUR",
+        "date": "03 avr. 2025",
+        "description": "",
+        "texte_brut": "POUR\n03 avr. 2025\nRetirer les aménagements de peine en cas de trafic de stupéfiants"
+      },
+      {
+        "titre": "Proposition de loi visant à faire exécuter les peines d'emprisonnement ferme",
+        "position": "POUR",
+        "date": "03 avr. 2025",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n03 avr. 2025\nProposition de loi visant à faire exécuter les peines d'emprisonnement ferme\nPremière lecture"
+      },
+      {
+        "titre": "Considérer le retrait non consenti du préservatif comme un viol",
+        "position": "CONTRE",
+        "date": "01 avr. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n01 avr. 2025\nConsidérer le retrait non consenti du préservatif comme un viol"
+      },
+      {
+        "titre": "Proposition de loi modifiant la définition pénale du viol et des agressions sexuelles",
+        "position": "CONTRE",
+        "date": "01 avr. 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n01 avr. 2025\nProposition de loi modifiant la définition pénale du viol et des agressions sexuelles\nPremière lecture"
+      },
+      {
+        "titre": "Permettre aux services de renseignement d'accéder aux messageries chiffrées (WhatsApp)",
+        "position": "POUR",
+        "date": "20 mars 2025",
+        "description": "",
+        "texte_brut": "POUR\n20 mars 2025\nPermettre aux services de renseignement d'accéder aux messageries chiffrées (WhatsApp)"
+      },
+      {
+        "titre": "Proposition de loi sur la sécurité dans les transports",
+        "position": "POUR",
+        "date": "18 mars 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n18 mars 2025\nProposition de loi sur la sécurité dans les transports\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Plafonner les marges de la grande distribution sur les denrées alimentaires",
+        "position": "CONTRE",
+        "date": "17 mars 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n17 mars 2025\nPlafonner les marges de la grande distribution sur les denrées alimentaires\nPremière lecture"
+      },
+      {
+        "titre": "Supprimer la mention d’une adhésion de l’Ukraine à l’Union européenne (UE)",
+        "position": "POUR",
+        "date": "12 mars 2025",
+        "description": "",
+        "texte_brut": "POUR\n12 mars 2025\nSupprimer la mention d’une adhésion de l’Ukraine à l’Union européenne (UE)"
+      },
+      {
+        "titre": "Appeler l'Union européenne (UE) à bâtir une défense européenne",
+        "position": "CONTRE",
+        "date": "12 mars 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n12 mars 2025\nAppeler l'Union européenne (UE) à bâtir une défense européenne"
+      },
+      {
+        "titre": "Condamner la minimisation de la responsabilité de la Russie dans la guerre en Ukraine",
+        "position": "ABSTENTION",
+        "date": "12 mars 2025",
+        "description": "",
+        "texte_brut": "ABSTENTION\n12 mars 2025\nCondamner la minimisation de la responsabilité de la Russie dans la guerre en Ukraine"
+      },
+      {
+        "titre": "Proposition de résolution européenne appelant au renforcement du soutien à l'Ukraine",
+        "position": "ABSTENTION",
+        "date": "12 mars 2025",
+        "description": "Première lecture",
+        "texte_brut": "ABSTENTION\n12 mars 2025\nProposition de résolution européenne appelant au renforcement du soutien à l'Ukraine\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de loi interdisant le démarchage téléphonique",
+        "position": "POUR",
+        "date": "06 mars 2025",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n06 mars 2025\nProposition de loi interdisant le démarchage téléphonique\nPremière lecture"
+      },
+      {
+        "titre": "Projet de loi souveraineté en matière agricole",
+        "position": "POUR",
+        "date": "19 févr. 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n19 févr. 2025\nProjet de loi souveraineté en matière agricole\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi renforçant les conditions d'accès à la nationalité française à Mayotte",
+        "position": "POUR",
+        "date": "06 févr. 2025",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n06 févr. 2025\nProposition de loi renforçant les conditions d'accès à la nationalité française à Mayotte\nPremière lecture"
+      },
+      {
+        "titre": "Supprimer le droit du sol à Mayotte",
+        "position": "POUR",
+        "date": "06 févr. 2025",
+        "description": "",
+        "texte_brut": "POUR\n06 févr. 2025\nSupprimer le droit du sol à Mayotte"
+      },
+      {
+        "titre": "Proposition de loi instaurant un nombre minimum de soignants par patient",
+        "position": "ABSTENTION",
+        "date": "23 janv. 2025",
+        "description": "",
+        "texte_brut": "ABSTENTION\n23 janv. 2025\nProposition de loi instaurant un nombre minimum de soignants par patient"
+      },
+      {
+        "titre": "Projet de loi d'urgence pour Mayotte",
+        "position": "POUR",
+        "date": "22 janv. 2025",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n22 janv. 2025\nProjet de loi d'urgence pour Mayotte\nPremière lecture"
+      },
+      {
+        "titre": "Motion de censure du gouvernement de Michel Barnier",
+        "position": "POUR",
+        "date": "04 déc. 2024",
+        "description": "",
+        "texte_brut": "POUR\n04 déc. 2024\nMotion de censure du gouvernement de Michel Barnier"
+      },
+      {
+        "titre": "Augmenter le plafond pour le taux réduit de l'impôt sur les sociétés",
+        "position": "POUR",
+        "date": "06 nov. 2024",
+        "description": "",
+        "texte_brut": "POUR\n06 nov. 2024\nAugmenter le plafond pour le taux réduit de l'impôt sur les sociétés"
+      },
+      {
+        "titre": "Supprimer le crédit d'impôt accordé aux entreprises mettant en place une flotte de vélos",
+        "position": "ABSTENTION",
+        "date": "06 nov. 2024",
+        "description": "",
+        "texte_brut": "ABSTENTION\n06 nov. 2024\nSupprimer le crédit d'impôt accordé aux entreprises mettant en place une flotte de vélos"
+      },
+      {
+        "titre": "Instaurer une taxe sur la publicité pour les aliments nocifs pour la santé",
+        "position": "CONTRE",
+        "date": "04 nov. 2024",
+        "description": "",
+        "texte_brut": "CONTRE\n04 nov. 2024\nInstaurer une taxe sur la publicité pour les aliments nocifs pour la santé"
+      },
+      {
+        "titre": "Augmenter la fiscalité sur les alcools les moins forts",
+        "position": "CONTRE",
+        "date": "04 nov. 2024",
+        "description": "",
+        "texte_brut": "CONTRE\n04 nov. 2024\nAugmenter la fiscalité sur les alcools les moins forts"
+      },
+      {
+        "titre": "Pérenniser dans le temps la contribution sur les plus hauts revenus (CDHR)",
+        "position": "ABSTENTION",
+        "date": "22 oct. 2024",
+        "description": "",
+        "texte_brut": "ABSTENTION\n22 oct. 2024\nPérenniser dans le temps la contribution sur les plus hauts revenus (CDHR)"
+      },
+      {
+        "titre": "Instaurer une contribution différentielle sur les hauts revenus (CDHR)",
+        "position": "POUR",
+        "date": "22 oct. 2024",
+        "description": "",
+        "texte_brut": "POUR\n22 oct. 2024\nInstaurer une contribution différentielle sur les hauts revenus (CDHR)"
+      }
+    ]
   },
   {
     "id": "marine-hamelet",
@@ -11721,15 +14074,251 @@
     "avatar": "https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/PA841769.jpg",
     "datanUrl": "https://datan.fr/deputes/saone-et-loire-71/depute_eric-michoux",
     "scores": {
-      "FIS": 85,
-      "ETA": 70,
-      "REG": 80,
-      "PRO": 80,
-      "LIB": 40,
-      "OUV": 35
+      "FIS": 80,
+      "ETA": 75,
+      "REG": 65,
+      "PRO": 50,
+      "LIB": 60,
+      "OUV": 50
     },
     "reseaux": {},
-    "initiatives": []
+    "initiatives": [],
+    "score_global": 63,
+    "qualification": "Modérément libéral",
+    "synthese_analyse": "Le député affiche une orientation fortement libérale sur les piliers de la Santé Fiscale et de la Taille de l'État, s'opposant constamment aux projets de loi de financement de la sécurité sociale et de finances (partie recettes et dépenses), ainsi qu'aux hausses d'impôts. Il a également soutenu des mesures de défiscalisation et de suppression de crédits d'impôts spécifiques. Concernant le Fardeau Réglementaire, il penche vers la dérégulation et la simplification administrative. Cependant, sa position sur le Droit de Propriété est mitigée, avec des votes contradictoires sur la taxation des dividendes (pour une imposition accrue des rendements élevés, mais contre la suppression de l'abattement fiscal sur les dividendes), ce qui neutralise sa tendance générale positive sur la protection de l'ordre public. En matière de Liberté du Travail, son soutien à la défiscalisation des heures supplémentaires est un signe positif, bien que l'échantillon de votes soit limité. Enfin, sur l'Ouverture des Marchés, le député présente un positionnement neutre, avec une mesure pro-concurrence locale contrebalancée par un vote en faveur de la 'souveraineté agricole', suggérant une préférence pour les intérêts nationaux dans certains secteurs.",
+    "votes": [
+      {
+        "titre": "Loi urgence agricole : réautorisation de l'acétamipride",
+        "position": "POUR",
+        "date": "20 juill. 2026",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n20 juill. 2026\nLoi urgence agricole : réautorisation de l'acétamipride\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "15 juill. 2026",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n15 juill. 2026\nProposition de loi créant un droit à l'aide à mourir\nLecture définitive"
+      },
+      {
+        "titre": "Proposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre",
+        "position": "POUR",
+        "date": "07 juill. 2026",
+        "description": "",
+        "texte_brut": "POUR\n07 juill. 2026\nProposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "16 déc. 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n16 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nLecture définitive"
+      },
+      {
+        "titre": "Partie dépenses du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026",
+        "position": "CONTRE",
+        "date": "09 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n09 déc. 2025\nPartie dépenses du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "09 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n09 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Partie recettes du projet de loi de finances (PLF) pour 2026",
+        "position": "CONTRE",
+        "date": "21 nov. 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n21 nov. 2025\nPartie recettes du projet de loi de finances (PLF) pour 2026\nPremière lecture"
+      },
+      {
+        "titre": "Partie recettes du projet de loi de financement de la Sécurité sociale (PLFSS) pour 2026",
+        "position": "CONTRE",
+        "date": "08 nov. 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n08 nov. 2025\nPartie recettes du projet de loi de financement de la Sécurité sociale (PLFSS) pour 2026\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de résolution visant à dénoncer les accords franco-algériens de 1968",
+        "position": "POUR",
+        "date": "30 oct. 2025",
+        "description": "",
+        "texte_brut": "POUR\n30 oct. 2025\nProposition de résolution visant à dénoncer les accords franco-algériens de 1968"
+      },
+      {
+        "titre": "Motion de censure de LFI contre le gouvernement Lecornu",
+        "position": "POUR",
+        "date": "16 oct. 2025",
+        "description": "",
+        "texte_brut": "POUR\n16 oct. 2025\nMotion de censure de LFI contre le gouvernement Lecornu"
+      },
+      {
+        "titre": "Vote de confiance au Premier ministre François Bayrou",
+        "position": "CONTRE",
+        "date": "08 sept. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n08 sept. 2025\nVote de confiance au Premier ministre François Bayrou"
+      },
+      {
+        "titre": "Loi Duplomb sur l’agriculture",
+        "position": "POUR",
+        "date": "08 juill. 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n08 juill. 2025\nLoi Duplomb sur l’agriculture\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "27 mai 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n27 mai 2025\nProposition de loi créant un droit à l'aide à mourir\nPremière lecture"
+      },
+      {
+        "titre": "Fin de vie : création des cinq critères pour accéder à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "20 mai 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n20 mai 2025\nFin de vie : création des cinq critères pour accéder à l'aide à mourir"
+      },
+      {
+        "titre": "Proposition de loi harmonisant le scrutin de liste paritaire aux élections municipales",
+        "position": "CONTRE",
+        "date": "07 avr. 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n07 avr. 2025\nProposition de loi harmonisant le scrutin de liste paritaire aux élections municipales\nLecture définitive"
+      },
+      {
+        "titre": "Proposition de loi sur la sécurité dans les transports",
+        "position": "POUR",
+        "date": "18 mars 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n18 mars 2025\nProposition de loi sur la sécurité dans les transports\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Suppression du vote par \"assis et levé\" à l'Assemblée nationale",
+        "position": "POUR",
+        "date": "12 mars 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "POUR\n12 mars 2025\nSuppression du vote par \"assis et levé\" à l'Assemblée nationale\nLecture définitive"
+      },
+      {
+        "titre": "Supprimer la mention d’une adhésion de l’Ukraine à l’Union européenne (UE)",
+        "position": "POUR",
+        "date": "12 mars 2025",
+        "description": "",
+        "texte_brut": "POUR\n12 mars 2025\nSupprimer la mention d’une adhésion de l’Ukraine à l’Union européenne (UE)"
+      },
+      {
+        "titre": "Appeler l'Union européenne (UE) à bâtir une défense européenne",
+        "position": "CONTRE",
+        "date": "12 mars 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n12 mars 2025\nAppeler l'Union européenne (UE) à bâtir une défense européenne"
+      },
+      {
+        "titre": "Condamner la minimisation de la responsabilité de la Russie dans la guerre en Ukraine",
+        "position": "ABSTENTION",
+        "date": "12 mars 2025",
+        "description": "",
+        "texte_brut": "ABSTENTION\n12 mars 2025\nCondamner la minimisation de la responsabilité de la Russie dans la guerre en Ukraine"
+      },
+      {
+        "titre": "Proposition de résolution européenne appelant au renforcement du soutien à l'Ukraine",
+        "position": "ABSTENTION",
+        "date": "12 mars 2025",
+        "description": "Première lecture",
+        "texte_brut": "ABSTENTION\n12 mars 2025\nProposition de résolution européenne appelant au renforcement du soutien à l'Ukraine\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de loi simplifiant l'ouverture des débits de boisson en zone rurale",
+        "position": "POUR",
+        "date": "10 mars 2025",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n10 mars 2025\nProposition de loi simplifiant l'ouverture des débits de boisson en zone rurale\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de loi visant à protéger la population des risques liés aux PFAS",
+        "position": "ABSTENTION",
+        "date": "20 févr. 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "ABSTENTION\n20 févr. 2025\nProposition de loi visant à protéger la population des risques liés aux PFAS\nLecture définitive"
+      },
+      {
+        "titre": "Projet de loi souveraineté en matière agricole",
+        "position": "POUR",
+        "date": "19 févr. 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n19 févr. 2025\nProjet de loi souveraineté en matière agricole\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi renforçant les conditions d'accès à la nationalité française à Mayotte",
+        "position": "POUR",
+        "date": "06 févr. 2025",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n06 févr. 2025\nProposition de loi renforçant les conditions d'accès à la nationalité française à Mayotte\nPremière lecture"
+      },
+      {
+        "titre": "Supprimer le droit du sol à Mayotte",
+        "position": "POUR",
+        "date": "06 févr. 2025",
+        "description": "",
+        "texte_brut": "POUR\n06 févr. 2025\nSupprimer le droit du sol à Mayotte"
+      },
+      {
+        "titre": "Motion de censure du gouvernement de Michel Barnier",
+        "position": "POUR",
+        "date": "04 déc. 2024",
+        "description": "",
+        "texte_brut": "POUR\n04 déc. 2024\nMotion de censure du gouvernement de Michel Barnier"
+      },
+      {
+        "titre": "Augmenter le plafond pour le taux réduit de l'impôt sur les sociétés",
+        "position": "CONTRE",
+        "date": "06 nov. 2024",
+        "description": "",
+        "texte_brut": "CONTRE\n06 nov. 2024\nAugmenter le plafond pour le taux réduit de l'impôt sur les sociétés"
+      },
+      {
+        "titre": "Supprimer le crédit d'impôt accordé aux entreprises mettant en place une flotte de vélos",
+        "position": "POUR",
+        "date": "06 nov. 2024",
+        "description": "",
+        "texte_brut": "POUR\n06 nov. 2024\nSupprimer le crédit d'impôt accordé aux entreprises mettant en place une flotte de vélos"
+      },
+      {
+        "titre": "Renforcer la défiscalisation des heures supplémentaires",
+        "position": "POUR",
+        "date": "23 oct. 2024",
+        "description": "",
+        "texte_brut": "POUR\n23 oct. 2024\nRenforcer la défiscalisation des heures supplémentaires"
+      },
+      {
+        "titre": "Supprimer l'avantage fiscal pour les intermittents du spectacle",
+        "position": "POUR",
+        "date": "23 oct. 2024",
+        "description": "",
+        "texte_brut": "POUR\n23 oct. 2024\nSupprimer l'avantage fiscal pour les intermittents du spectacle"
+      },
+      {
+        "titre": "Imposer davantage les dividendes aux rendements exceptionnellement élevés",
+        "position": "POUR",
+        "date": "23 oct. 2024",
+        "description": "",
+        "texte_brut": "POUR\n23 oct. 2024\nImposer davantage les dividendes aux rendements exceptionnellement élevés"
+      },
+      {
+        "titre": "Supprimer l'abattement fiscal sur les dividendes",
+        "position": "CONTRE",
+        "date": "23 oct. 2024",
+        "description": "",
+        "texte_brut": "CONTRE\n23 oct. 2024\nSupprimer l'abattement fiscal sur les dividendes"
+      }
+    ]
   },
   {
     "id": "dorine-bregman",
@@ -11805,15 +14394,202 @@
     "avatar": "https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/PA840685.jpg",
     "datanUrl": "https://datan.fr/deputes/ardeche-07/depute_vincent-trebuchet",
     "scores": {
-      "FIS": 80,
-      "ETA": 70,
-      "REG": 75,
-      "PRO": 75,
-      "LIB": 35,
-      "OUV": 30
+      "FIS": 70,
+      "ETA": 65,
+      "REG": 45,
+      "PRO": 50,
+      "LIB": 75,
+      "OUV": 35
     },
     "reseaux": {},
-    "initiatives": []
+    "initiatives": [],
+    "score_global": 57,
+    "qualification": "Modérément libéral",
+    "synthese_analyse": "Le député affiche une orientation généralement favorable aux principes de l'économie libérale, particulièrement en matière de fiscalité et de liberté du travail. Il s'oppose fermement aux augmentations d'impôts sur le patrimoine et les revenus élevés, tout en soutenant les incitations fiscales au travail (défiscalisation des heures supplémentaires). Sa position contre les projets de loi de financement de la Sécurité sociale révèle une volonté de maîtriser les dépenses publiques. Cependant, cette approche n'est pas constante. Sur le fardeau réglementaire, ses votes sont mitigés, avec un soutien à la dérégulation ponctuelle (acétamipride) mais aussi le maintien de régulations (ZFE). Le pilier du droit de propriété est équilibré entre la protection du capital (opposition à la taxe Zucman) et une taxation accrue des dividendes. Enfin, une tendance protectionniste se manifeste sur l'ouverture des marchés (souveraineté agricole), ce qui tempère son profil libéral global.",
+    "votes": [
+      {
+        "titre": "Loi urgence agricole : réautorisation de l'acétamipride",
+        "position": "POUR",
+        "date": "20 juill. 2026",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n20 juill. 2026\nLoi urgence agricole : réautorisation de l'acétamipride\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "15 juill. 2026",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n15 juill. 2026\nProposition de loi créant un droit à l'aide à mourir\nLecture définitive"
+      },
+      {
+        "titre": "Maintenir l'existence des ZFE mais les rendre facultatives",
+        "position": "CONTRE",
+        "date": "14 avr. 2026",
+        "description": "",
+        "texte_brut": "CONTRE\n14 avr. 2026\nMaintenir l'existence des ZFE mais les rendre facultatives"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "16 déc. 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n16 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nLecture définitive"
+      },
+      {
+        "titre": "Partie dépenses du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026",
+        "position": "CONTRE",
+        "date": "09 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n09 déc. 2025\nPartie dépenses du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "09 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n09 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Partie recettes du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026",
+        "position": "CONTRE",
+        "date": "05 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n05 déc. 2025\nPartie recettes du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Suspension de la réforme des retraites jusqu'au 1er janvier 2028",
+        "position": "CONTRE",
+        "date": "12 nov. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n12 nov. 2025\nSuspension de la réforme des retraites jusqu'au 1er janvier 2028"
+      },
+      {
+        "titre": "Partie recettes du projet de loi de financement de la Sécurité sociale (PLFSS) pour 2026",
+        "position": "CONTRE",
+        "date": "08 nov. 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n08 nov. 2025\nPartie recettes du projet de loi de financement de la Sécurité sociale (PLFSS) pour 2026\nPremière lecture"
+      },
+      {
+        "titre": "Instaurer la taxe Zucman sur les patrimoines supérieurs à 100 millions d'euros",
+        "position": "CONTRE",
+        "date": "31 oct. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n31 oct. 2025\nInstaurer la taxe Zucman sur les patrimoines supérieurs à 100 millions d'euros"
+      },
+      {
+        "titre": "Proposition de résolution visant à dénoncer les accords franco-algériens de 1968",
+        "position": "POUR",
+        "date": "30 oct. 2025",
+        "description": "",
+        "texte_brut": "POUR\n30 oct. 2025\nProposition de résolution visant à dénoncer les accords franco-algériens de 1968"
+      },
+      {
+        "titre": "Motion de censure de LFI contre le gouvernement Lecornu",
+        "position": "POUR",
+        "date": "16 oct. 2025",
+        "description": "",
+        "texte_brut": "POUR\n16 oct. 2025\nMotion de censure de LFI contre le gouvernement Lecornu"
+      },
+      {
+        "titre": "Vote de confiance au Premier ministre François Bayrou",
+        "position": "CONTRE",
+        "date": "08 sept. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n08 sept. 2025\nVote de confiance au Premier ministre François Bayrou"
+      },
+      {
+        "titre": "Loi Duplomb sur l’agriculture",
+        "position": "POUR",
+        "date": "08 juill. 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n08 juill. 2025\nLoi Duplomb sur l’agriculture\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "27 mai 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n27 mai 2025\nProposition de loi créant un droit à l'aide à mourir\nPremière lecture"
+      },
+      {
+        "titre": "Fin de vie : création des cinq critères pour accéder à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "20 mai 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n20 mai 2025\nFin de vie : création des cinq critères pour accéder à l'aide à mourir"
+      },
+      {
+        "titre": "Proposition de loi sur la sécurité dans les transports",
+        "position": "POUR",
+        "date": "18 mars 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n18 mars 2025\nProposition de loi sur la sécurité dans les transports\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de résolution européenne appelant au renforcement du soutien à l'Ukraine",
+        "position": "ABSTENTION",
+        "date": "12 mars 2025",
+        "description": "Première lecture",
+        "texte_brut": "ABSTENTION\n12 mars 2025\nProposition de résolution européenne appelant au renforcement du soutien à l'Ukraine\nPremière lecture"
+      },
+      {
+        "titre": "Projet de loi souveraineté en matière agricole",
+        "position": "POUR",
+        "date": "19 févr. 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n19 févr. 2025\nProjet de loi souveraineté en matière agricole\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi renforçant les conditions d'accès à la nationalité française à Mayotte",
+        "position": "POUR",
+        "date": "06 févr. 2025",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n06 févr. 2025\nProposition de loi renforçant les conditions d'accès à la nationalité française à Mayotte\nPremière lecture"
+      },
+      {
+        "titre": "Projet de loi d'urgence pour Mayotte",
+        "position": "POUR",
+        "date": "22 janv. 2025",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n22 janv. 2025\nProjet de loi d'urgence pour Mayotte\nPremière lecture"
+      },
+      {
+        "titre": "Motion de censure du gouvernement de Michel Barnier",
+        "position": "POUR",
+        "date": "04 déc. 2024",
+        "description": "",
+        "texte_brut": "POUR\n04 déc. 2024\nMotion de censure du gouvernement de Michel Barnier"
+      },
+      {
+        "titre": "Renforcer la défiscalisation des heures supplémentaires",
+        "position": "POUR",
+        "date": "23 oct. 2024",
+        "description": "",
+        "texte_brut": "POUR\n23 oct. 2024\nRenforcer la défiscalisation des heures supplémentaires"
+      },
+      {
+        "titre": "Supprimer l'avantage fiscal pour les intermittents du spectacle",
+        "position": "POUR",
+        "date": "23 oct. 2024",
+        "description": "",
+        "texte_brut": "POUR\n23 oct. 2024\nSupprimer l'avantage fiscal pour les intermittents du spectacle"
+      },
+      {
+        "titre": "Imposer davantage les dividendes aux rendements exceptionnellement élevés",
+        "position": "POUR",
+        "date": "23 oct. 2024",
+        "description": "",
+        "texte_brut": "POUR\n23 oct. 2024\nImposer davantage les dividendes aux rendements exceptionnellement élevés"
+      },
+      {
+        "titre": "Augmenter la progressivité de l'impôt sur le revenu",
+        "position": "CONTRE",
+        "date": "22 oct. 2024",
+        "description": "",
+        "texte_brut": "CONTRE\n22 oct. 2024\nAugmenter la progressivité de l'impôt sur le revenu"
+      }
+    ]
   },
   {
     "id": "philippe-bonnecarrere",
@@ -12729,15 +15505,202 @@
     "avatar": "https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/PA840657.jpg",
     "datanUrl": "https://datan.fr/deputes/alpes-de-haute-provence-04/depute_sophie-ricourtvaginay",
     "scores": {
-      "FIS": 50,
-      "ETA": 50,
-      "REG": 50,
-      "PRO": 50,
-      "LIB": 50,
-      "OUV": 50
+      "FIS": 80,
+      "ETA": 75,
+      "REG": 65,
+      "PRO": 55,
+      "LIB": 60,
+      "OUV": 40
     },
     "reseaux": {},
-    "initiatives": []
+    "initiatives": [],
+    "score_global": 63,
+    "qualification": "Modérément libéral",
+    "synthese_analyse": "Ce député démontre une forte orientation libérale en matière de finances publiques et de taille de l'État, s'opposant systématiquement aux projets de loi de financement de la sécurité sociale et aux parties recettes du budget, et soutenant les réformes des retraites. Sa position vise clairement à réduire la dépense publique et la pression fiscale. En ce qui concerne la réglementation et la liberté du travail, ses votes indiquent un positionnement modérément libéral, favorisant la dérégulation dans certains secteurs (comme l'agriculture) et la flexibilité. Cependant, sur l'ouverture des marchés, le député adopte une posture plus nuancée, voire moins libérale, s'opposant à l'adhésion de l'Ukraine à l'UE et soutenant la souveraineté agricole, ce qui peut traduire une préférence pour la protection nationale au détriment du libre-échange et de l'intégration des marchés. Le respect de la propriété privée n'est pas directement mis en évidence par ces votes, mais aucun élément n'indique une opposition.",
+    "votes": [
+      {
+        "titre": "Loi urgence agricole : réautorisation de l'acétamipride",
+        "position": "POUR",
+        "date": "20 juill. 2026",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n20 juill. 2026\nLoi urgence agricole : réautorisation de l'acétamipride\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "15 juill. 2026",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n15 juill. 2026\nProposition de loi créant un droit à l'aide à mourir\nLecture définitive"
+      },
+      {
+        "titre": "Proposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre",
+        "position": "POUR",
+        "date": "07 juill. 2026",
+        "description": "",
+        "texte_brut": "POUR\n07 juill. 2026\nProposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "16 déc. 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n16 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nLecture définitive"
+      },
+      {
+        "titre": "Partie dépenses du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026",
+        "position": "CONTRE",
+        "date": "09 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n09 déc. 2025\nPartie dépenses du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "09 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n09 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Partie recettes du projet de loi de finances (PLF) pour 2026",
+        "position": "CONTRE",
+        "date": "21 nov. 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n21 nov. 2025\nPartie recettes du projet de loi de finances (PLF) pour 2026\nPremière lecture"
+      },
+      {
+        "titre": "Suspension de la réforme des retraites jusqu'au 1er janvier 2028",
+        "position": "CONTRE",
+        "date": "12 nov. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n12 nov. 2025\nSuspension de la réforme des retraites jusqu'au 1er janvier 2028"
+      },
+      {
+        "titre": "Proposition de résolution visant à dénoncer les accords franco-algériens de 1968",
+        "position": "POUR",
+        "date": "30 oct. 2025",
+        "description": "",
+        "texte_brut": "POUR\n30 oct. 2025\nProposition de résolution visant à dénoncer les accords franco-algériens de 1968"
+      },
+      {
+        "titre": "Motion de censure de LFI contre le gouvernement Lecornu",
+        "position": "POUR",
+        "date": "16 oct. 2025",
+        "description": "",
+        "texte_brut": "POUR\n16 oct. 2025\nMotion de censure de LFI contre le gouvernement Lecornu"
+      },
+      {
+        "titre": "Vote de confiance au Premier ministre François Bayrou",
+        "position": "CONTRE",
+        "date": "08 sept. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n08 sept. 2025\nVote de confiance au Premier ministre François Bayrou"
+      },
+      {
+        "titre": "Loi Duplomb sur l’agriculture",
+        "position": "POUR",
+        "date": "08 juill. 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n08 juill. 2025\nLoi Duplomb sur l’agriculture\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "27 mai 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n27 mai 2025\nProposition de loi créant un droit à l'aide à mourir\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de loi harmonisant le scrutin de liste paritaire aux élections municipales",
+        "position": "CONTRE",
+        "date": "07 avr. 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n07 avr. 2025\nProposition de loi harmonisant le scrutin de liste paritaire aux élections municipales\nLecture définitive"
+      },
+      {
+        "titre": "Considérer le retrait non consenti du préservatif comme un viol",
+        "position": "CONTRE",
+        "date": "01 avr. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n01 avr. 2025\nConsidérer le retrait non consenti du préservatif comme un viol"
+      },
+      {
+        "titre": "Proposition de loi modifiant la définition pénale du viol et des agressions sexuelles",
+        "position": "CONTRE",
+        "date": "01 avr. 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n01 avr. 2025\nProposition de loi modifiant la définition pénale du viol et des agressions sexuelles\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de loi sur la sécurité dans les transports",
+        "position": "POUR",
+        "date": "18 mars 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n18 mars 2025\nProposition de loi sur la sécurité dans les transports\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Supprimer la mention d’une adhésion de l’Ukraine à l’Union européenne (UE)",
+        "position": "POUR",
+        "date": "12 mars 2025",
+        "description": "",
+        "texte_brut": "POUR\n12 mars 2025\nSupprimer la mention d’une adhésion de l’Ukraine à l’Union européenne (UE)"
+      },
+      {
+        "titre": "Appeler l'Union européenne (UE) à bâtir une défense européenne",
+        "position": "CONTRE",
+        "date": "12 mars 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n12 mars 2025\nAppeler l'Union européenne (UE) à bâtir une défense européenne"
+      },
+      {
+        "titre": "Condamner la minimisation de la responsabilité de la Russie dans la guerre en Ukraine",
+        "position": "ABSTENTION",
+        "date": "12 mars 2025",
+        "description": "",
+        "texte_brut": "ABSTENTION\n12 mars 2025\nCondamner la minimisation de la responsabilité de la Russie dans la guerre en Ukraine"
+      },
+      {
+        "titre": "Proposition de résolution européenne appelant au renforcement du soutien à l'Ukraine",
+        "position": "ABSTENTION",
+        "date": "12 mars 2025",
+        "description": "Première lecture",
+        "texte_brut": "ABSTENTION\n12 mars 2025\nProposition de résolution européenne appelant au renforcement du soutien à l'Ukraine\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de loi visant à protéger la population des risques liés aux PFAS",
+        "position": "ABSTENTION",
+        "date": "20 févr. 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "ABSTENTION\n20 févr. 2025\nProposition de loi visant à protéger la population des risques liés aux PFAS\nLecture définitive"
+      },
+      {
+        "titre": "Projet de loi souveraineté en matière agricole",
+        "position": "POUR",
+        "date": "19 févr. 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n19 févr. 2025\nProjet de loi souveraineté en matière agricole\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Projet de loi d'urgence pour Mayotte",
+        "position": "POUR",
+        "date": "22 janv. 2025",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n22 janv. 2025\nProjet de loi d'urgence pour Mayotte\nPremière lecture"
+      },
+      {
+        "titre": "Supprimer l'obligation de listes paritaires pour les élections des instances de protection sociale agricole",
+        "position": "POUR",
+        "date": "22 janv. 2025",
+        "description": "",
+        "texte_brut": "POUR\n22 janv. 2025\nSupprimer l'obligation de listes paritaires pour les élections des instances de protection sociale agricole"
+      },
+      {
+        "titre": "Motion de censure du gouvernement de Michel Barnier",
+        "position": "POUR",
+        "date": "04 déc. 2024",
+        "description": "",
+        "texte_brut": "POUR\n04 déc. 2024\nMotion de censure du gouvernement de Michel Barnier"
+      }
+    ]
   },
   {
     "id": "francois-ruffin",
@@ -14161,15 +17124,202 @@
     "avatar": "https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/PA840721.jpg",
     "datanUrl": "https://datan.fr/deputes/ain-01/depute_marc-chavent",
     "scores": {
-      "FIS": 65,
-      "ETA": 55,
-      "REG": 60,
+      "FIS": 85,
+      "ETA": 75,
+      "REG": 65,
       "PRO": 70,
-      "LIB": 30,
-      "OUV": 15
+      "LIB": 60,
+      "OUV": 40
     },
     "reseaux": {},
-    "initiatives": []
+    "initiatives": [],
+    "score_global": 66,
+    "qualification": "Modérément libéral",
+    "synthese_analyse": "Le député manifeste une forte orientation libérale en matière fiscale et de gestion de la dépense publique, s'opposant systématiquement aux projets de loi de financement de la sécurité sociale et aux parties recettes du budget, tout en soutenant les réformes structurelles comme celle des retraites pour maîtriser les finances. Il affiche également un positionnement clair en faveur du renforcement de l'État de droit et de la sécurité, des piliers essentiels à la protection de la propriété privée et à l'attractivité économique. Sur le plan réglementaire, il tend vers la simplification et la dérégulation ponctuelle, bien que des votes en faveur de la sécurité puissent introduire de nouvelles contraintes. Concernant la liberté du travail, les indications sont moins nombreuses mais pointent vers un soutien aux réformes structurelles. Le point de divergence majeur avec une orthodoxie libérale se trouve dans son appui à des mesures de 'souveraineté agricole' et des lois sectorielles, qui peuvent être interprétées comme protectionnistes et interventionnistes, allant à l'encontre de la concurrence et de l'ouverture des marchés.",
+    "votes": [
+      {
+        "titre": "Loi urgence agricole : réautorisation de l'acétamipride",
+        "position": "POUR",
+        "date": "20 juill. 2026",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n20 juill. 2026\nLoi urgence agricole : réautorisation de l'acétamipride\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "15 juill. 2026",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n15 juill. 2026\nProposition de loi créant un droit à l'aide à mourir\nLecture définitive"
+      },
+      {
+        "titre": "Inclure les amendes forfaitaires délictuelles dans le bulletin n°2 du casier judiciaire",
+        "position": "POUR",
+        "date": "15 juill. 2026",
+        "description": "",
+        "texte_brut": "POUR\n15 juill. 2026\nInclure les amendes forfaitaires délictuelles dans le bulletin n°2 du casier judiciaire"
+      },
+      {
+        "titre": "Proposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre",
+        "position": "POUR",
+        "date": "07 juill. 2026",
+        "description": "",
+        "texte_brut": "POUR\n07 juill. 2026\nProposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "16 déc. 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n16 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nLecture définitive"
+      },
+      {
+        "titre": "Partie dépenses du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026",
+        "position": "CONTRE",
+        "date": "09 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n09 déc. 2025\nPartie dépenses du projet de loi de financement de la sécurité sociale (PLFSS) pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "position": "CONTRE",
+        "date": "09 déc. 2025",
+        "description": "Deuxième lecture",
+        "texte_brut": "CONTRE\n09 déc. 2025\nProjet de loi de financement de la sécurité sociale pour 2026\nDeuxième lecture"
+      },
+      {
+        "titre": "Partie recettes du projet de loi de finances (PLF) pour 2026",
+        "position": "CONTRE",
+        "date": "21 nov. 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n21 nov. 2025\nPartie recettes du projet de loi de finances (PLF) pour 2026\nPremière lecture"
+      },
+      {
+        "titre": "Suspension de la réforme des retraites jusqu'au 1er janvier 2028",
+        "position": "CONTRE",
+        "date": "12 nov. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n12 nov. 2025\nSuspension de la réforme des retraites jusqu'au 1er janvier 2028"
+      },
+      {
+        "titre": "Motion de censure de LFI contre le gouvernement Lecornu",
+        "position": "POUR",
+        "date": "16 oct. 2025",
+        "description": "",
+        "texte_brut": "POUR\n16 oct. 2025\nMotion de censure de LFI contre le gouvernement Lecornu"
+      },
+      {
+        "titre": "Vote de confiance au Premier ministre François Bayrou",
+        "position": "CONTRE",
+        "date": "08 sept. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n08 sept. 2025\nVote de confiance au Premier ministre François Bayrou"
+      },
+      {
+        "titre": "Loi Duplomb sur l’agriculture",
+        "position": "POUR",
+        "date": "08 juill. 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n08 juill. 2025\nLoi Duplomb sur l’agriculture\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "27 mai 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n27 mai 2025\nProposition de loi créant un droit à l'aide à mourir\nPremière lecture"
+      },
+      {
+        "titre": "Fin de vie : création des cinq critères pour accéder à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "20 mai 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n20 mai 2025\nFin de vie : création des cinq critères pour accéder à l'aide à mourir"
+      },
+      {
+        "titre": "Proposition de loi harmonisant le scrutin de liste paritaire aux élections municipales",
+        "position": "CONTRE",
+        "date": "07 avr. 2025",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n07 avr. 2025\nProposition de loi harmonisant le scrutin de liste paritaire aux élections municipales\nLecture définitive"
+      },
+      {
+        "titre": "Considérer le retrait non consenti du préservatif comme un viol",
+        "position": "CONTRE",
+        "date": "01 avr. 2025",
+        "description": "",
+        "texte_brut": "CONTRE\n01 avr. 2025\nConsidérer le retrait non consenti du préservatif comme un viol"
+      },
+      {
+        "titre": "Proposition de loi modifiant la définition pénale du viol et des agressions sexuelles",
+        "position": "CONTRE",
+        "date": "01 avr. 2025",
+        "description": "Première lecture",
+        "texte_brut": "CONTRE\n01 avr. 2025\nProposition de loi modifiant la définition pénale du viol et des agressions sexuelles\nPremière lecture"
+      },
+      {
+        "titre": "Appeler à une stratégie nationale de prévention du chemsex",
+        "position": "ABSTENTION",
+        "date": "31 mars 2025",
+        "description": "",
+        "texte_brut": "ABSTENTION\n31 mars 2025\nAppeler à une stratégie nationale de prévention du chemsex"
+      },
+      {
+        "titre": "Proposition de loi sur la sécurité dans les transports",
+        "position": "POUR",
+        "date": "18 mars 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n18 mars 2025\nProposition de loi sur la sécurité dans les transports\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Plafonner les marges de la grande distribution sur les denrées alimentaires",
+        "position": "ABSTENTION",
+        "date": "17 mars 2025",
+        "description": "Première lecture",
+        "texte_brut": "ABSTENTION\n17 mars 2025\nPlafonner les marges de la grande distribution sur les denrées alimentaires\nPremière lecture"
+      },
+      {
+        "titre": "Proposition de résolution européenne appelant au renforcement du soutien à l'Ukraine",
+        "position": "ABSTENTION",
+        "date": "12 mars 2025",
+        "description": "Première lecture",
+        "texte_brut": "ABSTENTION\n12 mars 2025\nProposition de résolution européenne appelant au renforcement du soutien à l'Ukraine\nPremière lecture"
+      },
+      {
+        "titre": "Projet de loi souveraineté en matière agricole",
+        "position": "POUR",
+        "date": "19 févr. 2025",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n19 févr. 2025\nProjet de loi souveraineté en matière agricole\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Supprimer le droit du sol à Mayotte",
+        "position": "POUR",
+        "date": "06 févr. 2025",
+        "description": "",
+        "texte_brut": "POUR\n06 févr. 2025\nSupprimer le droit du sol à Mayotte"
+      },
+      {
+        "titre": "Projet de loi d'urgence pour Mayotte",
+        "position": "POUR",
+        "date": "22 janv. 2025",
+        "description": "Première lecture",
+        "texte_brut": "POUR\n22 janv. 2025\nProjet de loi d'urgence pour Mayotte\nPremière lecture"
+      },
+      {
+        "titre": "Supprimer l'obligation de listes paritaires pour les élections des instances de protection sociale agricole",
+        "position": "POUR",
+        "date": "22 janv. 2025",
+        "description": "",
+        "texte_brut": "POUR\n22 janv. 2025\nSupprimer l'obligation de listes paritaires pour les élections des instances de protection sociale agricole"
+      },
+      {
+        "titre": "Motion de censure du gouvernement de Michel Barnier",
+        "position": "POUR",
+        "date": "04 déc. 2024",
+        "description": "",
+        "texte_brut": "POUR\n04 déc. 2024\nMotion de censure du gouvernement de Michel Barnier"
+      }
+    ]
   },
   {
     "id": "benoit-biteau",
@@ -14749,15 +17899,48 @@
     "avatar": "https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/PA878242.jpg",
     "datanUrl": "https://datan.fr/deputes/haute-savoie-74/depute_antoine-valentin",
     "scores": {
-      "FIS": 65,
-      "ETA": 55,
-      "REG": 60,
-      "PRO": 70,
-      "LIB": 30,
-      "OUV": 20
+      "FIS": 50,
+      "ETA": 50,
+      "REG": 58,
+      "PRO": 65,
+      "LIB": 50,
+      "OUV": 55
     },
     "reseaux": {},
-    "initiatives": []
+    "initiatives": [],
+    "score_global": 55,
+    "qualification": "Légèrement libéral",
+    "synthese_analyse": "L'analyse des votes du député révèle une orientation légèrement libérale, principalement marquée par un soutien à la réduction de régulations spécifiques impactant l'agriculture (réautorisation de l'acétamipride) et un renforcement indirect de la protection des droits de propriété via le soutien aux forces de l'ordre (présomption de légitime défense). Néanmoins, une position plus nuancée sur la dérégulation générale est observée avec un vote en faveur du maintien de régulations environnementales (ZFE). L'absence de votes sur d'autres piliers clés de l'économie libérale (fiscalité, taille de l'État, flexibilité du travail, ouverture des marchés) limite une évaluation plus approfondie et consolide cette qualification de positionnement légèrement libéral.",
+    "votes": [
+      {
+        "titre": "Loi urgence agricole : réautorisation de l'acétamipride",
+        "position": "POUR",
+        "date": "20 juill. 2026",
+        "description": "Text commission mixte paritaire",
+        "texte_brut": "POUR\n20 juill. 2026\nLoi urgence agricole : réautorisation de l'acétamipride\nText commission mixte paritaire"
+      },
+      {
+        "titre": "Proposition de loi créant un droit à l'aide à mourir",
+        "position": "CONTRE",
+        "date": "15 juill. 2026",
+        "description": "Lecture définitive",
+        "texte_brut": "CONTRE\n15 juill. 2026\nProposition de loi créant un droit à l'aide à mourir\nLecture définitive"
+      },
+      {
+        "titre": "Proposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre",
+        "position": "POUR",
+        "date": "07 juill. 2026",
+        "description": "",
+        "texte_brut": "POUR\n07 juill. 2026\nProposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre"
+      },
+      {
+        "titre": "Maintenir l'existence des ZFE mais les rendre facultatives",
+        "position": "CONTRE",
+        "date": "14 avr. 2026",
+        "description": "",
+        "texte_brut": "CONTRE\n14 avr. 2026\nMaintenir l'existence des ZFE mais les rendre facultatives"
+      }
+    ]
   },
   {
     "id": "veronique-ludmann",
@@ -15339,10 +18522,10 @@
     "scores": {
       "FIS": 85,
       "ETA": 70,
-      "REG": 65,
-      "PRO": 40,
-      "LIB": 70,
-      "OUV": 55
+      "REG": 55,
+      "PRO": 75,
+      "LIB": 60,
+      "OUV": 40
     },
     "reseaux": {},
     "initiatives": [
@@ -15358,7 +18541,7 @@
     ],
     "score_global": 64,
     "qualification": "Modérément libéral",
-    "synthese_analyse": "Le député manifeste une orientation économique modérément libérale, principalement portée par un engagement affirmé pour la santé fiscale et la réduction du fardeau fiscal (FIS: 85), comme en témoignent ses votes répétés contre l'augmentation de l'impôt sur le revenu, la création de nouvelles taxes et en faveur de la défiscalisation. Il s'aligne également sur la réduction de la taille de l'État et des dépenses publiques (ETA: 70), notamment en s'opposant aux lois de financement de la sécurité sociale et en soutenant la réforme des retraites. La liberté du travail (LIB: 70) est également un pilier fort, avec des votes favorables aux incitations au travail. Cependant, son positionnement est plus nuancé et moins libéral concernant la protection du droit de propriété et du capital (PRO: 40), notamment en votant POUR une taxation accrue des dividendes élevés, ce qui contraste avec les principes libéraux. En matière de réglementation (REG: 65), une tendance à la dérégulation est perceptible, particulièrement dans le secteur agricole, bien qu'il ait soutenu le maintien des ZFE obligatoires. L'ouverture des marchés (OUV: 55) n'est pas un axe majeur de ses votes mais tend légèrement vers le libre-échange. En somme, le député présente un profil libéral marqué par une forte orthodoxie budgétaire et fiscale, mais avec une divergence notable sur la fiscalité du capital.",
+    "synthese_analyse": "Le député présente une orientation économique modérément libérale, principalement marquée par un fort engagement en faveur de la santé fiscale (FIS) et de la protection de la propriété (PRO). Ses votes révèlent une opposition constante aux hausses d'impôts, une volonté de défiscalisation et de préservation du capital. Concernant la taille de l'État et les dépenses (ETA), il tend à soutenir la réduction des dépenses publiques et la réforme des régimes sociaux. Cependant, son positionnement sur l'ouverture des marchés (OUV) est moins libéral, affichant un soutien aux politiques de souveraineté agricole qui peuvent impliquer des mesures protectionnistes. Les piliers du fardeau réglementaire (REG) et de la liberté du travail (LIB) bénéficient de moins de votes explicites, mais s'inscrivent dans une tendance légèrement favorable à la dérégulation et à la flexibilité.",
     "votes": [
       {
         "titre": "Loi urgence agricole : réautorisation de l'acétamipride",
