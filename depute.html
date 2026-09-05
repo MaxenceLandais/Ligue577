@@ -290,7 +290,7 @@
                     const vals = Object.values(d.scores || {});
                     const scoreGlobal = vals.length ? Math.round(vals.reduce((a, b) => a + b, 0) / vals.length) : 0;
                     const bande = getBande(scoreGlobal);
-                    const photoUrl = d.photoUrl || `https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/PA841223.jpg`;
+                    const photoUrl = d.photoUrl || d.photo || d.avatar || `https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/PA841223.jpg`;
 
                     // Mettre à jour les métadonnées Open Graph
                     const pageTitle = `${d.nom} (${scoreGlobal}/100 - ${bande.label}) | Observatoire du Libéralisme`;
@@ -365,9 +365,9 @@
                         </div>
                     ` : '';
 
-                    // Photos et avatars
-                    const photoHtml = d.photoUrl
-                        ? `<img src="${d.photoUrl}" alt="${d.nom}" class="profile-photo" onerror="this.onerror=null; this.outerHTML='<div class=\\'profile-initial\\'>${d.nom.charAt(0)}</div>';">`
+                    // Photos et avatars (avec la politique No-Referrer)
+                    const photoHtml = photoUrl
+                        ? `<img src="${photoUrl}" alt="${d.nom}" class="profile-photo" referrerpolicy="no-referrer" onerror="this.onerror=null; this.outerHTML='<div class=\\'profile-initial\\'>${d.nom.charAt(0)}</div>';">`
                         : `<div class="profile-initial">${d.nom.charAt(0)}</div>`;
 
                     const datanBtnHtml = d.datanUrl

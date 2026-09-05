@@ -5,7 +5,6 @@ import unicodedata
 import zipfile
 import requests
 
-# Liste complète des 17 députés UDR / UDDPLR
 UDR_SLUGS = {
     "eric-ciotti",
     "alexandre-allegret-pilot",
@@ -73,7 +72,6 @@ def extract_groupes_map(z):
 
 
 def parse_an_acteur(acteur, existing_record, groupes_map):
-    # 1. Extraction robuste de la profession (OpenData AN = libelleCourant)
     profession = "Non renseignée"
     prof_data = acteur.get("profession")
     if isinstance(prof_data, dict):
@@ -86,7 +84,9 @@ def parse_an_acteur(acteur, existing_record, groupes_map):
     elif isinstance(prof_data, str) and prof_data.strip():
         profession = prof_data.strip()
 
-    # 2. Groupe politique actif
+    # Nettoyage du préfixe "(23) - "
+    profession = re.sub(r"^\(\d+\)\s*-\s*", "", profession)
+
     groupe = existing_record.get("groupe", "NI")
     mandats = acteur.get("mandats", {}).get("mandat", [])
     if isinstance(mandats, dict):
@@ -100,7 +100,6 @@ def parse_an_acteur(acteur, existing_record, groupes_map):
                 groupe = groupes_map[ref]
                 break
 
-    # 3. Email & Réseaux sociaux
     email = ""
     reseaux = {}
 
@@ -171,7 +170,6 @@ def fetch_and_update():
                         if not acteur or not isinstance(acteur, dict):
                             continue
 
-                        # Extraction sécurisée de pa_id (ex: PA795828)
                         uid_raw = acteur.get("uid")
                         if isinstance(uid_raw, dict):
                             pa_id = uid_raw.get("#text", "")
@@ -198,7 +196,6 @@ def fetch_and_update():
                         if depute_id in UDR_SLUGS or groupe_an in ["UDR", "UDDPLR"]:
                             groupe_an = "UDR"
 
-                        # Construction URL Photo officielle HD
                         photo_url = f"https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/{pa_id}.jpg"
                         datan_url = existing_record.get("datanUrl") or f"https://datan.fr/deputes/depute_{depute_id}"
 
