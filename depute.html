@@ -365,6 +365,14 @@
                         </div>
                     ` : '';
 
+                    // Biographie Wikipédia
+                    const bioSectionHtml = d.biographie ? `
+                        <div class="social-box" style="margin-top: 15px;">
+                            <h3 style="margin: 0 0 8px 0; font-size: 1.1rem; color: #1e293b;">📝 Biographie</h3>
+                            <p style="color: #475569; line-height: 1.5; margin: 0; font-size: 0.95rem;">${d.biographie}</p>
+                        </div>
+                    ` : '';
+
                     // Photos et avatars (avec la politique No-Referrer)
                     const photoHtml = photoUrl
                         ? `<img src="${photoUrl}" alt="${d.nom}" class="profile-photo" referrerpolicy="no-referrer" onerror="this.onerror=null; this.outerHTML='<div class=\\'profile-initial\\'>${d.nom.charAt(0)}</div>';">`
@@ -460,6 +468,8 @@
                         </div>
 
                         ${socialSectionHtml}
+
+                        ${bioSectionHtml}
 
                         <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 20px 0;">
 

@@ -7,6 +7,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Technicien",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -34,6 +35,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Professeur, profession scientifique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -61,6 +63,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Ancien cadre",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -88,6 +91,7 @@
     "groupe": "NI",
     "email": "",
     "profession": "Industriel-Chef d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -115,6 +119,7 @@
     "groupe": "LIOT",
     "email": "",
     "profession": "Directeur de cabinet",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -142,6 +147,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Professeur, profession scientifique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -169,6 +175,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Ingénieur et cadre technique d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -196,6 +203,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -223,6 +231,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Officier de l'armée de Terre",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -250,6 +259,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Avocate",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -277,6 +287,7 @@
     "groupe": "UDR",
     "email": "",
     "profession": "Historien",
+    "biographie": "Maxime Michelet, né le 19 avril 1992 à Châlons-sur-Marne (Marne), est un historien et homme politique français.",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -304,6 +315,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Ancien Premier ministre",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -331,6 +343,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Autre cadre (secteur privé)",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -358,6 +371,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -385,6 +399,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Pharmacien",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -412,6 +427,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Collaborateur parlementaire",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -439,6 +455,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Employé administratif d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -466,6 +483,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Ingénieure",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -493,6 +511,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Psychologue scolaire",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -520,6 +539,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Médecin",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -547,6 +567,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Cardiologue",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -574,6 +595,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Chef d'entreprise de 10 salariés ou plus",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -601,6 +623,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Ingénieur Arts et métiers",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -628,6 +651,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Cheminot",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -655,6 +679,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -682,6 +707,7 @@
     "groupe": "LIOT",
     "email": "",
     "profession": "Professeur du secondaire",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -709,6 +735,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Personne diverse sans activité professionnelle de moins de 60 ans (sauf r",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -736,6 +763,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -763,6 +791,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Autre cadre (secteur privé)",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -790,6 +819,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -817,6 +847,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Journaliste et autre média",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -844,6 +875,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Professeure de danse",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -871,6 +903,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Conseiller en assurance",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -898,6 +931,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -925,6 +959,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Cadre de la fonction publique d'État",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -952,6 +987,7 @@
     "groupe": "GDR",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -979,6 +1015,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1006,6 +1043,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Médecin expert judiciaire",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1033,6 +1071,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Ingénieur et cadre technique d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1060,6 +1099,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Profession libérale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1087,6 +1127,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Profession intermédiaire administrative et commerciale des entreprises",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1114,6 +1155,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1141,6 +1183,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Industriel-Chef d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1168,6 +1211,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Ingénieur et cadre technique d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1195,6 +1239,7 @@
     "groupe": "NI",
     "email": "",
     "profession": "Artisan",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1222,6 +1267,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Assistant Parlementaire",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1249,6 +1295,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Collaboratrice politique en collectivité locale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1276,6 +1323,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Ancien artisan, commerçant, chef d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1303,6 +1351,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Journaliste",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1330,6 +1379,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Professeur, profession scientifique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1357,6 +1407,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Cadre supérieur (secteur privé)",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1384,6 +1435,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Cadre supérieur (secteur privé)",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1411,6 +1463,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Retraitée",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1438,6 +1491,7 @@
     "groupe": "UDR",
     "email": "",
     "profession": "Agriculteur",
+    "biographie": "Pierre-Henri Carbonnel, né le 23 mars 1990 à Montauban (Tarn-et-Garonne), est un agriculteur et homme politique français.",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1465,6 +1519,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Ingénieur et cadre technique d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1492,6 +1547,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Employé administratif d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1519,6 +1575,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Ostéopathe",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1546,6 +1603,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Conseiller parlementaire",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1573,6 +1631,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Artisan",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1607,6 +1666,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Conseiller en communication",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1634,6 +1694,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Consultant en développement durable",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1661,6 +1722,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Chef d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1688,6 +1750,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Agriculteur sur moyenne exploitation",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1715,6 +1778,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Ancien cadre",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1742,6 +1806,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Industriel-Chef d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1769,6 +1834,7 @@
     "groupe": "GDR",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1796,6 +1862,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1823,6 +1890,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "retraitée",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1850,6 +1918,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Professeur, profession scientifique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1877,6 +1946,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Profession intermédiaire administrative de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1904,6 +1974,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Professeur agrégé de biologie",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1931,6 +2002,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Avocat",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1958,6 +2030,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Directeur d'école primaire (retraité)",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -1985,6 +2058,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Autre profession libérale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2012,6 +2086,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Profession libérale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2039,6 +2114,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Professeur, profession scientifique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2066,6 +2142,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Professeur, profession scientifique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2093,6 +2170,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Analyste bancaire",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2120,6 +2198,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Chef d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2147,6 +2226,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Professeur, profession scientifique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2174,6 +2254,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Cadre territorial",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2201,6 +2282,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Employée (secteur privé)",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2228,6 +2310,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Ingénieur en informatique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2255,6 +2338,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Ancienne avocate / Ancien cadre",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2282,6 +2366,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Profession intermédiaire administrative de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2309,6 +2394,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Profession libérale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2336,6 +2422,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2363,6 +2450,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Avocat",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2390,6 +2478,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Enseignante",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2417,6 +2506,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Profession intermédiaire administrative de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2444,6 +2534,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Fonctionnaire",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2471,6 +2562,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Ancien cadre",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2498,6 +2590,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Profession intermédiaire de la santé et du travail social",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2525,6 +2618,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Chef d'entreprise de 10 salariés ou plus",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2552,6 +2646,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Chargé d'assistance automobile",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2579,6 +2674,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Chef d'entreprise de 10 salariés ou plus",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2606,6 +2702,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Professeur, profession scientifique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2633,6 +2730,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Photographe et réalisateur",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2660,6 +2758,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Ingénieur et cadre technique d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2687,6 +2786,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2714,6 +2814,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Profession libérale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2741,6 +2842,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Employé administratif d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2768,6 +2870,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Profession intermédiaire de la santé et du travail social",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2795,6 +2898,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Professeur d'italien",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2822,6 +2926,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Commerçant et assimilé",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2849,6 +2954,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2876,6 +2982,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Fonctionnaire de catégorie A",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2903,6 +3010,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Consultante communication",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2930,6 +3038,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Industriel-Chef d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2957,6 +3066,7 @@
     "groupe": "LIOT",
     "email": "",
     "profession": "Profession libérale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -2984,6 +3094,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Avocat",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3011,6 +3122,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Cadre territoriale de la fonction publique retraitée",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3038,6 +3150,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Agricultrice",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3069,6 +3182,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Chef d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3100,6 +3214,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "sans profession",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3127,6 +3242,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Employé administratif d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3154,6 +3270,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Collaboratrice parlementaire",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3181,6 +3298,7 @@
     "groupe": "GDR",
     "email": "",
     "profession": "Technicien",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3208,6 +3326,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Sans profession déclarée",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3235,6 +3354,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Fonctionnaire territorial",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3262,6 +3382,7 @@
     "groupe": "LIOT",
     "email": "",
     "profession": "Cadre supérieur",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3289,6 +3410,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3316,6 +3438,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Profession libérale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3343,6 +3466,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Chef de projet dans l'industrie",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3370,6 +3494,7 @@
     "groupe": "LIOT",
     "email": "",
     "profession": "Cadre de la fonction publique territoriale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3397,6 +3522,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "avocat",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3424,6 +3550,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3451,6 +3578,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3478,6 +3606,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Conseillère ministérielle",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3505,6 +3634,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Ancien cadre",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3532,6 +3662,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Chef d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3559,6 +3690,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Ingénieur commercial",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3586,6 +3718,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Formateur",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3613,6 +3746,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Professeur des Universités",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3640,6 +3774,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3667,6 +3802,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Profession intermédiaire administrative et commerciale des entreprises",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3694,6 +3830,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Psychologue",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3721,6 +3858,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Juriste",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3748,6 +3886,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Employé civil et agent de service de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3775,6 +3914,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3802,6 +3942,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Professeur, profession scientifique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3829,6 +3970,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3856,6 +3998,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3883,6 +4026,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Biologiste A.I.H.P.",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3910,6 +4054,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Profession libérale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3937,6 +4082,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Sans profession déclarée",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3964,6 +4110,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Cadre secteur privé",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -3995,6 +4142,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4022,6 +4170,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Personnel de direction de l'éducation nationale retraité",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4049,6 +4198,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Personne diverse sans activité professionnelle de moins de 60 ans (sauf r",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4076,6 +4226,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Cadre à la Caisse des Dépôts et Consignations",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4103,6 +4254,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Profession libérale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4130,6 +4282,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Personne diverse sans activité professionnelle de moins de 60 ans (sauf r",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4157,6 +4310,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Agriculteur sur moyenne exploitation",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4184,6 +4338,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Policier",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4211,6 +4366,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Professeur, profession scientifique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4238,6 +4394,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Ouvrier qualifié de type industriel",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4265,6 +4422,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "responsable d'usine",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4292,6 +4450,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Retraité militaire",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4319,6 +4478,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "cadre commercial",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4346,6 +4506,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4373,6 +4534,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Ancien Chef d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4400,6 +4562,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Agent contractuel au Parlement européen",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4427,6 +4590,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Commerçant",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4454,6 +4618,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Agent d'assurances",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4481,6 +4646,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4508,6 +4674,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Professeur, profession scientifique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4535,6 +4702,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Profession libérale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4562,6 +4730,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Ingénieur et cadre technique d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4589,6 +4758,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Professeur, profession scientifique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4616,6 +4786,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Retraité de l'enseignement supérieur",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4643,6 +4814,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Agriculteur-propriétaire exploitant",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4670,6 +4842,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Employé (secteur privé)",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4697,6 +4870,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Représentant de commerce",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4724,6 +4898,7 @@
     "groupe": "UDR",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "Bartolomé Lenoir, né le 4 septembre 1991 à Angers (Maine-et-Loire), est un homme politique français.",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4751,6 +4926,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Inspecteur général de l'éducation nationale honoraire",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4778,6 +4954,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Responsable de la communication numérique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4805,6 +4982,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Commerçante",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4832,6 +5010,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Cadre supérieur du secteur public",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4859,6 +5038,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Juriste",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4886,6 +5066,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Retraité de la police nationale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4913,6 +5094,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Professeure de piano",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4940,6 +5122,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Sans profession déclarée",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4967,6 +5150,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Cadre supérieur du secteur public",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -4994,6 +5178,7 @@
     "groupe": "UDR",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "Éric Ciotti, né le 28 septembre 1965 à Nice (Alpes-Maritimes), est un homme politique français, brièvement président du parti de droite Les Républicains (2022-2024) puis maire de Nice — la cinquième commune la plus peuplée du pays — à partir de 2026.",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5021,6 +5206,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Employé administratif d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5048,6 +5234,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Cadre du secteur privé",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5075,6 +5262,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Déléguée médicale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5102,6 +5290,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Collaborateur parlementaire",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5129,6 +5318,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Bibliothécaire",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5156,6 +5346,7 @@
     "groupe": "NI",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5183,6 +5374,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Profession libérale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5210,6 +5402,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Consultant en stratégie d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5237,6 +5430,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5264,6 +5458,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Profession libérale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5291,6 +5486,7 @@
     "groupe": "NI",
     "email": "",
     "profession": "Directeur général",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5318,6 +5514,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Commerçant et assimilé",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5345,6 +5542,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Avocate",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5372,6 +5570,7 @@
     "groupe": "UDR",
     "email": "",
     "profession": "Avocate",
+    "biographie": "Christelle D'Intorni, née à Nice le 2 mai 1985, est une femme politique française.",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5399,6 +5598,7 @@
     "groupe": "LIOT",
     "email": "",
     "profession": "Conseiller référendaire honoraire à la Cour des comptes",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5426,6 +5626,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Avocat",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5453,6 +5654,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Cadre supérieur (secteur privé)",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5480,6 +5682,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Profession intermédiaire administrative de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5507,6 +5710,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Ingénieur",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5534,6 +5738,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Professeure de français",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5561,6 +5766,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Cadre d'entreprise / enseignant universitaire",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5588,6 +5794,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Médecin",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5615,6 +5822,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Chargé d'opérations urbanisme",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5642,6 +5850,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Chef de projet",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5669,6 +5878,7 @@
     "groupe": "UDR",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "Charles Alloncle, né le 21 octobre 1993 à Nancy (Meurthe-et-Moselle), est un homme politique français.",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5696,6 +5906,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Ouvrier qualifié de la manutention, du magasinage et du transport",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5723,6 +5934,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5754,6 +5966,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Autre profession libérale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5781,6 +5994,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Sans profession déclarée",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5808,6 +6022,7 @@
     "groupe": "LIOT",
     "email": "",
     "profession": "Enseignante",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5835,6 +6050,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Avocate",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5862,6 +6078,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5889,6 +6106,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Délégué général du Comité des travaux historiques et scientifiques",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5916,6 +6134,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Personne diverse sans activité professionnelle de moins de 60 ans (sauf r",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5943,6 +6162,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Enseignant 1er deg.- Professeur d'école",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5970,6 +6190,7 @@
     "groupe": "LIOT",
     "email": "",
     "profession": "Avocat",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -5997,6 +6218,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Profession de l'information, des arts et des spectacles",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6024,6 +6246,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Ingénieur",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6051,6 +6274,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Chef d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6078,6 +6302,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Cadre territorial",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6105,6 +6330,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6132,6 +6358,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Profession libérale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6159,6 +6386,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6186,6 +6414,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Médecin généraliste",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6217,6 +6446,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Ingénieur dans le domaine de l'environnement",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6244,6 +6474,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Employé administratif d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6271,6 +6502,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Manager public",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6298,6 +6530,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Avocate",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6325,6 +6558,7 @@
     "groupe": "NI",
     "email": "",
     "profession": "Comptable",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6352,6 +6586,7 @@
     "groupe": "GDR",
     "email": "",
     "profession": "Ingénieur en chef du contrôle de la navigation aérienne",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6379,6 +6614,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Maître des requêtes au Conseil d'État",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6406,6 +6642,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6433,6 +6670,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6460,6 +6698,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Profession intermédiaire de la santé et du travail social",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6487,6 +6726,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Autre cadre (secteur privé)",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6514,6 +6754,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Permanent politique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6541,6 +6782,7 @@
     "groupe": "GDR",
     "email": "",
     "profession": "Collaborateur d'élu",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6568,6 +6810,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Educatrice spécialisée",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6595,6 +6838,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Inspecteur général des affaires sociales",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6622,6 +6866,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Chef d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6649,6 +6894,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Collaborateur de cabinet en mairie",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6676,6 +6922,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Enseignant",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6703,6 +6950,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Secrétaire de mairie",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6730,6 +6978,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Profession libérale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6757,6 +7006,7 @@
     "groupe": "GDR",
     "email": "",
     "profession": "Professeure des écoles",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6784,6 +7034,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Ancien cadre",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6811,6 +7062,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Responsable associative",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6838,6 +7090,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Cadre du secteur privé",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6865,6 +7118,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Profession libérale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6892,6 +7146,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Profession intermédiaire administrative de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6919,6 +7174,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Infirmier des forces spéciales",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6946,6 +7202,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -6973,6 +7230,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Contremaître, agent de maîtrise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7000,6 +7258,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7027,6 +7286,7 @@
     "groupe": "LIOT",
     "email": "",
     "profession": "Consultante",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7058,6 +7318,7 @@
     "groupe": "GDR",
     "email": "",
     "profession": "Professeur, profession scientifique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7085,6 +7346,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Contrôleure interne et risk manager",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7112,6 +7374,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Professeur, profession scientifique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7139,6 +7402,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Psychologue du travail",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7166,6 +7430,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Conseiller référendaire à la Cour des comptes",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7193,6 +7458,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Personne diverse sans activité professionnelle de moins de 60 ans (sauf r",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7220,6 +7486,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Retraitée",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7247,6 +7514,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Consultante en affaires publiques",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7274,6 +7542,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7301,6 +7570,7 @@
     "groupe": "GDR",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7328,6 +7598,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Collaboratrice parlementaire",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7355,6 +7626,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Ancienne profession intermédiaire",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7382,6 +7654,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Commerçant",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7409,6 +7682,7 @@
     "groupe": "NI",
     "email": "",
     "profession": "Cadre supérieur (secteur privé)",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7436,6 +7710,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Cadre supérieur (secteur privé)",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7463,6 +7738,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Professeur, profession scientifique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7490,6 +7766,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Industriel - Chef d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7517,6 +7794,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7544,6 +7822,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7571,6 +7850,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Retraité",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7598,6 +7878,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Inspecteur assurance-vie",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7625,6 +7906,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Dirigeante d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7652,6 +7934,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Artisan Photographe",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7679,6 +7962,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Avocat",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7706,6 +7990,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Commerçant",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7733,6 +8018,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Industriel-Chef d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7760,6 +8046,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Avocat",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7787,6 +8074,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "médecin",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7814,6 +8102,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Profession libérale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7841,6 +8130,7 @@
     "groupe": "LIOT",
     "email": "",
     "profession": "Médecin",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7868,6 +8158,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Sans profession déclarée",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7895,6 +8186,7 @@
     "groupe": "LIOT",
     "email": "",
     "profession": "Ancien cadre",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7922,6 +8214,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Directeur d'un établissement pour l'enfance handicapée",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7949,6 +8242,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Enseignant",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -7976,6 +8270,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8003,6 +8298,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Retraitée de la fonction publique (hors enseignement)",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8030,6 +8326,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Profession libérale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8061,6 +8358,7 @@
     "groupe": "LIOT",
     "email": "",
     "profession": "Expert comptable",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8092,6 +8390,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Professeur, profession scientifique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8119,6 +8418,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Fonctionnaire de catégorie B",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8146,6 +8446,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Profession libérale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8173,6 +8474,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Directrice adjointe de la communication",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8200,6 +8502,7 @@
     "groupe": "GDR",
     "email": "",
     "profession": "Employée du secteur privé",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8227,6 +8530,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Collaboratrice parlementaire",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8254,6 +8558,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Maître de conférences à Sciences Po",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8281,6 +8586,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Chef d'entreprise de 10 salariés ou plus",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8308,6 +8614,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Cadre supérieur (secteur privé)",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8335,6 +8642,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Ancien cadre",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8362,6 +8670,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Chef d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8389,6 +8698,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Chef d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8416,6 +8726,7 @@
     "groupe": "GDR",
     "email": "",
     "profession": "Employé",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8443,6 +8754,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Navigateur",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8470,6 +8782,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Consultant",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8497,6 +8810,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Consultant, formateur",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8524,6 +8838,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8551,6 +8866,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Sans profession déclarée",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8578,6 +8894,7 @@
     "groupe": "GDR",
     "email": "",
     "profession": "Collaborateur parlementaire",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8605,6 +8922,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Autre cadre (secteur privé)",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8632,6 +8950,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Educatrice spécialisée",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8659,6 +8978,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Chef d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8686,6 +9006,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Chargé de mission et d'études",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8713,6 +9034,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Profession intermédiaire de la santé et du travail social",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8740,6 +9062,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Consultante en communication",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8767,6 +9090,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Fonctionnaire de catégorie A",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8794,6 +9118,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Ouvrière agricole",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8821,6 +9146,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Profession libérale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8848,6 +9174,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "responsable de service social",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8875,6 +9202,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8902,6 +9230,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Fonctionnaire de catégorie A",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8929,6 +9258,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Technicien hospitalier",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8956,6 +9286,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Autre cadre (secteur privé)",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -8987,6 +9318,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Cadre d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9014,6 +9346,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Commerçant et assimilé",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9041,6 +9374,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Profession libérale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9068,6 +9402,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Chef d'entreprise - Enseignante associée université",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9095,6 +9430,7 @@
     "groupe": "GDR",
     "email": "",
     "profession": "Cadre technique d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9122,6 +9458,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Infirmière puéricultrice",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9149,6 +9486,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Masseur Kinésithérapeute",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9176,6 +9514,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Préparatrice en pharmacie",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9203,6 +9542,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Professeure agrégée",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9230,6 +9570,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Avocate",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9257,6 +9598,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Directeur d'un laboratoire de recherche",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9284,6 +9626,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Agriculteur",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9311,6 +9654,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Industriel-Chef d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9338,6 +9682,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9365,6 +9710,7 @@
     "groupe": "UDR",
     "email": "",
     "profession": "Elève, étudiant",
+    "biographie": "Hanane Mansouri, née le 24 novembre 2000 à Échirolles (Isère), est une femme politique française.",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9392,6 +9738,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Juriste",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9419,6 +9766,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Cadre",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9446,6 +9794,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9473,6 +9822,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Education nationale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9500,6 +9850,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9527,6 +9878,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Ingénieur",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9554,6 +9906,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Professeur du secondaire et technique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9581,6 +9934,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Ingénieur",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9608,6 +9962,7 @@
     "groupe": "UDR",
     "email": "",
     "profession": "Commerçant et assimilé",
+    "biographie": "Bernard Chaix, né le 6 janvier 1965 à Nice, est un homme politique français.",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9657,6 +10012,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Professeur, profession scientifique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9684,6 +10040,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Cadre territorial de catégorie A",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9711,6 +10068,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Pharmacien",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9738,6 +10096,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Cadre (entreprises publiques)",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9765,6 +10124,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Ancien cadre",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9792,6 +10152,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Ancien artisan, commerçant, chef d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9819,6 +10180,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Enseignant 1er degré-directeur d'école (en disponibilité)",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9846,6 +10208,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9873,6 +10236,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Professeur des écoles, instituteur et assimilé",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9900,6 +10264,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9927,6 +10292,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Ingénieur - Responsable Support Technique Grands Comptes",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9954,6 +10320,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Personne diverse sans activité professionnelle de moins de 60 ans (sauf r",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -9981,6 +10348,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "retraitée",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10008,6 +10376,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Pharmacien",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10035,6 +10404,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Policier et militaire",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10062,6 +10432,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Ingénieure",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10089,6 +10460,7 @@
     "groupe": "LIOT",
     "email": "",
     "profession": "Industriel-Chef d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10116,6 +10488,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Contremaître, agent de maîtrise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10143,6 +10516,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Profession intermédiaire de la santé et du travail social",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10170,6 +10544,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Professeur, profession scientifique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10197,6 +10572,7 @@
     "groupe": "NI",
     "email": "",
     "profession": "Journaliste",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10224,6 +10600,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Professeur de médecine",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10251,6 +10628,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10278,6 +10656,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10305,6 +10684,7 @@
     "groupe": "UDR",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "Matthieu Bloch, né le 26 avril 1983 à Audincourt, est un homme politique français.",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10332,6 +10712,7 @@
     "groupe": "LIOT",
     "email": "",
     "profession": "Directeur de mutuelle",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10359,6 +10740,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Chargée de communication",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10386,6 +10768,7 @@
     "groupe": "UDR",
     "email": "",
     "profession": "Dirigeant d'entreprise",
+    "biographie": "Olivier Fayssat, né le 24 mars 1968 à Marseille, est un chef d'entreprise et homme politique français.",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10413,6 +10796,7 @@
     "groupe": "NI",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10440,6 +10824,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10467,6 +10852,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Retraitée de l'enseignement",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10494,6 +10880,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Professeur, profession scientifique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10521,6 +10908,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Cadre (entreprises publiques)",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10548,6 +10936,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10575,6 +10964,7 @@
     "groupe": "UDR",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "Alexandre Allegret-Pilot, né le 11 janvier 1989 à Annecy, est un homme politique et haut fonctionnaire français.",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10602,6 +10992,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Profession intermédiaire administrative et commerciale des entreprises",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10629,6 +11020,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Ancien cadre",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10656,6 +11048,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Chauffeur-livreur",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10683,6 +11076,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Ancien cadre",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10710,6 +11104,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Professeur, profession scientifique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10737,6 +11132,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Professeur de philosophie",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10764,6 +11160,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Professeur, profession scientifique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10791,6 +11188,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Professeur, profession scientifique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10818,6 +11216,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Avocate",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10845,6 +11244,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Agricultrice",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10872,6 +11272,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Cadre Commercial",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10899,6 +11300,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Professeur, profession scientifique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10926,6 +11328,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Professeur, profession scientifique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10953,6 +11356,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Profession libérale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -10980,6 +11384,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Maître menuisier à la retraite",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11007,6 +11412,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Conseiller d'insertion professionnelle",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11034,6 +11440,7 @@
     "groupe": "UDR",
     "email": "",
     "profession": "Chef d'entreprise de 10 salariés ou plus",
+    "biographie": "Éric Michoux, né le 17 juin 1959 à Paris (France), est un homme politique français.",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11061,6 +11468,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Consultante en participation citoyenne",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11088,6 +11496,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "34 - Professeur, profession scientifique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11115,6 +11524,7 @@
     "groupe": "UDR",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "Vincent Trébuchet, né le 5 juillet 1988 à Paris, est un homme politique français.",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11142,6 +11552,7 @@
     "groupe": "NI",
     "email": "",
     "profession": "Avocat",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11169,6 +11580,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Professeur de lycée professionnel",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11196,6 +11608,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Chargée de ressources humaines",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11223,6 +11636,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Agricultrice",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11250,6 +11664,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Ouvrier qualifié de type industriel",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11277,6 +11692,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Autre cadre (secteur privé)",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11304,6 +11720,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11331,6 +11748,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Autre cadre (secteur privé)",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11358,6 +11776,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Profession libérale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11385,6 +11804,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Elève, étudiant",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11412,6 +11832,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Journaliste",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11439,6 +11860,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Profession intermédiaire de la santé et du travail social",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11466,6 +11888,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11493,6 +11916,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Notaire",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11520,6 +11944,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Profession libérale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11547,6 +11972,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Directeur des relations institutionnelles",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11574,6 +12000,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Agriculteur sur moyenne exploitation",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11601,6 +12028,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Notaire",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11628,6 +12056,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Collaborateur parlementaire",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11655,6 +12084,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Ancien artisan, commerçant, chef d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11682,6 +12112,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Avocate",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11709,6 +12140,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Professeur, profession scientifique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11736,6 +12168,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Juriste",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11763,6 +12196,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11790,6 +12224,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Ingénieur et cadre technique d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11817,6 +12252,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Autre cadre (secteur privé)",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11844,6 +12280,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11871,6 +12308,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11898,6 +12336,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11925,6 +12364,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11952,6 +12392,7 @@
     "groupe": "LIOT",
     "email": "",
     "profession": "Consultant aéronautique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -11979,6 +12420,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Agricultrice",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12006,6 +12448,7 @@
     "groupe": "UDR",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12033,6 +12476,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Reporter",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12060,6 +12504,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Ancien cadre",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12087,6 +12532,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12114,6 +12560,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Collaboratrice parlementaire",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12141,6 +12588,7 @@
     "groupe": "GDR",
     "email": "",
     "profession": "Intervenant social",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12168,6 +12616,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Chef d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12195,6 +12644,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Profession de l'information, des arts et des spectacles",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12222,6 +12672,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12249,6 +12700,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Employé de commerce",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12276,6 +12728,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Artisan",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12303,6 +12756,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Employé civil et agent de service de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12330,6 +12784,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Avocate",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12357,6 +12812,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Chef d'entreprise de 10 salariés ou plus",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12388,6 +12844,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Secrétaire générale de groupe parlementaire",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12415,6 +12872,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Commerciale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12442,6 +12900,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Cheffe d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12469,6 +12928,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Employée (secteur privé)",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12496,6 +12956,7 @@
     "groupe": "LIOT",
     "email": "",
     "profession": "Retraité de la sidérurgie",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12523,6 +12984,7 @@
     "groupe": "GDR",
     "email": "",
     "profession": "Avocate",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12550,6 +13012,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Professeur d'histoire-géographie",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12577,6 +13040,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Conseillère parlementaire",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12604,6 +13068,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Professeur, profession scientifique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12631,6 +13096,7 @@
     "groupe": "GDR",
     "email": "",
     "profession": "Électricien",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12658,6 +13124,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Attachée de Presse",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12685,6 +13152,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Agriculteur sur petite exploitation",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12712,6 +13180,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Directrice financière et des opérations",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12739,6 +13208,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Agriculteur-propriétaire exploitant",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12766,6 +13236,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Professeur du secondaire et technique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12793,6 +13264,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Ingénieur",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12820,6 +13292,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12847,6 +13320,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12874,6 +13348,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Inspecteur des finances publiques",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12901,6 +13376,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Chirurgien",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12928,6 +13404,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Coordinatrice de projets associatifs",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12955,6 +13432,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Autre cadre (secteur privé)",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -12982,6 +13460,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Responsable associative",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13009,6 +13488,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Chef de projets SI",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13036,6 +13516,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Employé civil et agent de service de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13063,6 +13544,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13090,6 +13572,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Commerçant et assimilé",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13117,6 +13600,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Cadre supérieur",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13144,6 +13628,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Ancien journaliste",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13171,6 +13656,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Exploitant agricole",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13198,6 +13684,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Magistrat",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13225,6 +13712,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Gestionnaire à l'INRAE",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13252,6 +13740,7 @@
     "groupe": "NI",
     "email": "",
     "profession": "Ancien artisan, commerçant, chef d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13279,6 +13768,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13306,6 +13796,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Directeur d'association",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13333,6 +13824,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13360,6 +13852,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Retraitée de la fonction publique hospitalière et chargée de formation",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13387,6 +13880,7 @@
     "groupe": "UDR",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "Marc Chavent, né le 28 juin 1968 à Bourg-en-Bresse, est un homme politique français.",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13414,6 +13908,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Agriculteur sur moyenne exploitation",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13441,6 +13936,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Cadre territorial",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13468,6 +13964,7 @@
     "groupe": "GDR",
     "email": "",
     "profession": "Permanent politique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13495,6 +13992,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Retraitée de la fonction publique hospitalière",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13522,6 +14020,7 @@
     "groupe": "GDR",
     "email": "",
     "profession": "Professeure",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13549,6 +14048,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Professeur, profession scientifique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13576,6 +14076,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Consultante",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13603,6 +14104,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Ingénieur de recherche",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13630,6 +14132,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Cadre administratif",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13657,6 +14160,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Professeur dans l'enseignement supérieur",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13684,6 +14188,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Cadre supérieur (secteur privé)",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13711,6 +14216,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Industriel-Chef d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13738,6 +14244,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Sociologue",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13765,6 +14272,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Cadre supérieur du secteur privé",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13792,6 +14300,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Profession de l'information, des arts et des spectacles",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13819,6 +14328,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Profession de l'information, des arts et des spectacles",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13846,6 +14356,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Cadre dirigeant",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13873,6 +14384,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Fonctionnaire de catégorie A",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13900,6 +14412,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13927,6 +14440,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Artisan Coiffeur",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13954,6 +14468,7 @@
     "groupe": "UDR",
     "email": "",
     "profession": "chef d'entreprise",
+    "biographie": "Antoine Valentin, né le 16 octobre 1992 à Bonneville (Haute-Savoie), est un homme politique français. Il est député UDR de la troisième circonscription de la Haute-Savoie depuis le 2 février 2026.",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -13981,6 +14496,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Directrice d'école",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14008,6 +14524,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Policier et militaire",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14035,6 +14552,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Médecin",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14062,6 +14580,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Avocat",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14089,6 +14608,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Ouvrier de type industriel",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14116,6 +14636,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Policier et militaire",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14143,6 +14664,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14170,6 +14692,7 @@
     "groupe": "LIOT",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14197,6 +14720,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Clerc d'huissier",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14224,6 +14748,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14251,6 +14776,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14278,6 +14804,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Sans profession",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14305,6 +14832,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Sans profession déclarée",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14332,6 +14860,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Profession de l'information",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14359,6 +14888,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Ingénieur et cadre technique d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14386,6 +14916,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Agriculteur",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14413,6 +14944,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Professeur des écoles, instituteur et assimilé",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14440,6 +14972,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Profession intermédiaire de la santé et du travail social",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14467,6 +15000,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Ancien employé",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14494,6 +15028,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Employé administratif d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14521,6 +15056,7 @@
     "groupe": "UDR",
     "email": "",
     "profession": "Chef d'entreprise de 10 salariés ou plus",
+    "biographie": "Gérault Verny, né le 23 décembre 1984 à Bourgoin-Jallieu (Isère), est un homme politique français.",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14558,6 +15094,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Fonctionnaire de catégorie A",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14585,6 +15122,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Personne diverse sans activité professionnelle de moins de 60 ans",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14612,6 +15150,7 @@
     "groupe": "LIOT",
     "email": "",
     "profession": "Pharmacien",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14639,6 +15178,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Cadre administratif et commercial d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14666,6 +15206,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Ingénieur et cadre technique d'entreprise",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14693,6 +15234,7 @@
     "groupe": "LIOT",
     "email": "",
     "profession": "Administrateur de l'État",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14720,6 +15262,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Inspecteur principal des Finances publiques",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14747,6 +15290,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14774,6 +15318,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Infirmière-Puéricultrice",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14801,6 +15346,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Profession libérale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14828,6 +15374,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Artiste-peintre",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14855,6 +15402,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Ingénieur-Cadre",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14882,6 +15430,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Ministre",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14909,6 +15458,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Ancien cadre",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14936,6 +15486,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14963,6 +15514,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Profession intermédiaire de la santé et du travail social",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -14990,6 +15542,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Cadre supérieur (secteur privé)",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -15017,6 +15570,7 @@
     "groupe": "LIOT",
     "email": "",
     "profession": "Fonction publique territoriale",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -15044,6 +15598,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Exploitant agricole",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -15071,6 +15626,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Magistrat administratif",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -15098,6 +15654,7 @@
     "groupe": "LIOT",
     "email": "",
     "profession": "Professeur du secondaire et technique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -15125,6 +15682,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Consultante-Coach en Ressources Humaines",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -15156,6 +15714,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Professeur de lettres",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -15183,6 +15742,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -15210,6 +15770,7 @@
     "groupe": "DR",
     "email": "",
     "profession": "Juriste",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -15237,6 +15798,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Profession rattachée à l'enseignement",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -15264,6 +15826,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Avocat",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -15291,6 +15854,7 @@
     "groupe": "HOR",
     "email": "",
     "profession": "Professeur des écoles, instituteur et assimilé",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -15318,6 +15882,7 @@
     "groupe": "SOC",
     "email": "",
     "profession": "Cadre territorial",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -15345,6 +15910,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Sans activité professionnelle",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -15372,6 +15938,7 @@
     "groupe": "LIOT",
     "email": "",
     "profession": "Professeur des Universités",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -15399,6 +15966,7 @@
     "groupe": "LIOT",
     "email": "",
     "profession": "Cadre",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -15426,6 +15994,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Collaboratrice de cabinet",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -15453,6 +16022,7 @@
     "groupe": "ECOS",
     "email": "",
     "profession": "Professeur, profession scientifique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -15480,6 +16050,7 @@
     "groupe": "DEM",
     "email": "",
     "profession": "Professeur du secondaire et technique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -15507,6 +16078,7 @@
     "groupe": "RN",
     "email": "",
     "profession": "Ancien employé",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -15534,6 +16106,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Professeur de faculté",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -15561,6 +16134,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Fonctionnaire de catégorie A",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -15588,6 +16162,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Fonctionnaire de catégorie B",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -15615,6 +16190,7 @@
     "groupe": "EPR",
     "email": "",
     "profession": "Cadre de la fonction publique",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0
@@ -15642,6 +16218,7 @@
     "groupe": "LFI-NFP",
     "email": "",
     "profession": "Employé de commerce",
+    "biographie": "",
     "stats": {
       "participation": 0,
       "loyaute_groupe": 0

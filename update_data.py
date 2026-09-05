@@ -39,6 +39,25 @@ def slugify(text):
     return re.sub(r"[^a-z0-9]+", "-", text).strip("-")
 
 
+def get_wikipedia_bio(nom_depute):
+    formatted_name = nom_depute.replace(" ", "_")
+    url = f"https://fr.wikipedia.org/api/rest_v1/page/summary/{formatted_name}"
+    headers = {
+        "User-Agent": "ObservatoireLiberalismeBot/1.0 (contact@votre-domaine.fr)"
+    }
+
+    try:
+        res = requests.get(url, headers=headers, timeout=3)
+        if res.status_code == 200:
+            data = res.json()
+            if data.get("type") == "standard":
+                return data.get("extract", "")
+    except Exception:
+        pass
+
+    return ""
+
+
 def load_existing_data(filepath="data.json"):
     try:
         with open(filepath, "r", encoding="utf-8") as f:
@@ -84,7 +103,6 @@ def parse_an_acteur(acteur, existing_record, groupes_map):
     elif isinstance(prof_data, str) and prof_data.strip():
         profession = prof_data.strip()
 
-    # Nettoyage du préfixe "(23) - "
     profession = re.sub(r"^\(\d+\)\s*-\s*", "", profession)
 
     groupe = existing_record.get("groupe", "NI")
@@ -193,8 +211,15 @@ def fetch_and_update():
                             acteur, existing_record, groupes_map
                         )
 
-                        if depute_id in UDR_SLUGS or groupe_an in ["UDR", "UDDPLR"]:
+                        is_udr = depute_id in UDR_SLUGS or groupe_an in ["UDR", "UDDPLR"]
+                        if is_udr:
                             groupe_an = "UDR"
+
+                        # Wikipédia uniquement si UDR et pas encore renseigné
+                        biographie = existing_record.get("biographie", "")
+                        if is_udr and not biographie:
+                            print(f"   ➔ Récupération bio Wikipédia : {full_name}")
+                            biographie = get_wikipedia_bio(full_name)
 
                         photo_url = f"https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/{pa_id}.jpg"
                         datan_url = existing_record.get("datanUrl") or f"https://datan.fr/deputes/depute_{depute_id}"
@@ -215,6 +240,7 @@ def fetch_and_update():
                             "groupe": groupe_an,
                             "email": email_an or existing_record.get("email", ""),
                             "profession": prof_an if prof_an != "Non renseignée" else existing_record.get("profession", "Non renseignée"),
+                            "biographie": biographie,
                             "stats": {
                                 "participation": old_stats.get("participation", 0),
                                 "loyaute_groupe": old_stats.get("loyaute_groupe", 0),
