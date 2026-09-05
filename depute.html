@@ -275,20 +275,36 @@
                     document.getElementById('tw-desc').setAttribute('content', pageDesc);
                     document.getElementById('tw-image').setAttribute('content', photoUrl);
 
-                    // Calcul du total des abonnés
-                    let totalAbonnes = 0;
-                    let socialBadgesHtml = '';
+                    // Calcul du total des abonnés et génération des liens
+let totalAbonnes = 0;
+let socialBadgesHtml = '';
 
-                    if (d.reseaux) {
-                        for (const [key, net] of Object.entries(d.reseaux)) {
-                            if (net && net.abonnees) {
-                                totalAbonnes += net.abonnees;
-                                const name = SOCIAL_NAMES[key] || key;
-                                socialBadgesHtml += `
-                                    <a href="${net.url}" target="_blank" rel="noopener" class="social-badge">
-                                        🌐 ${name} : <strong>${formatNumber(net.abonnees)}</strong> abonnés ↗
-                                    </a>
-                                `;
+if (d.reseaux) {
+    for (const [key, net] of Object.entries(d.reseaux)) {
+        if (net && net.url) {
+            const count = net.abonnees || 0;
+            totalAbonnes += count;
+            const name = SOCIAL_NAMES[key] || key.toUpperCase();
+
+            const countLabel = count > 0 ? ` : <strong>${formatNumber(count)}</strong> abonnés` : '';
+
+            socialBadgesHtml += `
+                <a href="${net.url}" target="_blank" rel="noopener noreferrer" class="social-badge">
+                    🌐 ${name}${countLabel} ↗
+                </a>
+            `;
+        }
+    }
+}
+
+const socialSectionHtml = socialBadgesHtml ? `
+    <div class="social-box">
+        ${totalAbonnes > 0 ? `<div class="social-total">📢 Audience cumulée : ${formatNumber(totalAbonnes)} abonnés</div>` : ''}
+        <div class="social-links">
+            ${socialBadgesHtml}
+        </div>
+    </div>
+` : '';
                             }
                         }
                     }
