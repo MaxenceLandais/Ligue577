@@ -3,66 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Député - Observatoire</title>
+    <title>Fiche Député - Observatoire du Libéralisme</title>
     <link rel="stylesheet" href="assets/style.css">
-    <!-- Inclusion de Chart.js pour le graphique Radar -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
         <div class="container">
             <h1>🏛️ Observatoire du Libéralisme</h1>
-            <p><a href="index.html" class="back-link">&larr; Retour au classement général</a></p>
+            <a href="index.html" style="color: white; text-decoration: underline;">← Retour au classement général</a>
         </div>
     </header>
 
-    <main class="container" id="profileContainer" style="display: none;">
-        <div class="profile-card">
-            <div class="profile-header-info">
-                <h2 id="depName">Nom du Député</h2>
-                <p class="subtitle" id="depDept">Circonscription</p>
-            </div>
-            <div class="score-display">
-                <div class="main-score">
-                    <span id="depScore">0</span><small>/100</small>
-                </div>
-                <div id="depBande" class="badge">Bande</div>
-            </div>
-        </div>
-
-        <div class="grid-2-cols">
-            <!-- Colonne Graphique -->
-            <div class="card chart-container">
-                <h3>Analyse des 6 Piliers (Score /20)</h3>
-                <canvas id="radarChart"></canvas>
-            </div>
-
-            <!-- Colonne Info -->
-            <div class="card bio-container">
-                <h3>Analyse Politique</h3>
-                <p id="depBio"></p>
-            </div>
-        </div>
-
-        <div class="card">
-            <h3>Historique & Preuves (Mise à jour hebdo)</h3>
-            <table class="history-table">
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Action / Loi</th>
-                        <th>Impact sur le Pilier</th>
-                    </tr>
-                </thead>
-                <tbody id="historyBody">
-                    <!-- Rempli par JS -->
-                </tbody>
-            </table>
+    <main class="container" style="margin-top: 30px;">
+        <div id="deputeCard" class="methodology-card">
+            <p style="text-align: center;">Chargement des données du député...</p>
         </div>
     </main>
-    
-    <div id="loadingMsg" style="text-align:center; padding: 3rem;">Chargement des données du député...</div>
 
-    <script src="assets/app.js"></script>
+    <script>
+        function getBande(score) {
+            if (score >= 80) return "Libéral";
+            if (score >= 70) return "Plutôt libéral";
+            if (score >= 60) return "Modérément libéral";
+            if (score >= 50) return "Peu libéral";
+            return "Dirigiste";
+        }
+
+        const params = new URLSearchParams(window.location.search);
+        const idDepute = params.get('id');
+
+        const cardContainer = document.getElementById('deputeCard');
+
+        if (!idDepute) {
+            cardContainer.innerHTML = '<p style="color: red;">Aucun député spécifié dans l\'URL.</p>';
+        } else {
+            fetch('data.json')
+                .then(response => {
+                    if (!response.ok) throw new Error("Impossible de charger data.json");
+                    return response.json();
+                })
+                .then(deputes => {
+                    const depute = deputes.find(d => d.id === idDepute);
+
+                    if (!depute) {
+                        cardContainer.innerHTML = '<p style="color: red;">Député introuvable.</p>';
+                        return;
+                    }
+
+                    const piliers = Object.values(depute.scores);
+                    const scoreGlobal = Math.round(piliers.reduce((acc, v) => acc + v, 0) / piliers.length);
+                    const bande = getBande(scoreGlobal);
+
+                    cardContainer.innerHTML = `
+                        <h2>${depute.nom}</h2>
+                        <p class="text-muted"><strong>Circonscription :</strong> ${depute.circo}</p>
+                        <hr style="margin: 15px 0;">
+                        <p><strong>Score global :</strong> ${scoreGlobal} / 100 — <em>${bande}</em></p>
+                        <p style="margin-top: 15px;"><strong>Biographie & orientation :</strong></p>
+                        <p>${depute.bio}</p>
+                        <h3 style="margin-top: 25px;">Détail par pilier (sur 100) :</h3>
+                        <ul style="line-height: 1.8;">
+                            <li><strong>Fiscalité (FIS) :</strong> ${depute.scores.FIS}</li>
+                            <li><strong>Périmètre de l'État (ÉTA) :</strong> ${depute.scores.ETA}</li>
+                            <li><strong>Régulation (RÉG) :</strong> ${depute.scores.REG}</li>
+                            <li><strong>Propriété (PRO) :</strong> ${depute.scores.PRO}</li>
+                            <li><strong>Libertés (LIB) :</strong> ${depute.scores.LIB}</li>
+                            <li><strong>Ouverture (OUV) :</strong> ${depute.scores.OUV}</li>
+                        </ul>
+                    `;
+                })
+                .catch(error => {
+                    cardContainer.innerHTML = `<p style="color: red;">Erreur de chargement : ${error.message}</p>`;
+                });
+        }
+    </script>
 </body>
 </html>
