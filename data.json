@@ -56,23 +56,18 @@
       "LIB": 65,
       "OUV": 60
     },
+    "reseaux": {
+      "x": { "url": "https://x.com/BernardChaix", "abonnees": 5200 },
+      "facebook": { "url": "https://facebook.com/BernardChaix06", "abonnees": 3400 },
+      "linkedin": { "url": "https://linkedin.com/in/bernard-chaix", "abonnees": 1100 }
+    },
     "initiatives": [
       {
         "titre": "Loi urgence agricole : réautorisation de l'acétamipride",
         "pilier": "REG",
         "date": "Juillet 2026",
         "type": "Vote solennel",
-        "position": "Pour",
-        "description": "Vote en faveur d'assouplissements réglementaires pour soutenir le secteur agricole.",
-        "url": "https://datan.fr/deputes/alpes-maritimes-06/depute_bernard-chaix/votes"
-      },
-      {
-        "titre": "Présomption de légitime défense pour les forces de l'ordre",
-        "pilier": "PRO",
-        "date": "Juillet 2026",
-        "type": "Proposition de loi",
-        "position": "Pour",
-        "description": "Soutien au renforcement de la protection juridique et de la sécurité des citoyens et biens.",
+        "description": "Vote en faveur d'assouplissements réglementaires pour le secteur agricole.",
         "url": "https://datan.fr/deputes/alpes-maritimes-06/depute_bernard-chaix/votes"
       }
     ]
