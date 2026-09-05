@@ -4,111 +4,239 @@
     "nom": "Gérault Verny",
     "circo": "Bouches-du-Rhône (14ᵉ)",
     "bio": "Entrepreneur dans les technologies et l'industrie numérique. Son parcours privé le pousse vers la baisse des prélèvements et la déréglementation.",
-    "scores": { "FIS": 85, "ETA": 75, "REG": 85, "PRO": 80, "LIB": 40, "OUV": 35 }
+    "scores": {
+      "FIS": 85,
+      "ETA": 75,
+      "REG": 85,
+      "PRO": 80,
+      "LIB": 40,
+      "OUV": 35
+    },
+    "scoreGlobal": 67
   },
   {
     "id": "eric-michoux",
     "nom": "Éric Michoux",
     "circo": "Saône-et-Loire (4ᵉ)",
     "bio": "Chef d'entreprise du secteur industriel (groupe Galilé). Axé sur la compétitivité et la simplification administrative.",
-    "scores": { "FIS": 85, "ETA": 70, "REG": 80, "PRO": 80, "LIB": 40, "OUV": 35 }
+    "scores": {
+      "FIS": 85,
+      "ETA": 70,
+      "REG": 80,
+      "PRO": 80,
+      "LIB": 40,
+      "OUV": 35
+    },
+    "scoreGlobal": 65
   },
   {
     "id": "bernard-chaix",
     "nom": "Bernard Chaix",
     "circo": "Alpes-Maritimes (3ᵉ)",
     "bio": "Vice-président de la CCI Nice Côte d'Azur. Très centré sur la défense des commerçants, des artisans et des TPE.",
-    "scores": { "FIS": 85, "ETA": 70, "REG": 80, "PRO": 80, "LIB": 35, "OUV": 30 }
+    "scores": {
+      "FIS": 85,
+      "ETA": 70,
+      "REG": 80,
+      "PRO": 80,
+      "LIB": 35,
+      "OUV": 30
+    },
+    "scoreGlobal": 63
   },
   {
     "id": "alexandre-allegret-pilot",
     "nom": "Alexandre Allegret-Pilot",
     "circo": "Gard (5ᵉ)",
     "bio": "Ancien haut fonctionnaire à Bercy. Vise la réduction de la bureaucratie tout en maintenant des positions souverainistes.",
-    "scores": { "FIS": 80, "ETA": 80, "REG": 75, "PRO": 75, "LIB": 35, "OUV": 30 }
+    "scores": {
+      "FIS": 80,
+      "ETA": 80,
+      "REG": 75,
+      "PRO": 75,
+      "LIB": 35,
+      "OUV": 30
+    },
+    "scoreGlobal": 62
   },
   {
     "id": "olivier-fayssat",
     "nom": "Olivier Fayssat",
     "circo": "Bouches-du-Rhône (6ᵉ)",
     "bio": "Avocat de profession. Insiste sur la sécurité juridique, la protection de la propriété et la baisse de la fiscalité.",
-    "scores": { "FIS": 80, "ETA": 70, "REG": 75, "PRO": 85, "LIB": 35, "OUV": 25 }
+    "scores": {
+      "FIS": 80,
+      "ETA": 70,
+      "REG": 75,
+      "PRO": 85,
+      "LIB": 35,
+      "OUV": 25
+    },
+    "scoreGlobal": 62
   },
   {
     "id": "vincent-trebuchet",
     "nom": "Vincent Trébuchet",
     "circo": "Ardèche (2ᵉ)",
     "bio": "Issu des nouvelles technologies. Plaide pour la modernisation publique et la fin des contraintes normatives.",
-    "scores": { "FIS": 80, "ETA": 70, "REG": 75, "PRO": 75, "LIB": 35, "OUV": 30 }
+    "scores": {
+      "FIS": 80,
+      "ETA": 70,
+      "REG": 75,
+      "PRO": 75,
+      "LIB": 35,
+      "OUV": 30
+    },
+    "scoreGlobal": 61
   },
   {
     "id": "charles-alloncle",
     "nom": "Charles Alloncle",
     "circo": "Hérault (9ᵉ)",
     "bio": "Entrepreneur du web. Combine discours pro-business sur l'innovation et fermeté régalienne.",
-    "scores": { "FIS": 80, "ETA": 65, "REG": 75, "PRO": 75, "LIB": 35, "OUV": 30 }
+    "scores": {
+      "FIS": 80,
+      "ETA": 65,
+      "REG": 75,
+      "PRO": 75,
+      "LIB": 35,
+      "OUV": 30
+    },
+    "scoreGlobal": 60
   },
   {
     "id": "christelle-dintorni",
     "nom": "Christelle D'Intorni",
     "circo": "Alpes-Maritimes (5ᵉ)",
     "bio": "Avocate. Offensive sur les baisses d'impôts et la défense ferme des propriétaires.",
-    "scores": { "FIS": 80, "ETA": 65, "REG": 70, "PRO": 85, "LIB": 30, "OUV": 25 }
+    "scores": {
+      "FIS": 80,
+      "ETA": 65,
+      "REG": 70,
+      "PRO": 85,
+      "LIB": 30,
+      "OUV": 25
+    },
+    "scoreGlobal": 59
   },
   {
     "id": "eric-ciotti",
     "nom": "Éric Ciotti",
     "circo": "Alpes-Maritimes (1ʳᵉ)",
     "bio": "Président de l'UDR. Opposé à la fiscalité lourde et aux dépenses sociales, favorable à un État régalien fort.",
-    "scores": { "FIS": 80, "ETA": 65, "REG": 70, "PRO": 85, "LIB": 25, "OUV": 25 }
+    "scores": {
+      "FIS": 80,
+      "ETA": 65,
+      "REG": 70,
+      "PRO": 85,
+      "LIB": 25,
+      "OUV": 25
+    },
+    "scoreGlobal": 58
   },
   {
     "id": "hanane-mansouri",
     "nom": "Hanane Mansouri",
     "circo": "Isère (8ᵉ)",
     "bio": "Ancienne responsable de jeunes actifs. Soutient la déréglementation et la baisse des taxes sur le travail.",
-    "scores": { "FIS": 75, "ETA": 65, "REG": 70, "PRO": 75, "LIB": 35, "OUV": 25 }
+    "scores": {
+      "FIS": 75,
+      "ETA": 65,
+      "REG": 70,
+      "PRO": 75,
+      "LIB": 35,
+      "OUV": 25
+    },
+    "scoreGlobal": 58
   },
   {
     "id": "matthieu-bloch",
     "nom": "Matthieu Bloch",
     "circo": "Doubs (3ᵉ)",
     "bio": "Juriste et élu local. Met l'accent sur la propriété privée et le dégraissage administratif.",
-    "scores": { "FIS": 75, "ETA": 65, "REG": 70, "PRO": 80, "LIB": 30, "OUV": 20 }
+    "scores": {
+      "FIS": 75,
+      "ETA": 65,
+      "REG": 70,
+      "PRO": 80,
+      "LIB": 30,
+      "OUV": 20
+    },
+    "scoreGlobal": 57
   },
   {
     "id": "bartolome-lenoir",
     "nom": "Bartolomé Lenoir",
     "circo": "Creuse (1ʳᵉ)",
     "bio": "Entrepreneur. Favorable à l'allègement des charges des TPE, avec une sensibilité rurale et souverainiste.",
-    "scores": { "FIS": 75, "ETA": 60, "REG": 70, "PRO": 75, "LIB": 30, "OUV": 25 }
+    "scores": {
+      "FIS": 75,
+      "ETA": 60,
+      "REG": 70,
+      "PRO": 75,
+      "LIB": 30,
+      "OUV": 25
+    },
+    "scoreGlobal": 56
   },
   {
     "id": "sophie-vaginay-ricourt",
     "nom": "Sophie Ricourt Vaginay",
     "circo": "Alpes-de-Haute-Provence (2ᵉ)",
     "bio": "Juriste et ancienne maire. Prône le pragmatisme local, la baisse des charges et le respect du droit de propriété.",
-    "scores": { "FIS": 70, "ETA": 60, "REG": 65, "PRO": 75, "LIB": 30, "OUV": 25 }
+    "scores": {
+      "FIS": 70,
+      "ETA": 60,
+      "REG": 65,
+      "PRO": 75,
+      "LIB": 30,
+      "OUV": 25
+    },
+    "scoreGlobal": 54
   },
   {
     "id": "maxime-michelet",
     "nom": "Maxime Michelet",
     "circo": "Marne (3ᵉ)",
     "bio": "Historien. Privilégie le rôle régulateur et stratégique de l'État dans l'économie.",
-    "scores": { "FIS": 65, "ETA": 60, "REG": 60, "PRO": 70, "LIB": 30, "OUV": 25 }
+    "scores": {
+      "FIS": 65,
+      "ETA": 60,
+      "REG": 60,
+      "PRO": 70,
+      "LIB": 30,
+      "OUV": 25
+    },
+    "scoreGlobal": 52
   },
   {
     "id": "antoine-valentin",
     "nom": "Antoine Valentin",
     "circo": "Haute-Savoie (3ᵉ)",
     "bio": "Maire. Ligne axée sur l'ordre public, l'action locale et la présence régulatrice de la collectivité.",
-    "scores": { "FIS": 65, "ETA": 55, "REG": 60, "PRO": 70, "LIB": 30, "OUV": 20 }
+    "scores": {
+      "FIS": 65,
+      "ETA": 55,
+      "REG": 60,
+      "PRO": 70,
+      "LIB": 30,
+      "OUV": 20
+    },
+    "scoreGlobal": 50
   },
   {
     "id": "marc-chavent",
     "nom": "Marc Chavent",
     "circo": "Ain (5ᵉ)",
     "bio": "Élu local. Défend le localisme, le contrôle des frontières commerciales et exprime des réserves sur le marché ouvert.",
-    "scores": { "FIS": 65, "ETA": 55, "REG": 60, "PRO": 70, "LIB": 30, "OUV": 15 }
+    "scores": {
+      "FIS": 65,
+      "ETA": 55,
+      "REG": 60,
+      "PRO": 70,
+      "LIB": 30,
+      "OUV": 15
+    },
+    "scoreGlobal": 49
   }
 ]

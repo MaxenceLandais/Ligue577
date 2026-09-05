@@ -1,0 +1,32 @@
+name: Mettre a jour les donnees
+
+on:
+  schedule:
+    # S'exécute automatiquement tous les lundis à 06:00 UTC
+    - cron: '0 6 * * 1'
+  workflow_dispatch: # Permet de lancer la mise à jour manuellement depuis l'onglet Actions sur GitHub
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Recupérer le code source
+        uses: actions/checkout@v4
+
+      - name: Configurer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Executer le script update_data.py
+        run: python update_data.py
+
+      - name: Commiter et Pusher si modifications
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Mise à jour automatique de data.json" && git push)
