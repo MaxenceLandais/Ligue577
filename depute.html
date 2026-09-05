@@ -217,6 +217,28 @@
         .back-btn:hover {
             text-decoration: underline;
         }
+        .vote-badge {
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+        .badge-pour {
+            background-color: #dcfce7;
+            color: #15803d;
+            border: 1px solid #bbf7d0;
+        }
+        .badge-contre {
+            background-color: #fee2e2;
+            color: #b91c1c;
+            border: 1px solid #fecaca;
+        }
+        .badge-abstention {
+            background-color: #f1f5f9;
+            color: #475569;
+            border: 1px solid #cbd5e1;
+        }
     </style>
 </head>
 <body>
@@ -287,8 +309,10 @@
                         return;
                     }
 
-                    const vals = Object.values(d.scores || {});
-                    const scoreGlobal = vals.length ? Math.round(vals.reduce((a, b) => a + b, 0) / vals.length) : 0;
+                    const scoreGlobal = d.score_global !== undefined
+                        ? d.score_global
+                        : (Object.values(d.scores || {}).length ? Math.round(Object.values(d.scores).reduce((a, b) => a + b, 0) / Object.values(d.scores).length) : 0);
+
                     const bande = getBande(scoreGlobal);
                     const photoUrl = d.photoUrl || d.photo || d.avatar || `https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/PA841223.jpg`;
 
@@ -311,7 +335,6 @@
                     let hasAbonnes = false;
                     let socialBadgesHtml = '';
 
-                    // 1. Bouton e-mail si présent
                     if (d.email) {
                         socialBadgesHtml += `
                             <a href="mailto:${d.email}" class="social-badge">
@@ -320,7 +343,6 @@
                         `;
                     }
 
-                    // 2. Liens réseaux sociaux (affiche l'URL même si abonnees == 0)
                     if (d.reseaux) {
                         for (const [key, net] of Object.entries(d.reseaux)) {
                             let url = "";
@@ -373,7 +395,15 @@
                         </div>
                     ` : '';
 
-                    // Photos et avatars (avec la politique No-Referrer)
+                    // Synthèse IA Gemini
+                    const syntheseHtml = d.synthese_analyse ? `
+                        <div class="social-box" style="margin-top: 15px; background-color: #fffbeb; border: 1px solid #fcd34d;">
+                            <h3 style="margin: 0 0 8px 0; font-size: 1.1rem; color: #b45309;">💡 Analyse du profil économique (IA)</h3>
+                            <p style="color: #78350f; line-height: 1.5; margin: 0; font-size: 0.95rem;">${d.synthese_analyse}</p>
+                        </div>
+                    ` : '';
+
+                    // Photos et avatars
                     const photoHtml = photoUrl
                         ? `<img src="${photoUrl}" alt="${d.nom}" class="profile-photo" referrerpolicy="no-referrer" onerror="this.onerror=null; this.outerHTML='<div class=\\'profile-initial\\'>${d.nom.charAt(0)}</div>';">`
                         : `<div class="profile-initial">${d.nom.charAt(0)}</div>`;
@@ -427,24 +457,35 @@
                         `;
                     }
 
-                    // Initiatives
-                    let initiativesHtml = '';
-                    if (d.initiatives && d.initiatives.length > 0) {
-                        initiativesHtml = d.initiatives.map(init => `
-                            <div class="initiative-card">
-                                <div class="initiative-header">
-                                    <span class="initiative-title">${init.titre}</span>
-                                    <span class="initiative-meta">📅 ${init.date || 'Récents'} | 🏷️ ${init.type || 'Action'}</span>
+                    // Votes enregistrés
+                    let votesHtml = '';
+                    const listVotes = d.votes || d.initiatives || [];
+
+                    if (listVotes.length > 0) {
+                        votesHtml = listVotes.map(vote => {
+                            let badgeClass = 'badge-abstention';
+                            if (vote.position === 'POUR') badgeClass = 'badge-pour';
+                            if (vote.position === 'CONTRE') badgeClass = 'badge-contre';
+
+                            return `
+                                <div class="initiative-card">
+                                    <div class="initiative-header">
+                                        <span class="initiative-title">${vote.titre}</span>
+                                        <div style="display: flex; align-items: center; gap: 8px;">
+                                            <span class="initiative-meta">📅 ${vote.date || 'Récents'}</span>
+                                            ${vote.position ? `<span class="vote-badge ${badgeClass}">${vote.position}</span>` : ''}
+                                        </div>
+                                    </div>
+                                    ${vote.description ? `<p style="margin: 6px 0 0 0; color: #475569; font-size: 0.95rem;">${vote.description}</p>` : ''}
+                                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-top: 8px;">
+                                        ${vote.pilier && PILLARS_MAP[vote.pilier] ? `<small style="color: #2563eb; font-weight: bold;">Pilier concerné : ${PILLARS_MAP[vote.pilier].label}</small>` : '<span></span>'}
+                                        ${vote.url ? `<a href="${vote.url}" target="_blank" rel="noopener" class="vote-link">Voir le vote sur Datan.fr ↗</a>` : ''}
+                                    </div>
                                 </div>
-                                <p style="margin: 6px 0 0 0; color: #475569; font-size: 0.95rem;">${init.description}</p>
-                                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-top: 8px;">
-                                    ${init.pilier && PILLARS_MAP[init.pilier] ? `<small style="color: #2563eb; font-weight: bold;">Pilier concerné : ${PILLARS_MAP[init.pilier].label}</small>` : '<span></span>'}
-                                    ${init.url ? `<a href="${init.url}" target="_blank" rel="noopener" class="vote-link">Voir le vote sur Datan.fr ↗</a>` : ''}
-                                </div>
-                            </div>
-                        `).join('');
+                            `;
+                        }).join('');
                     } else {
-                        initiativesHtml = '<p style="color: #64748b; font-style: italic;">Aucune initiative répertoriée pour le moment.</p>';
+                        votesHtml = '<p style="color: #64748b; font-style: italic;">Aucun vote répertorié pour le moment.</p>';
                     }
 
                     // Assemblage final du contenu HTML
@@ -458,7 +499,7 @@
 
                                 <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 10px;">
                                     <span class="badge ${bande.class}" style="font-size: 0.95rem; padding: 6px 12px;">
-                                        ${bande.label} — ${scoreGlobal} / 100
+                                        ${d.qualification || bande.label} — ${scoreGlobal} / 100
                                     </span>
                                     ${datanBtnHtml}
                                 </div>
@@ -471,6 +512,8 @@
 
                         ${bioSectionHtml}
 
+                        ${syntheseHtml}
+
                         <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 20px 0;">
 
                         <h3>📊 Décomposition selon les 6 piliers économiques</h3>
@@ -480,9 +523,9 @@
 
                         <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 25px 0;">
 
-                        <h3>📜 Votes & Initiatives clés</h3>
+                        <h3>📜 Votes enregistrés (${listVotes.length})</h3>
                         <div style="margin-top: 10px;">
-                            ${initiativesHtml}
+                            ${votesHtml}
                         </div>
                     `;
                 })
