@@ -22,7 +22,7 @@
     <style>
         .profile-header {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 20px;
             margin-bottom: 25px;
             flex-wrap: wrap;
@@ -48,12 +48,16 @@
             color: #475569;
             border: 3px solid #cbd5e1;
         }
+        .profile-info {
+            flex: 1;
+            min-width: 260px;
+        }
         .profile-info h2 {
             margin: 0 0 6px 0;
             font-size: 1.8rem;
         }
         .profile-info p {
-            margin: 0;
+            margin: 4px 0;
             color: #64748b;
             font-size: 1.05rem;
         }
@@ -73,6 +77,33 @@
         .datan-link:hover {
             background-color: #dbeafe;
         }
+
+        /* Stats Datan */
+        .stats-grid {
+            display: flex;
+            gap: 12px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+        .stat-card {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 8px 12px;
+            display: flex;
+            flex-direction: column;
+            min-width: 130px;
+        }
+        .stat-value {
+            font-size: 1.15rem;
+            font-weight: bold;
+            color: #1e293b;
+        }
+        .stat-label {
+            font-size: 0.78rem;
+            color: #64748b;
+        }
+
         .social-box {
             background-color: #f8fafc;
             border: 1px solid #e2e8f0;
@@ -103,7 +134,7 @@
             color: #334155;
             font-size: 0.85rem;
             font-weight: 600;
-            transition: border-color 0.2s;
+            transition: border-color 0.2s, color 0.2s;
         }
         .social-badge:hover {
             border-color: #2563eb;
@@ -275,33 +306,66 @@
                     document.getElementById('tw-desc').setAttribute('content', pageDesc);
                     document.getElementById('tw-image').setAttribute('content', photoUrl);
 
-                    // Calcul du total des abonnés
+                    // Traitement des réseaux sociaux et contacts
                     let totalAbonnes = 0;
+                    let hasAbonnes = false;
                     let socialBadgesHtml = '';
 
+                    // 1. Bouton e-mail si présent
+                    if (d.email) {
+                        socialBadgesHtml += `
+                            <a href="mailto:${d.email}" class="social-badge">
+                                ✉️ Email : <strong>${d.email}</strong>
+                            </a>
+                        `;
+                    }
+
+                    // 2. Liens réseaux sociaux (affiche l'URL même si abonnees == 0)
                     if (d.reseaux) {
                         for (const [key, net] of Object.entries(d.reseaux)) {
-                            if (net && net.abonnees) {
-                                totalAbonnes += net.abonnees;
-                                const name = SOCIAL_NAMES[key] || key;
-                                socialBadgesHtml += `
-                                    <a href="${net.url}" target="_blank" rel="noopener" class="social-badge">
-                                        🌐 ${name} : <strong>${formatNumber(net.abonnees)}</strong> abonnés ↗
-                                    </a>
-                                `;
+                            let url = "";
+                            let abonnees = 0;
+
+                            if (typeof net === 'string') {
+                                url = net;
+                            } else if (net && typeof net === 'object') {
+                                url = net.url || "";
+                                abonnees = net.abonnees || 0;
+                            }
+
+                            if (url) {
+                                const name = SOCIAL_NAMES[key.toLowerCase()] || key;
+                                if (abonnees > 0) {
+                                    totalAbonnes += abonnees;
+                                    hasAbonnes = true;
+                                    socialBadgesHtml += `
+                                        <a href="${url}" target="_blank" rel="noopener" class="social-badge">
+                                            🌐 ${name} : <strong>${formatNumber(abonnees)}</strong> abonnés ↗
+                                        </a>
+                                    `;
+                                } else {
+                                    socialBadgesHtml += `
+                                        <a href="${url}" target="_blank" rel="noopener" class="social-badge">
+                                            🌐 ${name} ↗
+                                        </a>
+                                    `;
+                                }
                             }
                         }
                     }
 
-                    const socialSectionHtml = totalAbonnes > 0 ? `
+                    const socialTotalHtml = hasAbonnes ? `<div class="social-total">📢 Audience cumulée : ${formatNumber(totalAbonnes)} abonnés</div>` : '';
+
+                    const socialSectionHtml = socialBadgesHtml ? `
                         <div class="social-box">
-                            <div class="social-total">📢 Audience totale : ${formatNumber(totalAbonnes)} abonnés</div>
+                            ${socialTotalHtml}
                             <div class="social-links">
                                 ${socialBadgesHtml}
                             </div>
                         </div>
                     ` : '';
 
+                    // Photos et avatars
                     const photoHtml = d.photoUrl
                         ? `<img src="${d.photoUrl}" alt="${d.nom}" class="profile-photo" onerror="this.onerror=null; this.outerHTML='<div class=\\'profile-initial\\'>${d.nom.charAt(0)}</div>';">`
                         : `<div class="profile-initial">${d.nom.charAt(0)}</div>`;
@@ -309,6 +373,31 @@
                     const datanBtnHtml = d.datanUrl
                         ? `<a href="${d.datanUrl}" target="_blank" rel="noopener" class="datan-link">📊 Profil Datan.fr ↗</a>`
                         : '';
+
+                    // Stats d'activité Datan
+                    const statsHtml = (d.stats && (d.stats.participation || d.stats.loyaute_groupe)) ? `
+                        <div class="stats-grid">
+                            ${d.stats.participation ? `
+                                <div class="stat-card">
+                                    <span class="stat-value">${d.stats.participation}%</span>
+                                    <span class="stat-label">Participation aux votes</span>
+                                </div>
+                            ` : ''}
+                            ${d.stats.loyaute_groupe ? `
+                                <div class="stat-card">
+                                    <span class="stat-value">${d.stats.loyaute_groupe}%</span>
+                                    <span class="stat-label">Proximité avec son groupe</span>
+                                </div>
+                            ` : ''}
+                        </div>
+                    ` : '';
+
+                    // Profession
+                    const professionHtml = d.profession ? `
+                        <p style="margin-top: 6px; font-size: 0.95rem;">
+                            💼 <strong>Profession :</strong> ${d.profession}
+                        </p>
+                    ` : '';
 
                     // Cartes des piliers
                     let pillarsHtml = '';
@@ -350,18 +439,23 @@
                         initiativesHtml = '<p style="color: #64748b; font-style: italic;">Aucune initiative répertoriée pour le moment.</p>';
                     }
 
+                    // Assemblage final du contenu HTML
                     document.getElementById('depute-content').innerHTML = `
                         <div class="profile-header">
                             ${photoHtml}
                             <div class="profile-info">
                                 <h2>${d.nom}</h2>
                                 <p><strong>Groupe :</strong> ${d.groupe || 'UDR'} | <strong>Circonscription :</strong> ${d.circo}</p>
+                                ${professionHtml}
+
                                 <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 10px;">
                                     <span class="badge ${bande.class}" style="font-size: 0.95rem; padding: 6px 12px;">
                                         ${bande.label} — ${scoreGlobal} / 100
                                     </span>
                                     ${datanBtnHtml}
                                 </div>
+
+                                ${statsHtml}
                             </div>
                         </div>
 
