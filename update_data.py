@@ -5,7 +5,7 @@ import unicodedata
 import zipfile
 import requests
 
-# Liste complète des 17 députés du groupe UDDPLR / UDR (avec variantes de slugs)
+# Liste complète des 17 députés UDR / UDDPLR
 UDR_SLUGS = {
     "eric-ciotti",
     "alexandre-allegret-pilot",
@@ -50,7 +50,6 @@ def load_existing_data(filepath="data.json"):
 
 
 def extract_groupes_map(z):
-    """Extrait la cartographie officielle des groupes politiques depuis l'OpenData."""
     groupes_map = {}
     for filename in z.namelist():
         if filename.endswith(".json") and ("PO" in filename or "organe" in filename):
@@ -64,11 +63,8 @@ def extract_groupes_map(z):
                     if isinstance(organe, dict) and organe.get("codeType") == "GP":
                         uid = organe.get("uid")
                         abrev = organe.get("libelleAbrev") or organe.get("libelle") or ""
-
-                        # Normalisation UDDPLR / UDR
                         if abrev.upper() in ["UDDPLR", "UDR"]:
                             abrev = "UDR"
-
                         if uid and abrev:
                             groupes_map[uid] = abrev
             except Exception:
@@ -77,12 +73,18 @@ def extract_groupes_map(z):
 
 
 def parse_an_acteur(acteur, existing_record, groupes_map):
-    """Extrait la profession, le groupe politique officiel, l'email et les réseaux sociaux."""
-    # 1. Profession officielle
+    # 1. Extraction robuste de la profession (OpenData AN = libelleCourant)
     profession = "Non renseignée"
     prof_data = acteur.get("profession")
     if isinstance(prof_data, dict):
-        profession = prof_data.get("libelle") or "Non renseignée"
+        profession = (
+            prof_data.get("libelleCourant")
+            or prof_data.get("socioPro")
+            or prof_data.get("libelle")
+            or "Non renseignée"
+        )
+    elif isinstance(prof_data, str) and prof_data.strip():
+        profession = prof_data.strip()
 
     # 2. Groupe politique actif
     groupe = existing_record.get("groupe", "NI")
@@ -139,7 +141,7 @@ def fetch_and_update():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
     }
 
-    print("⚡ Téléchargement et traitement de l'OpenData Assemblée Nationale...")
+    print("⚡ Téléchargement et traitement OpenData...")
 
     try:
         response = requests.get(url, headers=headers, timeout=30)
@@ -150,10 +152,8 @@ def fetch_and_update():
         updated_list = []
 
         with zipfile.ZipFile(io.BytesIO(response.content)) as z:
-            # 1. Extraction dynamique de la carte des groupes
             groupes_map = extract_groupes_map(z)
 
-            # 2. Parcours des fiches députés
             json_files = [
                 f
                 for f in z.namelist()
@@ -171,7 +171,15 @@ def fetch_and_update():
                         if not acteur or not isinstance(acteur, dict):
                             continue
 
-                        pa_id = acteur.get("uid", {}).get("#text", "")
+                        # Extraction sécurisée de pa_id (ex: PA795828)
+                        uid_raw = acteur.get("uid")
+                        if isinstance(uid_raw, dict):
+                            pa_id = uid_raw.get("#text", "")
+                        elif isinstance(uid_raw, str):
+                            pa_id = uid_raw
+                        else:
+                            pa_id = ""
+
                         etat_civil = acteur.get("etatCivil", {}).get("ident", {})
                         prenom = etat_civil.get("prenom", "")
                         nom = etat_civil.get("nom", "")
@@ -187,21 +195,19 @@ def fetch_and_update():
                             acteur, existing_record, groupes_map
                         )
 
-                        # Forcer UDR si le député appartient à la liste de contrôle UDR / UDDPLR
                         if depute_id in UDR_SLUGS or groupe_an in ["UDR", "UDDPLR"]:
                             groupe_an = "UDR"
 
+                        # Construction URL Photo officielle HD
                         photo_url = f"https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/{pa_id}.jpg"
                         datan_url = existing_record.get("datanUrl") or f"https://datan.fr/deputes/depute_{depute_id}"
 
-                        # Fusion propre des réseaux sociaux
                         reseaux = existing_record.get("reseaux", {})
                         if not isinstance(reseaux, dict):
                             reseaux = {}
                         for k, v in reseaux_an.items():
                             reseaux[k] = v
 
-                        # Conservation des stats
                         old_stats = existing_record.get("stats") or {}
 
                         depute_entry = {
@@ -211,8 +217,7 @@ def fetch_and_update():
                             "circo": existing_record.get("circo", "Non renseignée"),
                             "groupe": groupe_an,
                             "email": email_an or existing_record.get("email", ""),
-                            "profession": prof_an if prof_an != "Non renseignée" else existing_record.get("profession",
-                                                                                                          "Non renseignée"),
+                            "profession": prof_an if prof_an != "Non renseignée" else existing_record.get("profession", "Non renseignée"),
                             "stats": {
                                 "participation": old_stats.get("participation", 0),
                                 "loyaute_groupe": old_stats.get("loyaute_groupe", 0),
@@ -246,7 +251,7 @@ def fetch_and_update():
         udr_count = sum(1 for d in updated_list if d["groupe"] == "UDR")
 
         print("✅ Mis à jour avec succès !")
-        print(f"📊 Total députés mis à jour : {len(updated_list)}")
+        print(f"📊 Total députés : {len(updated_list)}")
         print(f"🇫🇷 Députés UDR identifiés : {udr_count}")
 
     except Exception as e:
