@@ -21,6 +21,7 @@ UDR_SLUGS = {
     "maxime-michelet",
     "eric-michoux",
     "sophie-vaginay",
+    "sophie-vaginay-ricourt",
     "sophie-ricourt-vaginay",
     "sophie-dumont",
     "vincent-trebuchet",
@@ -29,7 +30,8 @@ UDR_SLUGS = {
 }
 
 
-def slugify(text):
+def slugify(text: str) -> str:
+    """Slug générique pour les identifiants internes et les départements."""
     text = (
         unicodedata.normalize("NFD", text)
         .encode("ascii", "ignore")
@@ -39,33 +41,70 @@ def slugify(text):
     return re.sub(r"[^a-z0-9]+", "-", text).strip("-")
 
 
-def get_wikipedia_bio(nom_depute):
+def clean_alpha_only(text: str) -> str:
+    """Ne garde que les lettres minuscules (supprime accents, tirets, apostrophes, espaces)."""
+    text = unicodedata.normalize("NFD", text)
+    text = "".join(c for c in text if unicodedata.category(c) != "Mn")
+    return re.sub(r"[^a-zA-Z]", "", text).lower()
+
+
+def build_datan_slug(full_name: str) -> str:
+    """Génère le slug strict Datan : prenom-nom (prenom et nom tout attachés)."""
+    parts = full_name.strip().split(maxsplit=1)
+    if not parts:
+        return ""
+    prenom = parts[0]
+    nom_famille = parts[1] if len(parts) > 1 else ""
+
+    prenom_slug = clean_alpha_only(prenom)
+    nom_slug = clean_alpha_only(nom_famille)
+
+    return f"{prenom_slug}-{nom_slug}" if nom_slug else prenom_slug
+
+
+def get_wikipedia_bio_intro(nom_depute: str) -> str:
+    """
+    Récupère L'INTÉGRALITÉ du résumé introductif (tous les paragraphes d'introduction)
+    de la page Wikipédia du député, avant le premier chapitre.
+    """
     url = "https://fr.wikipedia.org/w/api.php"
-    params = {
-        "action": "query",
-        "prop": "extracts",
-        "exintro": "1",
-        "explaintext": "1",
-        "titles": nom_depute,
-        "format": "json",
-        "redirects": "1",
-    }
+
+    # Titres à tester en cas d'homonymie
+    titles_to_try = [
+        nom_depute,
+        f"{nom_depute} (homme politique)",
+        f"{nom_depute} (femme politique)",
+        f"{nom_depute} (politique)",
+    ]
+
     headers = {
         "User-Agent": "ObservatoireLiberalismeBot/1.0 (contact@votre-domaine.fr)"
     }
 
-    try:
-        res = requests.get(url, params=params, headers=headers, timeout=5)
-        if res.status_code == 200:
-            data = res.json()
-            pages = data.get("query", {}).get("pages", {})
-            for page_id, page_data in pages.items():
-                if page_id != "-1":
-                    extract = page_data.get("extract", "").strip()
-                    if extract:
-                        return re.sub(r"\n+", " ", extract)
-    except Exception:
-        pass
+    for title in titles_to_try:
+        params = {
+            "action": "query",
+            "prop": "extracts",
+            "exintro": "1",      # Restreint la recherche à TOUT le résumé introductif
+            "explaintext": "1",  # Renvoie du texte brut sans balises HTML
+            "titles": title,
+            "format": "json",
+            "redirects": "1",    # Suit automatiquement les redirections Wikipédia
+        }
+        try:
+            res = requests.get(url, params=params, headers=headers, timeout=5)
+            if res.status_code == 200:
+                data = res.json()
+                pages = data.get("query", {}).get("pages", {})
+                for page_id, page_data in pages.items():
+                    if page_id != "-1":
+                        extract = page_data.get("extract", "").strip()
+                        # Vérifie qu'il ne s'agit pas d'une page d'homonymie
+                        if extract and "peut désigner" not in extract[:120].lower():
+                            # Nettoie les espaces multiples tout en conservant le texte intégral
+                            return re.sub(r"\s+", " ", extract)
+        except Exception:
+            pass
 
     return ""
 
@@ -92,8 +131,12 @@ def extract_groupes_map(z):
 
                     if isinstance(organe, dict) and organe.get("codeType") == "GP":
                         uid = organe.get("uid")
-                        abrev = organe.get("libelleAbrev") or organe.get("libelle") or ""
-                        if abrev.upper() in ["UDDPLR", "UDR"]:
+                        abrev = (
+                            organe.get("libelleAbrev")
+                            or organe.get("libelle")
+                            or ""
+                        )
+                        if abrev.upper() in ["UDDPLR", "UDR", "UDR-R"]:
                             abrev = "UDR"
                         if uid and abrev:
                             groupes_map[uid] = abrev
@@ -134,7 +177,9 @@ def parse_an_acteur(acteur, existing_record, groupes_map):
 
         if type_organe == "GP" and date_fin is None:
             organes = m.get("organes", {})
-            ref = organes.get("organeRef", "") if isinstance(organes, dict) else ""
+            ref = (
+                organes.get("organeRef", "") if isinstance(organes, dict) else ""
+            )
             if ref in groupes_map:
                 groupe = groupes_map[ref]
 
@@ -234,22 +279,40 @@ def fetch_and_update():
                         depute_id = slugify(full_name)
                         existing_record = existing_db.get(depute_id, {})
 
-                        prof_an, groupe_an, email_an, reseaux_an, dept_name, num_dept, num_circo = parse_an_acteur(
-                            acteur, existing_record, groupes_map
-                        )
+                        (
+                            prof_an,
+                            groupe_an,
+                            email_an,
+                            reseaux_an,
+                            dept_name,
+                            num_dept,
+                            num_circo,
+                        ) = parse_an_acteur(acteur, existing_record, groupes_map)
 
-                        is_udr = depute_id in UDR_SLUGS or groupe_an in ["UDR", "UDDPLR"]
+                        is_udr = (
+                            depute_id in UDR_SLUGS
+                            or groupe_an in ["UDR", "UDDPLR", "UDR-R"]
+                        )
                         if is_udr:
                             groupe_an = "UDR"
 
-                        # Génération du lien Datan valide avec département et numéro
+                        # Lien Datan
+                        datan_slug = build_datan_slug(full_name)
                         if dept_name and num_dept:
                             dept_slug = slugify(dept_name)
-                            datan_url = f"https://datan.fr/deputes/{dept_slug}-{num_dept}/depute_{depute_id}"
+                            num_dept_fmt = (
+                                num_dept.zfill(2)
+                                if num_dept.isdigit() and len(num_dept) == 1
+                                else num_dept
+                            )
+                            datan_url = f"https://datan.fr/deputes/{dept_slug}-{num_dept_fmt}/depute_{datan_slug}"
                         else:
-                            datan_url = existing_record.get("datanUrl") or f"https://datan.fr/deputes/depute_{depute_id}"
+                            datan_url = (
+                                existing_record.get("datanUrl")
+                                or f"https://datan.fr/deputes/depute_{datan_slug}"
+                            )
 
-                        # Mise à jour de la circo si absente
+                        # Circonscription
                         circo_val = existing_record.get("circo")
                         if not circo_val or circo_val == "Non renseignée":
                             if dept_name and num_circo:
@@ -257,11 +320,13 @@ def fetch_and_update():
                             else:
                                 circo_val = dept_name or "Non renseignée"
 
-                        # Biographie Wikipédia
+                        # Récupération de l'intro complète Wikipédia pour tous les députés UDR
                         biographie = existing_record.get("biographie", "")
-                        if is_udr and len(biographie) < 100:
-                            print(f"   ➔ Récupération bio Wikipédia : {full_name}")
-                            biographie = get_wikipedia_bio(full_name)
+                        if is_udr:
+                            print(f"   ➔ Récupération de l'intro Wikipédia : {full_name}")
+                            bio_intro = get_wikipedia_bio_intro(full_name)
+                            if bio_intro:
+                                biographie = bio_intro
 
                         photo_url = f"https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/{pa_id}.jpg"
 
@@ -280,7 +345,11 @@ def fetch_and_update():
                             "circo": circo_val,
                             "groupe": groupe_an,
                             "email": email_an or existing_record.get("email", ""),
-                            "profession": prof_an if prof_an != "Non renseignée" else existing_record.get("profession", "Non renseignée"),
+                            "profession": (
+                                prof_an
+                                if prof_an != "Non renseignée"
+                                else existing_record.get("profession", "Non renseignée")
+                            ),
                             "biographie": biographie,
                             "stats": {
                                 "participation": old_stats.get("participation", 0),
@@ -301,6 +370,14 @@ def fetch_and_update():
                                     "OUV": 50,
                                 },
                             ),
+                            "score_global": existing_record.get("score_global", 50),
+                            "qualification": existing_record.get(
+                                "qualification", "Non évalué"
+                            ),
+                            "synthese_analyse": existing_record.get(
+                                "synthese_analyse", ""
+                            ),
+                            "votes": existing_record.get("votes", []),
                             "reseaux": reseaux,
                             "initiatives": existing_record.get("initiatives", []),
                         }
