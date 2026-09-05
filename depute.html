@@ -13,15 +13,23 @@
             margin-bottom: 25px;
             flex-wrap: wrap;
         }
-        .profile-avatar {
-            width: 90px;
-            height: 90px;
+        .profile-photo {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #cbd5e1;
+            background-color: #f1f5f9;
+        }
+        .profile-initial {
+            width: 110px;
+            height: 110px;
             border-radius: 50%;
             background-color: #e2e8f0;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.2rem;
+            font-size: 2.8rem;
             font-weight: bold;
             color: #475569;
             border: 3px solid #cbd5e1;
@@ -34,6 +42,24 @@
             margin: 0;
             color: #64748b;
             font-size: 1.05rem;
+        }
+        .datan-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 8px;
+            padding: 5px 12px;
+            background-color: #eff6ff;
+            color: #1d4ed8;
+            border: 1px solid #bfdbfe;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+        .datan-link:hover {
+            background-color: #dbeafe;
         }
         .pillar-grid {
             display: grid;
@@ -66,6 +92,42 @@
             border-radius: 5px;
             transition: width 0.4s ease;
         }
+        .initiative-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #2563eb;
+            border-radius: 6px;
+            padding: 14px 18px;
+            margin-top: 12px;
+        }
+        .initiative-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .initiative-title {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #1e293b;
+        }
+        .initiative-meta {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+        .vote-link {
+            display: inline-block;
+            margin-top: 8px;
+            font-size: 0.85rem;
+            color: #2563eb;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .vote-link:hover {
+            text-decoration: underline;
+        }
         .back-btn {
             display: inline-block;
             margin-bottom: 20px;
@@ -95,7 +157,6 @@
     </main>
 
     <script>
-        // Définition des 6 piliers et de leurs libellés
         const PILLARS_MAP = {
             FIS: { label: "Santé Fiscale & Impôts", desc: "Modération fiscale et attractivité" },
             ETA: { label: "Taille de l'État & Dépenses", desc: "Maîtrise des dépenses publiques" },
@@ -113,7 +174,6 @@
             return { label: "Dirigiste", class: "bande-dirigiste", color: "#dc2626" };
         }
 
-        // Récupérer l'ID depuis l'URL (?id=xxx)
         const params = new URLSearchParams(window.location.search);
         const deputeId = params.get('id');
 
@@ -137,12 +197,19 @@
                         return;
                     }
 
-                    // Calcul du score global
                     const vals = Object.values(d.scores || {});
                     const scoreGlobal = vals.length ? Math.round(vals.reduce((a, b) => a + b, 0) / vals.length) : 0;
                     const bande = getBande(scoreGlobal);
 
-                    // Génération des cartes pour les 6 piliers
+                    const photoHtml = d.photoUrl
+                        ? `<img src="${d.photoUrl}" alt="${d.nom}" class="profile-photo" onerror="this.onerror=null; this.outerHTML='<div class=\\'profile-initial\\'>${d.nom.charAt(0)}</div>';">`
+                        : `<div class="profile-initial">${d.nom.charAt(0)}</div>`;
+
+                    const datanBtnHtml = d.datanUrl
+                        ? `<a href="${d.datanUrl}" target="_blank" rel="noopener" class="datan-link">📊 Profil Datan.fr ↗</a>`
+                        : '';
+
+                    // Cartes des piliers
                     let pillarsHtml = '';
                     for (const [code, info] of Object.entries(PILLARS_MAP)) {
                         const score = (d.scores && d.scores[code] !== undefined) ? d.scores[code] : 0;
@@ -162,17 +229,46 @@
                         `;
                     }
 
-                    // On assemble l'affichage complet
+                    // Votes & Initiatives
+                    let initiativesHtml = '';
+                    if (d.initiatives && d.initiatives.length > 0) {
+                        initiativesHtml = d.initiatives.map(init => `
+                            <div class="initiative-card">
+                                <div class="initiative-header">
+                                    <span class="initiative-title">${init.titre}</span>
+                                    <span class="initiative-meta">📅 ${init.date || 'Récents'} | 🏷️ ${init.type || 'Action'}</span>
+                                </div>
+                                <p style="margin: 6px 0 0 0; color: #475569; font-size: 0.95rem;">${init.description}</p>
+                                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-top: 8px;">
+                                    ${init.pilier && PILLARS_MAP[init.pilier] ? `<small style="color: #2563eb; font-weight: bold;">Pilier concerné : ${PILLARS_MAP[init.pilier].label}</small>` : '<span></span>'}
+                                    ${init.url ? `<a href="${init.url}" target="_blank" rel="noopener" class="vote-link">Voir le vote sur Datan.fr ↗</a>` : ''}
+                                </div>
+                            </div>
+                        `).join('');
+                    } else {
+                        initiativesHtml = '<p style="color: #64748b; font-style: italic;">Aucune initiative répertoriée pour le moment.</p>';
+                    }
+
+                    const allVotesDatanUrl = d.datanUrl ? `${d.datanUrl.replace(/\/$/, '')}/votes` : null;
+                    const datanVotesBanner = allVotesDatanUrl ? `
+                        <div style="margin-top: 20px; text-align: center;">
+                            <a href="${allVotesDatanUrl}" target="_blank" rel="noopener" class="datan-link" style="padding: 8px 18px; font-size: 0.95rem;">
+                                🔍 Consulter l'historique complet des votes de ${d.nom} sur Datan.fr ↗
+                            </a>
+                        </div>
+                    ` : '';
+
                     document.getElementById('depute-content').innerHTML = `
                         <div class="profile-header">
-                            <div class="profile-avatar">${d.nom.charAt(0)}</div>
+                            ${photoHtml}
                             <div class="profile-info">
                                 <h2>${d.nom}</h2>
                                 <p><strong>Groupe :</strong> ${d.groupe || 'UDR'} | <strong>Circonscription :</strong> ${d.circo}</p>
-                                <div style="margin-top: 10px;">
+                                <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 10px;">
                                     <span class="badge ${bande.class}" style="font-size: 0.95rem; padding: 6px 12px;">
                                         ${bande.label} — ${scoreGlobal} / 100
                                     </span>
+                                    ${datanBtnHtml}
                                 </div>
                             </div>
                         </div>
@@ -183,6 +279,15 @@
                         <div class="pillar-grid">
                             ${pillarsHtml}
                         </div>
+
+                        <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 25px 0;">
+
+                        <h3>📜 Votes & Initiatives clés</h3>
+                        <div style="margin-top: 10px;">
+                            ${initiativesHtml}
+                        </div>
+
+                        ${datanVotesBanner}
                     `;
                 })
                 .catch(err => {

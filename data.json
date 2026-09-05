@@ -3,16 +3,28 @@
     "id": "gerault-verny",
     "nom": "Gérault Verny",
     "circo": "Bouches-du-Rhône (14ᵉ)",
-    "bio": "Entrepreneur dans les technologies et l'industrie numérique. Son parcours privé le pousse vers la baisse des prélèvements et la déréglementation.",
+    "groupe": "UDR",
+    "photoUrl": "https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/PA841431.jpg",
+    "datanUrl": "https://datan.fr/deputes/bouches-du-rhone-13/depute_gerault-verny",
     "scores": {
-      "FIS": 85,
-      "ETA": 75,
-      "REG": 85,
-      "PRO": 80,
-      "LIB": 40,
-      "OUV": 35
+      "FIS": 75,
+      "ETA": 68,
+      "REG": 70,
+      "PRO": 65,
+      "LIB": 62,
+      "OUV": 60
     },
-    "scoreGlobal": 67
+    "initiatives": [
+      {
+        "titre": "Proposition de loi visant l'allègement de la fiscalité sur les PME",
+        "pilier": "FIS",
+        "date": "Novembre 2024",
+        "type": "Proposition de loi",
+        "position": "Auteur",
+        "description": "Propose une réduction d'impôt pour stimuler l'investissement privé dans le tissu entrepreneurial.",
+        "url": "https://datan.fr/deputes/bouches-du-rhone-13/depute_gerault-verny/votes"
+      }
+    ]
   },
   {
     "id": "eric-michoux",
@@ -33,16 +45,37 @@
     "id": "bernard-chaix",
     "nom": "Bernard Chaix",
     "circo": "Alpes-Maritimes (3ᵉ)",
-    "bio": "Vice-président de la CCI Nice Côte d'Azur. Très centré sur la défense des commerçants, des artisans et des TPE.",
+    "groupe": "UDR",
+    "photoUrl": "https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/PA841223.jpg",
+    "datanUrl": "https://datan.fr/deputes/alpes-maritimes-06/depute_bernard-chaix",
     "scores": {
-      "FIS": 85,
-      "ETA": 70,
-      "REG": 80,
-      "PRO": 80,
-      "LIB": 35,
-      "OUV": 30
+      "FIS": 70,
+      "ETA": 65,
+      "REG": 68,
+      "PRO": 75,
+      "LIB": 65,
+      "OUV": 60
     },
-    "scoreGlobal": 63
+    "initiatives": [
+      {
+        "titre": "Loi urgence agricole : réautorisation de l'acétamipride",
+        "pilier": "REG",
+        "date": "Juillet 2026",
+        "type": "Vote solennel",
+        "position": "Pour",
+        "description": "Vote en faveur d'assouplissements réglementaires pour soutenir le secteur agricole.",
+        "url": "https://datan.fr/deputes/alpes-maritimes-06/depute_bernard-chaix/votes"
+      },
+      {
+        "titre": "Présomption de légitime défense pour les forces de l'ordre",
+        "pilier": "PRO",
+        "date": "Juillet 2026",
+        "type": "Proposition de loi",
+        "position": "Pour",
+        "description": "Soutien au renforcement de la protection juridique et de la sécurité des citoyens et biens.",
+        "url": "https://datan.fr/deputes/alpes-maritimes-06/depute_bernard-chaix/votes"
+      }
+    ]
   },
   {
     "id": "alexandre-allegret-pilot",
