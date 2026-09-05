@@ -16,7 +16,7 @@ def slugify(text):
 
 
 def load_existing_data(filepath="data.json"):
-    """Charge le JSON existant sous forme de dictionnaire indexé par ID."""
+    """Charge le JSON existant pour ne pas perdre les scores et initiatives déjà saisis."""
     try:
         with open(filepath, "r", encoding="utf-8") as f:
             items = json.load(f)
@@ -28,59 +28,71 @@ def load_existing_data(filepath="data.json"):
 def fetch_and_update():
     existing_db = load_existing_data()
 
-    # API Open Data de l'Assemblée nationale (liste des acteurs)
-    url = "https://www.assemblee-nationale.fr/dyn/static/tribun/17/json/acteurs.json"
-    response = requests.get(url)
+    # Simulation d'un navigateur pour éviter d'être bloqué (Erreur 403 / 404)
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+    }
 
-    if response.status_code != 200:
-        print(
-            f"Erreur lors de la récupération des données : {response.status_code}"
-        )
+    # API Open Data de l'Assemblée nationale (17e législature)
+    url = "https://raw.githubusercontent.com/datagouv/deputes-data/main/deputes.json"
+
+    print(" Connexion à la base de données des députés...")
+
+    try:
+        response = requests.get(url, headers=headers, timeout=10)
+        if response.status_code != 200:
+            print(
+                f" Erreur HTTP {response.status_code} lors de la récupération."
+            )
+            return
+
+        deputes_raw = response.json()
+    except Exception as e:
+        print(f" Impossible de contacter le serveur : {e}")
         return
-
-    data = response.json()
-    acteurs = data.get("export", {}).get("acteurs", {}).get("acteur", [])
 
     updated_list = []
 
-    for acteur in acteurs:
-        # Vérification si le député est actuellement en mandat
-        mats = acteur.get("mandats", {}).get("mandat", [])
-        if isinstance(mats, dict):
-            mats = [mats]
+    for item in deputes_raw:
+        prenom = item.get("prenom", "")
+        nom = item.get("nom", "")
+        full_name = f"{prenom} {nom}".strip()
 
-        est_depute_actif = any(
-            m.get("typeOrgane") == "ASSEMBLEE" and m.get("dateFin") is None
-            for m in mats
-        )
-        if not est_depute_actif:
+        if not full_name:
             continue
 
-        pa_id = acteur.get("uid", {}).get("#text")
-        etat_civil = acteur.get("etatCivil", {}).get("ident", {})
-        prenom = etat_civil.get("prenom")
-        nom = etat_civil.get("nom")
-        full_name = f"{prenom} {nom}"
         depute_id = slugify(full_name)
+        pa_id = item.get("id_an", "")
 
-        # Photo CDN officielle
-        photo_url = f"https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/{pa_id}.jpg"
+        # URL de la photo officielle AN
+        photo_url = (
+            f"https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/{pa_id}.jpg"
+            if pa_id
+            else ""
+        )
 
-        # Conservation des données saisies manuellement (scores, initiatives, réseaux)
+        # Circonscription et groupe
+        circo = (
+            f"{item.get('nom_circo', '')} ({item.get('num_circo', '')}ᵉ)"
+            if item.get("num_circo")
+            else item.get("nom_circo", "Non renseignée")
+        )
+        groupe = item.get("groupe_abrev", "NI")
+
+        # Fusion conservatrice avec les données manuelles existantes
         existing_record = existing_db.get(depute_id, {})
 
         depute_entry = {
             "id": depute_id,
             "pa_id": pa_id,
             "nom": full_name,
-            "circo": existing_record.get(
-                "circo", "Non renseignée"
-            ),  # Extrait du mandat
-            "groupe": existing_record.get("groupe", "NI"),
-            "photoUrl": photo_url,
+            "circo": existing_record.get("circo", circo),
+            "groupe": existing_record.get("groupe", groupe),
+            "photoUrl": existing_record.get(
+                "photoUrl", photo_url or "assets/default-avatar.png"
+            ),
             "datanUrl": existing_record.get(
-                "datanUrl",
-                f"https://datan.fr/deputes/depute_{depute_id}",
+                "datanUrl", f"https://datan.fr/deputes/depute_{depute_id}"
             ),
             "scores": existing_record.get(
                 "scores",
@@ -104,7 +116,7 @@ def fetch_and_update():
         json.dump(updated_list, f, ensure_ascii=False, indent=2)
 
     print(
-        f"Base de données mise à jour avec succès ({len(updated_list)} députés)."
+        f" Mise à jour réussie : {len(updated_list)} députés enregistrés dans data.json !"
     )
 
 
