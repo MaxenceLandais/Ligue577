@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observatoire du Libéralisme - Classement UDR</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🏛️ Observatoire du Libéralisme</h1>
+            <p>Classement objectif des députés selon les 6 piliers de la liberté économique</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="dashboard-header">
+            <h2>Classement du groupe UDR</h2>
+            <p id="lastUpdate" class="text-muted">Dernière mise à jour : Chargement...</p>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rang</th>
+                        <th>Député</th>
+                        <th>Circonscription</th>
+                        <th>Score (/100)</th>
+                        <th>Bande</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboardBody">
+                    <tr><td colspan="6" style="text-align: center;">Chargement des données...</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="methodology-card">
+            <h3>📊 Les Bandes de notation</h3>
+            <div class="legend-grid">
+                <span class="badge bande-liberal">Libéral (80+)</span>
+                <span class="badge bande-plutot">Plutôt libéral (70+)</span>
+                <span class="badge bande-modere">Modérément libéral (60+)</span>
+                <span class="badge bande-peu">Peu libéral (50+)</span>
+                <span class="badge bande-dirigiste">Dirigiste (0-49)</span>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/app.js"></script>
+</body>
+</html>

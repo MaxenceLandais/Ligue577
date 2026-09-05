@@ -1,0 +1,63 @@
+{
+    "metadata": {
+        "last_updated": "2026-09-05",
+        "methodology": "Basé sur les 6 piliers de la liberté économique : FIS, ÉTA, RÉG, PRO, LIB, OUV."
+    },
+    "deputies": [
+        {
+            "id": "gerault-verny",
+            "name": "Gérault Verny",
+            "group": "UDR",
+            "department": "Bouches-du-Rhône (14e)",
+            "scores_detail": {
+                "FIS": 18,
+                "ETA": 17,
+                "REG": 15,
+                "PRO": 16,
+                "LIB": 4,
+                "OUV": 3
+            },
+            "score_total": 60.8,
+            "bande": "Modérément libéral",
+            "bio": "Gérault Verny est un député du groupe Union des Droites pour la République (UDR). Son profil économique s'inscrit dans une ligne fermement libérale-conservatrice. Il se distingue par une volonté farouche de réduire la dépense publique (ÉTA) et d'alléger la fiscalité de production (FIS). Toutefois, ses positions sur les libertés individuelles (LIB) et l'ouverture des frontières (OUV) font chuter son score global, le classant dans la bande 'Modérément libéral'.",
+            "recent_actions": [
+                {
+                    "date": "Septembre 2026",
+                    "type": "Vote",
+                    "description": "Vote CONTRE le maintien des subventions sectorielles aux énergies fossiles",
+                    "impact": "+2 points en ÉTA (Subventions)"
+                },
+                {
+                    "date": "Août 2026",
+                    "type": "Déclaration",
+                    "description": "Appel à un moratoire sur les nouvelles normes administratives pour les PME",
+                    "impact": "+1 point en RÉG (Volume normatif)"
+                },
+                {
+                    "date": "Juillet 2026",
+                    "type": "Vote",
+                    "description": "Soutien au renforcement des contrôles aux frontières et restriction des visas",
+                    "impact": "-2 points en OUV (Mobilité des personnes)"
+                }
+            ]
+        },
+        {
+            "id": "eric-ciotti",
+            "name": "Éric Ciotti",
+            "group": "UDR",
+            "department": "Alpes-Maritimes (1re)",
+            "scores_detail": {
+                "FIS": 16,
+                "ETA": 14,
+                "REG": 13,
+                "PRO": 15,
+                "LIB": 5,
+                "OUV": 5
+            },
+            "score_total": 56.6,
+            "bande": "Peu libéral",
+            "bio": "Président du groupe UDR, Éric Ciotti défend une baisse de la fiscalité mais conserve une vision régalienne forte de l'État.",
+            "recent_actions": []
+        }
+    ]
+}

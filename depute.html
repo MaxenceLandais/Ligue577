@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Député - Observatoire</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <!-- Inclusion de Chart.js pour le graphique Radar -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🏛️ Observatoire du Libéralisme</h1>
+            <p><a href="index.html" class="back-link">&larr; Retour au classement général</a></p>
+        </div>
+    </header>
+
+    <main class="container" id="profileContainer" style="display: none;">
+        <div class="profile-card">
+            <div class="profile-header-info">
+                <h2 id="depName">Nom du Député</h2>
+                <p class="subtitle" id="depDept">Circonscription</p>
+            </div>
+            <div class="score-display">
+                <div class="main-score">
+                    <span id="depScore">0</span><small>/100</small>
+                </div>
+                <div id="depBande" class="badge">Bande</div>
+            </div>
+        </div>
+
+        <div class="grid-2-cols">
+            <!-- Colonne Graphique -->
+            <div class="card chart-container">
+                <h3>Analyse des 6 Piliers (Score /20)</h3>
+                <canvas id="radarChart"></canvas>
+            </div>
+
+            <!-- Colonne Info -->
+            <div class="card bio-container">
+                <h3>Analyse Politique</h3>
+                <p id="depBio"></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Historique & Preuves (Mise à jour hebdo)</h3>
+            <table class="history-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Action / Loi</th>
+                        <th>Impact sur le Pilier</th>
+                    </tr>
+                </thead>
+                <tbody id="historyBody">
+                    <!-- Rempli par JS -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    
+    <div id="loadingMsg" style="text-align:center; padding: 3rem;">Chargement des données du député...</div>
+
+    <script src="assets/app.js"></script>
+</body>
+</html>
