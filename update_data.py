@@ -1,31 +1,32 @@
 import io
 import json
 import re
-import time
 import unicodedata
 import zipfile
 import requests
-from bs4 import BeautifulSoup
 
-# Liste stricte des slugs des députés UDR (17e législature)
+# Liste complète des 17 députés du groupe UDDPLR / UDR (avec variantes de slugs)
 UDR_SLUGS = {
     "eric-ciotti",
+    "alexandre-allegret-pilot",
+    "charles-alloncle",
+    "matthieu-bloch",
+    "pierre-henri-carbonnel",
+    "bernard-chaix",
+    "marc-chavent",
     "christelle-d-intorni",
     "christelle-dintorni",
-    "bernard-chaix",
-    "gerault-verny",
+    "olivier-fayssat",
+    "bartolome-lenoir",
     "hanane-mansouri",
-    "charles-alloncle",
-    "vincent-trebuchet",
-    "alexandre-allegret-pilot",
-    "sophie-dumont",
-    "brigitte-bareges",
-    "matthieu-bloch",
-    "marc-chavent",
+    "maxime-michelet",
     "eric-michoux",
-    "typhanie-degois",
-    "thierry-perez",
-    "monique-griseti",
+    "sophie-vaginay",
+    "sophie-ricourt-vaginay",
+    "sophie-dumont",
+    "vincent-trebuchet",
+    "antoine-valentin",
+    "gerault-verny",
 }
 
 
@@ -48,68 +49,86 @@ def load_existing_data(filepath="data.json"):
         return {}
 
 
-def scrape_datan_info(depute_slug):
-    """Scrape la fiche Datan avec gestion sécurisée des erreurs."""
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
-    }
-    url = f"https://datan.fr/deputes/depute_{depute_slug}"
+def extract_groupes_map(z):
+    """Extrait la cartographie officielle des groupes politiques depuis l'OpenData."""
+    groupes_map = {}
+    for filename in z.namelist():
+        if filename.endswith(".json") and ("PO" in filename or "organe" in filename):
+            try:
+                with z.open(filename) as f:
+                    data = json.load(f)
+                    organe = data.get("organe", {})
+                    if not organe and "export" in data:
+                        organe = data["export"].get("organe", {})
 
-    data_scraped = {
-        "email": "",
-        "profession": "",
-        "participation": None,
-        "loyaute_groupe": None,
-        "reseaux": {},
-    }
+                    if isinstance(organe, dict) and organe.get("codeType") == "GP":
+                        uid = organe.get("uid")
+                        abrev = organe.get("libelleAbrev") or organe.get("libelle") or ""
 
-    try:
-        res = requests.get(url, headers=headers, timeout=5)
-        if res.status_code != 200:
-            return data_scraped
+                        # Normalisation UDDPLR / UDR
+                        if abrev.upper() in ["UDDPLR", "UDR"]:
+                            abrev = "UDR"
 
-        soup = BeautifulSoup(res.content, "html.parser")
+                        if uid and abrev:
+                            groupes_map[uid] = abrev
+            except Exception:
+                continue
+    return groupes_map
 
-        for a in soup.find_all("a", href=True):
-            href = a["href"]
-            if "mailto:" in href and not data_scraped["email"]:
-                data_scraped["email"] = href.replace("mailto:", "").strip()
-            elif "twitter.com" in href or "x.com" in href:
-                data_scraped["reseaux"]["x"] = href
-            elif "facebook.com" in href:
-                data_scraped["reseaux"]["facebook"] = href
-            elif "linkedin.com" in href:
-                data_scraped["reseaux"]["linkedin"] = href
-            elif "instagram.com" in href:
-                data_scraped["reseaux"]["instagram"] = href
 
-        text_content = soup.get_text()
+def parse_an_acteur(acteur, existing_record, groupes_map):
+    """Extrait la profession, le groupe politique officiel, l'email et les réseaux sociaux."""
+    # 1. Profession officielle
+    profession = "Non renseignée"
+    prof_data = acteur.get("profession")
+    if isinstance(prof_data, dict):
+        profession = prof_data.get("libelle") or "Non renseignée"
 
-        part_match = re.search(
-            r"participé à\s*(\d+)%\s*des votes", text_content
-        )
-        if part_match:
-            data_scraped["participation"] = int(part_match.group(1))
+    # 2. Groupe politique actif
+    groupe = existing_record.get("groupe", "NI")
+    mandats = acteur.get("mandats", {}).get("mandat", [])
+    if isinstance(mandats, dict):
+        mandats = [mandats]
 
-        loy_match = re.search(
-            r"voté sur la même ligne que son groupe politique dans\s*(\d+)%",
-            text_content,
-        )
-        if loy_match:
-            data_scraped["loyaute_groupe"] = int(loy_match.group(1))
+    for m in mandats:
+        if isinstance(m, dict) and m.get("typeOrgane") == "GP" and m.get("dateFin") is None:
+            organes = m.get("organes", {})
+            ref = organes.get("organeRef", "") if isinstance(organes, dict) else ""
+            if ref in groupes_map:
+                groupe = groupes_map[ref]
+                break
 
-        prof_match = re.search(
-            r"exerçait le métier [^\-]*-\s*([^.]+)\.", text_content
-        )
-        if prof_match:
-            data_scraped["profession"] = (
-                prof_match.group(1).strip().capitalize()
-            )
+    # 3. Email & Réseaux sociaux
+    email = ""
+    reseaux = {}
 
-    except Exception:
-        pass
+    adresses = acteur.get("adresses", {}).get("adresse", [])
+    if isinstance(adresses, dict):
+        adresses = [adresses]
 
-    return data_scraped
+    for addr in adresses:
+        if not isinstance(addr, dict):
+            continue
+
+        type_lib = str(addr.get("typeLibelle", "")).lower()
+        val_elec = addr.get("valElec", "") or addr.get("urlDeRattachement", "")
+
+        if "electronique" in type_lib or "email" in type_lib or "courriel" in type_lib:
+            if val_elec and not email:
+                email = val_elec.replace("mailto:", "").strip()
+
+        if val_elec:
+            val_lower = val_elec.lower()
+            if "twitter.com" in val_lower or "x.com" in val_lower:
+                reseaux["x"] = {"url": val_elec}
+            elif "facebook.com" in val_lower:
+                reseaux["facebook"] = {"url": val_elec}
+            elif "linkedin.com" in val_lower:
+                reseaux["linkedin"] = {"url": val_elec}
+            elif "instagram.com" in val_lower:
+                reseaux["instagram"] = {"url": val_elec}
+
+    return profession, groupe, email, reseaux
 
 
 def fetch_and_update():
@@ -120,7 +139,7 @@ def fetch_and_update():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
     }
 
-    print("⚡ Traitement ciblé EXCLUSIVEMENT pour les députés UDR...")
+    print("⚡ Téléchargement et traitement de l'OpenData Assemblée Nationale...")
 
     try:
         response = requests.get(url, headers=headers, timeout=30)
@@ -129,9 +148,12 @@ def fetch_and_update():
             return
 
         updated_list = []
-        udr_count = 0
 
         with zipfile.ZipFile(io.BytesIO(response.content)) as z:
+            # 1. Extraction dynamique de la carte des groupes
+            groupes_map = extract_groupes_map(z)
+
+            # 2. Parcours des fiches députés
             json_files = [
                 f
                 for f in z.namelist()
@@ -150,9 +172,7 @@ def fetch_and_update():
                             continue
 
                         pa_id = acteur.get("uid", {}).get("#text", "")
-                        etat_civil = acteur.get("etatCivil", {}).get(
-                            "ident", {}
-                        )
+                        etat_civil = acteur.get("etatCivil", {}).get("ident", {})
                         prenom = etat_civil.get("prenom", "")
                         nom = etat_civil.get("nom", "")
                         full_name = f"{prenom} {nom}".strip()
@@ -163,74 +183,43 @@ def fetch_and_update():
                         depute_id = slugify(full_name)
                         existing_record = existing_db.get(depute_id, {})
 
-                        # VÉRIFICATION STRICTE DE L'APPARTENANCE UDR
-                        is_udr = depute_id in UDR_SLUGS
-
-                        if is_udr:
-                            udr_count += 1
-                            groupe = "UDR"
-                            print(
-                                f"🔎 [{udr_count}] Enrichissement UDR : {full_name}"
-                            )
-                            datan_data = scrape_datan_info(depute_id)
-                            time.sleep(0.2)
-                        else:
-                            # Remet à "NI" ou autre si ce n'est pas un UDR
-                            prev_groupe = existing_record.get("groupe", "NI")
-                            groupe = (
-                                prev_groupe if prev_groupe != "UDR" else "NI"
-                            )
-
-                            old_stats = existing_record.get("stats") or {}
-                            datan_data = {
-                                "email": existing_record.get("email", ""),
-                                "profession": existing_record.get(
-                                    "profession", "Non renseignée"
-                                ),
-                                "participation": old_stats.get(
-                                    "participation", 0
-                                ),
-                                "loyaute_groupe": old_stats.get(
-                                    "loyaute_groupe", 0
-                                ),
-                                "reseaux": {},
-                            }
-
-                        photo_url = f"https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/{pa_id}.jpg"
-                        datan_url = (
-                            f"https://datan.fr/deputes/depute_{depute_id}"
+                        prof_an, groupe_an, email_an, reseaux_an = parse_an_acteur(
+                            acteur, existing_record, groupes_map
                         )
 
-                        reseaux = existing_record.get("reseaux", {})
-                        if isinstance(datan_data.get("reseaux"), dict):
-                            for k, v in datan_data["reseaux"].items():
-                                reseaux[k] = {"url": v}
+                        # Forcer UDR si le député appartient à la liste de contrôle UDR / UDDPLR
+                        if depute_id in UDR_SLUGS or groupe_an in ["UDR", "UDDPLR"]:
+                            groupe_an = "UDR"
 
+                        photo_url = f"https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/{pa_id}.jpg"
+                        datan_url = existing_record.get("datanUrl") or f"https://datan.fr/deputes/depute_{depute_id}"
+
+                        # Fusion propre des réseaux sociaux
+                        reseaux = existing_record.get("reseaux", {})
+                        if not isinstance(reseaux, dict):
+                            reseaux = {}
+                        for k, v in reseaux_an.items():
+                            reseaux[k] = v
+
+                        # Conservation des stats
                         old_stats = existing_record.get("stats") or {}
 
                         depute_entry = {
                             "id": depute_id,
                             "pa_id": pa_id,
                             "nom": full_name,
-                            "circo": existing_record.get(
-                                "circo", "Non renseignée"
-                            ),
-                            "groupe": groupe,
-                            "email": datan_data["email"]
-                            or existing_record.get("email", ""),
-                            "profession": datan_data["profession"]
-                            or existing_record.get(
-                                "profession", "Non renseignée"
-                            ),
+                            "circo": existing_record.get("circo", "Non renseignée"),
+                            "groupe": groupe_an,
+                            "email": email_an or existing_record.get("email", ""),
+                            "profession": prof_an if prof_an != "Non renseignée" else existing_record.get("profession",
+                                                                                                          "Non renseignée"),
                             "stats": {
-                                "participation": datan_data["participation"]
-                                if datan_data["participation"] is not None
-                                else old_stats.get("participation", 0),
-                                "loyaute_groupe": datan_data["loyaute_groupe"]
-                                if datan_data["loyaute_groupe"] is not None
-                                else old_stats.get("loyaute_groupe", 0),
+                                "participation": old_stats.get("participation", 0),
+                                "loyaute_groupe": old_stats.get("loyaute_groupe", 0),
                             },
                             "photoUrl": photo_url,
+                            "photo": photo_url,
+                            "avatar": photo_url,
                             "datanUrl": datan_url,
                             "scores": existing_record.get(
                                 "scores",
@@ -244,9 +233,7 @@ def fetch_and_update():
                                 },
                             ),
                             "reseaux": reseaux,
-                            "initiatives": existing_record.get(
-                                "initiatives", []
-                            ),
+                            "initiatives": existing_record.get("initiatives", []),
                         }
 
                         updated_list.append(depute_entry)
@@ -256,12 +243,14 @@ def fetch_and_update():
         with open("data.json", "w", encoding="utf-8") as f:
             json.dump(updated_list, f, ensure_ascii=False, indent=2)
 
-        print(
-            f"\n✅ Succès ! Seuls les {udr_count} députés UDR ont été enrichis sans erreur."
-        )
+        udr_count = sum(1 for d in updated_list if d["groupe"] == "UDR")
+
+        print("✅ Mis à jour avec succès !")
+        print(f"📊 Total députés mis à jour : {len(updated_list)}")
+        print(f"🇫🇷 Députés UDR identifiés : {udr_count}")
 
     except Exception as e:
-        print(f"❌ Erreur générale : {e}")
+        print(f"❌ Erreur : {e}")
 
 
 if __name__ == "__main__":
