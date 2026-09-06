@@ -144,25 +144,29 @@ a.btn-link {
 .fut-stats {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2px 10px;
-  padding: 4px 6px;
+  gap: 4px 8px;
+  padding: 6px 4px;
 }
 
 .fut-stat {
   display: flex;
-  gap: 6px;
+  gap: 4px;
   align-items: center;
+  overflow: hidden;
 }
 
 .fut-stat-val {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 700;
+  min-width: 24px;
 }
 
 .fut-stat-lbl {
-  font-size: 12px;
+  font-size: 11px;
   color: #3a2e05;
   font-weight: 700;
+  white-space: nowrap;
+  letter-spacing: -0.2px;
 }
 
 /* Version agrandie pour depute.html */

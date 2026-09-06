@@ -89,22 +89,26 @@
         .fut-stats {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4px 12px;
-            padding: 4px 6px;
+            gap: 4px 8px;
+            padding: 6px 4px;
         }
         .fut-stat {
             display: flex;
-            gap: 6px;
+            gap: 4px;
             align-items: center;
+            overflow: hidden;
         }
         .fut-stat-val {
-            font-size: 19px;
+            font-size: 18px;
             font-weight: 700;
+            min-width: 22px;
         }
         .fut-stat-lbl {
-            font-size: 13px;
+            font-size: 11px;
             color: #3a2e05;
             font-weight: 700;
+            white-space: nowrap;
+            letter-spacing: -0.2px;
         }
 
         .profile-info {
@@ -405,12 +409,12 @@
                             </div>
                             <div class="fut-nom">${nomFamille}</div>
                             <div class="fut-stats">
-                                <div class="fut-stat"><span class="fut-stat-val">${scores.FIS ?? 0}</span><span class="fut-stat-lbl">FIS</span></div>
-                                <div class="fut-stat"><span class="fut-stat-val">${scores.PRO ?? 0}</span><span class="fut-stat-lbl">PRO</span></div>
-                                <div class="fut-stat"><span class="fut-stat-val">${scores.ETA ?? 0}</span><span class="fut-stat-lbl">ETA</span></div>
-                                <div class="fut-stat"><span class="fut-stat-val">${scores.LIB ?? 0}</span><span class="fut-stat-lbl">LIB</span></div>
-                                <div class="fut-stat"><span class="fut-stat-val">${scores.REG ?? 0}</span><span class="fut-stat-lbl">REG</span></div>
-                                <div class="fut-stat"><span class="fut-stat-val">${scores.OUV ?? 0}</span><span class="fut-stat-lbl">OUV</span></div>
+                                <div class="fut-stat"><span class="fut-stat-val">${scores.FIS ?? 0}</span><span class="fut-stat-lbl">FISCALITÉ</span></div>
+                                <div class="fut-stat"><span class="fut-stat-val">${scores.PRO ?? 0}</span><span class="fut-stat-lbl">PROPRIÉTÉ</span></div>
+                                <div class="fut-stat"><span class="fut-stat-val">${scores.ETA ?? 0}</span><span class="fut-stat-lbl">ÉTAT</span></div>
+                                <div class="fut-stat"><span class="fut-stat-val">${scores.LIB ?? 0}</span><span class="fut-stat-lbl">LIBERTÉ</span></div>
+                                <div class="fut-stat"><span class="fut-stat-val">${scores.REG ?? 0}</span><span class="fut-stat-lbl">RÉGULATION</span></div>
+                                <div class="fut-stat"><span class="fut-stat-val">${scores.OUV ?? 0}</span><span class="fut-stat-lbl">OUVERTURE</span></div>
                             </div>
                         </div>
                     `;
