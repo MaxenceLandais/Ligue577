@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700;800&display=swap');
 
 /* --- Base & Conteneurs --- */
 body {
@@ -25,7 +25,7 @@ header {
     background: white;
     border-radius: 8px;
     padding: 1.5rem;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     margin: 1.5rem 0;
 }
 
@@ -85,6 +85,12 @@ th {
     width: 45px;
 }
 
+.col-carte {
+    text-align: center;
+    padding: 4px 6px !important;
+    width: 60px;
+}
+
 .col-nom {
     color: #0f172a;
     min-width: 140px;
@@ -106,7 +112,97 @@ th {
     text-align: center;
 }
 
-/* --- Pastilles des Notes (Pastilles FUTBIN & Badges) --- */
+/* --- Mini Cartes FUT (Classement) --- */
+.mini-fut-card {
+    position: relative;
+    width: 50px;
+    height: 66px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #fce08a 0%, #c59b27 50%, #e6c863 100%);
+    border-radius: 6px 6px 10px 10px;
+    border: 1.5px solid #ffe89e;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+    font-family: 'Rajdhani', sans-serif;
+    color: #1e1e1e;
+    overflow: hidden;
+    user-select: none;
+    box-sizing: border-box;
+    transition: transform 0.15s ease-in-out;
+}
+
+.clickable-row:hover .mini-fut-card {
+    transform: scale(1.08);
+}
+
+.mini-fut-score {
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1;
+    color: #111;
+    z-index: 3;
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+.mini-fut-photo-container {
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 38px;
+    height: 38px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.mini-fut-photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+.mini-fut-bottom {
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 3;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(1px);
+    padding: 0 1px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mini-fut-badge {
+    width: 11px;
+    height: 11px;
+    object-fit: contain;
+}
+
+.mini-fut-leg {
+    font-size: 6.5px;
+    font-weight: 800;
+    background: #0f172a;
+    color: #ffffff;
+    padding: 1px 2px;
+    border-radius: 2px;
+    letter-spacing: -0.3px;
+    white-space: nowrap;
+}
+
+/* --- Pastilles des Notes & Badges --- */
 .score-pill {
     display: inline-block;
     min-width: 34px;
@@ -131,23 +227,13 @@ th {
     white-space: nowrap;
 }
 
-/* 91 - 100 : Bleu */
-.score-tres-liberal, .bande-tres-liberal { background-color: #dbeafe; color: #1e40af; }
-
-/* 81 - 90 : Vert foncé */
-.score-liberal, .bande-liberal { background-color: #dcfce7; color: #14532d; }
-
-/* 71 - 80 : Vert clair */
-.score-plutot, .bande-plutot { background-color: #d1fae5; color: #047857; }
-
-/* 61 - 70 : Jaune doré */
-.score-modere, .bande-modere { background-color: #fef08a; color: #854d0e; }
-
-/* 51 - 60 : Orange */
-.score-peu, .bande-peu { background-color: #ffedd5; color: #c2410c; }
-
-/* 0 - 50 : Rouge */
-.score-dirigiste, .bande-dirigiste { background-color: #fee2e2; color: #991b1b; }
+/* Echelle 6 Couleurs */
+.score-tres-liberal, .bande-tres-liberal { background-color: #dbeafe; color: #1e40af; } /* 91 - 100 : Bleu */
+.score-liberal, .bande-liberal           { background-color: #dcfce7; color: #14532d; } /* 81 - 90 : Vert foncé */
+.score-plutot, .bande-plutot             { background-color: #d1fae5; color: #047857; } /* 71 - 80 : Vert clair */
+.score-modere, .bande-modere             { background-color: #fef08a; color: #854d0e; } /* 61 - 70 : Jaune doré */
+.score-peu, .bande-peu                   { background-color: #ffedd5; color: #c2410c; } /* 51 - 60 : Orange */
+.score-dirigiste, .bande-dirigiste       { background-color: #fee2e2; color: #991b1b; } /* 0 - 50 : Rouge */
 
 .legend-badges {
     display: flex;
@@ -156,159 +242,159 @@ th {
     margin-top: 10px;
 }
 
-/* --- Cartes FUT --- */
+/* --- Cartes FUT Standard (Grille & Fiche Député) --- */
 .cards-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 0;
 }
 
 .fut-card {
-  width: 230px;
-  background: linear-gradient(135deg, #fce08a 0%, #c59b27 50%, #e6c863 100%);
-  border-radius: 16px;
-  padding: 16px 12px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
-  border: 2px solid #ffe89e;
-  font-family: 'Rajdhani', sans-serif;
-  color: #1e1e1e;
-  text-transform: uppercase;
-  user-select: none;
-  text-decoration: none;
-  display: block;
-  transition: transform 0.2s ease;
+    width: 230px;
+    background: linear-gradient(135deg, #fce08a 0%, #c59b27 50%, #e6c863 100%);
+    border-radius: 16px;
+    padding: 16px 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+    border: 2px solid #ffe89e;
+    font-family: 'Rajdhani', sans-serif;
+    color: #1e1e1e;
+    text-transform: uppercase;
+    user-select: none;
+    text-decoration: none;
+    display: block;
+    transition: transform 0.2s ease;
 }
 
 .fut-card:hover {
-  transform: translateY(-5px) scale(1.02);
+    transform: translateY(-5px) scale(1.02);
 }
 
 .fut-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .fut-badge {
-  text-align: center;
-  line-height: 0.9;
+    text-align: center;
+    line-height: 0.9;
 }
 
 .fut-score-global {
-  font-size: 40px;
-  font-weight: 700;
+    font-size: 40px;
+    font-weight: 700;
 }
 
 .fut-groupe {
-  font-size: 13px;
-  font-weight: 700;
-  color: #3a2e05;
-  margin-top: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #3a2e05;
+    margin-top: 4px;
 }
 
 .fut-photo-container {
-  width: 110px;
-  height: 110px;
+    width: 110px;
+    height: 110px;
 }
 
 .fut-photo-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
 
 .fut-nom {
-  text-align: center;
-  font-size: 18px;
-  font-weight: 700;
-  margin: 6px 0 4px 0;
-  letter-spacing: 1px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.15);
-  padding-bottom: 4px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 6px 0 4px 0;
+    letter-spacing: 1px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+    padding-bottom: 4px;
 }
 
 .fut-stats {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4px 8px;
-  padding: 6px 4px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 8px;
+    padding: 6px 4px;
 }
 
 .fut-stat {
-  display: flex;
-  gap: 4px;
-  align-items: center;
-  overflow: hidden;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    overflow: hidden;
 }
 
 .fut-stat-val {
-  font-size: 18px;
-  font-weight: 700;
-  min-width: 24px;
+    font-size: 18px;
+    font-weight: 700;
+    min-width: 24px;
 }
 
 .fut-stat-lbl {
-  font-size: 11px;
-  color: #3a2e05;
-  font-weight: 700;
-  white-space: nowrap;
-  letter-spacing: -0.2px;
+    font-size: 11px;
+    color: #3a2e05;
+    font-weight: 700;
+    white-space: nowrap;
+    letter-spacing: -0.2px;
 }
 
 .fut-card-large,
 .fut-card.large {
-  width: 280px;
-  background: linear-gradient(135deg, #fce08a 0%, #c59b27 50%, #e6c863 100%);
-  border-radius: 18px;
-  padding: 18px 14px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  border: 2px solid #ffe89e;
-  font-family: 'Rajdhani', sans-serif;
-  color: #1e1e1e;
-  text-transform: uppercase;
-  user-select: none;
-  flex-shrink: 0;
+    width: 280px;
+    background: linear-gradient(135deg, #fce08a 0%, #c59b27 50%, #e6c863 100%);
+    border-radius: 18px;
+    padding: 18px 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border: 2px solid #ffe89e;
+    font-family: 'Rajdhani', sans-serif;
+    color: #1e1e1e;
+    text-transform: uppercase;
+    user-select: none;
+    flex-shrink: 0;
 }
 
 .fut-card-large .fut-score-global,
 .fut-card.large .fut-score-global {
-  font-size: 48px;
+    font-size: 48px;
 }
 
 .fut-card-large .fut-groupe,
 .fut-card.large .fut-groupe {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 .fut-card-large .fut-photo-container,
 .fut-card.large .fut-photo-container {
-  width: 130px;
-  height: 130px;
+    width: 130px;
+    height: 130px;
 }
 
 .fut-card-large .fut-nom,
 .fut-card.large .fut-nom {
-  font-size: 22px;
-  margin: 8px 0 6px 0;
-  letter-spacing: 1px;
+    font-size: 22px;
+    margin: 8px 0 6px 0;
+    letter-spacing: 1px;
 }
 
 .fut-card-large .fut-stats,
 .fut-card.large .fut-stats {
-  gap: 4px 12px;
-  padding: 4px 6px;
+    gap: 4px 12px;
+    padding: 4px 6px;
 }
 
 .fut-card-large .fut-stat-val,
 .fut-card.large .fut-stat-val {
-  font-size: 19px;
+    font-size: 19px;
 }
 
 .fut-card-large .fut-stat-lbl,
 .fut-card.large .fut-stat-lbl {
-  font-size: 13px;
+    font-size: 13px;
 }

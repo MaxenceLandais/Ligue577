@@ -11,18 +11,39 @@ function getScoreClass(val) {
     if (val === null || val === undefined || val === '—') return '';
     const score = Number(val);
     if (isNaN(score)) return '';
-    if (score >= 91) return 'score-tres-liberal'; // Bleu
-    if (score >= 81) return 'score-liberal';      // Vert foncé
-    if (score >= 71) return 'score-plutot';       // Vert clair
-    if (score >= 61) return 'score-modere';       // Jaune doré
-    if (score >= 51) return 'score-peu';          // Orange
-    return 'score-dirigiste';                     // Rouge
+    if (score >= 91) return 'score-tres-liberal';
+    if (score >= 81) return 'score-liberal';
+    if (score >= 71) return 'score-plutot';
+    if (score >= 61) return 'score-modere';
+    if (score >= 51) return 'score-peu';
+    return 'score-dirigiste';
 }
 
 function renderScorePill(val) {
     if (val === null || val === undefined || val === '—') return '—';
     const scoreClass = getScoreClass(val);
     return `<span class="score-pill ${scoreClass}">${val}</span>`;
+}
+
+function renderMiniFutCard(d) {
+    const photoUrl = d.photo || d.avatar || `assets/photos/${d.id}.jpg`;
+    const regionLogo = d.logo_region || d.region_logo || `assets/logos/regions/${d.region_code || 'occitanie'}.png`;
+    const partiLogo = d.logo_parti || d.parti_logo || `assets/logos/partis/${(d.groupe || 'udr').toLowerCase()}.png`;
+    const legText = d.legislature || '17ᵉ LÉG.';
+
+    return `
+        <div class="mini-fut-card">
+            <div class="mini-fut-score">${d.scoreGlobal}</div>
+            <div class="mini-fut-photo-container">
+                <img src="${photoUrl}" alt="${d.nom}" onerror="this.onerror=null; this.src='https://via.placeholder.com/40?text=Depute';">
+            </div>
+            <div class="mini-fut-bottom">
+                <img class="mini-fut-badge" src="${regionLogo}" alt="Région" onerror="this.style.visibility='hidden';">
+                <span class="mini-fut-leg">${legText}</span>
+                <img class="mini-fut-badge" src="${partiLogo}" alt="Parti" onerror="this.style.visibility='hidden';">
+            </div>
+        </div>
+    `;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -54,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 tr.innerHTML = `
                     <td class="col-rang">#${index + 1}</td>
+                    <td class="col-carte">${renderMiniFutCard(d)}</td>
                     <td class="col-nom">
                         <a href="depute.html?id=${d.id}" class="depute-link" onclick="event.stopPropagation();">${d.nom}</a>
                     </td>
@@ -74,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const tbody = document.getElementById('leaderboard');
             if (tbody) {
                 tbody.innerHTML = `
-                    <tr><td colspan="11" style="color:red; font-weight:bold;">Erreur : ${err.message}</td></tr>
+                    <tr><td colspan="12" style="color:red; font-weight:bold;">Erreur : ${err.message}</td></tr>
                 `;
             }
         });
