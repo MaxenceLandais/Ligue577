@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Observatoire du Libéralisme - Classement UDR</title>
     <link rel="stylesheet" href="assets/style.css">
+    <script src="js/index.js" defer></script>
 </head>
 <body>
     <header>
@@ -17,78 +18,41 @@
     <main class="container">
         <div class="card">
             <h2>Classement général</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Rang</th>
-                        <th>Député</th>
-                        <th>Circonscription</th>
-                        <th>Score (/100)</th>
-                        <th>Bande</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody id="leaderboard">
-                    <tr><td colspan="6">Chargement du classement...</td></tr>
-                </tbody>
-            </table>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rang</th>
+                            <th>Député</th>
+                            <th>Circonscription</th>
+                            <th class="col-score-global">Score Global</th>
+                            <th title="Santé Fiscale & Impôts">Fiscalité</th>
+                            <th title="Droit de Propriété">Propriété</th>
+                            <th title="Taille de l'État & Dépenses">État</th>
+                            <th title="Liberté du Travail">Liberté</th>
+                            <th title="Fardeau Réglementaire">Régulation</th>
+                            <th title="Ouverture des Marchés">Ouverture</th>
+                            <th>Bande</th>
+                            <th style="text-align: right;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboard">
+                        <tr><td colspan="12">Chargement du classement...</td></tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
+
         <div class="card">
-    <h3>📊 Légende des bandes</h3>
-    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px;">
-        <span class="badge bande-liberal">Libéral (80+)</span>
-        <span class="badge bande-plutot">Plutôt libéral (70+)</span>
-        <span class="badge bande-modere">Modérément libéral (60+)</span>
-        <span class="badge bande-peu">Peu libéral (50+)</span>
-        <span class="badge bande-dirigiste">Dirigiste (0-49)</span>
-    </div>
-</div>
+            <h3>📊 Légende des bandes</h3>
+            <div class="legend-badges">
+                <span class="badge bande-liberal">Libéral (80+)</span>
+                <span class="badge bande-plutot">Plutôt libéral (70+)</span>
+                <span class="badge bande-modere">Modérément libéral (60+)</span>
+                <span class="badge bande-peu">Peu libéral (50+)</span>
+                <span class="badge bande-dirigiste">Dirigiste (0-49)</span>
+            </div>
+        </div>
     </main>
-
-    <script>
-        function getBande(score) {
-            if (score >= 80) return { label: "Libéral", class: "bande-liberal" };
-            if (score >= 70) return { label: "Plutôt libéral", class: "bande-plutot" };
-            if (score >= 60) return { label: "Modérément libéral", class: "bande-modere" };
-            if (score >= 50) return { label: "Peu libéral", class: "bande-peu" };
-            return { label: "Dirigiste", class: "bande-dirigiste" };
-        }
-
-        fetch('./data.json?t=' + Date.now())
-            .then(res => {
-                if (!res.ok) throw new Error("Impossible de lire data.json");
-                return res.json();
-            })
-            .then(deputes => {
-                deputes.forEach(d => {
-                    const vals = Object.values(d.scores || {});
-                    d.scoreGlobal = vals.length ? Math.round(vals.reduce((a, b) => a + b, 0) / vals.length) : 0;
-                    d.bande = getBande(d.scoreGlobal);
-                });
-
-                deputes.sort((a, b) => b.scoreGlobal - a.scoreGlobal);
-
-                const tbody = document.getElementById('leaderboard');
-                tbody.innerHTML = '';
-
-                deputes.forEach((d, index) => {
-                    const tr = document.createElement('tr');
-                    tr.innerHTML = `
-                        <td><strong>#${index + 1}</strong></td>
-                        <td><strong>${d.nom}</strong></td>
-                        <td>${d.circo}</td>
-                        <td><strong>${d.scoreGlobal}</strong> / 100</td>
-                        <td><span class="badge ${d.bande.class}">${d.bande.label}</span></td>
-                        <td><a href="depute.html?id=${d.id}" class="btn-link">Voir la fiche</a></td>
-                    `;
-                    tbody.appendChild(tr);
-                });
-            })
-            .catch(err => {
-                document.getElementById('leaderboard').innerHTML = `
-                    <tr><td colspan="6" style="color:red; font-weight:bold;">Erreur : ${err.message}</td></tr>
-                `;
-            });
-    </script>
 </body>
 </html>

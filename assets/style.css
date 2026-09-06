@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap');
 
+/* --- Base & Conteneurs --- */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background-color: #f8fafc;
@@ -15,7 +16,7 @@ header {
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -28,29 +29,83 @@ header {
     margin: 1.5rem 0;
 }
 
-table {
+/* --- Tableau façon Heritage Foundation --- */
+.table-responsive {
     width: 100%;
-    border-collapse: collapse;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     margin-top: 1rem;
 }
 
-th, td {
-    padding: 12px;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
     text-align: left;
+}
+
+th, td {
+    padding: 12px 10px;
     border-bottom: 1px solid #e2e8f0;
+    white-space: nowrap;
 }
 
 th {
     background-color: #f1f5f9;
+    color: #475569;
     font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
+tr:hover {
+    background-color: #f8fafc;
+}
+
+/* Formatage spécial des colonnes */
+.col-rang {
+    font-weight: 700;
+    color: #64748b;
+    text-align: center;
+    width: 50px;
+}
+
+.col-nom {
+    color: #0f172a;
+}
+
+.col-circo {
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+/* Mise en valeur de la colonne Score Global */
+.col-score-global {
+    font-weight: 700;
+    color: #0f172a;
+    background-color: #f1f5f9;
+    text-align: center;
+    border-left: 2px solid #cbd5e1;
+    border-right: 2px solid #cbd5e1;
+}
+
+/* Formatage des 6 piliers */
+.col-pillar {
+    text-align: center;
+    color: #334155;
+    font-weight: 500;
+    font-size: 0.88rem;
+}
+
+/* --- Badges de Bande & Légende --- */
 .badge {
     padding: 4px 10px;
     border-radius: 12px;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     font-weight: 600;
     display: inline-block;
+    white-space: nowrap;
 }
 
 .bande-liberal { background: #dcfce7; color: #166534; }
@@ -59,13 +114,26 @@ th {
 .bande-peu { background: #ffedd5; color: #9a3412; }
 .bande-dirigiste { background: #fee2e2; color: #991b1b; }
 
-a.btn-link {
-    color: #2563eb;
-    text-decoration: underline;
-    font-weight: 500;
+.legend-badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 10px;
 }
 
-/* Grille d'affichage */
+/* --- Liens & Boutons --- */
+a.btn-link, a.btn-fiche {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+a.btn-link:hover, a.btn-fiche:hover {
+    text-decoration: underline;
+}
+
+/* --- Grille d'affichage & Cartes FUT --- */
 .cards-grid {
   display: flex;
   flex-wrap: wrap;
@@ -74,7 +142,6 @@ a.btn-link {
   padding: 20px 0;
 }
 
-/* Carte style FUT */
 .fut-card {
   width: 230px;
   background: linear-gradient(135deg, #fce08a 0%, #c59b27 50%, #e6c863 100%);
@@ -176,50 +243,4 @@ a.btn-link {
   background: linear-gradient(135deg, #fce08a 0%, #c59b27 50%, #e6c863 100%);
   border-radius: 18px;
   padding: 18px 14px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  border: 2px solid #ffe89e;
-  font-family: 'Rajdhani', sans-serif;
-  color: #1e1e1e;
-  text-transform: uppercase;
-  user-select: none;
-  flex-shrink: 0;
-}
-
-.fut-card-large .fut-score-global,
-.fut-card.large .fut-score-global {
-  font-size: 48px;
-}
-
-.fut-card-large .fut-groupe,
-.fut-card.large .fut-groupe {
-  font-size: 14px;
-}
-
-.fut-card-large .fut-photo-container,
-.fut-card.large .fut-photo-container {
-  width: 130px;
-  height: 130px;
-}
-
-.fut-card-large .fut-nom,
-.fut-card.large .fut-nom {
-  font-size: 22px;
-  margin: 8px 0 6px 0;
-  letter-spacing: 1px;
-}
-
-.fut-card-large .fut-stats,
-.fut-card.large .fut-stats {
-  gap: 4px 12px;
-  padding: 4px 6px;
-}
-
-.fut-card-large .fut-stat-val,
-.fut-card.large .fut-stat-val {
-  font-size: 19px;
-}
-
-.fut-card-large .fut-stat-lbl,
-.fut-card.large .fut-stat-lbl {
-  font-size: 13px;
-}
+  box-shadow: 0 10px 25px rgba(0, 0,
