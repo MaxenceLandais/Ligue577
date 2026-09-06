@@ -1,5 +1,6 @@
 import io
 import json
+import os
 import re
 import unicodedata
 import zipfile
@@ -29,6 +30,115 @@ UDR_SLUGS = {
     "gerault-verny",
 }
 
+# Dictionnaire de correspondance Département -> Région (pour cibler le bon blason)
+DEPT_TO_REGION = {
+    "Ain": "Auvergne-Rhône-Alpes",
+    "Allier": "Auvergne-Rhône-Alpes",
+    "Ardèche": "Auvergne-Rhône-Alpes",
+    "Cantal": "Auvergne-Rhône-Alpes",
+    "Drôme": "Auvergne-Rhône-Alpes",
+    "Isère": "Auvergne-Rhône-Alpes",
+    "Loire": "Auvergne-Rhône-Alpes",
+    "Haute-Loire": "Auvergne-Rhône-Alpes",
+    "Puy-de-Dôme": "Auvergne-Rhône-Alpes",
+    "Rhône": "Auvergne-Rhône-Alpes",
+    "Savoie": "Auvergne-Rhône-Alpes",
+    "Haute-Savoie": "Auvergne-Rhône-Alpes",
+    "Côte-d'Or": "Bourgogne-Franche-Comté",
+    "Doubs": "Bourgogne-Franche-Comté",
+    "Jura": "Bourgogne-Franche-Comté",
+    "Nièvre": "Bourgogne-Franche-Comté",
+    "Haute-Saône": "Bourgogne-Franche-Comté",
+    "Saône-et-Loire": "Bourgogne-Franche-Comté",
+    "Yonne": "Bourgogne-Franche-Comté",
+    "Territoire de Belfort": "Bourgogne-Franche-Comté",
+    "Côtes-d'Armor": "Bretagne",
+    "Finistère": "Bretagne",
+    "Ille-et-Vilaine": "Bretagne",
+    "Morbihan": "Bretagne",
+    "Cher": "Centre-Val de Loire",
+    "Eure-et-Loir": "Centre-Val de Loire",
+    "Indre": "Centre-Val de Loire",
+    "Indre-et-Loire": "Centre-Val de Loire",
+    "Loir-et-Cher": "Centre-Val de Loire",
+    "Loiret": "Centre-Val de Loire",
+    "Corse-du-Sud": "Corse",
+    "Haute-Corse": "Corse",
+    "Ardennes": "Grand Est",
+    "Aube": "Grand Est",
+    "Marne": "Grand Est",
+    "Haute-Marne": "Grand Est",
+    "Meurthe-et-Moselle": "Grand Est",
+    "Meuse": "Grand Est",
+    "Moselle": "Grand Est",
+    "Bas-Rhin": "Grand Est",
+    "Haut-Rhin": "Grand Est",
+    "Vosges": "Grand Est",
+    "Aisne": "Hauts-de-France",
+    "Nord": "Hauts-de-France",
+    "Oise": "Hauts-de-France",
+    "Pas-de-Calais": "Hauts-de-France",
+    "Somme": "Hauts-de-France",
+    "Paris": "Île-de-France",
+    "Seine-et-Marne": "Île-de-France",
+    "Yvelines": "Île-de-France",
+    "Essonne": "Île-de-France",
+    "Hauts-de-Seine": "Île-de-France",
+    "Seine-Saint-Denis": "Île-de-France",
+    "Val-de-Marne": "Île-de-France",
+    "Val-d'Oise": "Île-de-France",
+    "Calvados": "Normandie",
+    "Eure": "Normandie",
+    "Manche": "Normandie",
+    "Orne": "Normandie",
+    "Seine-Maritime": "Normandie",
+    "Charente": "Nouvelle-Aquitaine",
+    "Charente-Maritime": "Nouvelle-Aquitaine",
+    "Corrèze": "Nouvelle-Aquitaine",
+    "Creuse": "Nouvelle-Aquitaine",
+    "Dordogne": "Nouvelle-Aquitaine",
+    "Gironde": "Nouvelle-Aquitaine",
+    "Landes": "Nouvelle-Aquitaine",
+    "Lot-et-Garonne": "Nouvelle-Aquitaine",
+    "Pyrénées-Atlantiques": "Nouvelle-Aquitaine",
+    "Deux-Sèvres": "Nouvelle-Aquitaine",
+    "Vienne": "Nouvelle-Aquitaine",
+    "Haute-Vienne": "Nouvelle-Aquitaine",
+    "Ariège": "Occitanie",
+    "Aude": "Occitanie",
+    "Aveyron": "Occitanie",
+    "Gard": "Occitanie",
+    "Haute-Garonne": "Occitanie",
+    "Gers": "Occitanie",
+    "Hérault": "Occitanie",
+    "Lot": "Occitanie",
+    "Lozère": "Occitanie",
+    "Hautes-Pyrénées": "Occitanie",
+    "Pyrénées-Orientales": "Occitanie",
+    "Tarn": "Occitanie",
+    "Tarn-et-Garonne": "Occitanie",
+    "Loire-Atlantique": "Pays de la Loire",
+    "Maine-et-Loire": "Pays de la Loire",
+    "Mayenne": "Pays de la Loire",
+    "Sarthe": "Pays de la Loire",
+    "Vendée": "Pays de la Loire",
+    "Alpes-de-Haute-Provence": "Provence-Alpes-Côte d'Azur",
+    "Hautes-Alpes": "Provence-Alpes-Côte d'Azur",
+    "Alpes-Maritimes": "Provence-Alpes-Côte d'Azur",
+    "Bouches-du-Rhône": "Provence-Alpes-Côte d'Azur",
+    "Var": "Provence-Alpes-Côte d'Azur",
+    "Vaucluse": "Provence-Alpes-Côte d'Azur",
+    "Guadeloupe": "Guadeloupe",
+    "Martinique": "Martinique",
+    "Guyane": "Guyane",
+    "La Réunion": "La Réunion",
+    "Mayotte": "Mayotte",
+    "Nouvelle-Calédonie": "Nouvelle-Calédonie",
+    "Polynésie française": "Polynésie française",
+    "Saint-Barthélemy et Saint-Martin": "Guadeloupe",
+    "Saint-Pierre-et-Miquelon": "Normandie",
+}
+
 
 def slugify(text: str) -> str:
     """Slug générique pour les identifiants internes et les départements."""
@@ -39,6 +149,16 @@ def slugify(text: str) -> str:
         .lower()
     )
     return re.sub(r"[^a-z0-9]+", "-", text).strip("-")
+
+
+def slugify_asset(text: str) -> str:
+    """Slug avec underscores pour correspondre aux noms de fichiers dans assets/."""
+    if not text:
+        return ""
+    text = unicodedata.normalize("NFD", str(text))
+    text = "".join(c for c in text if unicodedata.category(c) != "Mn").lower()
+    text = re.sub(r"[^\w\s-]", "", text)
+    return re.sub(r"[\s_-]+", "_", text).strip("_")
 
 
 def clean_alpha_only(text: str) -> str:
@@ -271,7 +391,7 @@ def fetch_and_update():
                         nom = ident.get("nom", "")
                         full_name = f"{prenom} {nom}".strip()
 
-                        # Extraction de la date de naissance (OpenData AN)
+                        # Extraction date de naissance
                         info_nais = etat_civil.get("infoNaissance", {})
                         date_naissance = (
                             info_nais.get("dateNais", "")
@@ -318,7 +438,7 @@ def fetch_and_update():
                                 or f"https://datan.fr/deputes/depute_{datan_slug}"
                             )
 
-                        # Circonscription
+                        # Circonscription et Région
                         circo_val = existing_record.get("circo")
                         if not circo_val or circo_val == "Non renseignée":
                             if dept_name and num_circo:
@@ -326,15 +446,53 @@ def fetch_and_update():
                             else:
                                 circo_val = dept_name or "Non renseignée"
 
+                        region_val = existing_record.get(
+                            "region"
+                        ) or DEPT_TO_REGION.get(dept_name, dept_name)
+
                         # Intro Wikipédia
                         biographie = existing_record.get("biographie", "")
                         if is_udr:
-                            print(f"   ➔ Récupération de l'intro Wikipédia : {full_name}")
+                            print(
+                                f"   ➔ Récupération de l'intro Wikipédia : {full_name}"
+                            )
                             bio_intro = get_wikipedia_bio_intro(full_name)
                             if bio_intro:
                                 biographie = bio_intro
 
-                        photo_url = f"https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/{pa_id}.jpg"
+                        # --- RÉSOLUTION DES ASSETS LOCAUX ---
+                        # 1. Photo du député
+                        local_photo = os.path.join(
+                            "assets", "deputes", f"{depute_id}.jpg"
+                        )
+                        online_photo = f"https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/{pa_id}.jpg"
+                        photo_url = (
+                            local_photo.replace("\\", "/")
+                            if os.path.exists(local_photo)
+                            else online_photo
+                        )
+
+                        # 2. Blason de la région
+                        region_slug = slugify_asset(region_val)
+                        local_blason = os.path.join(
+                            "assets", "regions", f"{region_slug}.png"
+                        )
+                        blason_url = (
+                            local_blason.replace("\\", "/")
+                            if os.path.exists(local_blason)
+                            else None
+                        )
+
+                        # 3. Logo du parti / groupe
+                        parti_slug = slugify_asset(groupe_an)
+                        local_logo = os.path.join(
+                            "assets", "partis", f"{parti_slug}.png"
+                        )
+                        logo_parti_url = (
+                            local_logo.replace("\\", "/")
+                            if os.path.exists(local_logo)
+                            else None
+                        )
 
                         reseaux = existing_record.get("reseaux", {})
                         if not isinstance(reseaux, dict):
@@ -348,23 +506,37 @@ def fetch_and_update():
                             "id": depute_id,
                             "pa_id": pa_id,
                             "nom": full_name,
-                            "date_naissance": date_naissance or existing_record.get("date_naissance", ""),
+                            "date_naissance": (
+                                date_naissance
+                                or existing_record.get("date_naissance", "")
+                            ),
+                            "region": region_val,
+                            "dept": dept_name,
                             "circo": circo_val,
                             "groupe": groupe_an,
-                            "email": email_an or existing_record.get("email", ""),
+                            "email": email_an
+                            or existing_record.get("email", ""),
                             "profession": (
                                 prof_an
                                 if prof_an != "Non renseignée"
-                                else existing_record.get("profession", "Non renseignée")
+                                else existing_record.get(
+                                    "profession", "Non renseignée"
+                                )
                             ),
                             "biographie": biographie,
                             "stats": {
-                                "participation": old_stats.get("participation", 0),
-                                "loyaute_groupe": old_stats.get("loyaute_groupe", 0),
+                                "participation": old_stats.get(
+                                    "participation", 0
+                                ),
+                                "loyaute_groupe": old_stats.get(
+                                    "loyaute_groupe", 0
+                                ),
                             },
                             "photoUrl": photo_url,
                             "photo": photo_url,
                             "avatar": photo_url,
+                            "blason_url": blason_url,
+                            "logo_parti_url": logo_parti_url,
                             "datanUrl": datan_url,
                             "scores": existing_record.get(
                                 "scores",
@@ -377,7 +549,9 @@ def fetch_and_update():
                                     "OUV": 50,
                                 },
                             ),
-                            "score_global": existing_record.get("score_global", 50),
+                            "score_global": existing_record.get(
+                                "score_global", 50
+                            ),
                             "qualification": existing_record.get(
                                 "qualification", "Non évalué"
                             ),
@@ -386,7 +560,9 @@ def fetch_and_update():
                             ),
                             "votes": existing_record.get("votes", []),
                             "reseaux": reseaux,
-                            "initiatives": existing_record.get("initiatives", []),
+                            "initiatives": existing_record.get(
+                                "initiatives", []
+                            ),
                         }
 
                         updated_list.append(depute_entry)

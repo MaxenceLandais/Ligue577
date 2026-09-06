@@ -148,23 +148,24 @@
         .fut-footer {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 18px;
+            justify-content: space-between;
             padding-top: 10px;
-            height: 30px;
+            height: 36px;
         }
 
         .fut-footer-item {
             display: flex;
             align-items: center;
             justify-content: center;
+            flex: 1;
         }
 
         .fut-footer-item img {
-            height: 24px;
+            max-height: 32px;
+            max-width: 48px;
             width: auto;
-            max-width: 45px;
             object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25));
         }
 
         .fut-badge-17 {
@@ -175,6 +176,7 @@
             padding: 3px 8px;
             border-radius: 4px;
             border: 1px solid #475569;
+            white-space: nowrap;
         }
 
         .profile-info {
@@ -397,7 +399,6 @@
 
         const REGION_FLAGS = {
             "Occitanie": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Occitanie.svg/1200px-Flag_of_Occitanie.svg.png",
-            "Hérault": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Occitanie.svg/1200px-Flag_of_Occitanie.svg.png",
             "Provence-Alpes-Côte d'Azur": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Flag_of_Provence-Alpes-C%C3%B4te_d%27Azur.svg/1200px-Flag_of_Provence-Alpes-C%C3%B4te_d%27Azur.svg.png"
         };
 
@@ -411,6 +412,17 @@
             linkedin: "LinkedIn",
             instagram: "Instagram"
         };
+
+        function slugifyAsset(text) {
+            if (!text) return '';
+            return text
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .toLowerCase()
+                .replace(/[^\w\s-]/g, "")
+                .replace(/[\s_-]+/g, "_")
+                .replace(/^_+|_+$/g, "");
+        }
 
         function formatNumber(num) {
             return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
@@ -485,10 +497,20 @@
                     const computedAge = calculateAge(birthStr);
                     const ageDisplay = computedAge !== null ? `${computedAge} ANS` : (d.age ? `${d.age} ANS` : '—');
 
-                    // Image locale prioritaire dans assets/deputes/
-                    const localJpg = `assets/deputes/${d.id}.jpg`;
-                    const localPng = `assets/deputes/${d.id}.png`;
+                    // --- ASSETS & DÉCLARATION DES IMAGES ---
+                    const photoPrincipal = d.photo_url || d.photo || d.photoUrl || d.avatar || `assets/deputes/${d.id}.jpg`;
+                    const photoFallbackPng = `assets/deputes/${d.id}.png`;
+                    const onlineAnPhoto = d.pa_id ? `https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/${d.pa_id}.jpg` : '';
                     const svgDefault = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='35' r='25' fill='%23aaa'/><path d='M10 90 A40 40 0 0 1 90 90 Z' fill='%23aaa'/></svg>";
+
+                    // Blason Région (gauche)
+                    const regionSlug = slugifyAsset(d.region);
+                    const regionUrl = d.blason_url || (regionSlug ? `assets/regions/${regionSlug}.png` : (d.drapeau_region || REGION_FLAGS[d.region]));
+
+                    // Logo Parti (droite)
+                    const groupeName = d.parti || d.groupe || 'UDR';
+                    const partiSlug = slugifyAsset(groupeName);
+                    const partiUrl = d.logo_parti_url || (partiSlug ? `assets/partis/${partiSlug}.png` : (d.logo_parti || PARTY_LOGOS[groupeName]));
 
                     const nomFamille = d.nom.split(' ').pop();
                     const scores = d.scores || {};
@@ -500,20 +522,21 @@
                     document.title = pageTitle;
                     document.getElementById('og-title').setAttribute('content', pageTitle);
                     document.getElementById('og-desc').setAttribute('content', pageDesc);
-                    document.getElementById('og-image').setAttribute('content', localJpg);
+                    document.getElementById('og-image').setAttribute('content', photoPrincipal);
                     document.getElementById('og-url').setAttribute('content', window.location.href);
 
                     document.getElementById('tw-title').setAttribute('content', pageTitle);
                     document.getElementById('tw-desc').setAttribute('content', pageDesc);
-                    document.getElementById('tw-image').setAttribute('content', localJpg);
+                    document.getElementById('tw-image').setAttribute('content', photoPrincipal);
 
-                    // Drapeau et logo
-                    const regionUrl = d.drapeau_region || REGION_FLAGS[d.region] || REGION_FLAGS["Occitanie"];
-                    const drapeauRegionHtml = `<img src="${regionUrl}" alt="Région" referrerpolicy="no-referrer" onerror="this.style.display='none'">`;
+                    // HTML des images du bas de carte FUT
+                    const drapeauRegionHtml = regionUrl
+                        ? `<img src="${regionUrl}" alt="Blason ${d.region || ''}" title="${d.region || ''}" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
+                        : '';
 
-                    const groupeName = d.parti || d.groupe || 'UDR';
-                    const partiUrl = d.logo_parti || PARTY_LOGOS[groupeName] || PARTY_LOGOS["UDR"];
-                    const partiHtml = `<img src="${partiUrl}" alt="${groupeName}" referrerpolicy="no-referrer" onerror="this.style.display='none'">`;
+                    const partiHtml = partiUrl
+                        ? `<img src="${partiUrl}" alt="${groupeName}" title="${groupeName}" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
+                        : '';
 
                     // Carte FC26
                     const futCardHtml = `
@@ -528,9 +551,9 @@
                                 </div>
                             </div>
                             <div class="fut-photo-container">
-                                <img src="${localJpg}"
+                                <img src="${photoPrincipal}"
                                      alt="${d.nom}"
-                                     onerror="if(!this.dataset.fallback){this.dataset.fallback=1; this.src='${localPng}';}else{this.src='${svgDefault}';}">
+                                     onerror="if(!this.dataset.step){this.dataset.step=1; this.src='${photoFallbackPng}';}else if(this.dataset.step==='1'){this.dataset.step=2; this.src='${onlineAnPhoto}';}else{this.src='${svgDefault}';}">
                             </div>
                             <div class="fut-nom">${nomFamille}</div>
 
