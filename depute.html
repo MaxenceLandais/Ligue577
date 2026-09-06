@@ -9,7 +9,7 @@
     <!-- Typographie Style Arcade / FUT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700;800&display=swap" rel="stylesheet">
 
     <!-- Balises Open Graph pour réseaux sociaux -->
     <meta property="og:type" content="profile">
@@ -33,13 +33,14 @@
             flex-wrap: wrap;
         }
 
-        /* --- CARTE FIFA ULTIMATE TEAM (GRAND FORMAT) --- */
+        /* --- CARTE EA SPORTS FC 26 (ULTIMATE TEAM) --- */
         .fut-card-large {
+            position: relative;
             width: 280px;
             background: linear-gradient(135deg, #fce08a 0%, #c59b27 50%, #e6c863 100%);
-            border-radius: 18px;
-            padding: 18px 14px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            padding: 16px 14px 14px 14px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
             border: 2px solid #ffe89e;
             font-family: 'Rajdhani', sans-serif;
             color: #1e1e1e;
@@ -47,29 +48,52 @@
             user-select: none;
             flex-shrink: 0;
         }
-        .fut-header {
+
+        .fut-top {
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: flex-start;
         }
-        .fut-badge {
+
+        .fut-left-info {
             text-align: center;
-            line-height: 0.9;
+            line-height: 0.95;
         }
+
         .fut-score-global {
-            font-size: 48px;
-            font-weight: 700;
+            font-size: 52px;
+            font-weight: 800;
+            color: #1a1a1a;
+            letter-spacing: -1px;
         }
+
         .fut-groupe {
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 700;
             color: #3a2e05;
-            margin-top: 4px;
+            margin-top: 2px;
         }
+
+        /* Hexagone de position FC26 remplacé par l'Âge */
+        .fut-age-badge {
+            background: rgba(255, 255, 255, 0.85);
+            border: 2px solid #3a2e05;
+            clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+            padding: 6px 8px;
+            font-size: 13px;
+            font-weight: 800;
+            color: #1e1e1e;
+            min-width: 32px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        }
+
         .fut-photo-container {
-            width: 130px;
-            height: 130px;
+            width: 140px;
+            height: 140px;
+            margin: -20px auto 0 auto;
         }
+
         .fut-photo-container img {
             width: 100%;
             height: 100%;
@@ -77,38 +101,89 @@
             mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
             -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
         }
+
         .fut-nom {
             text-align: center;
-            font-size: 22px;
-            font-weight: 700;
-            margin: 8px 0 6px 0;
-            letter-spacing: 1px;
+            font-size: 24px;
+            font-weight: 800;
+            margin: 4px 0 8px 0;
+            letter-spacing: 0.5px;
             border-bottom: 2px solid rgba(0, 0, 0, 0.15);
             padding-bottom: 4px;
         }
-        .fut-stats {
+
+        /* 2 Colonnes de 3 lignes pour les 6 piliers */
+        .fut-stats-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4px 8px;
-            padding: 6px 4px;
+            gap: 6px 10px;
+            padding: 4px 6px 10px 6px;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.15);
         }
+
         .fut-stat {
             display: flex;
-            gap: 4px;
             align-items: center;
-            overflow: hidden;
+            gap: 6px;
         }
+
         .fut-stat-val {
-            font-size: 18px;
-            font-weight: 700;
-            min-width: 22px;
+            font-size: 20px;
+            font-weight: 800;
+            color: #1e1e1e;
+            min-width: 24px;
         }
+
         .fut-stat-lbl {
-            font-size: 11px;
+            font-size: 12px;
             color: #3a2e05;
             font-weight: 700;
-            white-space: nowrap;
             letter-spacing: -0.2px;
+            white-space: nowrap;
+        }
+
+        /* Footer FC26 (Région, 17e Législature, Parti) */
+        .fut-footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            padding-top: 10px;
+        }
+
+        .fut-footer-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .fut-footer-item img {
+            height: 22px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .fut-badge-17 {
+            background: #1e293b;
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 2px 7px;
+            border-radius: 4px;
+            border: 1px solid #475569;
+        }
+
+        .fut-badge-parti {
+            background: #2563eb;
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 2px 7px;
+            border-radius: 4px;
+            max-width: 80px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
         .profile-info {
@@ -395,26 +470,54 @@
                     document.getElementById('tw-desc').setAttribute('content', pageDesc);
                     document.getElementById('tw-image').setAttribute('content', photoUrl);
 
-                    // Génération de la Carte FUT
+                    // Gestion du drapeau régional
+                    const drapeauRegionHtml = d.drapeau_region
+                        ? `<img src="${d.drapeau_region}" alt="${d.region || 'Région'}">`
+                        : `<span style="font-size: 16px;" title="${d.region || 'Région'}">📍</span>`;
+
+                    // Gestion du logo ou nom du parti
+                    const partiHtml = d.logo_parti
+                        ? `<img src="${d.logo_parti}" alt="${d.parti || d.groupe}">`
+                        : `<span class="fut-badge-parti">${d.parti || d.groupe || 'PARTI'}</span>`;
+
+                    // Generation de la Carte FC26
                     const futCardHtml = `
                         <div class="fut-card-large">
-                            <div class="fut-header">
-                                <div class="fut-badge">
+                            <div class="fut-top">
+                                <div class="fut-left-info">
                                     <div class="fut-score-global">${scoreGlobal}</div>
                                     <div class="fut-groupe">${d.groupe || 'UDR'}</div>
                                 </div>
-                                <div class="fut-photo-container">
-                                    <img src="${photoUrl}" alt="${d.nom}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://www.assemblee-nationale.fr/17/photos/${d.id}.jpg';">
+                                <div class="fut-age-badge" title="Âge du député">
+                                    ${d.age ? d.age + ' ANS' : '45 ANS'}
                                 </div>
                             </div>
+                            <div class="fut-photo-container">
+                                <img src="${photoUrl}" alt="${d.nom}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://www.assemblee-nationale.fr/17/photos/${d.id}.jpg';">
+                            </div>
                             <div class="fut-nom">${nomFamille}</div>
-                            <div class="fut-stats">
+
+                            <!-- Grid 2 Colonnes x 3 Lignes -->
+                            <div class="fut-stats-grid">
                                 <div class="fut-stat"><span class="fut-stat-val">${scores.FIS ?? 0}</span><span class="fut-stat-lbl">FISCALITÉ</span></div>
                                 <div class="fut-stat"><span class="fut-stat-val">${scores.PRO ?? 0}</span><span class="fut-stat-lbl">PROPRIÉTÉ</span></div>
                                 <div class="fut-stat"><span class="fut-stat-val">${scores.ETA ?? 0}</span><span class="fut-stat-lbl">ÉTAT</span></div>
                                 <div class="fut-stat"><span class="fut-stat-val">${scores.LIB ?? 0}</span><span class="fut-stat-lbl">LIBERTÉ</span></div>
                                 <div class="fut-stat"><span class="fut-stat-val">${scores.REG ?? 0}</span><span class="fut-stat-lbl">RÉGULATION</span></div>
                                 <div class="fut-stat"><span class="fut-stat-val">${scores.OUV ?? 0}</span><span class="fut-stat-lbl">OUVERTURE</span></div>
+                            </div>
+
+                            <!-- Bas de Carte : Drapeau Région | 17e Législature | Parti Politique -->
+                            <div class="fut-footer">
+                                <div class="fut-footer-item" title="Région : ${d.region || 'Inconnue'}">
+                                    ${drapeauRegionHtml}
+                                </div>
+                                <div class="fut-footer-item" title="17e Législature">
+                                    <span class="fut-badge-17">17ᵉ LÉG.</span>
+                                </div>
+                                <div class="fut-footer-item" title="Parti politique : ${d.parti || d.groupe || 'Indépendant'}">
+                                    ${partiHtml}
+                                </div>
                             </div>
                         </div>
                     `;
