@@ -27,8 +27,12 @@ function renderScorePill(val) {
 
 function renderMiniFutCard(d) {
     const photoUrl = d.photo || d.avatar || `assets/photos/${d.id}.jpg`;
-    const regionLogo = d.logo_region || d.region_logo || `assets/logos/regions/${d.region_code || 'occitanie'}.png`;
+    const regionLogo = d.logo_region || d.region_logo || `assets/logos/regions/${d.region_code || 'france'}.png`;
     const partiLogo = d.logo_parti || d.parti_logo || `assets/logos/partis/${(d.groupe || 'udr').toLowerCase()}.png`;
+
+    // Placeholders SVG si les fichiers locaux n'existent pas encore
+    const fallbackRegion = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230f172a'%3E%3Cpath d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z'/%3E%3C/svg%3E";
+    const fallbackParti = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230f172a'%3E%3Cpath d='M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z'/%3E%3C/svg%3E";
 
     return `
         <div class="mini-fut-card">
@@ -37,9 +41,9 @@ function renderMiniFutCard(d) {
                 <img src="${photoUrl}" alt="${d.nom}" onerror="this.onerror=null; this.src='https://via.placeholder.com/80?text=Depute';">
             </div>
             <div class="mini-fut-bottom">
-                <img class="mini-fut-badge" src="${regionLogo}" alt="Région" onerror="this.style.visibility='hidden';">
+                <img class="mini-fut-badge" src="${regionLogo}" alt="Région" onerror="this.onerror=null; this.src='${fallbackRegion}';">
                 <span class="mini-fut-leg">17</span>
-                <img class="mini-fut-badge" src="${partiLogo}" alt="Parti" onerror="this.style.visibility='hidden';">
+                <img class="mini-fut-badge" src="${partiLogo}" alt="Parti" onerror="this.onerror=null; this.src='${fallbackParti}';">
             </div>
         </div>
     `;
