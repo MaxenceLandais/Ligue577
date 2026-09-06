@@ -35,7 +35,7 @@ function renderMiniFutCard(d) {
         <div class="mini-fut-card">
             <div class="mini-fut-score">${d.scoreGlobal}</div>
             <div class="mini-fut-photo-container">
-                <img src="${photoUrl}" alt="${d.nom}" onerror="this.onerror=null; this.src='https://via.placeholder.com/40?text=Depute';">
+                <img src="${photoUrl}" alt="${d.nom}" onerror="this.onerror=null; this.src='https://via.placeholder.com/90?text=Depute';">
             </div>
             <div class="mini-fut-bottom">
                 <img class="mini-fut-badge" src="${regionLogo}" alt="Région" onerror="this.style.visibility='hidden';">
