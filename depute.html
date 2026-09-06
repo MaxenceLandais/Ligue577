@@ -36,17 +36,63 @@
         /* --- CARTE EA SPORTS FC 26 (ULTIMATE TEAM) --- */
         .fut-card-large {
             position: relative;
-            width: 280px;
-            background: linear-gradient(135deg, #fce08a 0%, #c59b27 50%, #e6c863 100%);
-            border-radius: 20px;
+            width: 270px;
             padding: 16px 14px 14px 14px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-            border: 2px solid #ffe89e;
             font-family: 'Rajdhani', sans-serif;
             color: #1e1e1e;
             text-transform: uppercase;
             user-select: none;
             flex-shrink: 0;
+            background: linear-gradient(135deg, #fce08a 0%, #c59b27 50%, #e6c863 100%);
+            /* Découpe officielle style Écusson Ultimate Team */
+            clip-path: polygon(
+                14px 0,
+                calc(100% - 14px) 0,
+                100% 14px,
+                100% calc(100% - 24px),
+                calc(100% - 30px) 100%,
+                30px 100%,
+                0 calc(100% - 24px),
+                0 14px
+            );
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Fond Rayons Dorés ("Sunburst") style Rodri FC26 */
+        .fut-card-large::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background:
+                radial-gradient(circle at 50% 32%, rgba(255, 250, 210, 0.95) 0%, rgba(200, 150, 30, 0.2) 65%),
+                repeating-conic-gradient(from 0deg at 50% 32%, #fde68a 0deg 3.5deg, #ca9a24 3.5deg 7deg);
+            z-index: 0;
+            opacity: 0.9;
+        }
+
+        /* Bordure dorée interne */
+        .fut-card-large::after {
+            content: "";
+            position: absolute;
+            top: 3px; left: 3px; right: 3px; bottom: 3px;
+            border: 1.5px solid rgba(255, 245, 180, 0.65);
+            clip-path: polygon(
+                12px 0,
+                calc(100% - 12px) 0,
+                100% 12px,
+                100% calc(100% - 22px),
+                calc(100% - 28px) 100%,
+                28px 100%,
+                0 calc(100% - 22px),
+                0 12px
+            );
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .fut-card-content {
+            position: relative;
+            z-index: 2;
         }
 
         .fut-top {
@@ -57,45 +103,48 @@
 
         .fut-left-info {
             text-align: center;
-            line-height: 0.95;
+            line-height: 0.9;
         }
 
         .fut-score-global {
-            font-size: 52px;
+            font-size: 54px;
             font-weight: 800;
             color: #1a1a1a;
             letter-spacing: -1px;
+            text-shadow: 0 1px 2px rgba(255,255,255,0.6);
         }
 
         .fut-groupe {
             font-size: 15px;
-            font-weight: 700;
+            font-weight: 800;
             color: #3a2e05;
             margin-top: 2px;
+            letter-spacing: 0.5px;
         }
 
+        /* Badge Âge style Hexagone FC26 */
         .fut-age-badge {
-            background: rgba(255, 255, 255, 0.85);
-            border: 2px solid #3a2e05;
+            background: #fff8dc;
+            border: 2px solid #5c4709;
             clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-            padding: 6px 8px;
-            font-size: 13px;
+            padding: 5px 7px;
+            font-size: 12px;
             font-weight: 800;
             color: #1e1e1e;
-            min-width: 32px;
+            min-width: 34px;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
         }
 
-        /* Photo ronde style Datan */
+        /* Photo du député */
         .fut-photo-container {
-            width: 130px;
-            height: 130px;
-            margin: 6px auto;
+            width: 125px;
+            height: 125px;
+            margin: 2px auto 6px auto;
             overflow: hidden;
             border-radius: 50%;
             border: 3px solid #3a2e05;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
             background-color: #dbeafe;
         }
 
@@ -108,20 +157,29 @@
 
         .fut-nom {
             text-align: center;
-            font-size: 24px;
+            font-size: 23px;
             font-weight: 800;
-            margin: 4px 0 8px 0;
+            margin: 2px 0 6px 0;
             letter-spacing: 0.5px;
-            border-bottom: 2px solid rgba(0, 0, 0, 0.15);
-            padding-bottom: 4px;
+            color: #111;
+            text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+        }
+
+        /* Section basse avec léger effet translucide pour la lisibilité */
+        .fut-stats-block {
+            background: rgba(235, 195, 80, 0.45);
+            border-radius: 10px;
+            padding: 6px;
+            border-top: 1px solid rgba(255, 255, 255, 0.4);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         }
 
         .fut-stats-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 6px 10px;
-            padding: 4px 6px 10px 6px;
-            border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+            gap: 4px 12px;
+            padding: 2px 6px 6px 6px;
+            border-bottom: 1px solid rgba(60, 45, 5, 0.2);
         }
 
         .fut-stat {
@@ -131,52 +189,54 @@
         }
 
         .fut-stat-val {
-            font-size: 20px;
+            font-size: 19px;
             font-weight: 800;
-            color: #1e1e1e;
-            min-width: 24px;
+            color: #111111;
+            min-width: 22px;
         }
 
         .fut-stat-lbl {
-            font-size: 12px;
+            font-size: 11px;
             color: #3a2e05;
-            font-weight: 700;
+            font-weight: 800;
             letter-spacing: -0.2px;
             white-space: nowrap;
         }
 
+        /* Pied de carte : badges resserrés au centre comme FC26 */
         .fut-footer {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            padding-top: 10px;
-            height: 36px;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 8px;
+            height: 32px;
         }
 
         .fut-footer-item {
             display: flex;
             align-items: center;
             justify-content: center;
-            flex: 1;
         }
 
         .fut-footer-item img {
-            max-height: 32px;
-            max-width: 48px;
+            max-height: 26px;
+            max-width: 38px;
             width: auto;
             object-fit: contain;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25));
+            filter: drop-shadow(0 2px 3px rgba(0,0,0,0.3));
         }
 
         .fut-badge-17 {
             background: #1e293b;
             color: #ffffff;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 800;
-            padding: 3px 8px;
+            padding: 3px 6px;
             border-radius: 4px;
             border: 1px solid #475569;
             white-space: nowrap;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
 
         .profile-info {
@@ -428,7 +488,6 @@
             return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
         }
 
-        // Calcul exact de l'âge en années
         function calculateAge(birthDateStr) {
             if (!birthDateStr) return null;
             let birthDate;
@@ -492,22 +551,18 @@
 
                     const bande = getBande(scoreGlobal);
 
-                    // Calcul dynamique de l'âge
                     const birthStr = d.date_naissance || d.dateNaissance || d.birthdate || d.birth_date;
                     const computedAge = calculateAge(birthStr);
                     const ageDisplay = computedAge !== null ? `${computedAge} ANS` : (d.age ? `${d.age} ANS` : '—');
 
-                    // --- ASSETS & DÉCLARATION DES IMAGES ---
                     const photoPrincipal = d.photo_url || d.photo || d.photoUrl || d.avatar || `assets/deputes/${d.id}.jpg`;
                     const photoFallbackPng = `assets/deputes/${d.id}.png`;
                     const onlineAnPhoto = d.pa_id ? `https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/${d.pa_id}.jpg` : '';
                     const svgDefault = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='35' r='25' fill='%23aaa'/><path d='M10 90 A40 40 0 0 1 90 90 Z' fill='%23aaa'/></svg>";
 
-                    // Blason Région (gauche)
                     const regionSlug = slugifyAsset(d.region);
                     const regionUrl = d.blason_url || (regionSlug ? `assets/regions/${regionSlug}.png` : (d.drapeau_region || REGION_FLAGS[d.region]));
 
-                    // Logo Parti (droite)
                     const groupeName = d.parti || d.groupe || 'UDR';
                     const partiSlug = slugifyAsset(groupeName);
                     const partiUrl = d.logo_parti_url || (partiSlug ? `assets/partis/${partiSlug}.png` : (d.logo_parti || PARTY_LOGOS[groupeName]));
@@ -515,7 +570,6 @@
                     const nomFamille = d.nom.split(' ').pop();
                     const scores = d.scores || {};
 
-                    // Open Graph
                     const pageTitle = `${d.nom} (${scoreGlobal}/100 - ${bande.label}) | Observatoire du Libéralisme`;
                     const pageDesc = `Consultez le score libéral de ${d.nom} (${d.circo}) calculé selon les 6 piliers de la liberté économique.`;
 
@@ -529,7 +583,6 @@
                     document.getElementById('tw-desc').setAttribute('content', pageDesc);
                     document.getElementById('tw-image').setAttribute('content', photoPrincipal);
 
-                    // HTML des images du bas de carte FUT
                     const drapeauRegionHtml = regionUrl
                         ? `<img src="${regionUrl}" alt="Blason ${d.region || ''}" title="${d.region || ''}" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
                         : '';
@@ -538,49 +591,54 @@
                         ? `<img src="${partiUrl}" alt="${groupeName}" title="${groupeName}" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
                         : '';
 
-                    // Carte FC26
+                    // Carte FC26 Ultra-fidèle
                     const futCardHtml = `
                         <div class="fut-card-large">
-                            <div class="fut-top">
-                                <div class="fut-left-info">
-                                    <div class="fut-score-global">${scoreGlobal}</div>
-                                    <div class="fut-groupe">${d.groupe || 'UDR'}</div>
+                            <div class="fut-card-content">
+                                <div class="fut-top">
+                                    <div class="fut-left-info">
+                                        <div class="fut-score-global">${scoreGlobal}</div>
+                                        <div class="fut-groupe">${d.groupe || 'UDR'}</div>
+                                    </div>
+                                    <div class="fut-age-badge" title="Âge du député">
+                                        ${ageDisplay}
+                                    </div>
                                 </div>
-                                <div class="fut-age-badge" title="Âge calculé automatiquement">
-                                    ${ageDisplay}
-                                </div>
-                            </div>
-                            <div class="fut-photo-container">
-                                <img src="${photoPrincipal}"
-                                     alt="${d.nom}"
-                                     onerror="if(!this.dataset.step){this.dataset.step=1; this.src='${photoFallbackPng}';}else if(this.dataset.step==='1'){this.dataset.step=2; this.src='${onlineAnPhoto}';}else{this.src='${svgDefault}';}">
-                            </div>
-                            <div class="fut-nom">${nomFamille}</div>
 
-                            <div class="fut-stats-grid">
-                                <div class="fut-stat"><span class="fut-stat-val">${scores.FIS ?? 0}</span><span class="fut-stat-lbl">FISCALITÉ</span></div>
-                                <div class="fut-stat"><span class="fut-stat-val">${scores.PRO ?? 0}</span><span class="fut-stat-lbl">PROPRIÉTÉ</span></div>
-                                <div class="fut-stat"><span class="fut-stat-val">${scores.ETA ?? 0}</span><span class="fut-stat-lbl">ÉTAT</span></div>
-                                <div class="fut-stat"><span class="fut-stat-val">${scores.LIB ?? 0}</span><span class="fut-stat-lbl">LIBERTÉ</span></div>
-                                <div class="fut-stat"><span class="fut-stat-val">${scores.REG ?? 0}</span><span class="fut-stat-lbl">RÉGULATION</span></div>
-                                <div class="fut-stat"><span class="fut-stat-val">${scores.OUV ?? 0}</span><span class="fut-stat-lbl">OUVERTURE</span></div>
-                            </div>
+                                <div class="fut-photo-container">
+                                    <img src="${photoPrincipal}"
+                                         alt="${d.nom}"
+                                         onerror="if(!this.dataset.step){this.dataset.step=1; this.src='${photoFallbackPng}';}else if(this.dataset.step==='1'){this.dataset.step=2; this.src='${onlineAnPhoto}';}else{this.src='${svgDefault}';}">
+                                </div>
 
-                            <div class="fut-footer">
-                                <div class="fut-footer-item">
-                                    ${drapeauRegionHtml}
-                                </div>
-                                <div class="fut-footer-item" title="17e Législature">
-                                    <span class="fut-badge-17">17ᵉ LÉG.</span>
-                                </div>
-                                <div class="fut-footer-item">
-                                    ${partiHtml}
+                                <div class="fut-nom">${nomFamille}</div>
+
+                                <div class="fut-stats-block">
+                                    <div class="fut-stats-grid">
+                                        <div class="fut-stat"><span class="fut-stat-val">${scores.FIS ?? 0}</span><span class="fut-stat-lbl">FISCALITÉ</span></div>
+                                        <div class="fut-stat"><span class="fut-stat-val">${scores.PRO ?? 0}</span><span class="fut-stat-lbl">PROPRIÉTÉ</span></div>
+                                        <div class="fut-stat"><span class="fut-stat-val">${scores.ETA ?? 0}</span><span class="fut-stat-lbl">ÉTAT</span></div>
+                                        <div class="fut-stat"><span class="fut-stat-val">${scores.LIB ?? 0}</span><span class="fut-stat-lbl">LIBERTÉ</span></div>
+                                        <div class="fut-stat"><span class="fut-stat-val">${scores.REG ?? 0}</span><span class="fut-stat-lbl">RÉGULATION</span></div>
+                                        <div class="fut-stat"><span class="fut-stat-val">${scores.OUV ?? 0}</span><span class="fut-stat-lbl">OUVERTURE</span></div>
+                                    </div>
+
+                                    <div class="fut-footer">
+                                        <div class="fut-footer-item">
+                                            ${drapeauRegionHtml}
+                                        </div>
+                                        <div class="fut-footer-item" title="17e Législature">
+                                            <span class="fut-badge-17">17ᵉ LÉG.</span>
+                                        </div>
+                                        <div class="fut-footer-item">
+                                            ${partiHtml}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     `;
 
-                    // Réseaux sociaux & contact
                     let totalAbonnes = 0;
                     let hasAbonnes = false;
                     let socialBadgesHtml = '';
