@@ -70,7 +70,7 @@ th {
     background-color: #f8fafc;
 }
 
-/* --- Alignement et Taille des Colonnes --- */
+/* --- Alignement des Colonnes --- */
 .col-rang {
     font-weight: 800;
     color: #64748b;
@@ -117,11 +117,11 @@ th {
     text-align: center;
 }
 
-/* --- Mini Carte FUT Ajustée --- */
+/* --- Carte FUT (Format ajusté) --- */
 .mini-fut-card {
     position: relative;
-    width: 92px;
-    height: 126px;
+    width: 90px;
+    height: 125px;
     margin: 0 auto;
     background: linear-gradient(135deg, #fce08a 0%, #c59b27 50%, #e6c863 100%);
     border-radius: 8px 8px 12px 12px;
@@ -136,57 +136,57 @@ th {
 }
 
 .clickable-row:hover .mini-fut-card {
-    transform: scale(1.05);
+    transform: scale(1.04);
 }
 
+/* Note globale en haut à gauche */
 .mini-fut-score {
     position: absolute;
-    top: 4px;
-    left: 6px;
-    font-size: 20px;
+    top: 5px;
+    left: 7px;
+    font-size: 18px;
     font-weight: 800;
     line-height: 1;
     color: #111;
-    z-index: 3;
+    z-index: 5;
     text-shadow: 0 0 2px rgba(255, 255, 255, 0.9);
 }
 
-/* Photo réalignée et dézoomée pour éviter le coupage de tête */
+/* Photo ronde des députés avec cadrage haut */
 .mini-fut-photo-container {
     position: absolute;
-    top: 18px;
+    top: 24px;
     left: 50%;
     transform: translateX(-50%);
-    width: 64px;
-    height: 72px;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    background-color: #e2e8f0;
 }
 
 .mini-fut-photo-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 5%;
-    border-radius: 4px;
-    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    object-position: top center;
 }
 
-/* Bandeau inférieur (Région / 17 / Parti) */
+/* Bandeau inférieur : Région | 17 | Parti */
 .mini-fut-bottom {
     position: absolute;
     bottom: 3px;
     left: 0;
     width: 100%;
-    height: 26px;
+    height: 28px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 3;
-    background: rgba(255, 255, 255, 0.55);
+    z-index: 5;
+    background: rgba(255, 255, 255, 0.65);
     backdrop-filter: blur(2px);
     padding: 0 6px;
     box-sizing: border-box;
@@ -210,7 +210,7 @@ th {
     line-height: 1;
 }
 
-/* --- Pastilles des Notes --- */
+/* --- Pastilles & Badges --- */
 .score-pill {
     display: inline-block;
     min-width: 34px;
@@ -236,17 +236,9 @@ th {
     white-space: nowrap;
 }
 
-/* Couleurs des pastilles */
 .score-tres-liberal, .bande-tres-liberal { background-color: #dbeafe; color: #1e40af; }
 .score-liberal, .bande-liberal           { background-color: #dcfce7; color: #14532d; }
 .score-plutot, .bande-plutot             { background-color: #d1fae5; color: #047857; }
 .score-modere, .bande-modere             { background-color: #fef08a; color: #854d0e; }
 .score-peu, .bande-peu                   { background-color: #ffedd5; color: #c2410c; }
 .score-dirigiste, .bande-dirigiste       { background-color: #fee2e2; color: #991b1b; }
-
-.legend-badges {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-top: 8px;
-}
