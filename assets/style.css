@@ -82,7 +82,7 @@ th {
 .col-carte {
     text-align: center;
     padding: 6px 4px !important;
-    width: 100px;
+    width: 106px;
 }
 
 .col-nom {
@@ -117,11 +117,11 @@ th {
     text-align: center;
 }
 
-/* --- Carte FUT (Proportions réajustées) --- */
+/* --- Carte FUT (Format élargi & aéré) --- */
 .mini-fut-card {
     position: relative;
-    width: 90px;
-    height: 128px;
+    width: 98px;
+    height: 132px;
     margin: 0 auto;
     background: linear-gradient(135deg, #fce08a 0%, #c59b27 50%, #e6c863 100%);
     border-radius: 8px 8px 12px 12px;
@@ -143,8 +143,8 @@ th {
 .mini-fut-score {
     position: absolute;
     top: 4px;
-    left: 6px;
-    font-size: 18px;
+    left: 7px;
+    font-size: 19px;
     font-weight: 800;
     line-height: 1;
     color: #111;
@@ -152,14 +152,14 @@ th {
     text-shadow: 0 0 2px rgba(255, 255, 255, 0.9);
 }
 
-/* Photo remontée pour réduire l'espace sous la note et libérer le bas */
+/* Portrait rond du député */
 .mini-fut-photo-container {
     position: absolute;
     top: 18px;
     left: 50%;
     transform: translateX(-50%);
-    width: 56px;
-    height: 56px;
+    width: 58px;
+    height: 58px;
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid rgba(255, 255, 255, 0.9);
@@ -175,25 +175,25 @@ th {
     object-position: top center;
 }
 
-/* Bandeau inférieur agrandi : Région | 17 | Parti */
+/* Bandeau inférieur élargi : Région | 17 | Parti */
 .mini-fut-bottom {
     position: absolute;
     bottom: 2px;
     left: 0;
     width: 100%;
-    height: 32px;
+    height: 34px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 5;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(2px);
-    padding: 0 5px;
+    padding: 0 6px;
     box-sizing: border-box;
     border-top: 1px solid rgba(0, 0, 0, 0.12);
 }
 
-/* Logos plus larges et lisibles dans le bandeau */
+/* Logos plus imposants et nets */
 .mini-fut-badge {
     width: 24px;
     height: 24px;
@@ -202,7 +202,7 @@ th {
 }
 
 .mini-fut-leg {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 800;
     background: #0f172a;
     color: #ffffff;
