@@ -74,7 +74,6 @@
             margin-top: 2px;
         }
 
-        /* Hexagone de position FC26 remplacé par l'Âge */
         .fut-age-badge {
             background: rgba(255, 255, 255, 0.85);
             border: 2px solid #3a2e05;
@@ -112,7 +111,6 @@
             padding-bottom: 4px;
         }
 
-        /* 2 Colonnes de 3 lignes pour les 6 piliers */
         .fut-stats-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -142,13 +140,13 @@
             white-space: nowrap;
         }
 
-        /* Footer FC26 (Région, 17e Législature, Parti) */
         .fut-footer {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 16px;
+            gap: 18px;
             padding-top: 10px;
+            height: 30px;
         }
 
         .fut-footer-item {
@@ -158,8 +156,9 @@
         }
 
         .fut-footer-item img {
-            height: 22px;
+            height: 24px;
             width: auto;
+            max-width: 45px;
             object-fit: contain;
         }
 
@@ -168,22 +167,9 @@
             color: #ffffff;
             font-size: 11px;
             font-weight: 800;
-            padding: 2px 7px;
+            padding: 3px 8px;
             border-radius: 4px;
             border: 1px solid #475569;
-        }
-
-        .fut-badge-parti {
-            background: #2563eb;
-            color: #ffffff;
-            font-size: 11px;
-            font-weight: 800;
-            padding: 2px 7px;
-            border-radius: 4px;
-            max-width: 80px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
         }
 
         .profile-info {
@@ -216,7 +202,6 @@
             background-color: #dbeafe;
         }
 
-        /* Stats Datan */
         .stats-grid {
             display: flex;
             gap: 12px;
@@ -405,6 +390,15 @@
             OUV: { label: "Ouverture des Marchés", desc: "Libre-échange et concurrence" }
         };
 
+        const REGION_FLAGS = {
+            "Occitanie": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Occitanie.svg/1200px-Flag_of_Occitanie.svg.png",
+            "Hérault": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Occitanie.svg/1200px-Flag_of_Occitanie.svg.png"
+        };
+
+        const PARTY_LOGOS = {
+            "UDR": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Logo_Union_des_droites_pour_la_R%C3%A9publique_2024.svg/250px-Logo_Union_des_droites_pour_la_R%C3%A9publique_2024.svg.png"
+        };
+
         const SOCIAL_NAMES = {
             x: "X (Twitter)",
             facebook: "Facebook",
@@ -452,11 +446,15 @@
                         : (Object.values(d.scores || {}).length ? Math.round(Object.values(d.scores).reduce((a, b) => a + b, 0) / Object.values(d.scores).length) : 0);
 
                     const bande = getBande(scoreGlobal);
-                    const photoUrl = d.photoUrl || d.photo || d.avatar || `https://www.assemblee-nationale.fr/17/photos/${d.id}.jpg`;
+
+                    // Traitement de l'ID Assemblée pour l'URL de photo officielle (supporte PA841223 et 841223)
+                    const cleanId = String(d.id).replace(/^PA/i, '');
+                    const photoUrl = d.photoUrl || d.photo || `https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/${cleanId}.jpg`;
+
                     const nomFamille = d.nom.split(' ').pop();
                     const scores = d.scores || {};
 
-                    // Mettre à jour les métadonnées Open Graph
+                    // Métadonnées Open Graph
                     const pageTitle = `${d.nom} (${scoreGlobal}/100 - ${bande.label}) | Observatoire du Libéralisme`;
                     const pageDesc = `Consultez le score libéral de ${d.nom} (${d.circo}) calculé selon les 6 piliers de la liberté économique.`;
 
@@ -470,15 +468,14 @@
                     document.getElementById('tw-desc').setAttribute('content', pageDesc);
                     document.getElementById('tw-image').setAttribute('content', photoUrl);
 
-                    // Gestion du drapeau régional
-                    const drapeauRegionHtml = d.drapeau_region
-                        ? `<img src="${d.drapeau_region}" alt="${d.region || 'Région'}">`
-                        : `<span style="font-size: 16px;" title="${d.region || 'Région'}">📍</span>`;
+                    // Drapeau de région (Occitanie par défaut pour l'Hérault)
+                    const regionUrl = d.drapeau_region || REGION_FLAGS[d.region] || REGION_FLAGS["Occitanie"];
+                    const drapeauRegionHtml = `<img src="${regionUrl}" alt="Occitanie / ${d.circo || ''}" title="Élu en Occitanie (${d.circo || 'Hérault'})">`;
 
-                    // Gestion du logo ou nom du parti
-                    const partiHtml = d.logo_parti
-                        ? `<img src="${d.logo_parti}" alt="${d.parti || d.groupe}">`
-                        : `<span class="fut-badge-parti">${d.parti || d.groupe || 'PARTI'}</span>`;
+                    // Logo officiel de l'UDR / Parti
+                    const groupeName = d.parti || d.groupe || 'UDR';
+                    const partiUrl = d.logo_parti || PARTY_LOGOS[groupeName] || PARTY_LOGOS["UDR"];
+                    const partiHtml = `<img src="${partiUrl}" alt="${groupeName}" title="${groupeName}">`;
 
                     // Generation de la Carte FC26
                     const futCardHtml = `
@@ -489,15 +486,14 @@
                                     <div class="fut-groupe">${d.groupe || 'UDR'}</div>
                                 </div>
                                 <div class="fut-age-badge" title="Âge du député">
-                                    ${d.age ? d.age + ' ANS' : '45 ANS'}
+                                    ${d.age ? d.age + ' ANS' : '31 ANS'}
                                 </div>
                             </div>
                             <div class="fut-photo-container">
-                                <img src="${photoUrl}" alt="${d.nom}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://www.assemblee-nationale.fr/17/photos/${d.id}.jpg';">
+                                <img src="${photoUrl}" alt="${d.nom}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://www.assemblee-nationale.fr/17/photos/PA${cleanId}.jpg';">
                             </div>
                             <div class="fut-nom">${nomFamille}</div>
 
-                            <!-- Grid 2 Colonnes x 3 Lignes -->
                             <div class="fut-stats-grid">
                                 <div class="fut-stat"><span class="fut-stat-val">${scores.FIS ?? 0}</span><span class="fut-stat-lbl">FISCALITÉ</span></div>
                                 <div class="fut-stat"><span class="fut-stat-val">${scores.PRO ?? 0}</span><span class="fut-stat-lbl">PROPRIÉTÉ</span></div>
@@ -507,22 +503,21 @@
                                 <div class="fut-stat"><span class="fut-stat-val">${scores.OUV ?? 0}</span><span class="fut-stat-lbl">OUVERTURE</span></div>
                             </div>
 
-                            <!-- Bas de Carte : Drapeau Région | 17e Législature | Parti Politique -->
                             <div class="fut-footer">
-                                <div class="fut-footer-item" title="Région : ${d.region || 'Inconnue'}">
+                                <div class="fut-footer-item">
                                     ${drapeauRegionHtml}
                                 </div>
                                 <div class="fut-footer-item" title="17e Législature">
                                     <span class="fut-badge-17">17ᵉ LÉG.</span>
                                 </div>
-                                <div class="fut-footer-item" title="Parti politique : ${d.parti || d.groupe || 'Indépendant'}">
+                                <div class="fut-footer-item">
                                     ${partiHtml}
                                 </div>
                             </div>
                         </div>
                     `;
 
-                    // Traitement des réseaux sociaux et contacts
+                    // Contacts & Réseaux
                     let totalAbonnes = 0;
                     let hasAbonnes = false;
                     let socialBadgesHtml = '';
@@ -579,7 +574,7 @@
                         </div>
                     ` : '';
 
-                    // Biographie Wikipédia
+                    // Biographie
                     const bioSectionHtml = d.biographie ? `
                         <div class="social-box" style="margin-top: 15px;">
                             <h3 style="margin: 0 0 8px 0; font-size: 1.1rem; color: #1e293b;">📝 Biographie</h3>
@@ -587,7 +582,7 @@
                         </div>
                     ` : '';
 
-                    // Synthèse IA Gemini
+                    // Synthèse IA
                     const syntheseHtml = d.synthese_analyse ? `
                         <div class="social-box" style="margin-top: 15px; background-color: #fffbeb; border: 1px solid #fcd34d;">
                             <h3 style="margin: 0 0 8px 0; font-size: 1.1rem; color: #b45309;">💡 Analyse du profil économique (IA)</h3>
@@ -599,7 +594,7 @@
                         ? `<a href="${d.datanUrl}" target="_blank" rel="noopener" class="datan-link">📊 Profil Datan.fr ↗</a>`
                         : '';
 
-                    // Stats d'activité Datan
+                    // Stats Datan
                     const statsHtml = (d.stats && (d.stats.participation || d.stats.loyaute_groupe)) ? `
                         <div class="stats-grid">
                             ${d.stats.participation ? `
@@ -644,7 +639,7 @@
                         `;
                     }
 
-                    // Votes enregistrés
+                    // Votes
                     let votesHtml = '';
                     const listVotes = d.votes || d.initiatives || [];
 
@@ -675,7 +670,7 @@
                         votesHtml = '<p style="color: #64748b; font-style: italic;">Aucun vote répertorié pour le moment.</p>';
                     }
 
-                    // Assemblage final du contenu HTML
+                    // Assemblage final
                     document.getElementById('depute-content').innerHTML = `
                         <div class="profile-header">
                             ${futCardHtml}
