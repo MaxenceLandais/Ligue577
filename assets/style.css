@@ -61,6 +61,36 @@ th {
     padding: 10px 6px;
 }
 
+/* --- Style des en-têtes triables --- */
+th.sortable {
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+th.sortable:hover {
+    background-color: #e2e8f0;
+    color: #0f172a;
+}
+
+.sort-icon {
+    display: inline-block;
+    margin-left: 3px;
+    font-size: 0.65rem;
+    color: #94a3b8;
+    vertical-align: middle;
+}
+
+th.sortable.active {
+    background-color: #e0e7ff;
+    color: #1d4ed8;
+}
+
+th.sortable.active .sort-icon {
+    color: #1d4ed8;
+    font-weight: bold;
+}
+
 .clickable-row {
     cursor: pointer;
     transition: background-color 0.15s ease-in-out;
@@ -235,6 +265,12 @@ th {
     font-weight: 700;
     display: inline-block;
     white-space: nowrap;
+}
+
+.legend-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .score-tres-liberal, .bande-tres-liberal { background-color: #dbeafe; color: #1e40af; }

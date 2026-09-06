@@ -1,4 +1,7 @@
-// Transforme les textes avec des tirets bas (ex: "Île-de-France" -> "ile_de_france")
+let deputesData = [];
+let currentSortKey = 'scoreGlobal';
+let currentSortDir = 'desc';
+
 function slugifyRegion(str) {
     if (!str) return '';
     let slug = str.toString().toLowerCase()
@@ -11,7 +14,6 @@ function slugifyRegion(str) {
     return slug;
 }
 
-// Mapping Départements / Circonscriptions -> Fichiers régions exacts
 const DEPT_TO_REGION = {
     'ain': 'auvergne_rhone_alpes', 'aisne': 'hauts_de_france', 'allier': 'auvergne_rhone_alpes',
     'alpes_de_haute_provence': 'provence_alpes_cote_dazur', 'hautes_alpes': 'provence_alpes_cote_dazur',
@@ -47,7 +49,6 @@ const DEPT_TO_REGION = {
     'mayotte': 'mayotte', 'nouvelle_caledonie': 'nouvelle_caledonie', 'polynesie_francaise': 'polynesie_francaise'
 };
 
-// Mapping Groupes / Partis -> Fichiers partis exacts
 const GROUPE_TO_PARTI = {
     'dem': 'dem', 'democrates': 'dem', 'les democrates': 'dem', 'modem': 'dem',
     'dr': 'dr', 'droite republicaine': 'dr', 'lr': 'dr', 'les republicains': 'dr',
@@ -66,10 +67,8 @@ const GROUPE_TO_PARTI = {
 function getRegionSlug(d) {
     if (d.region) return slugifyRegion(d.region);
     if (d.region_nom) return slugifyRegion(d.region_nom);
-
     const rawDept = (d.circo || d.departement || '').replace(/\s*\([^)]*\)/, '').trim();
     const deptSlug = slugifyRegion(rawDept);
-
     return DEPT_TO_REGION[deptSlug] || deptSlug;
 }
 
@@ -107,12 +106,8 @@ function renderScorePill(val) {
 
 function renderMiniFutCard(d) {
     const photoUrl = d.photo || `assets/deputes/${d.id}.jpg`;
-
     const regionSlug = getRegionSlug(d);
     const partiSlug = getPartiSlug(d);
-
-    const regionLogo = `assets/regions/${regionSlug}.png`;
-    const partiLogo = `assets/partis/${partiSlug}.png`;
 
     return `
         <div class="mini-fut-card">
@@ -121,15 +116,94 @@ function renderMiniFutCard(d) {
                 <img src="${photoUrl}" alt="${d.nom}" onerror="this.onerror=null; this.src='https://via.placeholder.com/60?text=Depute';">
             </div>
             <div class="mini-fut-bottom">
-                <img class="mini-fut-badge" src="${regionLogo}" alt="Région" onerror="this.style.visibility='hidden';">
+                <img class="mini-fut-badge" src="assets/regions/${regionSlug}.png" alt="Région" onerror="this.style.visibility='hidden';">
                 <span class="mini-fut-leg">17</span>
-                <img class="mini-fut-badge" src="${partiLogo}" alt="Parti" onerror="this.style.visibility='hidden';">
+                <img class="mini-fut-badge" src="assets/partis/${partiSlug}.png" alt="Parti" onerror="this.style.visibility='hidden';">
             </div>
         </div>
     `;
 }
 
+function getSortValue(d, key) {
+    if (key === 'nom') return d.nom.toLowerCase();
+    if (key === 'scoreGlobal' || key === 'bande') return d.scoreGlobal;
+    return (d.scores && d.scores[key] !== undefined) ? d.scores[key] : -1;
+}
+
+function sortAndRender() {
+    deputesData.sort((a, b) => {
+        const valA = getSortValue(a, currentSortKey);
+        const valB = getSortValue(b, currentSortKey);
+
+        if (typeof valA === 'string') {
+            return currentSortDir === 'asc' ? valA.localeCompare(valB) : valB.localeCompare(valA);
+        }
+        return currentSortDir === 'asc' ? valA - valB : valB - valA;
+    });
+
+    // Mise à jour visuelle des entêtes
+    document.querySelectorAll('th.sortable').forEach(th => {
+        th.classList.remove('active', 'asc', 'desc');
+        const icon = th.querySelector('.sort-icon');
+
+        if (th.dataset.sort === currentSortKey) {
+            th.classList.add('active', currentSortDir);
+            if (icon) icon.textContent = currentSortDir === 'asc' ? '▲' : '▼';
+        } else {
+            if (icon) icon.textContent = '▲▼';
+        }
+    });
+
+    // Injection des lignes du tableau
+    const tbody = document.getElementById('leaderboard');
+    if (!tbody) return;
+    tbody.innerHTML = '';
+
+    deputesData.forEach((d, index) => {
+        const scores = d.scores || {};
+        const tr = document.createElement('tr');
+        tr.className = 'clickable-row';
+        tr.onclick = () => window.location.href = `depute.html?id=${d.id}`;
+
+        tr.innerHTML = `
+            <td class="col-rang">#${index + 1}</td>
+            <td class="col-carte">${renderMiniFutCard(d)}</td>
+            <td class="col-nom">
+                <a href="depute.html?id=${d.id}" class="depute-link" onclick="event.stopPropagation();">${d.nom}</a>
+            </td>
+            <td class="col-circo">${d.circo || '—'}</td>
+            <td class="col-score-global">${renderScorePill(d.scoreGlobal)}</td>
+            <td class="col-pillar">${renderScorePill(scores.FIS)}</td>
+            <td class="col-pillar">${renderScorePill(scores.PRO)}</td>
+            <td class="col-pillar">${renderScorePill(scores.ETA)}</td>
+            <td class="col-pillar">${renderScorePill(scores.LIB)}</td>
+            <td class="col-pillar">${renderScorePill(scores.REG)}</td>
+            <td class="col-pillar">${renderScorePill(scores.OUV)}</td>
+            <td><span class="badge ${d.bande.class}">${d.bande.label}</span></td>
+        `;
+        tbody.appendChild(tr);
+    });
+}
+
+function setupSortingEvents() {
+    document.querySelectorAll('th.sortable').forEach(th => {
+        th.addEventListener('click', () => {
+            const sortKey = th.dataset.sort;
+            if (currentSortKey === sortKey) {
+                currentSortDir = currentSortDir === 'desc' ? 'asc' : 'desc';
+            } else {
+                currentSortKey = sortKey;
+                // Par défaut : ordre alphabétique croissant pour le nom, décroissant pour les scores
+                currentSortDir = sortKey === 'nom' ? 'asc' : 'desc';
+            }
+            sortAndRender();
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    setupSortingEvents();
+
     fetch('./data.json?t=' + Date.now())
         .then(res => {
             if (!res.ok) throw new Error("Impossible de lire data.json");
@@ -144,43 +218,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 d.bande = getBande(d.scoreGlobal);
             });
 
-            deputes.sort((a, b) => b.scoreGlobal - a.scoreGlobal);
-
-            const tbody = document.getElementById('leaderboard');
-            if (!tbody) return;
-            tbody.innerHTML = '';
-
-            deputes.forEach((d, index) => {
-                const scores = d.scores || {};
-                const tr = document.createElement('tr');
-                tr.className = 'clickable-row';
-                tr.onclick = () => window.location.href = `depute.html?id=${d.id}`;
-
-                tr.innerHTML = `
-                    <td class="col-rang">#${index + 1}</td>
-                    <td class="col-carte">${renderMiniFutCard(d)}</td>
-                    <td class="col-nom">
-                        <a href="depute.html?id=${d.id}" class="depute-link" onclick="event.stopPropagation();">${d.nom}</a>
-                    </td>
-                    <td class="col-circo">${d.circo || '—'}</td>
-                    <td class="col-score-global">${renderScorePill(d.scoreGlobal)}</td>
-                    <td class="col-pillar">${renderScorePill(scores.FIS)}</td>
-                    <td class="col-pillar">${renderScorePill(scores.PRO)}</td>
-                    <td class="col-pillar">${renderScorePill(scores.ETA)}</td>
-                    <td class="col-pillar">${renderScorePill(scores.LIB)}</td>
-                    <td class="col-pillar">${renderScorePill(scores.REG)}</td>
-                    <td class="col-pillar">${renderScorePill(scores.OUV)}</td>
-                    <td><span class="badge ${d.bande.class}">${d.bande.label}</span></td>
-                `;
-                tbody.appendChild(tr);
-            });
+            deputesData = deputes;
+            sortAndRender();
         })
         .catch(err => {
             const tbody = document.getElementById('leaderboard');
             if (tbody) {
-                tbody.innerHTML = `
-                    <tr><td colspan="12" style="color:red; font-weight:bold;">Erreur : ${err.message}</td></tr>
-                `;
+                tbody.innerHTML = `<tr><td colspan="12" style="color:red; font-weight:bold;">Erreur : ${err.message}</td></tr>`;
             }
         });
 });
