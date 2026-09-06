@@ -117,11 +117,11 @@ th {
     text-align: center;
 }
 
-/* --- Carte FUT (Format ajusté) --- */
+/* --- Carte FUT (Proportions réajustées) --- */
 .mini-fut-card {
     position: relative;
     width: 90px;
-    height: 125px;
+    height: 128px;
     margin: 0 auto;
     background: linear-gradient(135deg, #fce08a 0%, #c59b27 50%, #e6c863 100%);
     border-radius: 8px 8px 12px 12px;
@@ -139,11 +139,11 @@ th {
     transform: scale(1.04);
 }
 
-/* Note globale en haut à gauche */
+/* Note globale */
 .mini-fut-score {
     position: absolute;
-    top: 5px;
-    left: 7px;
+    top: 4px;
+    left: 6px;
     font-size: 18px;
     font-weight: 800;
     line-height: 1;
@@ -152,17 +152,17 @@ th {
     text-shadow: 0 0 2px rgba(255, 255, 255, 0.9);
 }
 
-/* Photo ronde des députés avec cadrage haut */
+/* Photo remontée pour réduire l'espace sous la note et libérer le bas */
 .mini-fut-photo-container {
     position: absolute;
-    top: 24px;
+    top: 18px;
     left: 50%;
     transform: translateX(-50%);
-    width: 58px;
-    height: 58px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
     overflow: hidden;
-    border: 2px solid rgba(255, 255, 255, 0.85);
+    border: 2px solid rgba(255, 255, 255, 0.9);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 2;
     background-color: #e2e8f0;
@@ -175,33 +175,34 @@ th {
     object-position: top center;
 }
 
-/* Bandeau inférieur : Région | 17 | Parti */
+/* Bandeau inférieur agrandi : Région | 17 | Parti */
 .mini-fut-bottom {
     position: absolute;
-    bottom: 3px;
+    bottom: 2px;
     left: 0;
     width: 100%;
-    height: 28px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 5;
-    background: rgba(255, 255, 255, 0.65);
+    background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(2px);
-    padding: 0 6px;
+    padding: 0 5px;
     box-sizing: border-box;
     border-top: 1px solid rgba(0, 0, 0, 0.12);
 }
 
+/* Logos plus larges et lisibles dans le bandeau */
 .mini-fut-badge {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     object-fit: contain;
     flex-shrink: 0;
 }
 
 .mini-fut-leg {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 800;
     background: #0f172a;
     color: #ffffff;

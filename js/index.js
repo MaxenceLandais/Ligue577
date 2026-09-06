@@ -1,3 +1,13 @@
+// Convertit un texte en nom de fichier propre (ex: "Occitanie" -> "occitanie", "Auvergne-Rhône-Alpes" -> "auvergne-rhone-alpes")
+function slugify(str) {
+    if (!str) return '';
+    return str.toString().toLowerCase()
+        .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9]/g, "-")
+        .replace(/-+/g, "-")
+        .replace(/^-|-$/g, "");
+}
+
 function getBande(score) {
     if (score >= 91) return { label: "Très libéral", class: "bande-tres-liberal" };
     if (score >= 81) return { label: "Libéral", class: "bande-liberal" };
@@ -26,10 +36,14 @@ function renderScorePill(val) {
 }
 
 function renderMiniFutCard(d) {
-    // Chemins calqués directement sur l'arborescence
     const photoUrl = d.photo || `assets/deputes/${d.id}.jpg`;
-    const regionLogo = d.logo_region || `assets/regions/${d.region_code || d.region || 'france'}.png`;
-    const partiLogo = d.logo_parti || `assets/partis/${(d.groupe || d.parti || 'udr').toLowerCase()}.png`;
+
+    // Détection et formatage des noms de région et de parti
+    const regionVal = d.logo_region || d.region_logo || d.region_code || d.code_region || d.region || 'france';
+    const partiVal = d.logo_parti || d.parti_logo || d.groupe || d.parti || 'udr';
+
+    const regionLogo = regionVal.includes('/') ? regionVal : `assets/regions/${slugify(regionVal)}.png`;
+    const partiLogo = partiVal.includes('/') ? partiVal : `assets/partis/${slugify(partiVal)}.png`;
 
     return `
         <div class="mini-fut-card">
@@ -38,9 +52,9 @@ function renderMiniFutCard(d) {
                 <img src="${photoUrl}" alt="${d.nom}" onerror="this.onerror=null; this.src='https://via.placeholder.com/60?text=Depute';">
             </div>
             <div class="mini-fut-bottom">
-                <img class="mini-fut-badge" src="${regionLogo}" alt="Région" onerror="this.style.visibility='hidden';">
+                <img class="mini-fut-badge" src="${regionLogo}" alt="Région" onerror="this.src='assets/regions/${slugify(d.region || '')}.svg'; this.onerror=function(){this.style.opacity='0.2';};">
                 <span class="mini-fut-leg">17</span>
-                <img class="mini-fut-badge" src="${partiLogo}" alt="Parti" onerror="this.style.visibility='hidden';">
+                <img class="mini-fut-badge" src="${partiLogo}" alt="Parti" onerror="this.style.opacity='0.2';">
             </div>
         </div>
     `;
