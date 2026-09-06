@@ -12,53 +12,53 @@ body {
 header {
     background-color: #0f172a;
     color: white;
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
 }
 
 .container {
-    max-width: 1500px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
     padding: 0 1rem;
+    box-sizing: border-box;
 }
 
 .card {
     background: white;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    margin: 1.5rem 0;
+    border-radius: 10px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    margin: 1rem 0;
 }
 
-/* --- Tableau Harmonisdé & Espacé --- */
+/* --- Tableau Responsive Sans Scroll --- */
 .table-responsive {
     width: 100%;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    margin-top: 1rem;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     text-align: left;
+    table-layout: auto;
 }
 
 th, td {
-    padding: 12px 10px;
+    padding: 8px 6px;
     border-bottom: 1px solid #e2e8f0;
     white-space: nowrap;
-    vertical-align: middle; /* Alignement parfait avec la grande carte */
+    vertical-align: middle;
 }
 
 th {
     background-color: #f1f5f9;
     color: #475569;
     font-weight: 700;
-    font-size: 0.85rem;
+    font-size: 0.78rem;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 14px 10px;
+    letter-spacing: 0.4px;
+    padding: 10px 6px;
 }
 
 .clickable-row {
@@ -70,30 +70,30 @@ th {
     background-color: #f8fafc;
 }
 
-/* --- Texte & Colonnes Agrandis --- */
+/* --- Alignement et Taille des Colonnes --- */
 .col-rang {
     font-weight: 800;
     color: #64748b;
     text-align: center;
-    width: 55px;
-    font-size: 1.25rem;
+    width: 40px;
+    font-size: 1.05rem;
 }
 
 .col-carte {
     text-align: center;
-    padding: 8px 12px !important;
-    width: 135px;
+    padding: 6px 4px !important;
+    width: 98px;
 }
 
 .col-nom {
     color: #0f172a;
-    min-width: 180px;
+    min-width: 140px;
 }
 
 .depute-link {
     color: #2563eb;
-    font-weight: 800;
-    font-size: 1.2rem;
+    font-weight: 700;
+    font-size: 1.05rem;
     text-decoration: none;
 }
 
@@ -103,8 +103,7 @@ th {
 
 .col-circo {
     color: #64748b;
-    font-size: 0.95rem;
-    font-weight: 500;
+    font-size: 0.85rem;
 }
 
 .col-score-global {
@@ -118,48 +117,47 @@ th {
     text-align: center;
 }
 
-/* --- Mini Carte FUT Agrandie (2.5x) --- */
+/* --- Mini Carte FUT Rééquilibrée --- */
 .mini-fut-card {
     position: relative;
-    width: 115px;
-    height: 155px;
+    width: 90px;
+    height: 122px;
     margin: 0 auto;
     background: linear-gradient(135deg, #fce08a 0%, #c59b27 50%, #e6c863 100%);
-    border-radius: 12px 12px 18px 18px;
-    border: 2px solid #ffe89e;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.22);
+    border-radius: 8px 8px 12px 12px;
+    border: 1.5px solid #ffe89e;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.22);
     font-family: 'Rajdhani', sans-serif;
     color: #1e1e1e;
     overflow: hidden;
     user-select: none;
     box-sizing: border-box;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
 .clickable-row:hover .mini-fut-card {
     transform: scale(1.05);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
 }
 
 .mini-fut-score {
     position: absolute;
     top: 4px;
-    left: 8px;
-    font-size: 26px;
+    left: 6px;
+    font-size: 20px;
     font-weight: 800;
     line-height: 1;
     color: #111;
     z-index: 3;
-    text-shadow: 0 0 3px rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.9);
 }
 
 .mini-fut-photo-container {
     position: absolute;
-    top: 10px;
+    top: 22px;
     left: 50%;
     transform: translateX(-50%);
-    width: 88px;
-    height: 88px;
+    width: 62px;
+    height: 62px;
     z-index: 1;
     display: flex;
     justify-content: center;
@@ -171,71 +169,70 @@ th {
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
-    mask-image: linear-gradient(to bottom, black 82%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 82%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
 
 .mini-fut-bottom {
     position: absolute;
-    bottom: 5px;
+    bottom: 4px;
     left: 0;
     width: 100%;
-    height: 32px;
+    height: 24px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     z-index: 3;
     background: rgba(255, 255, 255, 0.45);
     backdrop-filter: blur(2px);
-    padding: 0 4px;
+    padding: 0 2px;
     box-sizing: border-box;
-    border-top: 1.5px solid rgba(0, 0, 0, 0.12);
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .mini-fut-badge {
-    width: 22px;
-    height: 22px;
+    width: 18px;
+    height: 18px;
     object-fit: contain;
 }
 
 .mini-fut-leg {
-    font-size: 10.5px;
+    font-size: 11px;
     font-weight: 800;
     background: #0f172a;
     color: #ffffff;
-    padding: 2px 5px;
-    border-radius: 4px;
-    letter-spacing: -0.2px;
-    white-space: nowrap;
+    padding: 1px 4px;
+    border-radius: 3px;
+    line-height: 1;
 }
 
-/* --- Pastilles des Notes Agrandies --- */
+/* --- Pastilles des Notes Ajustées --- */
 .score-pill {
     display: inline-block;
-    min-width: 44px;
-    padding: 6px 10px;
-    border-radius: 8px;
+    min-width: 34px;
+    padding: 4px 6px;
+    border-radius: 6px;
     font-weight: 700;
-    font-size: 1.05rem;
+    font-size: 0.9rem;
     text-align: center;
 }
 
 .col-score-global .score-pill {
-    font-size: 1.25rem;
-    min-width: 52px;
-    padding: 8px 14px;
+    font-size: 1.05rem;
+    min-width: 40px;
+    padding: 5px 8px;
 }
 
 .badge {
-    padding: 6px 12px;
-    border-radius: 14px;
-    font-size: 0.9rem;
+    padding: 4px 8px;
+    border-radius: 10px;
+    font-size: 0.8rem;
     font-weight: 700;
     display: inline-block;
     white-space: nowrap;
 }
 
-/* Échelle 6 Couleurs */
+/* Couleurs des pastilles */
 .score-tres-liberal, .bande-tres-liberal { background-color: #dbeafe; color: #1e40af; }
 .score-liberal, .bande-liberal           { background-color: #dcfce7; color: #14532d; }
 .score-plutot, .bande-plutot             { background-color: #d1fae5; color: #047857; }
@@ -245,7 +242,7 @@ th {
 
 .legend-badges {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     flex-wrap: wrap;
-    margin-top: 10px;
+    margin-top: 8px;
 }

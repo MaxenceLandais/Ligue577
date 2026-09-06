@@ -29,17 +29,16 @@ function renderMiniFutCard(d) {
     const photoUrl = d.photo || d.avatar || `assets/photos/${d.id}.jpg`;
     const regionLogo = d.logo_region || d.region_logo || `assets/logos/regions/${d.region_code || 'occitanie'}.png`;
     const partiLogo = d.logo_parti || d.parti_logo || `assets/logos/partis/${(d.groupe || 'udr').toLowerCase()}.png`;
-    const legText = d.legislature || '17ᵉ LÉG.';
 
     return `
         <div class="mini-fut-card">
             <div class="mini-fut-score">${d.scoreGlobal}</div>
             <div class="mini-fut-photo-container">
-                <img src="${photoUrl}" alt="${d.nom}" onerror="this.onerror=null; this.src='https://via.placeholder.com/90?text=Depute';">
+                <img src="${photoUrl}" alt="${d.nom}" onerror="this.onerror=null; this.src='https://via.placeholder.com/80?text=Depute';">
             </div>
             <div class="mini-fut-bottom">
                 <img class="mini-fut-badge" src="${regionLogo}" alt="Région" onerror="this.style.visibility='hidden';">
-                <span class="mini-fut-leg">${legText}</span>
+                <span class="mini-fut-leg">17</span>
                 <img class="mini-fut-badge" src="${partiLogo}" alt="Parti" onerror="this.style.visibility='hidden';">
             </div>
         </div>
