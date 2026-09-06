@@ -15,14 +15,14 @@
     <meta property="og:type" content="profile">
     <meta id="og-title" property="og:title" content="Fiche Député - Observatoire du Libéralisme">
     <meta id="og-desc" property="og:description" content="Découvrez l'évaluation économique et le score de ce député sur les 6 piliers de la liberté économique.">
-    <meta id="og-image" property="og:image" content="https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/PA841223.jpg">
+    <meta id="og-image" property="og:image" content="">
     <meta id="og-url" property="og:url" content="">
 
     <!-- Twitter / X Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta id="tw-title" name="twitter:title" content="Fiche Député - Observatoire du Libéralisme">
     <meta id="tw-desc" name="twitter:description" content="Évaluation économique et score global sur les 6 piliers de la liberté économique.">
-    <meta id="tw-image" name="twitter:image" content="https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/PA841223.jpg">
+    <meta id="tw-image" name="twitter:image" content="">
 
     <style>
         .profile-header {
@@ -447,9 +447,8 @@
 
                     const bande = getBande(scoreGlobal);
 
-                    // Traitement de l'ID Assemblée pour l'URL de photo officielle (supporte PA841223 et 841223)
-                    const cleanId = String(d.id).replace(/^PA/i, '');
-                    const photoUrl = d.photoUrl || d.photo || `https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/${cleanId}.jpg`;
+                    // Utilisation prioritaire des fichiers téléchargés localement dans assets/deputes/
+                    const photoUrl = d.photo || d.photoUrl || `assets/deputes/${d.id}.jpg`;
 
                     const nomFamille = d.nom.split(' ').pop();
                     const scores = d.scores || {};
@@ -468,16 +467,16 @@
                     document.getElementById('tw-desc').setAttribute('content', pageDesc);
                     document.getElementById('tw-image').setAttribute('content', photoUrl);
 
-                    // Drapeau de région (Occitanie par défaut pour l'Hérault)
+                    // Drapeau de région
                     const regionUrl = d.drapeau_region || REGION_FLAGS[d.region] || REGION_FLAGS["Occitanie"];
                     const drapeauRegionHtml = `<img src="${regionUrl}" alt="Occitanie / ${d.circo || ''}" title="Élu en Occitanie (${d.circo || 'Hérault'})">`;
 
-                    // Logo officiel de l'UDR / Parti
+                    // Logo officiel du Parti
                     const groupeName = d.parti || d.groupe || 'UDR';
                     const partiUrl = d.logo_parti || PARTY_LOGOS[groupeName] || PARTY_LOGOS["UDR"];
                     const partiHtml = `<img src="${partiUrl}" alt="${groupeName}" title="${groupeName}">`;
 
-                    // Generation de la Carte FC26
+                    // Génération de la Carte FC26
                     const futCardHtml = `
                         <div class="fut-card-large">
                             <div class="fut-top">
@@ -490,7 +489,7 @@
                                 </div>
                             </div>
                             <div class="fut-photo-container">
-                                <img src="${photoUrl}" alt="${d.nom}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://www.assemblee-nationale.fr/17/photos/PA${cleanId}.jpg';">
+                                <img src="${photoUrl}" alt="${d.nom}" onerror="this.onerror=null; this.src='assets/deputes/default.png';">
                             </div>
                             <div class="fut-nom">${nomFamille}</div>
 
