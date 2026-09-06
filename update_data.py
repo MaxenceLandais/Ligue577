@@ -64,12 +64,11 @@ def build_datan_slug(full_name: str) -> str:
 
 def get_wikipedia_bio_intro(nom_depute: str) -> str:
     """
-    Récupère L'INTÉGRALITÉ du résumé introductif (tous les paragraphes d'introduction)
+    Récupère L'INTÉGRALITÉ du résumé introductif
     de la page Wikipédia du député, avant le premier chapitre.
     """
     url = "https://fr.wikipedia.org/w/api.php"
 
-    # Titres à tester en cas d'homonymie
     titles_to_try = [
         nom_depute,
         f"{nom_depute} (homme politique)",
@@ -85,11 +84,11 @@ def get_wikipedia_bio_intro(nom_depute: str) -> str:
         params = {
             "action": "query",
             "prop": "extracts",
-            "exintro": "1",      # Restreint la recherche à TOUT le résumé introductif
-            "explaintext": "1",  # Renvoie du texte brut sans balises HTML
+            "exintro": "1",
+            "explaintext": "1",
             "titles": title,
             "format": "json",
-            "redirects": "1",    # Suit automatiquement les redirections Wikipédia
+            "redirects": "1",
         }
         try:
             res = requests.get(url, params=params, headers=headers, timeout=5)
@@ -99,9 +98,7 @@ def get_wikipedia_bio_intro(nom_depute: str) -> str:
                 for page_id, page_data in pages.items():
                     if page_id != "-1":
                         extract = page_data.get("extract", "").strip()
-                        # Vérifie qu'il ne s'agit pas d'une page d'homonymie
                         if extract and "peut désigner" not in extract[:120].lower():
-                            # Nettoie les espaces multiples tout en conservant le texte intégral
                             return re.sub(r"\s+", " ", extract)
         except Exception:
             pass
@@ -268,10 +265,19 @@ def fetch_and_update():
                         else:
                             pa_id = ""
 
-                        etat_civil = acteur.get("etatCivil", {}).get("ident", {})
-                        prenom = etat_civil.get("prenom", "")
-                        nom = etat_civil.get("nom", "")
+                        etat_civil = acteur.get("etatCivil", {})
+                        ident = etat_civil.get("ident", {})
+                        prenom = ident.get("prenom", "")
+                        nom = ident.get("nom", "")
                         full_name = f"{prenom} {nom}".strip()
+
+                        # Extraction de la date de naissance (OpenData AN)
+                        info_nais = etat_civil.get("infoNaissance", {})
+                        date_naissance = (
+                            info_nais.get("dateNais", "")
+                            if isinstance(info_nais, dict)
+                            else ""
+                        )
 
                         if not full_name or not pa_id:
                             continue
@@ -320,7 +326,7 @@ def fetch_and_update():
                             else:
                                 circo_val = dept_name or "Non renseignée"
 
-                        # Récupération de l'intro complète Wikipédia pour tous les députés UDR
+                        # Intro Wikipédia
                         biographie = existing_record.get("biographie", "")
                         if is_udr:
                             print(f"   ➔ Récupération de l'intro Wikipédia : {full_name}")
@@ -342,6 +348,7 @@ def fetch_and_update():
                             "id": depute_id,
                             "pa_id": pa_id,
                             "nom": full_name,
+                            "date_naissance": date_naissance or existing_record.get("date_naissance", ""),
                             "circo": circo_val,
                             "groupe": groupe_an,
                             "email": email_an or existing_record.get("email", ""),
