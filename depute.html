@@ -6,6 +6,11 @@
     <title>Fiche Député - Observatoire du Libéralisme</title>
     <link rel="stylesheet" href="assets/style.css">
 
+    <!-- Typographie Style Arcade / FUT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+
     <!-- Balises Open Graph pour réseaux sociaux -->
     <meta property="og:type" content="profile">
     <meta id="og-title" property="og:title" content="Fiche Député - Observatoire du Libéralisme">
@@ -23,31 +28,85 @@
         .profile-header {
             display: flex;
             align-items: flex-start;
-            gap: 20px;
+            gap: 25px;
             margin-bottom: 25px;
             flex-wrap: wrap;
         }
-        .profile-photo {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #cbd5e1;
-            background-color: #f1f5f9;
+
+        /* --- CARTE FIFA ULTIMATE TEAM (GRAND FORMAT) --- */
+        .fut-card-large {
+            width: 280px;
+            background: linear-gradient(135deg, #fce08a 0%, #c59b27 50%, #e6c863 100%);
+            border-radius: 18px;
+            padding: 18px 14px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            border: 2px solid #ffe89e;
+            font-family: 'Rajdhani', sans-serif;
+            color: #1e1e1e;
+            text-transform: uppercase;
+            user-select: none;
+            flex-shrink: 0;
         }
-        .profile-initial {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            background-color: #e2e8f0;
+        .fut-header {
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-size: 2.8rem;
-            font-weight: bold;
-            color: #475569;
-            border: 3px solid #cbd5e1;
+            justify-content: space-between;
         }
+        .fut-badge {
+            text-align: center;
+            line-height: 0.9;
+        }
+        .fut-score-global {
+            font-size: 48px;
+            font-weight: 700;
+        }
+        .fut-groupe {
+            font-size: 14px;
+            font-weight: 700;
+            color: #3a2e05;
+            margin-top: 4px;
+        }
+        .fut-photo-container {
+            width: 130px;
+            height: 130px;
+        }
+        .fut-photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        }
+        .fut-nom {
+            text-align: center;
+            font-size: 22px;
+            font-weight: 700;
+            margin: 8px 0 6px 0;
+            letter-spacing: 1px;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+            padding-bottom: 4px;
+        }
+        .fut-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 12px;
+            padding: 4px 6px;
+        }
+        .fut-stat {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+        .fut-stat-val {
+            font-size: 19px;
+            font-weight: 700;
+        }
+        .fut-stat-lbl {
+            font-size: 13px;
+            color: #3a2e05;
+            font-weight: 700;
+        }
+
         .profile-info {
             flex: 1;
             min-width: 260px;
@@ -314,7 +373,9 @@
                         : (Object.values(d.scores || {}).length ? Math.round(Object.values(d.scores).reduce((a, b) => a + b, 0) / Object.values(d.scores).length) : 0);
 
                     const bande = getBande(scoreGlobal);
-                    const photoUrl = d.photoUrl || d.photo || d.avatar || `https://www.assemblee-nationale.fr/dyn/static/tribun/17/photos/PA841223.jpg`;
+                    const photoUrl = d.photoUrl || d.photo || d.avatar || `https://www.assemblee-nationale.fr/17/photos/${d.id}.jpg`;
+                    const nomFamille = d.nom.split(' ').pop();
+                    const scores = d.scores || {};
 
                     // Mettre à jour les métadonnées Open Graph
                     const pageTitle = `${d.nom} (${scoreGlobal}/100 - ${bande.label}) | Observatoire du Libéralisme`;
@@ -329,6 +390,30 @@
                     document.getElementById('tw-title').setAttribute('content', pageTitle);
                     document.getElementById('tw-desc').setAttribute('content', pageDesc);
                     document.getElementById('tw-image').setAttribute('content', photoUrl);
+
+                    // Génération de la Carte FUT
+                    const futCardHtml = `
+                        <div class="fut-card-large">
+                            <div class="fut-header">
+                                <div class="fut-badge">
+                                    <div class="fut-score-global">${scoreGlobal}</div>
+                                    <div class="fut-groupe">${d.groupe || 'UDR'}</div>
+                                </div>
+                                <div class="fut-photo-container">
+                                    <img src="${photoUrl}" alt="${d.nom}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://www.assemblee-nationale.fr/17/photos/${d.id}.jpg';">
+                                </div>
+                            </div>
+                            <div class="fut-nom">${nomFamille}</div>
+                            <div class="fut-stats">
+                                <div class="fut-stat"><span class="fut-stat-val">${scores.FIS ?? 0}</span><span class="fut-stat-lbl">FIS</span></div>
+                                <div class="fut-stat"><span class="fut-stat-val">${scores.PRO ?? 0}</span><span class="fut-stat-lbl">PRO</span></div>
+                                <div class="fut-stat"><span class="fut-stat-val">${scores.ETA ?? 0}</span><span class="fut-stat-lbl">ETA</span></div>
+                                <div class="fut-stat"><span class="fut-stat-val">${scores.LIB ?? 0}</span><span class="fut-stat-lbl">LIB</span></div>
+                                <div class="fut-stat"><span class="fut-stat-val">${scores.REG ?? 0}</span><span class="fut-stat-lbl">REG</span></div>
+                                <div class="fut-stat"><span class="fut-stat-val">${scores.OUV ?? 0}</span><span class="fut-stat-lbl">OUV</span></div>
+                            </div>
+                        </div>
+                    `;
 
                     // Traitement des réseaux sociaux et contacts
                     let totalAbonnes = 0;
@@ -402,11 +487,6 @@
                             <p style="color: #78350f; line-height: 1.5; margin: 0; font-size: 0.95rem;">${d.synthese_analyse}</p>
                         </div>
                     ` : '';
-
-                    // Photos et avatars
-                    const photoHtml = photoUrl
-                        ? `<img src="${photoUrl}" alt="${d.nom}" class="profile-photo" referrerpolicy="no-referrer" onerror="this.onerror=null; this.outerHTML='<div class=\\'profile-initial\\'>${d.nom.charAt(0)}</div>';">`
-                        : `<div class="profile-initial">${d.nom.charAt(0)}</div>`;
 
                     const datanBtnHtml = d.datanUrl
                         ? `<a href="${d.datanUrl}" target="_blank" rel="noopener" class="datan-link">📊 Profil Datan.fr ↗</a>`
@@ -491,7 +571,7 @@
                     // Assemblage final du contenu HTML
                     document.getElementById('depute-content').innerHTML = `
                         <div class="profile-header">
-                            ${photoHtml}
+                            ${futCardHtml}
                             <div class="profile-info">
                                 <h2>${d.nom}</h2>
                                 <p><strong>Groupe :</strong> ${d.groupe || 'UDR'} | <strong>Circonscription :</strong> ${d.circo}</p>

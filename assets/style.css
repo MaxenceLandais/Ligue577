@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap');
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background-color: #f8fafc;
@@ -61,4 +63,159 @@ a.btn-link {
     color: #2563eb;
     text-decoration: underline;
     font-weight: 500;
+}
+
+/* Grille d'affichage */
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+/* Carte style FUT */
+.fut-card {
+  width: 230px;
+  background: linear-gradient(135deg, #fce08a 0%, #c59b27 50%, #e6c863 100%);
+  border-radius: 16px;
+  padding: 16px 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+  border: 2px solid #ffe89e;
+  font-family: 'Rajdhani', sans-serif;
+  color: #1e1e1e;
+  text-transform: uppercase;
+  user-select: none;
+  text-decoration: none;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.fut-card:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+.fut-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fut-badge {
+  text-align: center;
+  line-height: 0.9;
+}
+
+.fut-score-global {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.fut-groupe {
+  font-size: 13px;
+  font-weight: 700;
+  color: #3a2e05;
+  margin-top: 4px;
+}
+
+.fut-photo-container {
+  width: 110px;
+  height: 110px;
+}
+
+.fut-photo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+.fut-nom {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 6px 0 4px 0;
+  letter-spacing: 1px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+  padding-bottom: 4px;
+}
+
+.fut-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px 10px;
+  padding: 4px 6px;
+}
+
+.fut-stat {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.fut-stat-val {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.fut-stat-lbl {
+  font-size: 12px;
+  color: #3a2e05;
+  font-weight: 700;
+}
+
+/* Version agrandie pour depute.html */
+.fut-card-large,
+.fut-card.large {
+  width: 280px;
+  background: linear-gradient(135deg, #fce08a 0%, #c59b27 50%, #e6c863 100%);
+  border-radius: 18px;
+  padding: 18px 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border: 2px solid #ffe89e;
+  font-family: 'Rajdhani', sans-serif;
+  color: #1e1e1e;
+  text-transform: uppercase;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.fut-card-large .fut-score-global,
+.fut-card.large .fut-score-global {
+  font-size: 48px;
+}
+
+.fut-card-large .fut-groupe,
+.fut-card.large .fut-groupe {
+  font-size: 14px;
+}
+
+.fut-card-large .fut-photo-container,
+.fut-card.large .fut-photo-container {
+  width: 130px;
+  height: 130px;
+}
+
+.fut-card-large .fut-nom,
+.fut-card.large .fut-nom {
+  font-size: 22px;
+  margin: 8px 0 6px 0;
+  letter-spacing: 1px;
+}
+
+.fut-card-large .fut-stats,
+.fut-card.large .fut-stats {
+  gap: 4px 12px;
+  padding: 4px 6px;
+}
+
+.fut-card-large .fut-stat-val,
+.fut-card.large .fut-stat-val {
+  font-size: 19px;
+}
+
+.fut-card-large .fut-stat-lbl,
+.fut-card.large .fut-stat-lbl {
+  font-size: 13px;
 }
