@@ -72,6 +72,15 @@ function getBande(score) {
     return { label: "Dirigiste", class: "bande-dirigiste", color: "#dc2626" };
 }
 
+function getPillarColor(score) {
+    if (score <= 50) return "#dc2626"; // Rouge (0 à 50)
+    if (score <= 60) return "#ea580c"; // Orange (51 à 60)
+    if (score <= 70) return "#d97706"; // Jaune doré (61 à 70)
+    if (score <= 80) return "#22c55e"; // Vert clair (71 à 80)
+    if (score <= 90) return "#15803d"; // Vert foncé (81 à 90)
+    return "#2563eb";                  // Bleu (91 à 100)
+}
+
 function getFutCardThemeClass(score) {
     if (score <= 50) return 'fut-card-red';
     if (score <= 60) return 'fut-card-orange';
@@ -298,7 +307,7 @@ if (!deputeId) {
             let pillarsHtml = '';
             for (const [code, info] of Object.entries(PILLARS_MAP)) {
                 const score = (d.scores && d.scores[code] !== undefined) ? d.scores[code] : 0;
-                const pBande = getBande(score);
+                const barColor = getPillarColor(score);
 
                 pillarsHtml += `
                     <div class="pillar-card">
@@ -307,7 +316,7 @@ if (!deputeId) {
                             <span><strong>${score}</strong> / 100</span>
                         </div>
                         <div class="progress-bar-bg">
-                            <div class="progress-bar-fill" style="width: ${score}%; background-color: ${pBande.color};"></div>
+                            <div class="progress-bar-fill" style="width: ${score}%; background-color: ${barColor};"></div>
                         </div>
                         <small style="color: #64748b; margin-top: 6px; display: block;">${info.desc}</small>
                     </div>
