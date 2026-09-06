@@ -447,8 +447,10 @@
 
                     const bande = getBande(scoreGlobal);
 
-                    // Utilisation prioritaire des fichiers téléchargés localement dans assets/deputes/
-                    const photoUrl = d.photo || d.photoUrl || `assets/deputes/${d.id}.jpg`;
+                    // Chemins locaux prioritaires dans assets/deputes/
+                    const localJpg = `assets/deputes/${d.id}.jpg`;
+                    const localPng = `assets/deputes/${d.id}.png`;
+                    const svgDefault = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='35' r='25' fill='%23aaa'/><path d='M10 90 A40 40 0 0 1 90 90 Z' fill='%23aaa'/></svg>";
 
                     const nomFamille = d.nom.split(' ').pop();
                     const scores = d.scores || {};
@@ -460,21 +462,21 @@
                     document.title = pageTitle;
                     document.getElementById('og-title').setAttribute('content', pageTitle);
                     document.getElementById('og-desc').setAttribute('content', pageDesc);
-                    document.getElementById('og-image').setAttribute('content', photoUrl);
+                    document.getElementById('og-image').setAttribute('content', localJpg);
                     document.getElementById('og-url').setAttribute('content', window.location.href);
 
                     document.getElementById('tw-title').setAttribute('content', pageTitle);
                     document.getElementById('tw-desc').setAttribute('content', pageDesc);
-                    document.getElementById('tw-image').setAttribute('content', photoUrl);
+                    document.getElementById('tw-image').setAttribute('content', localJpg);
 
-                    // Drapeau de région
+                    // Drapeau de région (avec déblocage HTTP referrerpolicy)
                     const regionUrl = d.drapeau_region || REGION_FLAGS[d.region] || REGION_FLAGS["Occitanie"];
-                    const drapeauRegionHtml = `<img src="${regionUrl}" alt="Occitanie / ${d.circo || ''}" title="Élu en Occitanie (${d.circo || 'Hérault'})">`;
+                    const drapeauRegionHtml = `<img src="${regionUrl}" alt="Région" referrerpolicy="no-referrer" onerror="this.style.display='none'">`;
 
                     // Logo officiel du Parti
                     const groupeName = d.parti || d.groupe || 'UDR';
                     const partiUrl = d.logo_parti || PARTY_LOGOS[groupeName] || PARTY_LOGOS["UDR"];
-                    const partiHtml = `<img src="${partiUrl}" alt="${groupeName}" title="${groupeName}">`;
+                    const partiHtml = `<img src="${partiUrl}" alt="${groupeName}" referrerpolicy="no-referrer" onerror="this.style.display='none'">`;
 
                     // Génération de la Carte FC26
                     const futCardHtml = `
@@ -489,7 +491,9 @@
                                 </div>
                             </div>
                             <div class="fut-photo-container">
-                                <img src="${photoUrl}" alt="${d.nom}" onerror="this.onerror=null; this.src='assets/deputes/default.png';">
+                                <img src="${localJpg}"
+                                     alt="${d.nom}"
+                                     onerror="if(!this.dataset.fallback){this.dataset.fallback=1; this.src='${localPng}';}else{this.src='${svgDefault}';}">
                             </div>
                             <div class="fut-nom">${nomFamille}</div>
 
