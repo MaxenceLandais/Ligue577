@@ -43,46 +43,49 @@
             text-transform: uppercase;
             user-select: none;
             flex-shrink: 0;
-            background: linear-gradient(135deg, #fce08a 0%, #c59b27 50%, #e6c863 100%);
-            /* Découpe officielle style Écusson Ultimate Team */
+            background: linear-gradient(180deg, #f7d774 0%, #e2b240 45%, #ca9a24 100%);
+            /* Découpe écusson avec la pointe au bas du centre */
             clip-path: polygon(
                 14px 0,
                 calc(100% - 14px) 0,
                 100% 14px,
                 100% calc(100% - 24px),
-                calc(100% - 30px) 100%,
-                30px 100%,
+                calc(100% - 28px) calc(100% - 10px),
+                50% 100%,
+                28px calc(100% - 10px),
                 0 calc(100% - 24px),
                 0 14px
             );
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
         }
 
-        /* Fond Rayons Dorés ("Sunburst") style Rodri FC26 */
+        /* Rayons ultra-fins et très légers uniquement sur le haut */
         .fut-card-large::before {
             content: "";
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
+            top: 0; left: 0; right: 0;
+            height: 52%;
             background:
-                radial-gradient(circle at 50% 32%, rgba(255, 250, 210, 0.95) 0%, rgba(200, 150, 30, 0.2) 65%),
-                repeating-conic-gradient(from 0deg at 50% 32%, #fde68a 0deg 3.5deg, #ca9a24 3.5deg 7deg);
+                radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.7) 0%, transparent 75%),
+                repeating-conic-gradient(from 0deg at 50% 40%, rgba(255, 255, 255, 0.22) 0deg 1deg, transparent 1deg 2deg);
             z-index: 0;
-            opacity: 0.9;
+            pointer-events: none;
         }
 
-        /* Bordure dorée interne */
+        /* Bordure dorée interne épousant la pointe */
         .fut-card-large::after {
             content: "";
             position: absolute;
             top: 3px; left: 3px; right: 3px; bottom: 3px;
-            border: 1.5px solid rgba(255, 245, 180, 0.65);
+            border: 1.5px solid rgba(255, 245, 180, 0.7);
             clip-path: polygon(
                 12px 0,
                 calc(100% - 12px) 0,
                 100% 12px,
                 100% calc(100% - 22px),
-                calc(100% - 28px) 100%,
-                28px 100%,
+                calc(100% - 26px) calc(100% - 9px),
+                50% calc(100% - 3px),
+                26px calc(100% - 9px),
                 0 calc(100% - 22px),
                 0 12px
             );
@@ -122,7 +125,7 @@
             letter-spacing: 0.5px;
         }
 
-        /* Badge Âge style Hexagone FC26 */
+        /* Badge Âge style Hexagone */
         .fut-age-badge {
             background: #fff8dc;
             border: 2px solid #5c4709;
@@ -159,19 +162,18 @@
             text-align: center;
             font-size: 23px;
             font-weight: 800;
-            margin: 2px 0 6px 0;
+            margin: 4px 0 6px 0;
             letter-spacing: 0.5px;
             color: #111;
             text-shadow: 0 1px 0 rgba(255,255,255,0.5);
         }
 
-        /* Section basse avec léger effet translucide pour la lisibilité */
+        /* Section basse unie et nette pour une visibilité optimale */
         .fut-stats-block {
-            background: rgba(235, 195, 80, 0.45);
-            border-radius: 10px;
+            background: linear-gradient(180deg, rgba(235, 195, 75, 0.9) 0%, rgba(210, 160, 45, 0.95) 100%);
+            border-radius: 8px;
             padding: 6px;
-            border-top: 1px solid rgba(255, 255, 255, 0.4);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
         }
 
         .fut-stats-grid {
@@ -179,7 +181,7 @@
             grid-template-columns: 1fr 1fr;
             gap: 4px 12px;
             padding: 2px 6px 6px 6px;
-            border-bottom: 1px solid rgba(60, 45, 5, 0.2);
+            border-bottom: 1px solid rgba(60, 45, 5, 0.25);
         }
 
         .fut-stat {
@@ -203,7 +205,7 @@
             white-space: nowrap;
         }
 
-        /* Pied de carte : badges resserrés au centre comme FC26 */
+        /* Pied de carte : badges resserrés au centre */
         .fut-footer {
             display: flex;
             align-items: center;
@@ -591,7 +593,7 @@
                         ? `<img src="${partiUrl}" alt="${groupeName}" title="${groupeName}" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
                         : '';
 
-                    // Carte FC26 Ultra-fidèle
+                    // Carte FC26
                     const futCardHtml = `
                         <div class="fut-card-large">
                             <div class="fut-card-content">
