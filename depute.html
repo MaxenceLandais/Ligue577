@@ -593,12 +593,20 @@
             return { label: "Dirigiste", class: "bande-dirigiste", color: "#dc2626" };
         }
 
-        // Attribution dynamique de la classe de couleur de la carte FUT
         function getFutCardThemeClass(score) {
             if (score <= 50) return 'fut-card-red';
             if (score <= 60) return 'fut-card-orange';
             if (score <= 70) return 'fut-card-gold';
             return 'fut-card-gold-rare';
+        }
+
+        function getPillarColor(score) {
+            if (score <= 50) return "#dc2626"; // Rouge
+            if (score <= 60) return "#ea580c"; // Orange
+            if (score <= 70) return "#eab308"; // Jaune
+            if (score <= 80) return "#22c55e"; // Vert clair
+            if (score <= 90) return "#15803d"; // Vert foncé
+            return "#2563eb";                  // Bleu (91 à 100)
         }
 
         const params = new URLSearchParams(window.location.search);
@@ -647,7 +655,7 @@
                     const partiSlug = slugifyAsset(groupeName);
                     const partiUrl = d.logo_parti_url || (partiSlug ? `assets/partis/${partiSlug}.png` : (d.logo_parti || PARTY_LOGOS[groupeName]));
 
-                    const nomFamille = d.nom.split(' ').pop();
+                    const nomFamille = d.nom ? d.nom.split(' ').pop() : '';
                     const scores = d.scores || {};
 
                     const pageTitle = `${d.nom} (${scoreGlobal}/100 - ${bande.label}) | Observatoire du Libéralisme`;
@@ -671,7 +679,6 @@
                         ? `<img src="${partiUrl}" alt="${groupeName}" title="${groupeName}" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
                         : '';
 
-                    // Carte FC26 dynamique selon le score
                     const futCardHtml = `
                         <div class="fut-card-large ${futCardThemeClass}">
                             <div class="fut-card-content">
@@ -782,12 +789,29 @@
                         </div>
                     ` : '';
 
-                    const syntheseHtml = d.synthese_analyse ? `
-                        <div class="social-box" style="margin-top: 15px; background-color: #fffbeb; border: 1px solid #fcd34d;">
-                            <h3 style="margin: 0 0 8px 0; font-size: 1.1rem; color: #b45309;">💡 Analyse du profil économique (IA)</h3>
-                            <p style="color: #78350f; line-height: 1.5; margin: 0; font-size: 0.95rem;">${d.synthese_analyse}</p>
-                        </div>
-                    ` : '';
+                    // Module Analyse IA (Synthèse + Vue détaillée dépliable)
+                    let syntheseHtml = '';
+                    if (d.synthese_analyse || d.analyse_detaillee) {
+                        const texteSynthese = d.synthese_analyse || '';
+                        const texteDetail = d.analyse_detaillee || '';
+
+                        syntheseHtml = `
+                            <div class="social-box" style="margin-top: 15px; background-color: #fffbeb; border: 1px solid #fcd34d;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
+                                    <h3 style="margin: 0; font-size: 1.1rem; color: #b45309;">💡 Analyse du profil économique (IA)</h3>
+                                    ${texteDetail ? `<button onclick="toggleAnalyseDetail()" id="btn-toggle-analyse" style="background: #fef3c7; border: 1px solid #f59e0b; color: #b45309; padding: 4px 10px; border-radius: 6px; font-size: 0.82rem; cursor: pointer; font-weight: 600;">🔍 Voir l'analyse détaillée</button>` : ''}
+                                </div>
+                                <div style="color: #78350f; line-height: 1.6; font-size: 0.95rem;">
+                                    ${texteSynthese}
+                                </div>
+                                ${texteDetail ? `
+                                    <div id="analyse-detaillee-block" style="display: none; margin-top: 12px; padding-top: 12px; border-top: 1px dashed #fcd34d; color: #451a03; line-height: 1.6; font-size: 0.92rem;">
+                                        ${texteDetail}
+                                    </div>
+                                ` : ''}
+                            </div>
+                        `;
+                    }
 
                     const datanBtnHtml = d.datanUrl
                         ? `<a href="${d.datanUrl}" target="_blank" rel="noopener" class="datan-link">📊 Profil Datan.fr ↗</a>`
@@ -810,16 +834,11 @@
                         </div>
                     ` : '';
 
-                    const professionHtml = d.profession ? `
-                        <p style="margin-top: 6px; font-size: 0.95rem;">
-                            💼 <strong>Profession :</strong> ${d.profession}
-                        </p>
-                    ` : '';
-
+                    // Génération des 6 cartes de piliers
                     let pillarsHtml = '';
                     for (const [code, info] of Object.entries(PILLARS_MAP)) {
                         const score = (d.scores && d.scores[code] !== undefined) ? d.scores[code] : 0;
-                        const pBande = getBande(score);
+                        const barColor = getPillarColor(score);
 
                         pillarsHtml += `
                             <div class="pillar-card">
@@ -828,88 +847,82 @@
                                     <span><strong>${score}</strong> / 100</span>
                                 </div>
                                 <div class="progress-bar-bg">
-                                    <div class="progress-bar-fill" style="width: ${score}%; background-color: ${pBande.color};"></div>
+                                    <div class="progress-bar-fill" style="width: ${score}%; background-color: ${barColor};"></div>
                                 </div>
                                 <small style="color: #64748b; margin-top: 6px; display: block;">${info.desc}</small>
                             </div>
                         `;
                     }
 
-                    let votesHtml = '';
-                    const listVotes = d.votes || d.initiatives || [];
-
-                    if (listVotes.length > 0) {
-                        votesHtml = listVotes.map(vote => {
-                            let badgeClass = 'badge-abstention';
-                            if (vote.position === 'POUR') badgeClass = 'badge-pour';
-                            if (vote.position === 'CONTRE') badgeClass = 'badge-contre';
-
-                            return `
-                                <div class="initiative-card">
-                                    <div class="initiative-header">
-                                        <span class="initiative-title">${vote.titre}</span>
-                                        <div style="display: flex; align-items: center; gap: 8px;">
-                                            <span class="initiative-meta">📅 ${vote.date || 'Récents'}</span>
-                                            ${vote.position ? `<span class="vote-badge ${badgeClass}">${vote.position}</span>` : ''}
+                    // Initiatives et votes
+                    let initiativesHtml = '';
+                    if (d.initiatives && d.initiatives.length > 0) {
+                        initiativesHtml = `
+                            <h3 style="margin-top: 25px;">📜 Votes et initiatives clés</h3>
+                            <div class="initiatives-list">
+                                ${d.initiatives.map(item => `
+                                    <div class="initiative-card">
+                                        <div class="initiative-header">
+                                            <span class="initiative-title">${item.titre}</span>
+                                            <span class="vote-badge badge-${(item.vote || '').toLowerCase()}">${item.vote || 'N/A'}</span>
                                         </div>
+                                        <div class="initiative-meta">${item.description || ''}</div>
+                                        ${item.url ? `<a href="${item.url}" target="_blank" rel="noopener" class="vote-link">Consulter le vote sur Assemblee-Nationale.fr ↗</a>` : ''}
                                     </div>
-                                    ${vote.description ? `<p style="margin: 6px 0 0 0; color: #475569; font-size: 0.95rem;">${vote.description}</p>` : ''}
-                                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-top: 8px;">
-                                        ${vote.pilier && PILLARS_MAP[vote.pilier] ? `<small style="color: #2563eb; font-weight: bold;">Pilier concerné : ${PILLARS_MAP[vote.pilier].label}</small>` : '<span></span>'}
-                                        ${vote.url ? `<a href="${vote.url}" target="_blank" rel="noopener" class="vote-link">Voir le vote sur Datan.fr ↗</a>` : ''}
-                                    </div>
-                                </div>
-                            `;
-                        }).join('');
-                    } else {
-                        votesHtml = '<p style="color: #64748b; font-style: italic;">Aucun vote répertorié pour le moment.</p>';
+                                `).join('')}
+                            </div>
+                        `;
                     }
 
+                    // Injection dans la page
                     document.getElementById('depute-content').innerHTML = `
                         <div class="profile-header">
                             ${futCardHtml}
                             <div class="profile-info">
                                 <h2>${d.nom}</h2>
-                                <p><strong>Groupe :</strong> ${d.groupe || 'UDR'} | <strong>Circonscription :</strong> ${d.circo}</p>
-                                ${professionHtml}
-
-                                <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 10px;">
-                                    <span class="badge ${bande.class}" style="font-size: 0.95rem; padding: 6px 12px;">
-                                        ${d.qualification || bande.label} — ${scoreGlobal} / 100
-                                    </span>
+                                <p><strong>Circonscription :</strong> ${d.circo || 'Non renseignée'}</p>
+                                <p><strong>Groupe :</strong> ${d.groupe || 'Non inscrit'}</p>
+                                <div style="margin-top: 10px;">
                                     ${datanBtnHtml}
                                 </div>
-
-                                ${bioInlineHtml}
-
                                 ${statsHtml}
+                                ${bioInlineHtml}
                             </div>
                         </div>
 
                         ${syntheseHtml}
-
                         ${socialSectionHtml}
 
-                        <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 20px 0;">
+                        <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 25px 0;">
 
-                        <h3>📊 Décomposition selon les 6 piliers économiques</h3>
+                        <h3>📊 Les 6 piliers économiques du libéralisme</h3>
                         <div class="pillar-grid">
                             ${pillarsHtml}
                         </div>
 
-                        <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 25px 0;">
-
-                        <h3>📜 Votes enregistrés (${listVotes.length})</h3>
-                        <div style="margin-top: 10px;">
-                            ${votesHtml}
-                        </div>
+                        ${initiativesHtml}
                     `;
                 })
                 .catch(err => {
+                    console.error(err);
                     document.getElementById('depute-content').innerHTML = `
-                        <p style="color: red; font-weight: bold;">Erreur : ${err.message}</p>
+                        <p style="color: red; font-weight: bold;">Erreur lors du chargement des données du député.</p>
                     `;
                 });
+        }
+
+        function toggleAnalyseDetail() {
+            const el = document.getElementById('analyse-detaillee-block');
+            const btn = document.getElementById('btn-toggle-analyse');
+            if (el) {
+                if (el.style.display === 'none') {
+                    el.style.display = 'block';
+                    btn.innerText = '▲ Masquer le détail';
+                } else {
+                    el.style.display = 'none';
+                    btn.innerText = '🔍 Voir l\'analyse détaillée';
+                }
+            }
         }
     </script>
 </body>
