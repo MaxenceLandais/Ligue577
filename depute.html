@@ -125,35 +125,20 @@
             letter-spacing: 0.5px;
         }
 
-        /* --- BADGE ÂGE NOUVEAU STYLE FC26 --- */
+        /* --- BADGE ÂGE STYLE HEXAGONE RODRI --- */
         .fut-age-badge {
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(145deg, #2b2207 0%, #120d03 100%);
-            border: 1.5px solid #fce08a;
-            clip-path: polygon(25% 0%, 75% 0%, 100% 28%, 100% 72%, 75% 100%, 25% 100%, 0% 72%, 0% 28%);
-            padding: 4px 8px 3px 8px;
-            min-width: 40px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-            line-height: 0.9;
-        }
-
-        .fut-age-num {
-            font-size: 17px;
+            background: linear-gradient(180deg, #fce8a6 0%, #ebc161 100%);
+            border: 1px solid #5c4709;
+            clip-path: polygon(22% 0%, 78% 0%, 100% 50%, 78% 100%, 22% 100%, 0% 50%);
+            padding: 4px 10px;
+            color: #3a2e05;
+            font-size: 13px;
             font-weight: 800;
-            color: #ffffff;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-            letter-spacing: -0.5px;
-        }
-
-        .fut-age-unit {
-            font-size: 9px;
-            font-weight: 800;
-            color: #fce08a;
             letter-spacing: 0.5px;
-            margin-top: 2px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         /* Photo du député */
@@ -620,8 +605,7 @@
                                         <div class="fut-groupe">${d.groupe || 'UDR'}</div>
                                     </div>
                                     <div class="fut-age-badge" title="Âge du député">
-                                        <span class="fut-age-num">${ageNum}</span>
-                                        <span class="fut-age-unit">ANS</span>
+                                        ${ageNum} ANS
                                     </div>
                                 </div>
 
