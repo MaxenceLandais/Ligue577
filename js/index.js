@@ -30,9 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
             deputes.forEach((d, index) => {
                 const scores = d.scores || {};
                 const tr = document.createElement('tr');
+                tr.className = 'clickable-row';
+                tr.onclick = () => window.location.href = `depute.html?id=${d.id}`;
+
                 tr.innerHTML = `
                     <td class="col-rang">#${index + 1}</td>
-                    <td class="col-nom"><strong>${d.nom}</strong></td>
+                    <td class="col-nom">
+                        <a href="depute.html?id=${d.id}" class="depute-link" onclick="event.stopPropagation();">${d.nom}</a>
+                    </td>
                     <td class="col-circo">${d.circo || '—'}</td>
                     <td class="col-score-global"><strong>${d.scoreGlobal}</strong> / 100</td>
                     <td class="col-pillar">${scores.FIS ?? '—'}</td>
@@ -42,7 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     <td class="col-pillar">${scores.REG ?? '—'}</td>
                     <td class="col-pillar">${scores.OUV ?? '—'}</td>
                     <td><span class="badge ${d.bande.class}">${d.bande.label}</span></td>
-                    <td style="text-align: right;"><a href="depute.html?id=${d.id}" class="btn-link">Voir la fiche</a></td>
                 `;
                 tbody.appendChild(tr);
             });
@@ -51,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const tbody = document.getElementById('leaderboard');
             if (tbody) {
                 tbody.innerHTML = `
-                    <tr><td colspan="12" style="color:red; font-weight:bold;">Erreur : ${err.message}</td></tr>
+                    <tr><td colspan="11" style="color:red; font-weight:bold;">Erreur : ${err.message}</td></tr>
                 `;
             }
         });

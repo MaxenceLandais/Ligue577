@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap');
 
-/* --- Base & Conteneurs --- */
+/* --- Base & Conteneurs (Élargis à 1400px) --- */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background-color: #f8fafc;
@@ -16,7 +16,7 @@ header {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px; /* Élargi pour faire rentrer toutes les colonnes */
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -40,12 +40,12 @@ header {
 table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     text-align: left;
 }
 
 th, td {
-    padding: 12px 10px;
+    padding: 10px 8px; /* Rembourrage optimisé */
     border-bottom: 1px solid #e2e8f0;
     white-space: nowrap;
 }
@@ -53,56 +53,73 @@ th, td {
 th {
     background-color: #f1f5f9;
     color: #475569;
-    font-weight: 600;
-    font-size: 0.85rem;
+    font-weight: 700;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
-tr:hover {
-    background-color: #f8fafc;
+/* Ligne cliquable avec effet Hover */
+.clickable-row {
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
 }
 
-/* Formatage spécial des colonnes */
+.clickable-row:hover {
+    background-color: #f1f5f9;
+}
+
+.depute-link {
+    color: #2563eb;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.depute-link:hover {
+    text-decoration: underline;
+}
+
+/* Formatage des colonnes */
 .col-rang {
     font-weight: 700;
     color: #64748b;
     text-align: center;
-    width: 50px;
+    width: 45px;
 }
 
 .col-nom {
     color: #0f172a;
+    min-width: 140px;
 }
 
 .col-circo {
     color: #64748b;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
 }
 
-/* Mise en valeur de la colonne Score Global */
+/* Score Global mis en avant */
 .col-score-global {
     font-weight: 700;
     color: #0f172a;
-    background-color: #f1f5f9;
+    background-color: #f8fafc;
     text-align: center;
-    border-left: 2px solid #cbd5e1;
-    border-right: 2px solid #cbd5e1;
+    border-left: 2px solid #e2e8f0;
+    border-right: 2px solid #e2e8f0;
 }
 
 /* Formatage des 6 piliers */
 .col-pillar {
     text-align: center;
     color: #334155;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 0.88rem;
 }
 
 /* --- Badges de Bande & Légende --- */
 .badge {
-    padding: 4px 10px;
+    padding: 3px 8px;
     border-radius: 12px;
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     font-weight: 600;
     display: inline-block;
     white-space: nowrap;
@@ -121,19 +138,7 @@ tr:hover {
     margin-top: 10px;
 }
 
-/* --- Liens & Boutons --- */
-a.btn-link, a.btn-fiche {
-    color: #2563eb;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.85rem;
-}
-
-a.btn-link:hover, a.btn-fiche:hover {
-    text-decoration: underline;
-}
-
-/* --- Grille d'affichage & Cartes FUT --- */
+/* --- Grille d'affichage & Cartes FUT (conservées pour depute.html) --- */
 .cards-grid {
   display: flex;
   flex-wrap: wrap;
@@ -236,11 +241,57 @@ a.btn-link:hover, a.btn-fiche:hover {
   letter-spacing: -0.2px;
 }
 
-/* Version agrandie pour depute.html */
+/* Version agrandie */
 .fut-card-large,
 .fut-card.large {
   width: 280px;
   background: linear-gradient(135deg, #fce08a 0%, #c59b27 50%, #e6c863 100%);
   border-radius: 18px;
   padding: 18px 14px;
-  box-shadow: 0 10px 25px rgba(0, 0,
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border: 2px solid #ffe89e;
+  font-family: 'Rajdhani', sans-serif;
+  color: #1e1e1e;
+  text-transform: uppercase;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.fut-card-large .fut-score-global,
+.fut-card.large .fut-score-global {
+  font-size: 48px;
+}
+
+.fut-card-large .fut-groupe,
+.fut-card.large .fut-groupe {
+  font-size: 14px;
+}
+
+.fut-card-large .fut-photo-container,
+.fut-card.large .fut-photo-container {
+  width: 130px;
+  height: 130px;
+}
+
+.fut-card-large .fut-nom,
+.fut-card.large .fut-nom {
+  font-size: 22px;
+  margin: 8px 0 6px 0;
+  letter-spacing: 1px;
+}
+
+.fut-card-large .fut-stats,
+.fut-card.large .fut-stats {
+  gap: 4px 12px;
+  padding: 4px 6px;
+}
+
+.fut-card-large .fut-stat-val,
+.fut-card.large .fut-stat-val {
+  font-size: 19px;
+}
+
+.fut-card-large .fut-stat-lbl,
+.fut-card.large .fut-stat-lbl {
+  font-size: 13px;
+}
