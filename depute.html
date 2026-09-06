@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Balises Open Graph pour réseaux sociaux -->
+    <!-- Balises Open Graph -->
     <meta property="og:type" content="profile">
     <meta id="og-title" property="og:title" content="Fiche Député - Observatoire du Libéralisme">
     <meta id="og-desc" property="og:description" content="Découvrez l'évaluation économique et le score de ce député sur les 6 piliers de la liberté économique.">
@@ -87,18 +87,21 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.15);
         }
 
+        /* Ajustement photo : pas de marge négative, centrage haut du visuel */
         .fut-photo-container {
             width: 140px;
             height: 140px;
-            margin: -20px auto 0 auto;
+            margin: 2px auto 0 auto;
+            overflow: hidden;
         }
 
         .fut-photo-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-            -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+            object-position: top center;
+            mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
         }
 
         .fut-nom {
@@ -392,7 +395,8 @@
 
         const REGION_FLAGS = {
             "Occitanie": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Occitanie.svg/1200px-Flag_of_Occitanie.svg.png",
-            "Hérault": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Occitanie.svg/1200px-Flag_of_Occitanie.svg.png"
+            "Hérault": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Occitanie.svg/1200px-Flag_of_Occitanie.svg.png",
+            "Provence-Alpes-Côte d'Azur": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Flag_of_Provence-Alpes-C%C3%B4te_d%27Azur.svg/1200px-Flag_of_Provence-Alpes-C%C3%B4te_d%27Azur.svg.png"
         };
 
         const PARTY_LOGOS = {
@@ -408,6 +412,33 @@
 
         function formatNumber(num) {
             return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+        }
+
+        // Calcul exact de l'âge en années
+        function calculateAge(birthDateStr) {
+            if (!birthDateStr) return null;
+            let birthDate;
+            if (birthDateStr.includes('-')) {
+                const parts = birthDateStr.split('-');
+                birthDate = parts[0].length === 4
+                    ? new Date(birthDateStr)
+                    : new Date(`${parts[2]}-${parts[1]}-${parts[0]}`);
+            } else if (birthDateStr.includes('/')) {
+                const parts = birthDateStr.split('/');
+                birthDate = new Date(`${parts[2]}-${parts[1]}-${parts[0]}`);
+            } else {
+                birthDate = new Date(birthDateStr);
+            }
+
+            if (isNaN(birthDate.getTime())) return null;
+
+            const today = new Date();
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const monthDiff = today.getMonth() - birthDate.getMonth();
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            return age;
         }
 
         function getBande(score) {
@@ -447,7 +478,12 @@
 
                     const bande = getBande(scoreGlobal);
 
-                    // Chemins locaux prioritaires dans assets/deputes/
+                    // Calcul dynamique de l'âge
+                    const birthStr = d.date_naissance || d.dateNaissance || d.birthdate || d.birth_date;
+                    const computedAge = calculateAge(birthStr);
+                    const ageDisplay = computedAge !== null ? `${computedAge} ANS` : (d.age ? `${d.age} ANS` : '—');
+
+                    // Image locale prioritaire dans assets/deputes/
                     const localJpg = `assets/deputes/${d.id}.jpg`;
                     const localPng = `assets/deputes/${d.id}.png`;
                     const svgDefault = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='35' r='25' fill='%23aaa'/><path d='M10 90 A40 40 0 0 1 90 90 Z' fill='%23aaa'/></svg>";
@@ -455,7 +491,7 @@
                     const nomFamille = d.nom.split(' ').pop();
                     const scores = d.scores || {};
 
-                    // Métadonnées Open Graph
+                    // Open Graph
                     const pageTitle = `${d.nom} (${scoreGlobal}/100 - ${bande.label}) | Observatoire du Libéralisme`;
                     const pageDesc = `Consultez le score libéral de ${d.nom} (${d.circo}) calculé selon les 6 piliers de la liberté économique.`;
 
@@ -469,16 +505,15 @@
                     document.getElementById('tw-desc').setAttribute('content', pageDesc);
                     document.getElementById('tw-image').setAttribute('content', localJpg);
 
-                    // Drapeau de région (avec déblocage HTTP referrerpolicy)
+                    // Drapeau et logo
                     const regionUrl = d.drapeau_region || REGION_FLAGS[d.region] || REGION_FLAGS["Occitanie"];
                     const drapeauRegionHtml = `<img src="${regionUrl}" alt="Région" referrerpolicy="no-referrer" onerror="this.style.display='none'">`;
 
-                    // Logo officiel du Parti
                     const groupeName = d.parti || d.groupe || 'UDR';
                     const partiUrl = d.logo_parti || PARTY_LOGOS[groupeName] || PARTY_LOGOS["UDR"];
                     const partiHtml = `<img src="${partiUrl}" alt="${groupeName}" referrerpolicy="no-referrer" onerror="this.style.display='none'">`;
 
-                    // Génération de la Carte FC26
+                    // Carte FC26
                     const futCardHtml = `
                         <div class="fut-card-large">
                             <div class="fut-top">
@@ -486,8 +521,8 @@
                                     <div class="fut-score-global">${scoreGlobal}</div>
                                     <div class="fut-groupe">${d.groupe || 'UDR'}</div>
                                 </div>
-                                <div class="fut-age-badge" title="Âge du député">
-                                    ${d.age ? d.age + ' ANS' : '31 ANS'}
+                                <div class="fut-age-badge" title="Âge calculé automatiquement">
+                                    ${ageDisplay}
                                 </div>
                             </div>
                             <div class="fut-photo-container">
@@ -520,7 +555,7 @@
                         </div>
                     `;
 
-                    // Contacts & Réseaux
+                    // Réseaux sociaux & contact
                     let totalAbonnes = 0;
                     let hasAbonnes = false;
                     let socialBadgesHtml = '';
@@ -577,7 +612,6 @@
                         </div>
                     ` : '';
 
-                    // Biographie
                     const bioSectionHtml = d.biographie ? `
                         <div class="social-box" style="margin-top: 15px;">
                             <h3 style="margin: 0 0 8px 0; font-size: 1.1rem; color: #1e293b;">📝 Biographie</h3>
@@ -585,7 +619,6 @@
                         </div>
                     ` : '';
 
-                    // Synthèse IA
                     const syntheseHtml = d.synthese_analyse ? `
                         <div class="social-box" style="margin-top: 15px; background-color: #fffbeb; border: 1px solid #fcd34d;">
                             <h3 style="margin: 0 0 8px 0; font-size: 1.1rem; color: #b45309;">💡 Analyse du profil économique (IA)</h3>
@@ -597,7 +630,6 @@
                         ? `<a href="${d.datanUrl}" target="_blank" rel="noopener" class="datan-link">📊 Profil Datan.fr ↗</a>`
                         : '';
 
-                    // Stats Datan
                     const statsHtml = (d.stats && (d.stats.participation || d.stats.loyaute_groupe)) ? `
                         <div class="stats-grid">
                             ${d.stats.participation ? `
@@ -615,14 +647,12 @@
                         </div>
                     ` : '';
 
-                    // Profession
                     const professionHtml = d.profession ? `
                         <p style="margin-top: 6px; font-size: 0.95rem;">
                             💼 <strong>Profession :</strong> ${d.profession}
                         </p>
                     ` : '';
 
-                    // Cartes des piliers
                     let pillarsHtml = '';
                     for (const [code, info] of Object.entries(PILLARS_MAP)) {
                         const score = (d.scores && d.scores[code] !== undefined) ? d.scores[code] : 0;
@@ -642,7 +672,6 @@
                         `;
                     }
 
-                    // Votes
                     let votesHtml = '';
                     const listVotes = d.votes || d.initiatives || [];
 
@@ -673,7 +702,6 @@
                         votesHtml = '<p style="color: #64748b; font-style: italic;">Aucun vote répertorié pour le moment.</p>';
                     }
 
-                    // Assemblage final
                     document.getElementById('depute-content').innerHTML = `
                         <div class="profile-header">
                             ${futCardHtml}
