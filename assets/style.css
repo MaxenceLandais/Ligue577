@@ -29,7 +29,7 @@ header {
     margin: 1.5rem 0;
 }
 
-/* --- Tableau façon Heritage Foundation / FUTBIN --- */
+/* --- Tableau --- */
 .table-responsive {
     width: 100%;
     overflow-x: auto;
@@ -106,7 +106,7 @@ th {
     text-align: center;
 }
 
-/* --- Pastilles des Notes (Style FUTBIN) --- */
+/* --- Pastilles des Notes (Pastilles FUTBIN & Badges) --- */
 .score-pill {
     display: inline-block;
     min-width: 34px;
@@ -122,13 +122,6 @@ th {
     padding: 4px 10px;
 }
 
-.score-liberal { background-color: #dcfce7; color: #166534; }
-.score-plutot  { background-color: #e0f2fe; color: #075985; }
-.score-modere  { background-color: #fef9c3; color: #854d0e; }
-.score-peu     { background-color: #ffedd5; color: #9a3412; }
-.score-dirigiste { background-color: #fee2e2; color: #991b1b; }
-
-/* --- Badges de Bande & Légende --- */
 .badge {
     padding: 3px 8px;
     border-radius: 12px;
@@ -138,11 +131,23 @@ th {
     white-space: nowrap;
 }
 
-.bande-liberal { background: #dcfce7; color: #166534; }
-.bande-plutot { background: #e0f2fe; color: #075985; }
-.bande-modere { background: #fef9c3; color: #854d0e; }
-.bande-peu { background: #ffedd5; color: #9a3412; }
-.bande-dirigiste { background: #fee2e2; color: #991b1b; }
+/* 91 - 100 : Bleu */
+.score-tres-liberal, .bande-tres-liberal { background-color: #dbeafe; color: #1e40af; }
+
+/* 81 - 90 : Vert foncé */
+.score-liberal, .bande-liberal { background-color: #dcfce7; color: #14532d; }
+
+/* 71 - 80 : Vert clair */
+.score-plutot, .bande-plutot { background-color: #d1fae5; color: #047857; }
+
+/* 61 - 70 : Jaune doré */
+.score-modere, .bande-modere { background-color: #fef08a; color: #854d0e; }
+
+/* 51 - 60 : Orange */
+.score-peu, .bande-peu { background-color: #ffedd5; color: #c2410c; }
+
+/* 0 - 50 : Rouge */
+.score-dirigiste, .bande-dirigiste { background-color: #fee2e2; color: #991b1b; }
 
 .legend-badges {
     display: flex;
@@ -151,7 +156,7 @@ th {
     margin-top: 10px;
 }
 
-/* --- Grille d'affichage & Cartes FUT --- */
+/* --- Cartes FUT --- */
 .cards-grid {
   display: flex;
   flex-wrap: wrap;

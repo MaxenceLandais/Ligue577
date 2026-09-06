@@ -1,8 +1,9 @@
 function getBande(score) {
-    if (score >= 80) return { label: "Libéral", class: "bande-liberal" };
-    if (score >= 70) return { label: "Plutôt libéral", class: "bande-plutot" };
-    if (score >= 60) return { label: "Modérément libéral", class: "bande-modere" };
-    if (score >= 50) return { label: "Peu libéral", class: "bande-peu" };
+    if (score >= 91) return { label: "Très libéral", class: "bande-tres-liberal" };
+    if (score >= 81) return { label: "Libéral", class: "bande-liberal" };
+    if (score >= 71) return { label: "Plutôt libéral", class: "bande-plutot" };
+    if (score >= 61) return { label: "Modérément libéral", class: "bande-modere" };
+    if (score >= 51) return { label: "Peu libéral", class: "bande-peu" };
     return { label: "Dirigiste", class: "bande-dirigiste" };
 }
 
@@ -10,11 +11,12 @@ function getScoreClass(val) {
     if (val === null || val === undefined || val === '—') return '';
     const score = Number(val);
     if (isNaN(score)) return '';
-    if (score >= 80) return 'score-liberal';
-    if (score >= 70) return 'score-plutot';
-    if (score >= 60) return 'score-modere';
-    if (score >= 50) return 'score-peu';
-    return 'score-dirigiste';
+    if (score >= 91) return 'score-tres-liberal'; // Bleu
+    if (score >= 81) return 'score-liberal';      // Vert foncé
+    if (score >= 71) return 'score-plutot';       // Vert clair
+    if (score >= 61) return 'score-modere';       // Jaune doré
+    if (score >= 51) return 'score-peu';          // Orange
+    return 'score-dirigiste';                     // Rouge
 }
 
 function renderScorePill(val) {
