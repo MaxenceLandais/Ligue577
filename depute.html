@@ -125,18 +125,35 @@
             letter-spacing: 0.5px;
         }
 
-        /* Badge Âge style Hexagone */
+        /* --- BADGE ÂGE NOUVEAU STYLE FC26 --- */
         .fut-age-badge {
-            background: #fff8dc;
-            border: 2px solid #5c4709;
-            clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-            padding: 5px 7px;
-            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(145deg, #2b2207 0%, #120d03 100%);
+            border: 1.5px solid #fce08a;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 28%, 100% 72%, 75% 100%, 25% 100%, 0% 72%, 0% 28%);
+            padding: 4px 8px 3px 8px;
+            min-width: 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            line-height: 0.9;
+        }
+
+        .fut-age-num {
+            font-size: 17px;
             font-weight: 800;
-            color: #1e1e1e;
-            min-width: 34px;
-            text-align: center;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            color: #ffffff;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+            letter-spacing: -0.5px;
+        }
+
+        .fut-age-unit {
+            font-size: 9px;
+            font-weight: 800;
+            color: #fce08a;
+            letter-spacing: 0.5px;
+            margin-top: 2px;
         }
 
         /* Photo du député */
@@ -555,7 +572,7 @@
 
                     const birthStr = d.date_naissance || d.dateNaissance || d.birthdate || d.birth_date;
                     const computedAge = calculateAge(birthStr);
-                    const ageDisplay = computedAge !== null ? `${computedAge} ANS` : (d.age ? `${d.age} ANS` : '—');
+                    const ageNum = computedAge !== null ? computedAge : (d.age ? d.age : '—');
 
                     const photoPrincipal = d.photo_url || d.photo || d.photoUrl || d.avatar || `assets/deputes/${d.id}.jpg`;
                     const photoFallbackPng = `assets/deputes/${d.id}.png`;
@@ -603,7 +620,8 @@
                                         <div class="fut-groupe">${d.groupe || 'UDR'}</div>
                                     </div>
                                     <div class="fut-age-badge" title="Âge du député">
-                                        ${ageDisplay}
+                                        <span class="fut-age-num">${ageNum}</span>
+                                        <span class="fut-age-unit">ANS</span>
                                     </div>
                                 </div>
 
