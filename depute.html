@@ -33,7 +33,7 @@
             flex-wrap: wrap;
         }
 
-        /* --- CARTE EA SPORTS FC (ULTIMATE TEAM) --- */
+        /* --- CARTE EA SPORTS FC (ULTIMATE TEAM) BASE --- */
         .fut-card-large {
             position: relative;
             width: 270px;
@@ -43,7 +43,6 @@
             text-transform: uppercase;
             user-select: none;
             flex-shrink: 0;
-            background: linear-gradient(180deg, #f7d774 0%, #e2b240 45%, #ca9a24 100%);
             clip-path: polygon(
                 14px 0,
                 calc(100% - 14px) 0,
@@ -56,8 +55,84 @@
                 0 14px
             );
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
         }
 
+        /* --- THÈMES DE COULEURS SEGMENTÉS PAR SCORE --- */
+
+        /* 0 à 50 : ROUGE */
+        .fut-card-red {
+            background: linear-gradient(180deg, #f87171 0%, #dc2626 45%, #991b1b 100%);
+            color: #ffffff;
+        }
+        .fut-card-red .fut-score-global,
+        .fut-card-red .fut-nom,
+        .fut-card-red .fut-stat-val {
+            color: #ffffff;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        .fut-card-red .fut-groupe,
+        .fut-card-red .fut-stat-lbl {
+            color: #fecaca;
+        }
+        .fut-card-red .fut-stats-block {
+            background: linear-gradient(180deg, rgba(220, 38, 38, 0.9) 0%, rgba(153, 27, 27, 0.95) 100%);
+            border-top: 1px solid rgba(254, 202, 202, 0.4);
+        }
+        .fut-card-red .fut-age-badge {
+            background: #fee2e2;
+            border-color: #7f1d1d;
+            color: #7f1d1d;
+        }
+
+        /* 51 à 60 : ORANGE */
+        .fut-card-orange {
+            background: linear-gradient(180deg, #fb923c 0%, #ea580c 45%, #9a3412 100%);
+            color: #ffffff;
+        }
+        .fut-card-orange .fut-score-global,
+        .fut-card-orange .fut-nom,
+        .fut-card-orange .fut-stat-val {
+            color: #ffffff;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        .fut-card-orange .fut-groupe,
+        .fut-card-orange .fut-stat-lbl {
+            color: #ffedd5;
+        }
+        .fut-card-orange .fut-stats-block {
+            background: linear-gradient(180deg, rgba(234, 88, 12, 0.9) 0%, rgba(154, 52, 18, 0.95) 100%);
+            border-top: 1px solid rgba(254, 215, 170, 0.4);
+        }
+        .fut-card-orange .fut-age-badge {
+            background: #ffedd5;
+            border-color: #7c2d12;
+            color: #7c2d12;
+        }
+
+        /* 61 à 70 : OR (CLASSIQUE) */
+        .fut-card-gold {
+            background: linear-gradient(180deg, #f7d774 0%, #e2b240 45%, #ca9a24 100%);
+            color: #1e1e1e;
+        }
+
+        /* 71 à 100 : OR RARE */
+        .fut-card-gold-rare {
+            background: linear-gradient(180deg, #fff3a1 0%, #facc15 35%, #eab308 70%, #854d0e 100%);
+            color: #1a1a1a;
+            box-shadow: 0 0 20px rgba(250, 204, 21, 0.4), 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+        .fut-card-gold-rare::before {
+            background:
+                radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.85) 0%, transparent 70%),
+                repeating-conic-gradient(from 0deg at 50% 40%, rgba(255, 255, 255, 0.35) 0deg 2deg, transparent 2deg 4deg) !important;
+        }
+        .fut-card-gold-rare .fut-score-global {
+            color: #000000;
+            text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+        }
+
+        /* Effet de rayon lumineux */
         .fut-card-large::before {
             content: "";
             position: absolute;
@@ -70,11 +145,12 @@
             pointer-events: none;
         }
 
+        /* Bordure interne */
         .fut-card-large::after {
             content: "";
             position: absolute;
             top: 3px; left: 3px; right: 3px; bottom: 3px;
-            border: 1.5px solid rgba(255, 245, 180, 0.7);
+            border: 1.5px solid rgba(255, 255, 255, 0.6);
             clip-path: polygon(
                 12px 0,
                 calc(100% - 12px) 0,
@@ -109,15 +185,12 @@
         .fut-score-global {
             font-size: 52px;
             font-weight: 800;
-            color: #1a1a1a;
             letter-spacing: -1px;
-            text-shadow: 0 1px 2px rgba(255,255,255,0.6);
         }
 
         .fut-groupe {
             font-size: 15px;
             font-weight: 800;
-            color: #3a2e05;
             margin-top: 2px;
             letter-spacing: 0.5px;
         }
@@ -140,7 +213,7 @@
             margin: 2px auto 6px auto;
             overflow: hidden;
             border-radius: 50%;
-            border: 3px solid #3a2e05;
+            border: 3px solid rgba(0, 0, 0, 0.3);
             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
             background-color: #dbeafe;
         }
@@ -158,8 +231,6 @@
             font-weight: 800;
             margin: 4px 0 6px 0;
             letter-spacing: 0.5px;
-            color: #111;
-            text-shadow: 0 1px 0 rgba(255,255,255,0.5);
         }
 
         .fut-stats-block {
@@ -174,7 +245,7 @@
             grid-template-columns: 1fr 1fr;
             gap: 4px 12px;
             padding: 2px 6px 6px 6px;
-            border-bottom: 1px solid rgba(60, 45, 5, 0.25);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.15);
         }
 
         .fut-stat {
@@ -186,13 +257,11 @@
         .fut-stat-val {
             font-size: 19px;
             font-weight: 800;
-            color: #111111;
             min-width: 22px;
         }
 
         .fut-stat-lbl {
             font-size: 11px;
-            color: #3a2e05;
             font-weight: 800;
             letter-spacing: -0.2px;
             white-space: nowrap;
@@ -524,6 +593,14 @@
             return { label: "Dirigiste", class: "bande-dirigiste", color: "#dc2626" };
         }
 
+        // Attribution dynamique de la classe de couleur de la carte FUT
+        function getFutCardThemeClass(score) {
+            if (score <= 50) return 'fut-card-red';
+            if (score <= 60) return 'fut-card-orange';
+            if (score <= 70) return 'fut-card-gold';
+            return 'fut-card-gold-rare';
+        }
+
         const params = new URLSearchParams(window.location.search);
         const deputeId = params.get('id');
 
@@ -552,6 +629,7 @@
                         : (Object.values(d.scores || {}).length ? Math.round(Object.values(d.scores).reduce((a, b) => a + b, 0) / Object.values(d.scores).length) : 0);
 
                     const bande = getBande(scoreGlobal);
+                    const futCardThemeClass = getFutCardThemeClass(scoreGlobal);
 
                     const birthStr = d.date_naissance || d.dateNaissance || d.birthdate || d.birth_date;
                     const computedAge = calculateAge(birthStr);
@@ -593,9 +671,9 @@
                         ? `<img src="${partiUrl}" alt="${groupeName}" title="${groupeName}" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
                         : '';
 
-                    // Carte FC26
+                    // Carte FC26 dynamique selon le score
                     const futCardHtml = `
-                        <div class="fut-card-large">
+                        <div class="fut-card-large ${futCardThemeClass}">
                             <div class="fut-card-content">
                                 <div class="fut-top">
                                     <div class="fut-left-info">
@@ -697,7 +775,6 @@
                         </div>
                     ` : '';
 
-                    // Biographie intégrée à droite
                     const bioInlineHtml = d.biographie ? `
                         <div class="bio-box-inline">
                             <h3 style="margin: 0 0 6px 0; font-size: 1rem; color: #1e293b;">📝 Biographie</h3>
@@ -705,7 +782,6 @@
                         </div>
                     ` : '';
 
-                    // Analyse IA remontée
                     const syntheseHtml = d.synthese_analyse ? `
                         <div class="social-box" style="margin-top: 15px; background-color: #fffbeb; border: 1px solid #fcd34d;">
                             <h3 style="margin: 0 0 8px 0; font-size: 1.1rem; color: #b45309;">💡 Analyse du profil économique (IA)</h3>
