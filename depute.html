@@ -87,21 +87,23 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.15);
         }
 
-        /* Ajustement photo : pas de marge négative, centrage haut du visuel */
+        /* Photo ronde style Datan */
         .fut-photo-container {
-            width: 140px;
-            height: 140px;
-            margin: 2px auto 0 auto;
+            width: 130px;
+            height: 130px;
+            margin: 6px auto;
             overflow: hidden;
+            border-radius: 50%;
+            border: 3px solid #3a2e05;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            background-color: #dbeafe;
         }
 
         .fut-photo-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: top center;
-            mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
-            -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+            object-position: center 15%;
         }
 
         .fut-nom {
