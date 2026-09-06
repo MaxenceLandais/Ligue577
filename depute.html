@@ -33,7 +33,7 @@
             flex-wrap: wrap;
         }
 
-        /* --- CARTE EA SPORTS FC 26 (ULTIMATE TEAM) --- */
+        /* --- CARTE EA SPORTS FC (ULTIMATE TEAM) --- */
         .fut-card-large {
             position: relative;
             width: 270px;
@@ -44,7 +44,6 @@
             user-select: none;
             flex-shrink: 0;
             background: linear-gradient(180deg, #f7d774 0%, #e2b240 45%, #ca9a24 100%);
-            /* Découpe écusson avec la pointe au bas du centre */
             clip-path: polygon(
                 14px 0,
                 calc(100% - 14px) 0,
@@ -59,20 +58,20 @@
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
         }
 
-        /* Rayons ultra-fins et très légers uniquement sur le haut */
+        /* Rayons ultra-fins en haut */
         .fut-card-large::before {
             content: "";
             position: absolute;
             top: 0; left: 0; right: 0;
-            height: 52%;
+            height: 50%;
             background:
-                radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.7) 0%, transparent 75%),
-                repeating-conic-gradient(from 0deg at 50% 40%, rgba(255, 255, 255, 0.22) 0deg 1deg, transparent 1deg 2deg);
+                radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.6) 0%, transparent 75%),
+                repeating-conic-gradient(from 0deg at 50% 40%, rgba(255, 255, 255, 0.2) 0deg 1deg, transparent 1deg 2deg);
             z-index: 0;
             pointer-events: none;
         }
 
-        /* Bordure dorée interne épousant la pointe */
+        /* Bordure dorée interne */
         .fut-card-large::after {
             content: "";
             position: absolute;
@@ -110,7 +109,7 @@
         }
 
         .fut-score-global {
-            font-size: 54px;
+            font-size: 52px;
             font-weight: 800;
             color: #1a1a1a;
             letter-spacing: -1px;
@@ -125,20 +124,17 @@
             letter-spacing: 0.5px;
         }
 
-        /* --- BADGE ÂGE STYLE HEXAGONE RODRI --- */
+        /* Badge d'âge simple, net et lisible */
         .fut-age-badge {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(180deg, #fce8a6 0%, #ebc161 100%);
-            border: 1px solid #5c4709;
-            clip-path: polygon(22% 0%, 78% 0%, 100% 50%, 78% 100%, 22% 100%, 0% 50%);
-            padding: 4px 10px;
-            color: #3a2e05;
-            font-size: 13px;
+            background: #fce8a6;
+            border: 1px solid #4a3b08;
+            border-radius: 4px;
+            padding: 2px 8px;
+            color: #2b1f02;
+            font-size: 12px;
             font-weight: 800;
             letter-spacing: 0.5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.15);
         }
 
         /* Photo du député */
@@ -170,7 +166,7 @@
             text-shadow: 0 1px 0 rgba(255,255,255,0.5);
         }
 
-        /* Section basse unie et nette pour une visibilité optimale */
+        /* Bloc statistiques du bas */
         .fut-stats-block {
             background: linear-gradient(180deg, rgba(235, 195, 75, 0.9) 0%, rgba(210, 160, 45, 0.95) 100%);
             border-radius: 8px;
@@ -207,7 +203,7 @@
             white-space: nowrap;
         }
 
-        /* Pied de carte : badges resserrés au centre */
+        /* Pied de carte : logos */
         .fut-footer {
             display: flex;
             align-items: center;
