@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap');
 
-/* --- Base & Conteneurs (Élargis à 1400px) --- */
+/* --- Base & Conteneurs --- */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background-color: #f8fafc;
@@ -16,7 +16,7 @@ header {
 }
 
 .container {
-    max-width: 1400px; /* Élargi pour faire rentrer toutes les colonnes */
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -29,7 +29,7 @@ header {
     margin: 1.5rem 0;
 }
 
-/* --- Tableau façon Heritage Foundation --- */
+/* --- Tableau façon Heritage Foundation / FUTBIN --- */
 .table-responsive {
     width: 100%;
     overflow-x: auto;
@@ -45,7 +45,7 @@ table {
 }
 
 th, td {
-    padding: 10px 8px; /* Rembourrage optimisé */
+    padding: 10px 8px;
     border-bottom: 1px solid #e2e8f0;
     white-space: nowrap;
 }
@@ -59,7 +59,6 @@ th {
     letter-spacing: 0.5px;
 }
 
-/* Ligne cliquable avec effet Hover */
 .clickable-row {
     cursor: pointer;
     transition: background-color 0.15s ease-in-out;
@@ -79,7 +78,6 @@ th {
     text-decoration: underline;
 }
 
-/* Formatage des colonnes */
 .col-rang {
     font-weight: 700;
     color: #64748b;
@@ -97,23 +95,38 @@ th {
     font-size: 0.82rem;
 }
 
-/* Score Global mis en avant */
 .col-score-global {
-    font-weight: 700;
-    color: #0f172a;
-    background-color: #f8fafc;
     text-align: center;
+    background-color: #f8fafc;
     border-left: 2px solid #e2e8f0;
     border-right: 2px solid #e2e8f0;
 }
 
-/* Formatage des 6 piliers */
 .col-pillar {
     text-align: center;
-    color: #334155;
-    font-weight: 600;
-    font-size: 0.88rem;
 }
+
+/* --- Pastilles des Notes (Style FUTBIN) --- */
+.score-pill {
+    display: inline-block;
+    min-width: 34px;
+    padding: 3px 7px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.col-score-global .score-pill {
+    font-size: 0.95rem;
+    padding: 4px 10px;
+}
+
+.score-liberal { background-color: #dcfce7; color: #166534; }
+.score-plutot  { background-color: #e0f2fe; color: #075985; }
+.score-modere  { background-color: #fef9c3; color: #854d0e; }
+.score-peu     { background-color: #ffedd5; color: #9a3412; }
+.score-dirigiste { background-color: #fee2e2; color: #991b1b; }
 
 /* --- Badges de Bande & Légende --- */
 .badge {
@@ -138,7 +151,7 @@ th {
     margin-top: 10px;
 }
 
-/* --- Grille d'affichage & Cartes FUT (conservées pour depute.html) --- */
+/* --- Grille d'affichage & Cartes FUT --- */
 .cards-grid {
   display: flex;
   flex-wrap: wrap;
@@ -241,7 +254,6 @@ th {
   letter-spacing: -0.2px;
 }
 
-/* Version agrandie */
 .fut-card-large,
 .fut-card.large {
   width: 280px;

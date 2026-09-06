@@ -6,6 +6,23 @@ function getBande(score) {
     return { label: "Dirigiste", class: "bande-dirigiste" };
 }
 
+function getScoreClass(val) {
+    if (val === null || val === undefined || val === '—') return '';
+    const score = Number(val);
+    if (isNaN(score)) return '';
+    if (score >= 80) return 'score-liberal';
+    if (score >= 70) return 'score-plutot';
+    if (score >= 60) return 'score-modere';
+    if (score >= 50) return 'score-peu';
+    return 'score-dirigiste';
+}
+
+function renderScorePill(val) {
+    if (val === null || val === undefined || val === '—') return '—';
+    const scoreClass = getScoreClass(val);
+    return `<span class="score-pill ${scoreClass}">${val}</span>`;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     fetch('./data.json?t=' + Date.now())
         .then(res => {
@@ -39,13 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         <a href="depute.html?id=${d.id}" class="depute-link" onclick="event.stopPropagation();">${d.nom}</a>
                     </td>
                     <td class="col-circo">${d.circo || '—'}</td>
-                    <td class="col-score-global"><strong>${d.scoreGlobal}</strong> / 100</td>
-                    <td class="col-pillar">${scores.FIS ?? '—'}</td>
-                    <td class="col-pillar">${scores.PRO ?? '—'}</td>
-                    <td class="col-pillar">${scores.ETA ?? '—'}</td>
-                    <td class="col-pillar">${scores.LIB ?? '—'}</td>
-                    <td class="col-pillar">${scores.REG ?? '—'}</td>
-                    <td class="col-pillar">${scores.OUV ?? '—'}</td>
+                    <td class="col-score-global">${renderScorePill(d.scoreGlobal)}</td>
+                    <td class="col-pillar">${renderScorePill(scores.FIS)}</td>
+                    <td class="col-pillar">${renderScorePill(scores.PRO)}</td>
+                    <td class="col-pillar">${renderScorePill(scores.ETA)}</td>
+                    <td class="col-pillar">${renderScorePill(scores.LIB)}</td>
+                    <td class="col-pillar">${renderScorePill(scores.REG)}</td>
+                    <td class="col-pillar">${renderScorePill(scores.OUV)}</td>
                     <td><span class="badge ${d.bande.class}">${d.bande.label}</span></td>
                 `;
                 tbody.appendChild(tr);
